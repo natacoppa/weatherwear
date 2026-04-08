@@ -1,0 +1,13 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Concept 1: A needle threading through a cloud -->
+  <g>
+    <!-- Cloud (cream) -->
+    <path d="M32 18 C20 18 16 30 20 38 C16 48 24 54 32 54 C40 54 48 48 44 38 C48 30 44 18 32 18 Z" fill="#f5f0ea"/>
+    <!-- Needle body (warm tan) passing through the cloud -->
+    <path d="M20 30 L44 48" stroke="#d4b896" stroke-width="2" stroke-linecap="round"/>
+    <!-- Needle eye (warm tan) -->
+    <circle cx="44" cy="48" r="1.5" fill="#d4b896"/>
+    <!-- Thread (sage green) flowing from the needle eye -->
+    <path d="M44 48 Q48 52 40 58" stroke="#6b7c5e" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

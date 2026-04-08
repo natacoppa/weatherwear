@@ -1,0 +1,16 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="petal-fold-relative" d="M 0,-10 Q -4,-20 0,-28 Q 4,-20 0,-10 Z" fill-rule="evenodd"/>
+  </defs>
+  <g transform="translate(32 32)">
+    <circle r="10" fill="#f5f0ea"/>
+    <use href="#petal-fold-relative" fill="#6b7c5e"/>
+    <use href="#petal-fold-relative" fill="#d4b896" transform="rotate(45)"/>
+    <use href="#petal-fold-relative" fill="#6b7c5e" transform="rotate(90)"/>
+    <use href="#petal-fold-relative" fill="#d4b896" transform="rotate(135)"/>
+    <use href="#petal-fold-relative" fill="#6b7c5e" transform="rotate(180)"/>
+    <use href="#petal-fold-relative" fill="#d4b896" transform="rotate(225)"/>
+    <use href="#petal-fold-relative" fill="#6b7c5e" transform="rotate(270)"/>
+    <use href="#petal-fold-relative" fill="#d4b896" transform="rotate(315)"/>
+  </g>
+</svg>

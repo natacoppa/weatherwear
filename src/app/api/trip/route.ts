@@ -150,7 +150,7 @@ Return ONLY valid JSON, no markdown.`;
 
     const client = new Anthropic({ apiKey: process.env.WW_ANTHROPIC_API_KEY! });
     const message = await client.messages.create({
-      model: "claude-haiku-4-5-20251001",
+      model: "claude-sonnet-4-5-20250929",
       max_tokens: 1000,
       messages: [{ role: "user", content: prompt }],
     });
