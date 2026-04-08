@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 // ── Types ────────────────────────────────────────────────────────────
 
@@ -354,6 +354,27 @@ export default function V4Page() {
 // ── Shared Day Card ──────────────────────────────────────────────────
 
 function DayCard({ result }: { result: TodayResult }) {
+  const [outfitImage, setOutfitImage] = useState<string | null>(null);
+  const [imageLoading, setImageLoading] = useState(false);
+
+  useEffect(() => {
+    setOutfitImage(null);
+    setImageLoading(true);
+    fetch("/api/outfit-image", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        outfit: result.outfit,
+        location: result.location,
+        temp: (result.day.tempMin + result.day.tempMax) / 2,
+      }),
+    })
+      .then((res) => res.ok ? res.json() : null)
+      .then((data) => { if (data?.image) setOutfitImage(data.image); })
+      .catch(() => {})
+      .finally(() => setImageLoading(false));
+  }, [result.location, result.day.date, result.outfit.headline]);
+
   return (
     <div className="rounded-3xl bg-[#f5f0ea] border border-[#e8e0d4] overflow-hidden">
       <div className="p-5 pb-4">
@@ -443,6 +464,35 @@ function DayCard({ result }: { result: TodayResult }) {
           </div>
         </>
       )}
+
+      {/* Outfit image — loads async */}
+      <div className="mx-5 border-t border-dashed border-[#d4ccc0]" />
+      <div className="p-5">
+        <p className="text-[10px] uppercase tracking-[0.18em] text-[#a09080] mb-3">The look</p>
+        {imageLoading && (
+          <div className="rounded-2xl bg-[#ece6dc] aspect-[3/4] max-h-[360px] flex items-center justify-center">
+            <div className="flex flex-col items-center gap-3">
+              <div className="w-full max-w-[120px] h-1.5 rounded-full overflow-hidden bg-[#e0d8cc]">
+                <div className="h-full rounded-full" style={{ background: "linear-gradient(90deg, #d4b896, #6b7c5e, #d4b896)", backgroundSize: "300% 100%", animation: "breatheBar 6s ease-in-out infinite" }} />
+              </div>
+              <p className="text-[10px] text-[#b0a490]">Styling your look...</p>
+              <style>{`@keyframes breatheBar { 0%, 100% { background-position: 0% 50%; opacity: 0.7; } 50% { background-position: 100% 50%; opacity: 1; } }`}</style>
+            </div>
+          </div>
+        )}
+        {outfitImage && (
+          <img
+            src={outfitImage}
+            alt="Outfit visualization"
+            className="w-full rounded-2xl object-cover aspect-[3/4] max-h-[360px]"
+          />
+        )}
+        {!imageLoading && !outfitImage && (
+          <div className="rounded-2xl bg-[#ece6dc] aspect-[3/4] max-h-[200px] flex items-center justify-center">
+            <p className="text-[11px] text-[#b0a490]">Couldn&apos;t generate outfit image</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
