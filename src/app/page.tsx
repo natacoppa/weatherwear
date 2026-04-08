@@ -70,6 +70,7 @@ interface PackingCategory {
 
 interface TripResult {
   location: string;
+  isHistorical?: boolean;
   days: { dayName: string; date: string; tempRange: string; precipChance: number }[];
   packingList: {
     headline: string;
@@ -249,9 +250,9 @@ export default function Home() {
 
       {/* Trip date picker */}
       {mode === "trip" && (
-        <div className="flex items-center gap-2 mt-2 mb-4">
-          <div className="flex-1">
-            <p className="text-[10px] uppercase tracking-[0.12em] text-[#aaa] mb-1">From</p>
+        <div className="flex items-center gap-3 mt-2 mb-4">
+          <div className="flex items-center gap-2 flex-1 min-w-0">
+            <span className="text-[11px] text-[#aaa] shrink-0">From</span>
             <input
               type="date"
               value={tripStart}
@@ -260,19 +261,17 @@ export default function Home() {
                 if (e.target.value > tripEnd) setTripEnd(e.target.value);
               }}
               min={new Date().toISOString().split("T")[0]}
-              max={(() => { const d = new Date(); d.setDate(d.getDate() + 6); return d.toISOString().split("T")[0]; })()}
-              className="w-full h-9 px-3 rounded-xl bg-white border border-[#e8e4e0] text-[13px] text-[#1a1a1a] outline-none focus:border-[#ccc]"
+              className="flex-1 min-w-0 h-9 px-2.5 rounded-xl bg-white border border-[#e8e4e0] text-[13px] text-[#1a1a1a] outline-none focus:border-[#ccc]"
             />
           </div>
-          <div className="flex-1">
-            <p className="text-[10px] uppercase tracking-[0.12em] text-[#aaa] mb-1">To</p>
+          <div className="flex items-center gap-2 flex-1 min-w-0">
+            <span className="text-[11px] text-[#aaa] shrink-0">To</span>
             <input
               type="date"
               value={tripEnd}
               onChange={(e) => setTripEnd(e.target.value)}
               min={tripStart}
-              max={(() => { const d = new Date(); d.setDate(d.getDate() + 6); return d.toISOString().split("T")[0]; })()}
-              className="w-full h-9 px-3 rounded-xl bg-white border border-[#e8e4e0] text-[13px] text-[#1a1a1a] outline-none focus:border-[#ccc]"
+              className="flex-1 min-w-0 h-9 px-2.5 rounded-xl bg-white border border-[#e8e4e0] text-[13px] text-[#1a1a1a] outline-none focus:border-[#ccc]"
             />
           </div>
         </div>
@@ -414,14 +413,17 @@ export default function Home() {
             </div>
             <p className="font-[var(--font-serif)] text-[22px] text-[#1a1a1a] leading-snug mb-3">{tripResult.packingList.headline}</p>
             <p className="text-[13px] text-[#888] leading-relaxed">{tripResult.packingList.weatherSummary}</p>
+            {tripResult.isHistorical && (
+              <p className="text-[10px] text-[#bbb] mt-2 italic">Based on typical conditions for these dates</p>
+            )}
           </div>
 
-          {/* Weather overview pills */}
-          <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
+          {/* Weather overview */}
+          <div className="flex gap-1.5 overflow-x-auto pb-1 scrollbar-hide -mx-1 px-1">
             {tripResult.days.map((day) => (
-              <div key={day.date} className="flex flex-col items-center gap-0.5 min-w-[56px] py-2 px-2 rounded-2xl bg-white/60 border border-[#eae6e2]">
+              <div key={day.date} className="flex flex-col items-center gap-0.5 py-2 px-3 rounded-xl bg-white/60 border border-[#eae6e2] shrink-0">
                 <span className="text-[10px] text-[#aaa]">{day.dayName.slice(0, 3)}</span>
-                <span className="text-[12px] font-medium text-[#1a1a1a]">{day.tempRange}</span>
+                <span className="text-[11px] font-medium text-[#1a1a1a] whitespace-nowrap">{day.tempRange}</span>
                 {day.precipChance > 30 && <span className="text-[9px] text-[#b08888]">{day.precipChance}%</span>}
               </div>
             ))}

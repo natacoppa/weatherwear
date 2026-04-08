@@ -2,8 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import {
   fetchWeather,
+  fetchHistoricalWeather,
   geocode,
   analyzeByTimeOfDay,
+  DayForecast,
+  HourlyForecast,
 } from "@/lib/weather";
 
 export async function GET(req: NextRequest) {
@@ -23,18 +26,50 @@ export async function GET(req: NextRequest) {
     }
 
     const locationName = [geo.name, geo.admin1, geo.country].filter(Boolean).join(", ");
-    const weather = await fetchWeather(geo.lat, geo.lon, 7);
-    weather.location = locationName;
 
-    // Filter days to the selected date range
-    const filteredDays = weather.daily.filter((day) => {
-      if (startDate && endDate) return day.date >= startDate && day.date <= endDate;
-      return true;
-    });
+    // Determine if any requested dates are beyond the 7-day forecast
     const today = new Date().toISOString().split("T")[0];
+    const maxForecastDate = new Date();
+    maxForecastDate.setDate(maxForecastDate.getDate() + 6);
+    const maxForecast = maxForecastDate.toISOString().split("T")[0];
 
-    const tripDays = filteredDays.map((day) => {
-      const periods = analyzeByTimeOfDay(weather.hourly, weather.elevation, day.date);
+    const requestedStart = startDate || today;
+    const requestedEnd = endDate || maxForecast;
+
+    // Collect daily + hourly data from both sources as needed
+    let allDaily: DayForecast[] = [];
+    let allHourly: HourlyForecast[] = [];
+    let elevation = 0;
+    let isHistorical = false;
+
+    // Fetch live forecast for dates within the 7-day window
+    if (requestedStart <= maxForecast) {
+      const weather = await fetchWeather(geo.lat, geo.lon, 7);
+      const forecastEnd = requestedEnd <= maxForecast ? requestedEnd : maxForecast;
+      allDaily = weather.daily.filter((d) => d.date >= requestedStart && d.date <= forecastEnd);
+      allHourly = weather.hourly.filter((h) => {
+        const hDate = h.time.split("T")[0];
+        return hDate >= requestedStart && hDate <= forecastEnd;
+      });
+      elevation = weather.elevation;
+    }
+
+    // Fetch historical data for dates beyond the forecast window
+    if (requestedEnd > maxForecast) {
+      const histStart = requestedStart > maxForecast ? requestedStart : new Date(maxForecastDate.getTime() + 86400000).toISOString().split("T")[0];
+      const historical = await fetchHistoricalWeather(geo.lat, geo.lon, histStart, requestedEnd);
+      allDaily = [...allDaily, ...historical.daily.filter((d) => d.date >= histStart && d.date <= requestedEnd)];
+      allHourly = [...allHourly, ...historical.hourly.filter((h) => {
+        const hDate = h.time.split("T")[0];
+        return hDate >= histStart && hDate <= requestedEnd;
+      })];
+      if (!elevation) elevation = historical.elevation;
+      isHistorical = true;
+    }
+
+    // Build per-day summaries
+    const tripDays = allDaily.map((day) => {
+      const periods = analyzeByTimeOfDay(allHourly, elevation, day.date);
       const date = new Date(day.date + "T12:00:00");
       const dayName = day.date === today ? "Today" : date.toLocaleDateString("en-US", { weekday: "long" });
 
@@ -54,13 +89,22 @@ export async function GET(req: NextRequest) {
       };
     });
 
+    if (tripDays.length === 0) {
+      return NextResponse.json({ error: "No weather data available for those dates" }, { status: 400 });
+    }
+
+    const historicalNote = isHistorical
+      ? "\n\nNOTE: Some of this data is based on last year's weather for the same dates. Mention this briefly — e.g., 'based on typical conditions for these dates.'"
+      : "";
+
     const prompt = `You're a smart packer who understands weather. Someone is traveling to ${locationName} for ${tripDays.length} days. Help them pack.
 
 Here's the weather for each day:
 ${tripDays.map((d) => `${d.dayName} (${d.date}): ${d.tempRange}, UV ${d.uvMax}, ${d.precipChance}% rain
   ${d.periods.map((p) => `${p.period}: sun ${p.sunFeel}°, shade ${p.shadeFeel}°, wind ${p.wind}mph, humidity ${p.humidity}%`).join("\n  ")}`).join("\n")}
+${historicalNote}
 
-Create a CONSOLIDATED packing list. Not 7 outfits — one list of what to pack.
+Create a CONSOLIDATED packing list. Not ${tripDays.length} outfits — one list of what to pack.
 
 Rules:
 - Name specific garments + materials (merino crewneck, not "warm sweater")
@@ -119,6 +163,7 @@ Return ONLY valid JSON, no markdown.`;
       location: locationName,
       days: tripDays,
       packingList,
+      isHistorical,
     });
   } catch (error) {
     console.error("Trip API error:", error);

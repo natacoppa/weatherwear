@@ -323,6 +323,86 @@ export async function fetchWeather(
   };
 }
 
+/**
+ * Fetch historical weather for the same dates last year.
+ * Used as a proxy when trip dates are beyond the 7-day forecast window.
+ */
+export async function fetchHistoricalWeather(
+  lat: number,
+  lon: number,
+  startDate: string, // "YYYY-MM-DD" — the actual trip dates
+  endDate: string
+): Promise<{ daily: DayForecast[]; hourly: HourlyForecast[]; elevation: number; isHistorical: true }> {
+  // Shift dates back 1 year
+  const lastYearStart = shiftYear(startDate, -1);
+  const lastYearEnd = shiftYear(endDate, -1);
+
+  const params = new URLSearchParams({
+    latitude: lat.toString(),
+    longitude: lon.toString(),
+    hourly:
+      "temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,uv_index,cloud_cover,precipitation_probability,direct_normal_irradiance,weather_code",
+    daily:
+      "temperature_2m_max,temperature_2m_min,uv_index_max,precipitation_probability_max,sunrise,sunset",
+    temperature_unit: "fahrenheit",
+    wind_speed_unit: "mph",
+    timezone: "auto",
+    start_date: lastYearStart,
+    end_date: lastYearEnd,
+  });
+
+  const res = await fetch(
+    `https://archive-api.open-meteo.com/v1/archive?${params.toString()}`
+  );
+
+  if (!res.ok) {
+    throw new Error(`Historical weather API error: ${res.status}`);
+  }
+
+  const data = await res.json();
+
+  const hourly: HourlyForecast[] = data.hourly.time.map(
+    (time: string, i: number) => ({
+      // Shift the timestamps forward to this year so the rest of the code works
+      time: shiftYear(time, 1),
+      temperature: data.hourly.temperature_2m[i],
+      feelsLike: data.hourly.apparent_temperature[i],
+      humidity: data.hourly.relative_humidity_2m[i],
+      windSpeed: data.hourly.wind_speed_10m[i],
+      uvIndex: data.hourly.uv_index[i],
+      cloudCover: data.hourly.cloud_cover[i],
+      precipitationProbability: data.hourly.precipitation_probability?.[i] ?? 0,
+      solarRadiation: data.hourly.direct_normal_irradiance[i],
+      weatherCode: data.hourly.weather_code[i],
+    })
+  );
+
+  const daily: DayForecast[] = data.daily.time.map(
+    (date: string, i: number) => ({
+      // Shift dates forward to this year
+      date: shiftYear(date, 1),
+      tempMax: data.daily.temperature_2m_max[i],
+      tempMin: data.daily.temperature_2m_min[i],
+      uvIndexMax: data.daily.uv_index_max[i],
+      precipitationProbability: data.daily.precipitation_probability_max?.[i] ?? 0,
+      sunrise: shiftYear(data.daily.sunrise[i], 1),
+      sunset: shiftYear(data.daily.sunset[i], 1),
+    })
+  );
+
+  return {
+    daily,
+    hourly,
+    elevation: data.elevation,
+    isHistorical: true,
+  };
+}
+
+function shiftYear(dateStr: string, delta: number): string {
+  const year = parseInt(dateStr.substring(0, 4), 10) + delta;
+  return year.toString() + dateStr.substring(4);
+}
+
 export async function geocode(
   query: string
 ): Promise<{ name: string; lat: number; lon: number; country: string; admin1: string } | null> {
