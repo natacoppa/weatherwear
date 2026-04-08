@@ -139,7 +139,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex-1 w-full max-w-[440px] mx-auto px-5 pt-12 pb-16">
+    <main className="flex-1 w-full max-w-[440px] mx-auto px-4 pt-10 pb-16 overflow-x-hidden">
       {/* Header */}
       <h1 className="font-[var(--font-serif)] text-[28px] text-[#1a1a1a] tracking-tight">
         WeatherWear
@@ -175,7 +175,7 @@ export default function Home() {
           <button
             type="submit"
             disabled={loading || !query.trim()}
-            className="h-11 px-5 rounded-2xl bg-[#1a1a1a] text-white text-[13px] font-medium tracking-wide disabled:opacity-30 transition-opacity"
+            className="h-11 px-4 rounded-2xl bg-[#1a1a1a] text-white text-[13px] font-medium tracking-wide disabled:opacity-30 transition-opacity shrink-0"
           >
             Go
           </button>
@@ -228,12 +228,12 @@ export default function Home() {
           </div>
 
           {/* Hero */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#fce4d6]/50 via-[#fdeef0]/40 to-[#e8dff5]/30 p-6 backdrop-blur-sm border border-white/60">
-            <div className="flex items-center justify-between mb-4">
-              <p className="text-[11px] uppercase tracking-[0.15em] text-[#999]">
+          <div className="rounded-3xl bg-gradient-to-br from-[#fce4d6]/50 via-[#fdeef0]/40 to-[#e8dff5]/30 p-5 backdrop-blur-sm border border-white/60">
+            <div className="flex items-center justify-between gap-3 mb-4">
+              <p className="text-[11px] uppercase tracking-[0.15em] text-[#999] truncate min-w-0">
                 {result.weather.location}
               </p>
-              <span className="text-[11px] tracking-[0.12em] uppercase text-[#888] bg-white/50 backdrop-blur-sm px-3 py-1.5 rounded-full">
+              <span className="text-[11px] tracking-[0.12em] uppercase text-[#888] bg-white/50 backdrop-blur-sm px-3 py-1.5 rounded-full shrink-0 whitespace-nowrap">
                 {result.outfit.vibe}
               </span>
             </div>
@@ -243,7 +243,7 @@ export default function Home() {
           </div>
 
           {/* Stats row */}
-          <div className="grid grid-cols-4 gap-2.5">
+          <div className="grid grid-cols-4 gap-2">
             <StatPill
               label="Range"
               value={`${Math.round(dayData.tempMin)}–${Math.round(dayData.tempMax)}°`}
@@ -282,7 +282,7 @@ export default function Home() {
                   className="w-full text-left"
                 >
                   <div
-                    className={`bg-gradient-to-br ${gradient} p-5 transition-all`}
+                    className={`bg-gradient-to-br ${gradient} p-4 transition-all`}
                   >
                     <div className="flex items-start justify-between">
                       <div>
@@ -409,9 +409,9 @@ export default function Home() {
 
 function StatPill({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-col items-center gap-1 py-3 rounded-2xl bg-white/60 backdrop-blur-sm border border-[#eae6e2]">
-      <span className="text-[14px] font-medium text-[#1a1a1a]">{value}</span>
-      <span className="text-[9px] uppercase tracking-[0.15em] text-[#bbb]">
+    <div className="flex flex-col items-center gap-0.5 py-2.5 rounded-2xl bg-white/60 backdrop-blur-sm border border-[#eae6e2] min-w-0 overflow-hidden">
+      <span className="text-[13px] font-medium text-[#1a1a1a] truncate">{value}</span>
+      <span className="text-[8px] uppercase tracking-[0.12em] text-[#bbb]">
         {label}
       </span>
     </div>

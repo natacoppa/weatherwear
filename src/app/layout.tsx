@@ -16,6 +16,7 @@ const sans = Inter({
 export const metadata: Metadata = {
   title: "WeatherWear",
   description: "What to actually wear, based on how it actually feels.",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
