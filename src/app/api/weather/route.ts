@@ -11,6 +11,7 @@ export async function GET(req: NextRequest) {
   const query = searchParams.get("q");
   const lat = searchParams.get("lat");
   const lon = searchParams.get("lon");
+  const day = searchParams.get("day"); // "YYYY-MM-DD" or index "0"-"6"
 
   try {
     let latitude: number;
@@ -33,7 +34,6 @@ export async function GET(req: NextRequest) {
     } else if (lat && lon) {
       latitude = parseFloat(lat);
       longitude = parseFloat(lon);
-      // Reverse geocode for display name
       const geo = await geocode(`${lat},${lon}`);
       locationName = geo
         ? [geo.name, geo.admin1].filter(Boolean).join(", ")
@@ -45,18 +45,39 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const weather = await fetchWeather(latitude, longitude);
+    const weather = await fetchWeather(latitude, longitude, 7);
     weather.location = locationName;
 
-    const periods = analyzeByTimeOfDay(weather.hourly, weather.elevation);
+    // Determine which day to analyze
+    let dayIndex = 0;
+    if (day) {
+      if (day.includes("-")) {
+        // "YYYY-MM-DD" format
+        dayIndex = weather.daily.findIndex((d) => d.date === day);
+        if (dayIndex === -1) dayIndex = 0;
+      } else {
+        dayIndex = parseInt(day, 10) || 0;
+      }
+    }
+    dayIndex = Math.max(0, Math.min(dayIndex, weather.daily.length - 1));
+
+    const targetDate = weather.daily[dayIndex]?.date;
+    const selectedDay = weather.daily[dayIndex];
+
+    const periods = analyzeByTimeOfDay(weather.hourly, weather.elevation, targetDate);
+
+    // Build a single-day weather object for the outfit generator
+    const dayWeather = { ...weather, daily: selectedDay };
+
     const outfit = await generateOutfitRecommendations(
-      weather,
+      dayWeather,
       periods,
       locationName
     );
 
     return NextResponse.json({
       weather,
+      selectedDay: dayIndex,
       periods,
       outfit,
     });

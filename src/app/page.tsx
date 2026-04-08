@@ -18,6 +18,16 @@ interface OutfitPeriod {
   layeringTip: string | null;
 }
 
+interface DayForecast {
+  date: string;
+  tempMax: number;
+  tempMin: number;
+  uvIndexMax: number;
+  precipitationProbability: number;
+  sunrise: string;
+  sunset: string;
+}
+
 interface WeatherResult {
   weather: {
     location: string;
@@ -31,15 +41,9 @@ interface WeatherResult {
       weatherCode: number;
       isDay: boolean;
     };
-    daily: {
-      tempMax: number;
-      tempMin: number;
-      uvIndexMax: number;
-      precipitationProbability: number;
-      sunrise: string;
-      sunset: string;
-    };
+    daily: DayForecast[];
   };
+  selectedDay: number;
   periods: {
     period: string;
     label: string;
@@ -77,12 +81,15 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [expandedPeriod, setExpandedPeriod] = useState<number>(0);
   const [locating, setLocating] = useState(false);
+  const [selectedDay, setSelectedDay] = useState(0);
+  const [lastSearchParams, setLastSearchParams] = useState("");
 
-  const fetchData = useCallback(async (params: string) => {
+  const fetchData = useCallback(async (params: string, dayIndex?: number) => {
     setLoading(true);
     setError(null);
+    const dayParam = dayIndex !== undefined ? `&day=${dayIndex}` : "";
     try {
-      const res = await fetch(`/api/weather?${params}`);
+      const res = await fetch(`/api/weather?${params}${dayParam}`);
       if (!res.ok) {
         const data = await res.json();
         throw new Error(data.error || "Failed to fetch");
@@ -90,6 +97,9 @@ export default function Home() {
       const data = await res.json();
       setResult(data);
       setExpandedPeriod(0);
+      setSelectedDay(data.selectedDay || 0);
+      // Save search params for day switching
+      if (!dayParam) setLastSearchParams(params);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong");
     } finally {
@@ -97,9 +107,16 @@ export default function Home() {
     }
   }, []);
 
+  const handleDaySelect = (dayIndex: number) => {
+    if (!lastSearchParams || dayIndex === selectedDay) return;
+    setSelectedDay(dayIndex);
+    fetchData(lastSearchParams, dayIndex);
+  };
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
+    setSelectedDay(0);
     fetchData(`q=${encodeURIComponent(query.trim())}`);
   };
 
@@ -132,31 +149,38 @@ export default function Home() {
       </p>
 
       {/* Search */}
-      <form onSubmit={handleSearch} className="mb-2">
-        <div className="flex gap-2.5">
-          <input
-            type="text"
-            placeholder="Search a city..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="flex-1 h-12 px-4 rounded-2xl bg-white border border-[#e8e4e0] text-[14px] text-[#1a1a1a] placeholder:text-[#bbb] outline-none focus:border-[#ccc] transition-colors"
-          />
+      <form onSubmit={handleSearch} className="mb-5">
+        <div className="flex gap-2">
+          <div className="relative flex-1">
+            <input
+              type="text"
+              placeholder="Search a city..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="w-full h-11 pl-4 pr-10 rounded-2xl bg-white border border-[#e8e4e0] text-[14px] text-[#1a1a1a] placeholder:text-[#bbb] outline-none focus:border-[#ccc] transition-colors"
+            />
+            <button
+              type="button"
+              onClick={handleGeolocate}
+              disabled={locating || loading}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#ccc] hover:text-[#888] transition-colors disabled:opacity-40"
+              title="Use my location"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <circle cx="8" cy="8" r="3" stroke="currentColor" strokeWidth="1.2" />
+                <path d="M8 1v2M8 13v2M1 8h2M13 8h2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
           <button
             type="submit"
             disabled={loading || !query.trim()}
-            className="h-12 px-5 rounded-2xl bg-[#1a1a1a] text-white text-[13px] font-medium tracking-wide disabled:opacity-30 transition-opacity"
+            className="h-11 px-5 rounded-2xl bg-[#1a1a1a] text-white text-[13px] font-medium tracking-wide disabled:opacity-30 transition-opacity"
           >
             Go
           </button>
         </div>
       </form>
-      <button
-        onClick={handleGeolocate}
-        disabled={locating || loading}
-        className="text-[12px] text-[#aaa] hover:text-[#666] transition-colors mb-8 tracking-wide"
-      >
-        {locating ? "Finding you..." : "Use my location"}
-      </button>
 
       {/* Error */}
       {error && (
@@ -169,8 +193,40 @@ export default function Home() {
       {loading && <PulseOrb />}
 
       {/* Results */}
-      {result && !loading && (
+      {result && !loading && (() => {
+        const dayData = result.weather.daily[selectedDay] || result.weather.daily[0];
+        return (
         <div className="space-y-4">
+          {/* Day nav */}
+          <div className="flex items-center justify-end">
+            <div className="flex items-center gap-2">
+              {selectedDay > 0 && (
+                <button
+                  onClick={() => handleDaySelect(selectedDay - 1)}
+                  className="text-[#bbb] hover:text-[#888] transition-colors text-[13px]"
+                >
+                  ←
+                </button>
+              )}
+              <p className="text-[13px] text-[#666] font-medium">
+                {(() => {
+                  if (selectedDay === 0) return "Today";
+                  if (selectedDay === 1) return "Tomorrow";
+                  const d = new Date(dayData.date + "T12:00:00");
+                  return d.toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" });
+                })()}
+              </p>
+              {selectedDay < result.weather.daily.length - 1 && (
+                <button
+                  onClick={() => handleDaySelect(selectedDay + 1)}
+                  className="text-[#bbb] hover:text-[#888] transition-colors text-[13px]"
+                >
+                  →
+                </button>
+              )}
+            </div>
+          </div>
+
           {/* Hero */}
           <div className="rounded-3xl bg-gradient-to-br from-[#fce4d6]/50 via-[#fdeef0]/40 to-[#e8dff5]/30 p-6 backdrop-blur-sm border border-white/60">
             <div className="flex items-center justify-between mb-4">
@@ -190,11 +246,11 @@ export default function Home() {
           <div className="grid grid-cols-4 gap-2.5">
             <StatPill
               label="Range"
-              value={`${Math.round(result.weather.daily.tempMin)}–${Math.round(result.weather.daily.tempMax)}°`}
+              value={`${Math.round(dayData.tempMin)}–${Math.round(dayData.tempMax)}°`}
             />
             <StatPill
               label="UV"
-              value={`${result.weather.daily.uvIndexMax}`}
+              value={`${dayData.uvIndexMax}`}
             />
             <StatPill
               label="Wind"
@@ -202,7 +258,7 @@ export default function Home() {
             />
             <StatPill
               label="Rain"
-              value={`${result.weather.daily.precipitationProbability}%`}
+              value={`${dayData.precipitationProbability}%`}
             />
           </div>
 
@@ -333,7 +389,8 @@ export default function Home() {
             </div>
           )}
         </div>
-      )}
+        );
+      })()}
 
       {/* Empty state */}
       {!result && !loading && !error && (

@@ -1,5 +1,8 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { TimeOfDayWeather, WeatherData } from "./weather";
+import { DayForecast, TimeOfDayWeather, WeatherData } from "./weather";
+
+// The API route passes a single day's forecast instead of the full array
+type WeatherWithDay = Omit<WeatherData, "daily"> & { daily: DayForecast };
 
 export interface OutfitRecommendation {
   period: string;
@@ -24,7 +27,7 @@ export interface OutfitResponse {
 }
 
 export async function generateOutfitRecommendations(
-  weather: WeatherData,
+  weather: WeatherWithDay,
   periods: TimeOfDayWeather[],
   locationName: string
 ): Promise<OutfitResponse> {
@@ -38,7 +41,7 @@ export async function generateOutfitRecommendations(
 }
 
 async function generateWithAI(
-  weather: WeatherData,
+  weather: WeatherWithDay,
   periods: TimeOfDayWeather[],
   locationName: string
 ): Promise<OutfitResponse> {
@@ -235,7 +238,7 @@ function pickAccessories(c: Conditions): string[] {
   return acc;
 }
 
-function pickEssentials(weather: WeatherData, periods: TimeOfDayWeather[]): string[] {
+function pickEssentials(weather: WeatherWithDay, periods: TimeOfDayWeather[]): string[] {
   const essentials: string[] = [];
   const maxPrecip = Math.max(...periods.map((p) => p.precipChance));
   const maxUV = Math.max(...periods.map((p) => p.uvIndex));
@@ -251,7 +254,7 @@ function pickEssentials(weather: WeatherData, periods: TimeOfDayWeather[]): stri
   return essentials;
 }
 
-function generateHeadline(weather: WeatherData, periods: TimeOfDayWeather[], location: string): string {
+function generateHeadline(weather: WeatherWithDay, periods: TimeOfDayWeather[], location: string): string {
   const maxSun = Math.max(...periods.map((p) => p.feelsLike.sunFeel));
   const minShade = Math.min(...periods.map((p) => p.feelsLike.shadeFeel));
   const spread = maxSun - minShade;
@@ -271,7 +274,7 @@ function generateHeadline(weather: WeatherData, periods: TimeOfDayWeather[], loc
   return "Comfortable conditions — dress for the transitions as the day shifts";
 }
 
-function generateVibe(weather: WeatherData, periods: TimeOfDayWeather[]): string {
+function generateVibe(weather: WeatherWithDay, periods: TimeOfDayWeather[]): string {
   const maxSun = Math.max(...periods.map((p) => p.feelsLike.sunFeel));
   const minShade = Math.min(...periods.map((p) => p.feelsLike.shadeFeel));
   const elevation = weather.elevation;
@@ -289,7 +292,7 @@ function generateVibe(weather: WeatherData, periods: TimeOfDayWeather[]): string
 }
 
 function generateRuleBased(
-  weather: WeatherData,
+  weather: WeatherWithDay,
   periods: TimeOfDayWeather[],
   locationName: string
 ): OutfitResponse {

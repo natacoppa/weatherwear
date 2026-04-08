@@ -18,14 +18,17 @@ export interface WeatherData {
     solarRadiation: number; // W/m²
   };
   hourly: HourlyForecast[];
-  daily: {
-    tempMax: number;
-    tempMin: number;
-    uvIndexMax: number;
-    precipitationProbability: number;
-    sunrise: string;
-    sunset: string;
-  };
+  daily: DayForecast[];
+}
+
+export interface DayForecast {
+  date: string;
+  tempMax: number;
+  tempMin: number;
+  uvIndexMax: number;
+  precipitationProbability: number;
+  sunrise: string;
+  sunset: string;
 }
 
 export interface HourlyForecast {
@@ -171,10 +174,12 @@ export interface TimeOfDayWeather {
 
 export function analyzeByTimeOfDay(
   hourly: HourlyForecast[],
-  elevation: number
+  elevation: number,
+  targetDate?: string // "YYYY-MM-DD" — if omitted, uses today and filters past periods
 ): TimeOfDayWeather[] {
-  const now = new Date();
-  const currentHour = now.getHours();
+  const isToday = !targetDate || targetDate === new Date().toISOString().split("T")[0];
+  const currentHour = isToday ? new Date().getHours() : 0;
+  const datePrefix = targetDate || new Date().toISOString().split("T")[0];
 
   const periods: {
     period: "daytime" | "night";
@@ -187,11 +192,12 @@ export function analyzeByTimeOfDay(
     { period: "night", label: "Night", timeRange: "6pm – 11pm", startHour: 18, endHour: 23 },
   ];
 
-  // Filter to only show periods that haven't fully passed
+  // For today, filter out periods that have passed. For future days, show all.
   const relevantPeriods = periods.filter((p) => p.endHour > currentHour);
 
   return relevantPeriods.map((p) => {
     const hours = hourly.filter((h) => {
+      if (!h.time.startsWith(datePrefix)) return false;
       const hour = new Date(h.time).getHours();
       return hour >= p.startHour && hour < p.endHour;
     });
@@ -242,7 +248,8 @@ export function analyzeByTimeOfDay(
 
 export async function fetchWeather(
   lat: number,
-  lon: number
+  lon: number,
+  forecastDays: number = 7
 ): Promise<WeatherData> {
   const params = new URLSearchParams({
     latitude: lat.toString(),
@@ -256,7 +263,7 @@ export async function fetchWeather(
     temperature_unit: "fahrenheit",
     wind_speed_unit: "mph",
     timezone: "auto",
-    forecast_days: "1",
+    forecast_days: forecastDays.toString(),
   });
 
   const res = await fetch(
@@ -304,14 +311,15 @@ export async function fetchWeather(
       solarRadiation: data.current.direct_normal_irradiance,
     },
     hourly,
-    daily: {
-      tempMax: data.daily.temperature_2m_max[0],
-      tempMin: data.daily.temperature_2m_min[0],
-      uvIndexMax: data.daily.uv_index_max[0],
-      precipitationProbability: data.daily.precipitation_probability_max[0],
-      sunrise: data.daily.sunrise[0],
-      sunset: data.daily.sunset[0],
-    },
+    daily: data.daily.time.map((date: string, i: number) => ({
+      date,
+      tempMax: data.daily.temperature_2m_max[i],
+      tempMin: data.daily.temperature_2m_min[i],
+      uvIndexMax: data.daily.uv_index_max[i],
+      precipitationProbability: data.daily.precipitation_probability_max[i],
+      sunrise: data.daily.sunrise[i],
+      sunset: data.daily.sunset[i],
+    })),
   };
 }
 
