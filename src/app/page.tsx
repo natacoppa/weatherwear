@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 // ── Types ────────────────────────────────────────────────────────────
 
@@ -101,11 +101,25 @@ function TripLoader() {
 
 // ── Page ─────────────────────────────────────────────────────────────
 
-export default function V4Page() {
+// ── Recent searches ─────────────────────────────────────────────────
+
+function getRecents(): string[] {
+  if (typeof window === "undefined") return [];
+  try { return JSON.parse(localStorage.getItem("ww_recents") || "[]"); } catch { return []; }
+}
+
+function saveRecent(city: string) {
+  const recents = getRecents().filter((r) => r.toLowerCase() !== city.toLowerCase());
+  recents.unshift(city);
+  localStorage.setItem("ww_recents", JSON.stringify(recents.slice(0, 5)));
+}
+
+export default function Home() {
   const [mode, setMode] = useState<Mode>("today");
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [recents, setRecents] = useState<string[]>([]);
 
   // Today
   const [todayResult, setTodayResult] = useState<TodayResult | null>(null);
@@ -119,6 +133,9 @@ export default function V4Page() {
   // Trip → day drill-down
   const [drillDay, setDrillDay] = useState<TodayResult | null>(null);
   const [drillLoading, setDrillLoading] = useState(false);
+
+  // Load recents on mount
+  useEffect(() => { setRecents(getRecents()); }, []);
 
   const fetchToday = useCallback(async (q: string, day: number) => {
     setLoading(true); setError(null);
@@ -151,11 +168,17 @@ export default function V4Page() {
     finally { setDrillLoading(false); }
   }, []);
 
+  const doSearch = (q: string) => {
+    saveRecent(q);
+    setRecents(getRecents());
+    if (mode === "today") { setDayIndex(0); fetchToday(q, 0); }
+    else fetchTrip(q);
+  };
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!query.trim()) return;
-    if (mode === "today") { setDayIndex(0); fetchToday(query.trim(), 0); }
-    else fetchTrip(query.trim());
+    doSearch(query.trim());
   };
 
   const handleDayNav = (dir: number) => {
@@ -340,11 +363,29 @@ export default function V4Page() {
         </div>
       )}
 
-      {/* Empty */}
+      {/* Empty + recents */}
       {!loading && !error && ((mode === "today" && !todayResult) || (mode === "trip" && !tripResult)) && (
-        <div className="text-center mt-20">
-          <p className="font-[var(--font-serif)] text-[32px] text-[#e0d8cc]">{mode === "today" ? "?" : "..."}</p>
-          <p className="text-[13px] text-[#c0b8a8] mt-2">{mode === "today" ? "What city are you dressing for?" : "Where are you headed?"}</p>
+        <div className="mt-12">
+          {recents.length > 0 && (
+            <div className="mb-10">
+              <p className="text-[10px] uppercase tracking-[0.18em] text-[#b0a490] mb-3">Recent</p>
+              <div className="flex flex-wrap gap-2">
+                {recents.map((r) => (
+                  <button
+                    key={r}
+                    onClick={() => { setQuery(r); doSearch(r); }}
+                    className="text-[12px] text-[#5a5248] bg-[#f0ebe4] hover:bg-[#e8e2da] px-3 py-1.5 rounded-full transition-colors"
+                  >
+                    {r}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          <div className="text-center">
+            <p className="font-[var(--font-serif)] text-[32px] text-[#e0d8cc]">{mode === "today" ? "?" : "..."}</p>
+            <p className="text-[13px] text-[#c0b8a8] mt-2">{mode === "today" ? "What city are you dressing for?" : "Where are you headed?"}</p>
+          </div>
         </div>
       )}
     </main>
@@ -492,6 +533,36 @@ function DayCard({ result }: { result: TodayResult }) {
             <p className="text-[11px] text-[#b0a490]">Couldn&apos;t generate outfit image</p>
           </div>
         )}
+      </div>
+
+      {/* Share */}
+      <div className="px-5 pb-5">
+        <button
+          onClick={async () => {
+            const text = `${result.outfit.headline}\n\n` +
+              `Walk out: ${result.outfit.walkOut.top}${result.outfit.walkOut.layer ? `, ${result.outfit.walkOut.layer}` : ""}, ${result.outfit.walkOut.bottom}, ${result.outfit.walkOut.shoes}\n\n` +
+              `${result.location} — via WeatherWear`;
+            if (navigator.share) {
+              try {
+                const shareData: ShareData = { title: "WeatherWear", text };
+                if (outfitImage) {
+                  const blob = await fetch(outfitImage).then((r) => r.blob());
+                  const file = new File([blob], "outfit.png", { type: "image/png" });
+                  if (navigator.canShare?.({ files: [file] })) {
+                    shareData.files = [file];
+                  }
+                }
+                await navigator.share(shareData);
+              } catch {}
+            } else {
+              await navigator.clipboard.writeText(text);
+              alert("Copied to clipboard!");
+            }
+          }}
+          className="w-full py-2.5 rounded-xl bg-[#6b7c5e] text-white text-[12px] font-medium tracking-wide hover:bg-[#5a6b4e] transition-colors"
+        >
+          Share this look
+        </button>
       </div>
     </div>
   );

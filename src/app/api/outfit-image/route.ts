@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     const accessories = (outfit.walkOut?.accessories || []).join(", ");
     const accString = accessories ? ` Accessories: ${accessories}.` : "";
 
-    const imagePrompt = `Generate a fashion photography image: A stylish person walking on a ${location.split(",")[0]} street in ${Math.round(temp)}°F weather. They are wearing: ${garments}.${accString} Street style editorial photography, natural lighting, shallow depth of field, fashion blog aesthetic. Full body shot, urban background.`;
+    const imagePrompt = `High-end fashion editorial photograph. A woman walking on a ${location.split(",")[0]} street in ${Math.round(temp)}°F weather. She is wearing: ${garments}.${accString} Style references: The Row, Khaite, Totême, Lemaire — quiet luxury, minimal, elevated basics, tonal dressing, impeccable tailoring, relaxed but intentional silhouettes. Muted earth tones and neutrals. Shot on 35mm film, natural light, shallow depth of field, street style editorial. Full body, urban setting. No logos visible.`;
 
     const geminiRes = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${process.env.GEMINI_API_KEY}`,

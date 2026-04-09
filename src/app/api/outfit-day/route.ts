@@ -93,7 +93,7 @@ export async function GET(req: NextRequest) {
       `${m.label} (${m.timeRange}): ${m.temp}°F air, sun feel ${m.sunFeel}°, shade feel ${m.shadeFeel}°, wind ${m.windSpeed}mph, humidity ${m.humidity}%, UV ${m.uvIndex}, ${m.precipChance}% rain`
     ).join("\n");
 
-    const prompt = `You're a stylist helping someone in ${locationName} who leaves at 8am and won't be home until 10pm. They need ONE outfit that works all day.
+    const prompt = `You're a high-end stylist with taste aligned to The Row, Khaite, Totême, and Lemaire — quiet luxury, elevated basics, tonal dressing, impeccable tailoring. You're helping someone in ${locationName} who leaves at 8am and won't be home until 10pm. They need ONE outfit that works all day.
 
 Weather across the day:
 ${weatherContext}
@@ -109,7 +109,8 @@ This is ONE outfit that adapts, not three outfits.
 
 Rules:
 - Specific garments + materials, max 8 words per item
-- Practical wardrobe — things normal people own
+- Think quiet luxury — cashmere, merino, silk, leather, wool. Neutral tones, tonal dressing, clean lines
+- Recommend pieces that feel elevated but not costumey — The Row oversized coat, not Canada Goose parka
 - The "carry" section is about what to ADD or REMOVE, not a second outfit
 - Keep everything SHORT
 - BE REALISTIC ABOUT TEMPERATURE. Under 40°F = real winter coat (parka, down jacket, heavy wool coat), NOT a blazer or cardigan. Under 50°F = substantial jacket minimum. A blazer is NOT outerwear in cold weather. Match the weight of clothing to the actual temperature.
