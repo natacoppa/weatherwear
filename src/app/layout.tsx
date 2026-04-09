@@ -17,6 +17,17 @@ export const metadata: Metadata = {
   title: "WeatherWear",
   description: "What to actually wear, based on how it actually feels.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  manifest: "/manifest.json",
+  themeColor: "#6b7c5e",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "WeatherWear",
+  },
+  icons: {
+    icon: "/icon-192.png",
+    apple: "/icon-192.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-[var(--font-sans)] bg-[#faf8f6]">
+      <body className="min-h-full flex flex-col font-[var(--font-sans)] bg-[#faf8f4]">
         {children}
       </body>
     </html>
