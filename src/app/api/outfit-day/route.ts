@@ -93,7 +93,20 @@ export async function GET(req: NextRequest) {
       `${m.label} (${m.timeRange}): ${m.temp}°F air, sun feel ${m.sunFeel}°, shade feel ${m.shadeFeel}°, wind ${m.windSpeed}mph, humidity ${m.humidity}%, UV ${m.uvIndex}, ${m.precipChance}% rain`
     ).join("\n");
 
-    const prompt = `You're a high-end stylist with taste aligned to The Row, Khaite, Totême, and Lemaire — quiet luxury, elevated basics, tonal dressing, impeccable tailoring. You're helping someone in ${locationName} who leaves at 8am and won't be home until 10pm. They need ONE outfit that works all day.
+    // Pick a random color direction so outfits vary across requests
+    const colorDirections = [
+      "dark and sharp: black, charcoal, navy, oxblood",
+      "earthy and rich: olive, burgundy, rust, dark brown, forest green",
+      "cool minimalist: slate grey, black, navy, white, ice blue",
+      "warm contrast: terracotta, navy, cream, dark olive",
+      "all black with one accent color",
+      "coastal clean: navy, white, slate blue, sand",
+      "jewel tones: deep emerald, burgundy, sapphire, plum",
+      "muted naturals: sage, stone, charcoal, mushroom",
+    ];
+    const colorDirection = colorDirections[Math.floor(Math.random() * colorDirections.length)];
+
+    const prompt = `You're a high-end stylist. You're helping someone in ${locationName} who leaves at 8am and won't be home until 10pm. They need ONE outfit that works all day.
 
 Weather across the day:
 ${weatherContext}
@@ -107,18 +120,21 @@ Think in three moments:
 
 This is ONE outfit that adapts, not three outfits.
 
+Today's color direction: ${colorDirection}. Every garment MUST include its color.
+
 Rules:
-- Specific garments + materials, max 8 words per item
-- Think quiet luxury — cashmere, merino, silk, leather, wool. Neutral tones, tonal dressing, clean lines
-- Recommend pieces that feel elevated but not costumey — The Row oversized coat, not Canada Goose parka
+- Specific garments + materials WITH COLOR, max 8 words per item (e.g., "Black merino crewneck" not "Merino crewneck")
+- Quality materials — cashmere, merino, silk, leather, wool, linen, cotton — but in VARIED colors, not always neutrals
+- BANNED as dominant palette: camel, cream, ivory, beige, taupe, oatmeal. Max ONE of these per outfit.
 - The "carry" section is about what to ADD or REMOVE, not a second outfit
 - Keep everything SHORT
-- BE REALISTIC ABOUT TEMPERATURE. Under 40°F = real winter coat (parka, down jacket, heavy wool coat), NOT a blazer or cardigan. Under 50°F = substantial jacket minimum. A blazer is NOT outerwear in cold weather. Match the weight of clothing to the actual temperature.
-- Under 25°F = heavy parka, thermal layers, insulated boots, gloves, hat — no exceptions
-- 25-40°F = proper winter coat, warm layers, closed boots
-- 40-55°F = medium jacket or heavy sweater, layers
-- 55-70°F = light jacket or layer, flexible
-- Over 70°F = light clothing, maybe a light layer for AC
+- MATCH CLOTHING WEIGHT TO ACTUAL TEMPERATURE — this is critical:
+  - Over 75°F = lightweight breathable fabrics only (linen, cotton, light silk). NO wool, NO cashmere, NO coats, NO heavy layers. Think t-shirts, sundresses, linen pants, sandals.
+  - 65-75°F = light layers, cotton or light knits, maybe a light jacket for evening
+  - 55-65°F = medium layers, light sweater + jacket
+  - 45-55°F = substantial jacket, warm layers
+  - 35-45°F = proper winter coat, warm layers, closed boots
+  - Under 35°F = heavy parka, thermal layers, insulated boots, gloves, hat
 
 JSON format:
 {

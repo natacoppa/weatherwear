@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     const accessories = (outfit.walkOut?.accessories || []).join(", ");
     const accString = accessories ? ` Accessories: ${accessories}.` : "";
 
-    const imagePrompt = `High-end fashion editorial photograph. A woman walking on a ${location.split(",")[0]} street in ${Math.round(temp)}°F weather. She is wearing: ${garments}.${accString} Style references: The Row, Khaite, Totême, Lemaire — quiet luxury, minimal, elevated basics, tonal dressing, impeccable tailoring, relaxed but intentional silhouettes. Muted earth tones and neutrals. Shot on 35mm film, natural light, shallow depth of field, street style editorial. Full body, urban setting. No logos visible.`;
+    const imagePrompt = `High-end fashion editorial photograph. A woman walking on a ${location.split(",")[0]} street in ${Math.round(temp)}°F weather. She is wearing exactly: ${garments}.${accString} The colors of the clothing should match exactly what is described — do NOT default to beige, camel, or cream unless the description specifically says those colors. Shot on 35mm film, natural light, shallow depth of field, street style editorial. Full body, urban setting. No logos visible.`;
 
     const geminiRes = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${process.env.GEMINI_API_KEY}`,
