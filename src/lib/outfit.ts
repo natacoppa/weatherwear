@@ -73,6 +73,7 @@ Rules:
 - Big sun/shade split = recommend easy layers
 - No suede in rain. No cashmere in humid heat. No cotton in cold + wet.
 - Wind amplifies cold significantly
+- Vary colors — don't default to camel/ivory/beige every time. Use the full range: black, navy, olive, burgundy, rust, slate, terracotta, forest green, charcoal, white, cream. Match palette to season and location energy. Neutrals are fine sometimes, just not every outfit.
 
 CRITICAL FORMATTING RULES:
 - "top", "outerwear", "bottom", "shoes": MAX 8 words each. Just the garment + material. e.g., "Linen camp-collar shirt" or "Cashmere quarter-zip sweater"
