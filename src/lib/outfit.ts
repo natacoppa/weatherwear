@@ -61,6 +61,19 @@ ${p.label} (${p.timeRange}):
     )
     .join("\n");
 
+  // Pick a random color palette to inject variety across requests
+  const palettes = [
+    { name: "dark and moody", colors: "black, charcoal, dark navy, oxblood" },
+    { name: "earthy rich", colors: "olive, burgundy, rust, dark brown" },
+    { name: "cool and urban", colors: "slate grey, black, navy, white" },
+    { name: "forest tones", colors: "deep green, charcoal, dark brown, black" },
+    { name: "warm contrast", colors: "terracotta, navy, cream, dark olive" },
+    { name: "monochrome", colors: "black, charcoal, grey, white" },
+    { name: "coastal", colors: "navy, white, slate blue, khaki" },
+    { name: "nordic", colors: "oatmeal, charcoal, navy, moss green" },
+  ];
+  const palette = palettes[Math.floor(Math.random() * palettes.length)];
+
   const prompt = `You're a stylist who knows how weather actually feels on your body. Be specific about garments and materials but KEEP IT SHORT. No explanations, no justifications — just the recommendation.
 
 Location: ${locationName} (elevation ${weather.elevation}m)
@@ -68,20 +81,23 @@ Range: ${weather.daily.tempMin}°F – ${weather.daily.tempMax}°F | UV max: ${w
 
 ${weatherContext}
 
+Today's color direction: ${palette.name} — build the outfit around these tones: ${palette.colors}. Every garment should specify its color.
+
 Rules:
-- Name exact garments + materials (e.g., "Merino crewneck" not "A warm sweater")
+- Name exact garments + materials WITH COLOR (e.g., "Black merino crewneck" not "Merino crewneck", "Navy wool peacoat" not "Wool peacoat")
+- Every "top", "outerwear", "bottom", and "shoes" field MUST start with a color
 - Big sun/shade split = recommend easy layers
 - No suede in rain. No cashmere in humid heat. No cotton in cold + wet.
 - Wind amplifies cold significantly
-- COLOR IS CRITICAL: Do NOT default to camel, cream, ivory, beige, or taupe. These are overused. For cold weather: black, charcoal, navy, dark olive, burgundy, deep forest green. For warm weather: white, slate blue, sage, terracotta, rust, khaki. Mix darks and colors — a black coat with olive trousers, a navy turtleneck with charcoal wool pants. Only use camel/cream if you're deliberately mixing them with darker pieces, never as the dominant palette.
+- BANNED colors as dominant palette: camel, cream, ivory, beige, taupe. Never use more than one of these in a single outfit.
 
 CRITICAL FORMATTING RULES:
-- "top", "outerwear", "bottom", "shoes": MAX 8 words each. Just the garment + material. e.g., "Linen camp-collar shirt" or "Cashmere quarter-zip sweater"
+- "top", "outerwear", "bottom", "shoes": MAX 8 words each. MUST start with a color. e.g., "Black linen camp-collar shirt" or "Navy cashmere quarter-zip sweater"
 - "summary": 1 short sentence, max 12 words
-- "accessories": max 4 words per item, e.g., "Polarized sunglasses", "Wool scarf"
+- "accessories": max 4 words per item, include color, e.g., "Black polarized sunglasses", "Burgundy wool scarf"
 - "materialNote": 1 sentence, max 15 words
 - "layeringTip": 1 sentence, max 15 words, or null
-- "headline": max 10 words
+- "headline": max 10 words, reference the color palette mood
 - "allDayEssentials": max 3 words per item, e.g., "SPF 30+", "Compact umbrella"
 
 JSON format:
@@ -95,11 +111,11 @@ JSON format:
       "sunFeel": 72,
       "shadeFeel": 58,
       "summary": "Short sentence about how it feels",
-      "top": "Garment + material, max 8 words",
-      "outerwear": "Garment or null",
-      "bottom": "Garment + material",
-      "shoes": "Shoe type + material",
-      "accessories": ["Short item name"],
+      "top": "COLOR + garment + material, max 8 words",
+      "outerwear": "COLOR + garment or null",
+      "bottom": "COLOR + garment + material",
+      "shoes": "COLOR + shoe type + material",
+      "accessories": ["Color + short item name"],
       "materialNote": "Why these materials, one sentence",
       "layeringTip": "Short tip or null"
     }
