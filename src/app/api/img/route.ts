@@ -5,17 +5,17 @@ import { NextRequest, NextResponse } from "next/server";
 // arbitrary URLs, only known-safe ShopMy/S3 CDNs.
 
 // Hostname allowlist for the image proxy. Only CDNs we intentionally hotlink
-// from are permitted; anything else gets a 400. Prevents the proxy from
-// being used for SSRF against internal hosts (metadata endpoints, etc.) or
-// as an open redirect/bandwidth sink.
+// from are permitted. Matches both the canonical ShopMy CDN and the raw S3
+// buckets in every region we've seen content served from (us-east-1,
+// us-east-2). If a new region shows up, images will 400 until it's added.
 const ALLOWED_HOSTS = new Set([
   "static.shopmy.us",
   "cdn.shopmy.us",
-  "production-shopmyshelf-uploads.s3.amazonaws.com",
-  "production-shopmyshelf-uploads.s3.us-east-1.amazonaws.com",
-  "production-shopmyshelf-pins.s3.amazonaws.com",
-  "production-shopmyshelf-pins.s3.us-east-1.amazonaws.com",
 ]);
+const ALLOWED_HOST_PATTERNS: RegExp[] = [
+  // ShopMy S3 buckets across any AWS region.
+  /^production-shopmyshelf-(uploads|pins)\.s3(?:[.-][a-z0-9-]+)?\.amazonaws\.com$/,
+];
 
 function rewriteUrl(url: string): string {
   // Rewrite all ShopMy S3 URLs to static.shopmy.us which allows public access
@@ -32,7 +32,8 @@ function isAllowed(url: string): boolean {
   try {
     const parsed = new URL(url);
     if (parsed.protocol !== "https:" && parsed.protocol !== "http:") return false;
-    return ALLOWED_HOSTS.has(parsed.hostname);
+    if (ALLOWED_HOSTS.has(parsed.hostname)) return true;
+    return ALLOWED_HOST_PATTERNS.some((r) => r.test(parsed.hostname));
   } catch {
     return false;
   }
@@ -41,14 +42,12 @@ function isAllowed(url: string): boolean {
 export async function GET(req: NextRequest) {
   const url = req.nextUrl.searchParams.get("url");
   if (!url) return new NextResponse("Missing url", { status: 400 });
-  if (!isAllowed(url)) return new NextResponse("Host not allowed", { status: 400 });
+  // Rewrite first, then check. The rewrite canonicalizes S3 variants to
+  // static.shopmy.us, so a us-east-2 URL becomes the allowlisted CDN host.
+  const fetchUrl = rewriteUrl(url);
+  if (!isAllowed(fetchUrl)) return new NextResponse("Host not allowed", { status: 400 });
 
   try {
-    const fetchUrl = rewriteUrl(url);
-    // The rewrite target is always static.shopmy.us which is in the allowlist,
-    // but re-check defensively in case rewriteUrl changes.
-    if (!isAllowed(fetchUrl)) return new NextResponse("Host not allowed", { status: 400 });
-
     const res = await fetch(fetchUrl, {
       headers: { "User-Agent": "Mozilla/5.0" },
     });
