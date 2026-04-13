@@ -28,7 +28,15 @@ interface ShopMyProduct {
   department: string;
 }
 
-function loadCreatorData(username: string): { products: ShopMyProduct[]; curatorId: number | null } | null {
+// ShopMy usernames are lowercase alphanumerics plus hyphen / underscore /
+// dot. Anything outside this character set is rejected before touching the
+// filesystem to prevent path traversal (e.g. `?creator=../../.env`).
+const VALID_USERNAME = /^[a-zA-Z0-9_.-]{1,64}$/;
+
+function loadCreatorData(
+  username: string,
+): { products: ShopMyProduct[]; curatorId: number | null } | null {
+  if (!VALID_USERNAME.test(username)) return null;
   const filePath = path.join(process.cwd(), "data/creators", `${username}.json`);
   try {
     const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));

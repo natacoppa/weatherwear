@@ -1,5 +1,5 @@
 ---
-status: pending
+status: complete
 priority: p1
 issue_id: "be-001"
 tags: [backend, security, path-traversal]
