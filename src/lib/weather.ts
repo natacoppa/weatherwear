@@ -1,3 +1,5 @@
+import { TtlCache } from "./cache";
+
 export interface WeatherData {
   location: string;
   latitude: number;
@@ -251,10 +253,25 @@ export function analyzeByTimeOfDay(
   });
 }
 
+// 10-minute TTL is enough to absorb burst traffic for popular cities
+// without serving stale forecasts. The cache key is rounded to 2 decimal
+// places (~1km precision) so two users searching the same city collide
+// even if their geocode drift is sub-kilometer.
+const weatherCache = new TtlCache<WeatherData>(10 * 60 * 1000);
+
 export async function fetchWeather(
   lat: number,
   lon: number,
   forecastDays: number = 7
+): Promise<WeatherData> {
+  const key = `${lat.toFixed(2)}|${lon.toFixed(2)}|${forecastDays}`;
+  return weatherCache.getOrCompute(key, () => fetchWeatherUncached(lat, lon, forecastDays));
+}
+
+async function fetchWeatherUncached(
+  lat: number,
+  lon: number,
+  forecastDays: number
 ): Promise<WeatherData> {
   const params = new URLSearchParams({
     latitude: lat.toString(),
@@ -418,9 +435,25 @@ function shiftYear(dateStr: string, delta: number): string {
   return year.toString() + dateStr.substring(4);
 }
 
-export async function geocode(
-  query: string
-): Promise<{ name: string; lat: number; lon: number; country: string; admin1: string } | null> {
+// Geocode results are deterministic per query; cache indefinitely.
+// Negative results (null) also cached briefly so typos don't retry on every
+// keystroke-driven fetch, but short TTL so genuinely new cities still land.
+type GeocodeResult = { name: string; lat: number; lon: number; country: string; admin1: string };
+const geocodeCache = new TtlCache<GeocodeResult | null>(Infinity);
+const NEGATIVE_TTL_MS = 60 * 1000;
+
+export async function geocode(query: string): Promise<GeocodeResult | null> {
+  const key = query.trim().toLowerCase();
+  if (!key) return null;
+  const cached = geocodeCache.get(key);
+  if (cached !== undefined) return cached;
+
+  const result = await geocodeUncached(query);
+  geocodeCache.set(key, result, result === null ? NEGATIVE_TTL_MS : Infinity);
+  return result;
+}
+
+async function geocodeUncached(query: string): Promise<GeocodeResult | null> {
   // Open-Meteo geocoding doesn't handle "city, state/country" well.
   // Try the full query first, then fall back to just the city part.
   const attempts = [query];

@@ -1,5 +1,5 @@
 ---
-status: pending
+status: complete
 priority: p1
 issue_id: "be-006"
 tags: [backend, performance, cost, cache]
