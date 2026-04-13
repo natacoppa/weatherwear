@@ -1,0 +1,149 @@
+// Lightweight runtime validators for AI-generated JSON. Not zod — just
+// enough to catch a missing/renamed field before it propagates as a typed
+// `any` into downstream code.
+//
+// Pattern: each validator asserts required keys and types, coerces where
+// safe, and throws AIShapeError with a human-readable message otherwise.
+//
+// Narrow the `unknown` into the declared return type and trust the caller
+// to have run this before using the result.
+
+import type { DayOutfit, CreatorOutfit, TripResult } from "@/lib/types";
+
+export class AIShapeError extends Error {
+  constructor(message: string, public readonly raw: unknown) {
+    super(`AI response shape invalid: ${message}`);
+    this.name = "AIShapeError";
+  }
+}
+
+function isObject(x: unknown): x is Record<string, unknown> {
+  return typeof x === "object" && x !== null && !Array.isArray(x);
+}
+
+function str(v: unknown, fallback = ""): string {
+  return typeof v === "string" ? v : fallback;
+}
+
+function strArray(v: unknown): string[] {
+  if (!Array.isArray(v)) return [];
+  return v.filter((x): x is string => typeof x === "string");
+}
+
+export function assertDayOutfit(raw: unknown): DayOutfit {
+  if (!isObject(raw)) throw new AIShapeError("not an object", raw);
+  if (!isObject(raw.walkOut)) throw new AIShapeError("walkOut missing", raw);
+  if (!isObject(raw.carry)) throw new AIShapeError("carry missing", raw);
+  if (!isObject(raw.evening)) throw new AIShapeError("evening missing", raw);
+
+  const walkOut = raw.walkOut;
+  const carry = raw.carry;
+  const evening = raw.evening;
+
+  return {
+    headline: str(raw.headline),
+    walkOut: {
+      summary: str(walkOut.summary),
+      top: str(walkOut.top),
+      layer: typeof walkOut.layer === "string" ? walkOut.layer : null,
+      bottom: str(walkOut.bottom),
+      shoes: str(walkOut.shoes),
+      accessories: strArray(walkOut.accessories),
+    },
+    carry: {
+      summary: str(carry.summary),
+      add: strArray(carry.add),
+      remove: strArray(carry.remove),
+      note: str(carry.note),
+    },
+    evening: {
+      summary: str(evening.summary),
+      add: strArray(evening.add),
+      note: str(evening.note),
+    },
+    bagEssentials: strArray(raw.bagEssentials),
+  };
+}
+
+// Packing-list shape used by /api/trip.
+export function assertPackingList(raw: unknown): TripResult["packingList"] {
+  if (!isObject(raw)) throw new AIShapeError("packing list not an object", raw);
+  const cats = Array.isArray(raw.categories) ? raw.categories : [];
+  return {
+    headline: str(raw.headline),
+    weatherSummary: str(raw.weatherSummary),
+    categories: cats
+      .filter(isObject)
+      .map((c) => ({
+        name: str(c.name),
+        items: strArray(c.items),
+      })),
+    skipList: strArray(raw.skipList),
+    proTip: str(raw.proTip),
+  };
+}
+
+// Creator-outfit shape used by /api/outfit-shopmy. Item indices are ints
+// referencing candidate arrays; we keep them as numbers and let the
+// consumer remap. Out-of-range indices become -1 elsewhere.
+interface CreatorCandidateSlot {
+  index: number;
+}
+
+export interface CreatorOutfitRaw {
+  headline: string;
+  walkOut: {
+    summary: string;
+    top: CreatorCandidateSlot | null;
+    layer: CreatorCandidateSlot | null;
+    bottom: CreatorCandidateSlot | null;
+    shoes: CreatorCandidateSlot | null;
+    accessories: CreatorCandidateSlot[];
+  };
+  carry: CreatorOutfit["outfit"]["carry"];
+  evening: CreatorOutfit["outfit"]["evening"];
+  bagEssentials: string[];
+}
+
+function slotOrNull(v: unknown): CreatorCandidateSlot | null {
+  if (!isObject(v)) return null;
+  if (typeof v.index !== "number") return null;
+  return { index: v.index };
+}
+
+export function assertCreatorOutfitRaw(raw: unknown): CreatorOutfitRaw {
+  if (!isObject(raw)) throw new AIShapeError("not an object", raw);
+  if (!isObject(raw.walkOut)) throw new AIShapeError("walkOut missing", raw);
+  if (!isObject(raw.carry)) throw new AIShapeError("carry missing", raw);
+  if (!isObject(raw.evening)) throw new AIShapeError("evening missing", raw);
+
+  const accessories = Array.isArray(raw.walkOut.accessories)
+    ? raw.walkOut.accessories.map(slotOrNull).filter((x): x is CreatorCandidateSlot => x !== null)
+    : [];
+
+  const carry = raw.carry;
+  const evening = raw.evening;
+  return {
+    headline: str(raw.headline),
+    walkOut: {
+      summary: str(raw.walkOut.summary),
+      top: slotOrNull(raw.walkOut.top),
+      layer: slotOrNull(raw.walkOut.layer),
+      bottom: slotOrNull(raw.walkOut.bottom),
+      shoes: slotOrNull(raw.walkOut.shoes),
+      accessories,
+    },
+    carry: {
+      summary: str(carry.summary),
+      add: strArray(carry.add),
+      remove: strArray(carry.remove),
+      note: str(carry.note),
+    },
+    evening: {
+      summary: str(evening.summary),
+      add: strArray(evening.add),
+      note: str(evening.note),
+    },
+    bagEssentials: strArray(raw.bagEssentials),
+  };
+}

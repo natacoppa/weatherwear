@@ -1,5 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import Anthropic from "@anthropic-ai/sdk";
+import type Anthropic from "@anthropic-ai/sdk";
+import { anthropic, CLAUDE_MODEL } from "@/lib/anthropic";
+import { AIShapeError, assertCreatorOutfitRaw } from "@/lib/ai-shapes";
+import { AIParseError, parseAiJson } from "@/lib/parse-ai-json";
 import { fetchWeather, geocode, calculateFeelsLike, HourlyForecast } from "@/lib/weather";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 import fs from "fs";
@@ -217,64 +220,60 @@ JSON only:
 Return ONLY valid JSON.`
     });
 
-    const client = new Anthropic({ apiKey: process.env.WW_ANTHROPIC_API_KEY! });
-    const message = await client.messages.create({
-      model: "claude-sonnet-4-5-20250929",
+    const message = await anthropic.messages.create({
+      model: CLAUDE_MODEL,
       max_tokens: 1000,
       messages: [{ role: "user", content: imageContents }],
     });
 
     const text = message.content[0].type === "text" ? message.content[0].text : "";
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) throw new Error("No JSON in response");
-    const outfit = JSON.parse(jsonMatch[0]);
+    const raw = assertCreatorOutfitRaw(parseAiJson(text));
 
-    // Map candidate indices back to the relevant array
-    function resolveIndex(idx: number) {
-      return candidates[idx] ? relevant.indexOf(candidates[idx]) : -1;
-    }
-    // Fix indices from candidate-space to relevant-space
-    if (outfit.walkOut) {
-      if (outfit.walkOut.top) outfit.walkOut.top.index = resolveIndex(outfit.walkOut.top.index);
-      if (outfit.walkOut.layer) outfit.walkOut.layer.index = resolveIndex(outfit.walkOut.layer.index);
-      if (outfit.walkOut.bottom) outfit.walkOut.bottom.index = resolveIndex(outfit.walkOut.bottom.index);
-      if (outfit.walkOut.shoes) outfit.walkOut.shoes.index = resolveIndex(outfit.walkOut.shoes.index);
-      if (outfit.walkOut.accessories) {
-        outfit.walkOut.accessories.forEach((a: { index: number }) => { a.index = resolveIndex(a.index); });
+    // Map candidate-space indices back to relevant-space. Returns -1 for
+    // hallucinated (out-of-range) indices so enrichItem can null them out.
+    const resolveIndex = (idx: number): number => {
+      if (idx < 0 || idx >= candidates.length) {
+        hallucinated.push(idx);
+        return -1;
       }
-    }
+      return relevant.indexOf(candidates[idx]);
+    };
+    const hallucinated: number[] = [];
 
-    // Enrich outfit items with product data
-    function enrichItem(item: { index: number; title: string } | null) {
-      if (!item || item.index < 0 || item.index >= relevant.length) return null;
-      const product = relevant[item.index];
+    const enrichItem = (slot: { index: number } | null) => {
+      if (!slot) return null;
+      const mapped = resolveIndex(slot.index);
+      if (mapped < 0 || mapped >= relevant.length) return null;
+      const product = relevant[mapped];
       const shopMyUrl = curatorId
         ? `https://shopmy.us/shop/product/${product.id}?Curator_id=${curatorId}`
         : product.url;
-      return { ...item, image: product.image, url: shopMyUrl, price: product.price, brand: product.brand };
-    }
+      return {
+        index: mapped,
+        title: product.title,
+        image: product.image,
+        url: shopMyUrl,
+        price: product.price,
+        brand: product.brand,
+      };
+    };
 
-    if (outfit.walkOut) {
-      outfit.walkOut.top = enrichItem(outfit.walkOut.top);
-      outfit.walkOut.layer = enrichItem(outfit.walkOut.layer);
-      outfit.walkOut.bottom = enrichItem(outfit.walkOut.bottom);
-      outfit.walkOut.shoes = enrichItem(outfit.walkOut.shoes);
-      if (outfit.walkOut.accessories) {
-        outfit.walkOut.accessories = outfit.walkOut.accessories.map(enrichItem).filter(Boolean);
-      }
-    }
-
-    // Resolve any indices the AI put in carry/evening arrays
-    function resolveItemName(val: string | number): string {
-      if (typeof val === "number") {
-        const item = candidates[val];
-        return item ? item.title : String(val);
-      }
-      return String(val);
-    }
-    if (outfit.carry?.remove) outfit.carry.remove = outfit.carry.remove.map(resolveItemName);
-    if (outfit.carry?.add) outfit.carry.add = outfit.carry.add.map(resolveItemName);
-    if (outfit.evening?.add) outfit.evening.add = outfit.evening.add.map(resolveItemName);
+    const outfit = {
+      headline: raw.headline,
+      walkOut: {
+        summary: raw.walkOut.summary,
+        top: enrichItem(raw.walkOut.top),
+        layer: enrichItem(raw.walkOut.layer),
+        bottom: enrichItem(raw.walkOut.bottom),
+        shoes: enrichItem(raw.walkOut.shoes),
+        accessories: raw.walkOut.accessories
+          .map(enrichItem)
+          .filter((x): x is NonNullable<ReturnType<typeof enrichItem>> => x !== null),
+      },
+      carry: raw.carry,
+      evening: raw.evening,
+      bagEssentials: raw.bagEssentials,
+    };
 
     return NextResponse.json({
       location: locationName,
@@ -283,9 +282,19 @@ Return ONLY valid JSON.`
       day: dayData,
       moments,
       outfit,
+      // Surface any hallucinated indices so clients can show a "couldn't
+      // match every pick" notice instead of silently dropping items.
+      ...(hallucinated.length > 0 && { hallucinatedIndices: hallucinated }),
     });
   } catch (error) {
-    console.error("ShopMy outfit error:", error instanceof Error ? error.message : error, error instanceof Error ? error.stack : "");
+    if (error instanceof AIParseError || error instanceof AIShapeError) {
+      console.error("ShopMy AI response error:", error.message);
+      return NextResponse.json(
+        { error: "The stylist's response was malformed — try again" },
+        { status: 502 },
+      );
+    }
+    console.error("ShopMy outfit error:", error instanceof Error ? error.message : error);
     return NextResponse.json({ error: "Failed to generate outfit" }, { status: 500 });
   }
 }

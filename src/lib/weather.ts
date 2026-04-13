@@ -281,20 +281,30 @@ export async function fetchWeather(
 
   const data = await res.json();
 
-  const hourly: HourlyForecast[] = data.hourly.time.map(
-    (time: string, i: number) => ({
-      time,
-      temperature: data.hourly.temperature_2m[i],
-      feelsLike: data.hourly.apparent_temperature[i],
-      humidity: data.hourly.relative_humidity_2m[i],
-      windSpeed: data.hourly.wind_speed_10m[i],
-      uvIndex: data.hourly.uv_index[i],
-      cloudCover: data.hourly.cloud_cover[i],
-      precipitationProbability: data.hourly.precipitation_probability[i],
-      solarRadiation: data.hourly.direct_normal_irradiance[i],
-      weatherCode: data.hourly.weather_code[i],
-    })
-  );
+  // Defensive: Open-Meteo occasionally omits a param (vendor change, outage,
+  // unit mismatch). Asserting upfront produces a clear error instead of
+  // NaN values silently flowing into feels-like math and AI prompts.
+  if (!data?.hourly?.time || !Array.isArray(data.hourly.time)) {
+    throw new Error("Weather API returned unexpected shape (missing hourly.time)");
+  }
+  const h = data.hourly;
+  const get = (key: string, i: number): number => {
+    const arr = h[key];
+    return Array.isArray(arr) && typeof arr[i] === "number" ? arr[i] : 0;
+  };
+
+  const hourly: HourlyForecast[] = h.time.map((time: string, i: number) => ({
+    time,
+    temperature: get("temperature_2m", i),
+    feelsLike: get("apparent_temperature", i),
+    humidity: get("relative_humidity_2m", i),
+    windSpeed: get("wind_speed_10m", i),
+    uvIndex: get("uv_index", i),
+    cloudCover: get("cloud_cover", i),
+    precipitationProbability: get("precipitation_probability", i),
+    solarRadiation: get("direct_normal_irradiance", i),
+    weatherCode: get("weather_code", i),
+  }));
 
   return {
     location: "",

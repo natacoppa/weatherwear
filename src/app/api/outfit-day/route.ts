@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import Anthropic from "@anthropic-ai/sdk";
+import { anthropic, CLAUDE_MODEL } from "@/lib/anthropic";
+import { AIShapeError, assertDayOutfit } from "@/lib/ai-shapes";
+import { AIParseError, parseAiJson } from "@/lib/parse-ai-json";
 import {
   fetchWeather,
   geocode,
@@ -171,16 +173,14 @@ JSON format:
 
 Return ONLY valid JSON.`;
 
-    const client = new Anthropic({ apiKey: process.env.WW_ANTHROPIC_API_KEY! });
-    const message = await client.messages.create({
-      model: "claude-sonnet-4-5-20250929",
+    const message = await anthropic.messages.create({
+      model: CLAUDE_MODEL,
       max_tokens: 800,
       messages: [{ role: "user", content: prompt }],
     });
 
     const text = message.content[0].type === "text" ? message.content[0].text : "";
-    const cleaned = text.replace(/```json?\s*/g, "").replace(/```\s*/g, "").trim();
-    const outfit = JSON.parse(cleaned);
+    const outfit = assertDayOutfit(parseAiJson(text));
 
     return NextResponse.json({
       location: locationName,
@@ -191,6 +191,13 @@ Return ONLY valid JSON.`;
       outfit,
     });
   } catch (error) {
+    if (error instanceof AIParseError || error instanceof AIShapeError) {
+      console.error("Outfit day AI response error:", error.message);
+      return NextResponse.json(
+        { error: "The stylist's response was malformed — try again" },
+        { status: 502 },
+      );
+    }
     console.error("Outfit day API error:", error);
     return NextResponse.json({ error: "Failed to generate outfit" }, { status: 500 });
   }
