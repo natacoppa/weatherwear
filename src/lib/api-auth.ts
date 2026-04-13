@@ -10,7 +10,9 @@ import { corsHeaders } from "./rate-limit";
 const HEADER = "x-ww-key";
 
 export function requireApiKey(req: NextRequest): NextResponse | null {
-  const expected = process.env.WW_API_KEY;
+  // `.trim()` defends against env values that accidentally include a
+  // trailing newline (easy to do when piping `echo` into `vercel env add`).
+  const expected = process.env.WW_API_KEY?.trim();
 
   // If the env var isn't configured (local dev without the key),
   // allow requests through — saves setup friction. Production always has
@@ -22,7 +24,7 @@ export function requireApiKey(req: NextRequest): NextResponse | null {
     return null;
   }
 
-  const provided = req.headers.get(HEADER);
+  const provided = req.headers.get(HEADER)?.trim();
   if (provided !== expected) {
     return NextResponse.json(
       { error: "Unauthorized" },
