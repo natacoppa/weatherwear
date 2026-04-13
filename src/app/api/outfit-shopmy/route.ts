@@ -151,32 +151,49 @@ export async function GET(req: NextRequest) {
     addFromPool(dresses, 1);
     addFromPool(bags, 1);
 
-    // Fetch images for candidates and build vision prompt
-    const imageContents: Anthropic.Messages.ContentBlockParam[] = [];
-    for (let i = 0; i < candidates.length; i++) {
-      const p = candidates[i];
-      try {
-        const imgUrl = rewriteImageUrl(p.image);
-        const imgRes = await fetch(imgUrl, { headers: { "User-Agent": "Mozilla/5.0" } });
-        if (imgRes.ok) {
+    // Fetch candidate images in parallel. Previously sequential: 12
+    // images × 100-300ms each = 1-4s of serial I/O. Promise.all cuts this
+    // to the slowest single fetch. Order is preserved so the Claude
+    // prompt's [${i}] indices remain valid.
+    //
+    // Per-image timeout guards against a single slow CDN response
+    // tanking the whole request (Vercel Hobby tier has a 10s total
+    // budget).
+    const FETCH_TIMEOUT_MS = 3000;
+    const textLabel = (i: number, p: ShopMyProduct, suffix = "") =>
+      `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"}${suffix}`;
+
+    const blocks = await Promise.all(
+      candidates.map(async (p, i): Promise<Anthropic.Messages.ContentBlockParam[]> => {
+        try {
+          const imgUrl = rewriteImageUrl(p.image);
+          const imgRes = await fetch(imgUrl, {
+            headers: { "User-Agent": "Mozilla/5.0" },
+            signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+          });
+          if (!imgRes.ok) {
+            return [{ type: "text", text: textLabel(i, p, " (no image)") }];
+          }
           const buffer = Buffer.from(await imgRes.arrayBuffer());
           const ct = imgRes.headers.get("content-type") || "image/jpeg";
-          const mediaType = ct.includes("png") ? "image/png" as const : ct.includes("webp") ? "image/webp" as const : "image/jpeg" as const;
-          imageContents.push(
-            { type: "text", text: `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"}` },
-            { type: "image", source: { type: "base64", media_type: mediaType, data: buffer.toString("base64") } },
-          );
-        } else {
-          imageContents.push(
-            { type: "text", text: `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"} (no image)` },
-          );
+          const mediaType = ct.includes("png")
+            ? ("image/png" as const)
+            : ct.includes("webp")
+              ? ("image/webp" as const)
+              : ("image/jpeg" as const);
+          return [
+            { type: "text", text: textLabel(i, p) },
+            {
+              type: "image",
+              source: { type: "base64", media_type: mediaType, data: buffer.toString("base64") },
+            },
+          ];
+        } catch {
+          return [{ type: "text", text: textLabel(i, p, " (no image)") }];
         }
-      } catch {
-        imageContents.push(
-          { type: "text", text: `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"} (no image)` },
-        );
-      }
-    }
+      }),
+    );
+    const imageContents: Anthropic.Messages.ContentBlockParam[] = blocks.flat();
 
     const styleDirections = [
       "polished minimalist — clean lines, muted tones, understated",
