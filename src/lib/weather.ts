@@ -177,9 +177,13 @@ export function analyzeByTimeOfDay(
   elevation: number,
   targetDate?: string // "YYYY-MM-DD" — if omitted, uses today and filters past periods
 ): TimeOfDayWeather[] {
-  const isToday = !targetDate || targetDate === new Date().toISOString().split("T")[0];
-  const currentHour = isToday ? new Date().getHours() : 0;
-  const datePrefix = targetDate || new Date().toISOString().split("T")[0];
+  // Capture `now` once to avoid minute-boundary disagreement between the
+  // ISO date and hour reads.
+  const now = new Date();
+  const todayIso = now.toISOString().split("T")[0];
+  const isToday = !targetDate || targetDate === todayIso;
+  const currentHour = isToday ? now.getHours() : 0;
+  const datePrefix = targetDate || todayIso;
 
   const periods: {
     period: "daytime" | "night";
@@ -198,7 +202,8 @@ export function analyzeByTimeOfDay(
   return relevantPeriods.map((p) => {
     const hours = hourly.filter((h) => {
       if (!h.time.startsWith(datePrefix)) return false;
-      const hour = new Date(h.time).getHours();
+      // Hour parsed from the bare ISO string — see outfit-day/route.ts.
+      const hour = parseInt(h.time.split("T")[1].slice(0, 2), 10);
       return hour >= p.startHour && hour < p.endHour;
     });
 

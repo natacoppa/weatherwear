@@ -88,9 +88,13 @@ export async function GET(req: NextRequest) {
     const targetDate = dayData.date;
     const dayHours = weather.hourly.filter((h) => h.time.startsWith(targetDate));
 
-    const walkOut = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 7 && hr <= 9; });
-    const midday = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 11 && hr <= 15; });
-    const evening = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 18 && hr <= 22; });
+    // See outfit-day/route.ts for why we parse the hour from the string
+    // directly — Open-Meteo `timezone: "auto"` returns bare local-time ISO
+    // strings that `new Date(...)` misinterprets in the server's TZ.
+    const hourOf = (iso: string) => parseInt(iso.split("T")[1].slice(0, 2), 10);
+    const walkOut = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 7 && hr <= 9; });
+    const midday = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 11 && hr <= 15; });
+    const evening = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 18 && hr <= 22; });
 
     const moments = [
       walkOut.length > 0 ? analyzeMoment(walkOut, weather.elevation, "Walk out the door", "7–9am") : null,

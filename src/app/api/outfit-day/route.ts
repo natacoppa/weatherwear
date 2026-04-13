@@ -82,10 +82,14 @@ export async function GET(req: NextRequest) {
     // Filter hourly to target day
     const dayHours = weather.hourly.filter((h) => h.time.startsWith(targetDate));
 
-    // Three moments
-    const walkOut = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 7 && hr <= 9; });
-    const midday = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 11 && hr <= 15; });
-    const evening = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 18 && hr <= 22; });
+    // Three moments. Open-Meteo `timezone: "auto"` returns bare local-time
+    // strings like "2026-04-13T08:00" with no offset. `new Date(...)` parses
+    // these in the server's local timezone (wrong for cities far from the
+    // server), so read the hour straight out of the string.
+    const hourOf = (iso: string) => parseInt(iso.split("T")[1].slice(0, 2), 10);
+    const walkOut = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 7 && hr <= 9; });
+    const midday = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 11 && hr <= 15; });
+    const evening = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 18 && hr <= 22; });
 
     const moments = [
       walkOut.length > 0 ? analyzeMoment(walkOut, weather.elevation, "Walk out the door", "7–9am") : null,
