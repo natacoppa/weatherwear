@@ -215,7 +215,7 @@ Return ONLY valid JSON.`
     const text = message.content[0].type === "text" ? message.content[0].text : "";
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (!jsonMatch) throw new Error("No JSON in response");
-    let outfit = JSON.parse(jsonMatch[0]);
+    const outfit = JSON.parse(jsonMatch[0]);
 
     // Map candidate indices back to the relevant array
     function resolveIndex(idx: number) {

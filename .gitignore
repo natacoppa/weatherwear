@@ -12,6 +12,9 @@
 
 # testing
 /coverage
+/test-results
+/playwright-report
+/playwright/.cache
 
 # next.js
 /.next/
@@ -45,4 +48,3 @@ test-outfit.png
 /video
 /logo-concepts
 /plans
-/src/app/page-v1.tsx
