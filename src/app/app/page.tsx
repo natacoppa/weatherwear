@@ -15,6 +15,18 @@ import type { CreatorInfo, CreatorOutfit, TodayResult, TripResult } from "@/lib/
 const fmt = (d: string) =>
   new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
 
+// Read the body once; fall back gracefully for non-JSON (502 gateway HTML etc.).
+async function readError(res: Response): Promise<string> {
+  try {
+    const body = (await res.json()) as { error?: string };
+    return body.error || `HTTP ${res.status}`;
+  } catch {
+    return `HTTP ${res.status}`;
+  }
+}
+
+const isAbort = (e: unknown) => e instanceof DOMException && e.name === "AbortError";
+
 function dayLabel(result: TodayResult) {
   if (result.dayIndex === 0) return "Today";
   if (result.dayIndex === 1) return "Tomorrow";
@@ -53,16 +65,14 @@ export default function AppPage() {
   const primaryCtrl = useRef<AbortController | null>(null);
   const drillCtrl = useRef<AbortController | null>(null);
 
-  // Read the body once; fall back gracefully for non-JSON (502 gateway HTML etc.).
-  async function readError(res: Response): Promise<string> {
-    try {
-      const body = (await res.json()) as { error?: string };
-      return body.error || `HTTP ${res.status}`;
-    } catch {
-      return `HTTP ${res.status}`;
-    }
-  }
-  const isAbort = (e: unknown) => e instanceof DOMException && e.name === "AbortError";
+  // Abort any in-flight fetches when the user navigates away from /app,
+  // preventing state-update-on-unmounted warnings and wasted network work.
+  useEffect(() => {
+    return () => {
+      primaryCtrl.current?.abort();
+      drillCtrl.current?.abort();
+    };
+  }, []);
 
   const fetchToday = useCallback(async (q: string, day: number) => {
     primaryCtrl.current?.abort();
@@ -74,6 +84,9 @@ export default function AppPage() {
       const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${day}`, { signal: ctrl.signal });
       if (!res.ok) throw new Error(await readError(res));
       const data = (await res.json()) as TodayResult;
+      // Guard: response body can resolve after abort() if the browser
+      // already buffered it. Check the signal before writing state.
+      if (ctrl.signal.aborted) return;
       setTodayResult(data);
       setDayIndex(data.dayIndex);
     } catch (e) {
@@ -98,7 +111,9 @@ export default function AppPage() {
         { signal: ctrl.signal },
       );
       if (!res.ok) throw new Error(await readError(res));
-      setTripResult((await res.json()) as TripResult);
+      const data = (await res.json()) as TripResult;
+      if (ctrl.signal.aborted) return;
+      setTripResult(data);
     } catch (e) {
       if (isAbort(e)) return;
       setError(e instanceof Error ? e.message : "Error");
@@ -115,7 +130,9 @@ export default function AppPage() {
     try {
       const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${dayIdx}`, { signal: ctrl.signal });
       if (!res.ok) throw new Error(await readError(res));
-      setDrillDay((await res.json()) as TodayResult);
+      const data = (await res.json()) as TodayResult;
+      if (ctrl.signal.aborted) return;
+      setDrillDay(data);
     } catch (e) {
       if (isAbort(e)) return;
       setDrillDay(null);
@@ -137,7 +154,9 @@ export default function AppPage() {
         { signal: ctrl.signal },
       );
       if (!res.ok) throw new Error(await readError(res));
-      setCreatorResult((await res.json()) as CreatorOutfit);
+      const data = (await res.json()) as CreatorOutfit;
+      if (ctrl.signal.aborted) return;
+      setCreatorResult(data);
     } catch (e) {
       if (isAbort(e)) return;
       setError(e instanceof Error ? e.message : "Error");

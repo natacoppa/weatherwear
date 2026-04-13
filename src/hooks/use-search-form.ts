@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Mode } from "@/lib/types";
 
 export interface SearchFormState {
@@ -22,20 +22,15 @@ export interface SearchFormHandlers {
   onSubmit: (e: React.FormEvent) => void;
   /**
    * Programmatically submit a search — updates the query field then fires
-   * the configured onSubmit. Used by recents / sample-city pills.
+   * the configured onSubmit. Passes `q` directly to the submit payload,
+   * so callers don't need to wait for setQuery to commit.
    */
   submitWith: (query: string) => void;
 }
 
 interface Options {
-  // Called after a valid submit with the current state. AppPage uses this
-  // to dispatch the right fetch (today / trip / creator) and record a recent.
   onSubmit: (state: SearchFormState) => void;
-  // Called when the user changes mode. AppPage uses this to abort in-flight
-  // primary fetches and clear opposite-mode result state.
   onModeChange?: (next: Mode) => void;
-  // Called when the creator selection changes. AppPage uses this to abort
-  // primary fetches and drop stale creator result.
   onCreatorChange?: (next: string) => void;
 }
 
@@ -57,51 +52,67 @@ export function useSearchForm(opts: Options): {
   const [tripEnd, setTripEnd] = useState(defaultEndIso);
   const [editingSearch, setEditingSearch] = useState(false);
 
-  const onModeChange = useCallback(
-    (m: Mode) => {
-      setMode(m);
-      opts.onModeChange?.(m);
-    },
-    [opts],
-  );
+  // Stash latest opts in a ref so the returned handlers stay referentially
+  // stable (callers typically pass a fresh inline options object every
+  // render). Handlers read `optsRef.current.*` instead of closing over opts.
+  const optsRef = useRef(opts);
+  useEffect(() => {
+    optsRef.current = opts;
+  });
 
-  const onCreatorChange = useCallback(
-    (u: string) => {
-      setSelectedCreator(u);
-      opts.onCreatorChange?.(u);
-    },
-    [opts],
-  );
+  // Same treatment for state read inside submitWith / dispatchSearch —
+  // keep a ref so we don't need those state values in the callback deps
+  // and callbacks remain stable across renders. Sync in an effect so we
+  // don't touch refs during render (React's lint rule).
+  const stateRef = useRef<SearchFormState>({
+    mode,
+    query,
+    selectedCreator,
+    tripStart,
+    tripEnd,
+    editingSearch,
+  });
+  useEffect(() => {
+    stateRef.current = { mode, query, selectedCreator, tripStart, tripEnd, editingSearch };
+  });
+
+  const onModeChange = useCallback((m: Mode) => {
+    setMode(m);
+    optsRef.current.onModeChange?.(m);
+  }, []);
+
+  const onCreatorChange = useCallback((u: string) => {
+    setSelectedCreator(u);
+    optsRef.current.onCreatorChange?.(u);
+  }, []);
 
   const onTripStartChange = useCallback((d: string) => {
     setTripStart(d);
-    // If the new start is after the end, push end forward so the range stays valid.
+    // Keep range valid if new start is past current end.
     setTripEnd((prev) => (d > prev ? d : prev));
   }, []);
 
-  const dispatchSearch = useCallback(
-    (q: string) => {
-      const trimmed = q.trim();
-      if (!trimmed) return;
-      opts.onSubmit({
-        mode,
-        query: trimmed,
-        selectedCreator,
-        tripStart,
-        tripEnd,
-        editingSearch,
-      });
-      setEditingSearch(false);
-    },
-    [editingSearch, mode, opts, selectedCreator, tripEnd, tripStart],
-  );
+  const dispatchSearch = useCallback((q: string) => {
+    const trimmed = q.trim();
+    if (!trimmed) return;
+    const s = stateRef.current;
+    optsRef.current.onSubmit({
+      mode: s.mode,
+      query: trimmed,
+      selectedCreator: s.selectedCreator,
+      tripStart: s.tripStart,
+      tripEnd: s.tripEnd,
+      editingSearch: s.editingSearch,
+    });
+    setEditingSearch(false);
+  }, []);
 
   const onSubmit = useCallback(
     (e: React.FormEvent) => {
       e.preventDefault();
-      dispatchSearch(query);
+      dispatchSearch(stateRef.current.query);
     },
-    [dispatchSearch, query],
+    [dispatchSearch],
   );
 
   const submitWith = useCallback(
@@ -112,6 +123,8 @@ export function useSearchForm(opts: Options): {
     [dispatchSearch],
   );
 
+  const onEdit = useCallback(() => setEditingSearch(true), []);
+
   return {
     state: { mode, query, selectedCreator, tripStart, tripEnd, editingSearch },
     handlers: {
@@ -120,7 +133,7 @@ export function useSearchForm(opts: Options): {
       onCreatorChange,
       onTripStartChange,
       onTripEndChange: setTripEnd,
-      onEdit: () => setEditingSearch(true),
+      onEdit,
       onSubmit,
       submitWith,
     },
