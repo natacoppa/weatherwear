@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Serif_Display, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -13,12 +13,32 @@ const sans = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "WeatherWear",
-  description: "What to actually wear, based on how it actually feels.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
-  manifest: "/manifest.json",
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#6b7c5e",
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://weatherwear-blush.vercel.app"),
+  title: {
+    default: "WeatherWear — What to actually wear, based on how it actually feels",
+    template: "%s | WeatherWear",
+  },
+  description: "AI-powered outfit recommendations based on hourly weather — sun feel, shade feel, wind chill, UV, and rain chance. Plus a REST API for developers.",
+  manifest: "/manifest.json",
+  openGraph: {
+    title: "WeatherWear — What to actually wear, based on how it actually feels",
+    description: "AI-powered outfit recommendations based on hourly weather — sun feel, shade feel, wind chill, UV, and rain chance.",
+    siteName: "WeatherWear",
+    type: "website",
+    url: "https://weatherwear-blush.vercel.app",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "WeatherWear",
+    description: "What to actually wear, based on how it actually feels.",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",

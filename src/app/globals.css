@@ -128,3 +128,26 @@
     @apply font-sans;
   }
 }
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slowScroll {
+  0%, 10% {
+    transform: translateY(0);
+  }
+  45%, 55% {
+    transform: translateY(calc(-100% + 480px));
+  }
+  90%, 100% {
+    transform: translateY(0);
+  }
+}
