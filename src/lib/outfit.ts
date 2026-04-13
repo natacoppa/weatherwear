@@ -1,4 +1,5 @@
-import Anthropic from "@anthropic-ai/sdk";
+import { anthropic, CLAUDE_MODEL } from "@/lib/anthropic";
+import { parseAiJson } from "@/lib/parse-ai-json";
 import { DayForecast, TimeOfDayWeather, WeatherData } from "./weather";
 
 // The API route passes a single day's forecast instead of the full array
@@ -125,9 +126,8 @@ JSON format:
 
 Return ONLY valid JSON, no markdown.`;
 
-  const client = new Anthropic({ apiKey: process.env.WW_ANTHROPIC_API_KEY! });
-  const message = await client.messages.create({
-    model: "claude-sonnet-4-5-20250929",
+  const message = await anthropic.messages.create({
+    model: CLAUDE_MODEL,
     max_tokens: 1500,
     messages: [{ role: "user", content: prompt }],
   });
@@ -135,8 +135,7 @@ Return ONLY valid JSON, no markdown.`;
   const text =
     message.content[0].type === "text" ? message.content[0].text : "";
 
-  const cleaned = text.replace(/```json?\s*/g, "").replace(/```\s*/g, "").trim();
-  return JSON.parse(cleaned) as OutfitResponse;
+  return parseAiJson<OutfitResponse>(text);
 }
 
 // ── Rule-based fallback ──────────────────────────────────────────────

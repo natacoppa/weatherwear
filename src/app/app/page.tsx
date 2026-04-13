@@ -9,6 +9,7 @@ import { OutfitLoader } from "@/components/outfit-loader";
 import { SearchControls } from "@/components/search-controls";
 import { useRecents } from "@/hooks/use-recents";
 import { useSearchForm, type SearchFormState } from "@/hooks/use-search-form";
+import { apiFetch } from "@/lib/api-fetch";
 import { shopUrl } from "@/lib/shop";
 import type { CreatorInfo, CreatorOutfit, TodayResult, TripResult } from "@/lib/types";
 
@@ -53,7 +54,7 @@ export default function AppPage() {
   const [creatorResult, setCreatorResult] = useState<CreatorOutfit | null>(null);
 
   useEffect(() => {
-    fetch("/api/creators")
+    apiFetch("/api/creators")
       .then((r) => r.json())
       .then(setCreators)
       .catch(() => {});
@@ -81,7 +82,7 @@ export default function AppPage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${day}`, { signal: ctrl.signal });
+      const res = await apiFetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${day}`, { signal: ctrl.signal });
       if (!res.ok) throw new Error(await readError(res));
       const data = (await res.json()) as TodayResult;
       // Guard: response body can resolve after abort() if the browser
@@ -106,7 +107,7 @@ export default function AppPage() {
     setError(null);
     setDrillDay(null);
     try {
-      const res = await fetch(
+      const res = await apiFetch(
         `/api/trip?q=${encodeURIComponent(q)}&startDate=${start}&endDate=${end}`,
         { signal: ctrl.signal },
       );
@@ -128,7 +129,7 @@ export default function AppPage() {
     drillCtrl.current = ctrl;
     setDrillLoading(true);
     try {
-      const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${dayIdx}`, { signal: ctrl.signal });
+      const res = await apiFetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${dayIdx}`, { signal: ctrl.signal });
       if (!res.ok) throw new Error(await readError(res));
       const data = (await res.json()) as TodayResult;
       if (ctrl.signal.aborted) return;
@@ -149,7 +150,7 @@ export default function AppPage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(
+      const res = await apiFetch(
         `/api/outfit-shopmy?q=${encodeURIComponent(q)}&creator=${encodeURIComponent(creator)}`,
         { signal: ctrl.signal },
       );

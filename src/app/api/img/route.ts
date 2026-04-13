@@ -1,4 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
+// No requireApiKey here: this route is loaded via <img src> from the
+// browser, which can't send custom headers. The SSRF host allowlist
+// below is the real protection — bots can't use this proxy to fetch
+// arbitrary URLs, only known-safe ShopMy/S3 CDNs.
 
 // Hostname allowlist for the image proxy. Only CDNs we intentionally hotlink
 // from are permitted; anything else gets a 400. Prevents the proxy from

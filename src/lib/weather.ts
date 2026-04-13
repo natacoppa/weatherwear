@@ -1,3 +1,5 @@
+import { TtlCache } from "./cache";
+
 export interface WeatherData {
   location: string;
   latitude: number;
@@ -177,9 +179,13 @@ export function analyzeByTimeOfDay(
   elevation: number,
   targetDate?: string // "YYYY-MM-DD" — if omitted, uses today and filters past periods
 ): TimeOfDayWeather[] {
-  const isToday = !targetDate || targetDate === new Date().toISOString().split("T")[0];
-  const currentHour = isToday ? new Date().getHours() : 0;
-  const datePrefix = targetDate || new Date().toISOString().split("T")[0];
+  // Capture `now` once to avoid minute-boundary disagreement between the
+  // ISO date and hour reads.
+  const now = new Date();
+  const todayIso = now.toISOString().split("T")[0];
+  const isToday = !targetDate || targetDate === todayIso;
+  const currentHour = isToday ? now.getHours() : 0;
+  const datePrefix = targetDate || todayIso;
 
   const periods: {
     period: "daytime" | "night";
@@ -198,7 +204,8 @@ export function analyzeByTimeOfDay(
   return relevantPeriods.map((p) => {
     const hours = hourly.filter((h) => {
       if (!h.time.startsWith(datePrefix)) return false;
-      const hour = new Date(h.time).getHours();
+      // Hour parsed from the bare ISO string — see outfit-day/route.ts.
+      const hour = parseInt(h.time.split("T")[1].slice(0, 2), 10);
       return hour >= p.startHour && hour < p.endHour;
     });
 
@@ -246,10 +253,25 @@ export function analyzeByTimeOfDay(
   });
 }
 
+// 10-minute TTL is enough to absorb burst traffic for popular cities
+// without serving stale forecasts. The cache key is rounded to 2 decimal
+// places (~1km precision) so two users searching the same city collide
+// even if their geocode drift is sub-kilometer.
+const weatherCache = new TtlCache<WeatherData>(10 * 60 * 1000);
+
 export async function fetchWeather(
   lat: number,
   lon: number,
   forecastDays: number = 7
+): Promise<WeatherData> {
+  const key = `${lat.toFixed(2)}|${lon.toFixed(2)}|${forecastDays}`;
+  return weatherCache.getOrCompute(key, () => fetchWeatherUncached(lat, lon, forecastDays));
+}
+
+async function fetchWeatherUncached(
+  lat: number,
+  lon: number,
+  forecastDays: number
 ): Promise<WeatherData> {
   const params = new URLSearchParams({
     latitude: lat.toString(),
@@ -276,20 +298,30 @@ export async function fetchWeather(
 
   const data = await res.json();
 
-  const hourly: HourlyForecast[] = data.hourly.time.map(
-    (time: string, i: number) => ({
-      time,
-      temperature: data.hourly.temperature_2m[i],
-      feelsLike: data.hourly.apparent_temperature[i],
-      humidity: data.hourly.relative_humidity_2m[i],
-      windSpeed: data.hourly.wind_speed_10m[i],
-      uvIndex: data.hourly.uv_index[i],
-      cloudCover: data.hourly.cloud_cover[i],
-      precipitationProbability: data.hourly.precipitation_probability[i],
-      solarRadiation: data.hourly.direct_normal_irradiance[i],
-      weatherCode: data.hourly.weather_code[i],
-    })
-  );
+  // Defensive: Open-Meteo occasionally omits a param (vendor change, outage,
+  // unit mismatch). Asserting upfront produces a clear error instead of
+  // NaN values silently flowing into feels-like math and AI prompts.
+  if (!data?.hourly?.time || !Array.isArray(data.hourly.time)) {
+    throw new Error("Weather API returned unexpected shape (missing hourly.time)");
+  }
+  const h = data.hourly;
+  const get = (key: string, i: number): number => {
+    const arr = h[key];
+    return Array.isArray(arr) && typeof arr[i] === "number" ? arr[i] : 0;
+  };
+
+  const hourly: HourlyForecast[] = h.time.map((time: string, i: number) => ({
+    time,
+    temperature: get("temperature_2m", i),
+    feelsLike: get("apparent_temperature", i),
+    humidity: get("relative_humidity_2m", i),
+    windSpeed: get("wind_speed_10m", i),
+    uvIndex: get("uv_index", i),
+    cloudCover: get("cloud_cover", i),
+    precipitationProbability: get("precipitation_probability", i),
+    solarRadiation: get("direct_normal_irradiance", i),
+    weatherCode: get("weather_code", i),
+  }));
 
   return {
     location: "",
@@ -403,9 +435,25 @@ function shiftYear(dateStr: string, delta: number): string {
   return year.toString() + dateStr.substring(4);
 }
 
-export async function geocode(
-  query: string
-): Promise<{ name: string; lat: number; lon: number; country: string; admin1: string } | null> {
+// Geocode results are deterministic per query; cache indefinitely.
+// Negative results (null) also cached briefly so typos don't retry on every
+// keystroke-driven fetch, but short TTL so genuinely new cities still land.
+type GeocodeResult = { name: string; lat: number; lon: number; country: string; admin1: string };
+const geocodeCache = new TtlCache<GeocodeResult | null>(Infinity);
+const NEGATIVE_TTL_MS = 60 * 1000;
+
+export async function geocode(query: string): Promise<GeocodeResult | null> {
+  const key = query.trim().toLowerCase();
+  if (!key) return null;
+  const cached = geocodeCache.get(key);
+  if (cached !== undefined) return cached;
+
+  const result = await geocodeUncached(query);
+  geocodeCache.set(key, result, result === null ? NEGATIVE_TTL_MS : Infinity);
+  return result;
+}
+
+async function geocodeUncached(query: string): Promise<GeocodeResult | null> {
   // Open-Meteo geocoding doesn't handle "city, state/country" well.
   // Try the full query first, then fall back to just the city part.
   const attempts = [query];

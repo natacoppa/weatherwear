@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import Anthropic from "@anthropic-ai/sdk";
+import type Anthropic from "@anthropic-ai/sdk";
+import { anthropic, CLAUDE_MODEL } from "@/lib/anthropic";
+import { AIShapeError, assertCreatorOutfitRaw } from "@/lib/ai-shapes";
+import { AIParseError, parseAiJson } from "@/lib/parse-ai-json";
 import { fetchWeather, geocode, calculateFeelsLike, HourlyForecast } from "@/lib/weather";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
+import { requireApiKey } from "@/lib/api-auth";
 import fs from "fs";
 import path from "path";
 
@@ -28,7 +32,15 @@ interface ShopMyProduct {
   department: string;
 }
 
-function loadCreatorData(username: string): { products: ShopMyProduct[]; curatorId: number | null } | null {
+// ShopMy usernames are lowercase alphanumerics plus hyphen / underscore /
+// dot. Anything outside this character set is rejected before touching the
+// filesystem to prevent path traversal (e.g. `?creator=../../.env`).
+const VALID_USERNAME = /^[a-zA-Z0-9_.-]{1,64}$/;
+
+function loadCreatorData(
+  username: string,
+): { products: ShopMyProduct[]; curatorId: number | null } | null {
+  if (!VALID_USERNAME.test(username)) return null;
   const filePath = path.join(process.cwd(), "data/creators", `${username}.json`);
   try {
     const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
@@ -60,6 +72,8 @@ function analyzeMoment(hours: HourlyForecast[], elevation: number, label: string
 // ── Route ───────────────────────────────────────────────────────────
 
 export async function GET(req: NextRequest) {
+  const unauthed = requireApiKey(req);
+  if (unauthed) return unauthed;
   const limited = rateLimit(req);
   if (limited) return limited;
 
@@ -88,9 +102,13 @@ export async function GET(req: NextRequest) {
     const targetDate = dayData.date;
     const dayHours = weather.hourly.filter((h) => h.time.startsWith(targetDate));
 
-    const walkOut = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 7 && hr <= 9; });
-    const midday = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 11 && hr <= 15; });
-    const evening = dayHours.filter((h) => { const hr = new Date(h.time).getHours(); return hr >= 18 && hr <= 22; });
+    // See outfit-day/route.ts for why we parse the hour from the string
+    // directly — Open-Meteo `timezone: "auto"` returns bare local-time ISO
+    // strings that `new Date(...)` misinterprets in the server's TZ.
+    const hourOf = (iso: string) => parseInt(iso.split("T")[1].slice(0, 2), 10);
+    const walkOut = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 7 && hr <= 9; });
+    const midday = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 11 && hr <= 15; });
+    const evening = dayHours.filter((h) => { const hr = hourOf(h.time); return hr >= 18 && hr <= 22; });
 
     const moments = [
       walkOut.length > 0 ? analyzeMoment(walkOut, weather.elevation, "Walk out the door", "7–9am") : null,
@@ -136,32 +154,49 @@ export async function GET(req: NextRequest) {
     addFromPool(dresses, 1);
     addFromPool(bags, 1);
 
-    // Fetch images for candidates and build vision prompt
-    const imageContents: Anthropic.Messages.ContentBlockParam[] = [];
-    for (let i = 0; i < candidates.length; i++) {
-      const p = candidates[i];
-      try {
-        const imgUrl = rewriteImageUrl(p.image);
-        const imgRes = await fetch(imgUrl, { headers: { "User-Agent": "Mozilla/5.0" } });
-        if (imgRes.ok) {
+    // Fetch candidate images in parallel. Previously sequential: 12
+    // images × 100-300ms each = 1-4s of serial I/O. Promise.all cuts this
+    // to the slowest single fetch. Order is preserved so the Claude
+    // prompt's [${i}] indices remain valid.
+    //
+    // Per-image timeout guards against a single slow CDN response
+    // tanking the whole request (Vercel Hobby tier has a 10s total
+    // budget).
+    const FETCH_TIMEOUT_MS = 3000;
+    const textLabel = (i: number, p: ShopMyProduct, suffix = "") =>
+      `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"}${suffix}`;
+
+    const blocks = await Promise.all(
+      candidates.map(async (p, i): Promise<Anthropic.Messages.ContentBlockParam[]> => {
+        try {
+          const imgUrl = rewriteImageUrl(p.image);
+          const imgRes = await fetch(imgUrl, {
+            headers: { "User-Agent": "Mozilla/5.0" },
+            signal: AbortSignal.timeout(FETCH_TIMEOUT_MS),
+          });
+          if (!imgRes.ok) {
+            return [{ type: "text", text: textLabel(i, p, " (no image)") }];
+          }
           const buffer = Buffer.from(await imgRes.arrayBuffer());
           const ct = imgRes.headers.get("content-type") || "image/jpeg";
-          const mediaType = ct.includes("png") ? "image/png" as const : ct.includes("webp") ? "image/webp" as const : "image/jpeg" as const;
-          imageContents.push(
-            { type: "text", text: `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"}` },
-            { type: "image", source: { type: "base64", media_type: mediaType, data: buffer.toString("base64") } },
-          );
-        } else {
-          imageContents.push(
-            { type: "text", text: `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"} (no image)` },
-          );
+          const mediaType = ct.includes("png")
+            ? ("image/png" as const)
+            : ct.includes("webp")
+              ? ("image/webp" as const)
+              : ("image/jpeg" as const);
+          return [
+            { type: "text", text: textLabel(i, p) },
+            {
+              type: "image",
+              source: { type: "base64", media_type: mediaType, data: buffer.toString("base64") },
+            },
+          ];
+        } catch {
+          return [{ type: "text", text: textLabel(i, p, " (no image)") }];
         }
-      } catch {
-        imageContents.push(
-          { type: "text", text: `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"} (no image)` },
-        );
-      }
-    }
+      }),
+    );
+    const imageContents: Anthropic.Messages.ContentBlockParam[] = blocks.flat();
 
     const styleDirections = [
       "polished minimalist — clean lines, muted tones, understated",
@@ -205,64 +240,60 @@ JSON only:
 Return ONLY valid JSON.`
     });
 
-    const client = new Anthropic({ apiKey: process.env.WW_ANTHROPIC_API_KEY! });
-    const message = await client.messages.create({
-      model: "claude-sonnet-4-5-20250929",
+    const message = await anthropic.messages.create({
+      model: CLAUDE_MODEL,
       max_tokens: 1000,
       messages: [{ role: "user", content: imageContents }],
     });
 
     const text = message.content[0].type === "text" ? message.content[0].text : "";
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) throw new Error("No JSON in response");
-    const outfit = JSON.parse(jsonMatch[0]);
+    const raw = assertCreatorOutfitRaw(parseAiJson(text));
 
-    // Map candidate indices back to the relevant array
-    function resolveIndex(idx: number) {
-      return candidates[idx] ? relevant.indexOf(candidates[idx]) : -1;
-    }
-    // Fix indices from candidate-space to relevant-space
-    if (outfit.walkOut) {
-      if (outfit.walkOut.top) outfit.walkOut.top.index = resolveIndex(outfit.walkOut.top.index);
-      if (outfit.walkOut.layer) outfit.walkOut.layer.index = resolveIndex(outfit.walkOut.layer.index);
-      if (outfit.walkOut.bottom) outfit.walkOut.bottom.index = resolveIndex(outfit.walkOut.bottom.index);
-      if (outfit.walkOut.shoes) outfit.walkOut.shoes.index = resolveIndex(outfit.walkOut.shoes.index);
-      if (outfit.walkOut.accessories) {
-        outfit.walkOut.accessories.forEach((a: { index: number }) => { a.index = resolveIndex(a.index); });
+    // Map candidate-space indices back to relevant-space. Returns -1 for
+    // hallucinated (out-of-range) indices so enrichItem can null them out.
+    const resolveIndex = (idx: number): number => {
+      if (idx < 0 || idx >= candidates.length) {
+        hallucinated.push(idx);
+        return -1;
       }
-    }
+      return relevant.indexOf(candidates[idx]);
+    };
+    const hallucinated: number[] = [];
 
-    // Enrich outfit items with product data
-    function enrichItem(item: { index: number; title: string } | null) {
-      if (!item || item.index < 0 || item.index >= relevant.length) return null;
-      const product = relevant[item.index];
+    const enrichItem = (slot: { index: number } | null) => {
+      if (!slot) return null;
+      const mapped = resolveIndex(slot.index);
+      if (mapped < 0 || mapped >= relevant.length) return null;
+      const product = relevant[mapped];
       const shopMyUrl = curatorId
         ? `https://shopmy.us/shop/product/${product.id}?Curator_id=${curatorId}`
         : product.url;
-      return { ...item, image: product.image, url: shopMyUrl, price: product.price, brand: product.brand };
-    }
+      return {
+        index: mapped,
+        title: product.title,
+        image: product.image,
+        url: shopMyUrl,
+        price: product.price,
+        brand: product.brand,
+      };
+    };
 
-    if (outfit.walkOut) {
-      outfit.walkOut.top = enrichItem(outfit.walkOut.top);
-      outfit.walkOut.layer = enrichItem(outfit.walkOut.layer);
-      outfit.walkOut.bottom = enrichItem(outfit.walkOut.bottom);
-      outfit.walkOut.shoes = enrichItem(outfit.walkOut.shoes);
-      if (outfit.walkOut.accessories) {
-        outfit.walkOut.accessories = outfit.walkOut.accessories.map(enrichItem).filter(Boolean);
-      }
-    }
-
-    // Resolve any indices the AI put in carry/evening arrays
-    function resolveItemName(val: string | number): string {
-      if (typeof val === "number") {
-        const item = candidates[val];
-        return item ? item.title : String(val);
-      }
-      return String(val);
-    }
-    if (outfit.carry?.remove) outfit.carry.remove = outfit.carry.remove.map(resolveItemName);
-    if (outfit.carry?.add) outfit.carry.add = outfit.carry.add.map(resolveItemName);
-    if (outfit.evening?.add) outfit.evening.add = outfit.evening.add.map(resolveItemName);
+    const outfit = {
+      headline: raw.headline,
+      walkOut: {
+        summary: raw.walkOut.summary,
+        top: enrichItem(raw.walkOut.top),
+        layer: enrichItem(raw.walkOut.layer),
+        bottom: enrichItem(raw.walkOut.bottom),
+        shoes: enrichItem(raw.walkOut.shoes),
+        accessories: raw.walkOut.accessories
+          .map(enrichItem)
+          .filter((x): x is NonNullable<ReturnType<typeof enrichItem>> => x !== null),
+      },
+      carry: raw.carry,
+      evening: raw.evening,
+      bagEssentials: raw.bagEssentials,
+    };
 
     return NextResponse.json({
       location: locationName,
@@ -271,9 +302,19 @@ Return ONLY valid JSON.`
       day: dayData,
       moments,
       outfit,
+      // Surface any hallucinated indices so clients can show a "couldn't
+      // match every pick" notice instead of silently dropping items.
+      ...(hallucinated.length > 0 && { hallucinatedIndices: hallucinated }),
     });
   } catch (error) {
-    console.error("ShopMy outfit error:", error instanceof Error ? error.message : error, error instanceof Error ? error.stack : "");
+    if (error instanceof AIParseError || error instanceof AIShapeError) {
+      console.error("ShopMy AI response error:", error.message);
+      return NextResponse.json(
+        { error: "The stylist's response was malformed — try again" },
+        { status: 502 },
+      );
+    }
+    console.error("ShopMy outfit error:", error instanceof Error ? error.message : error);
     return NextResponse.json({ error: "Failed to generate outfit" }, { status: 500 });
   }
 }

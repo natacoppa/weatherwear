@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import Anthropic from "@anthropic-ai/sdk";
+import { anthropic, CLAUDE_MODEL } from "@/lib/anthropic";
+import { AIShapeError, assertPackingList } from "@/lib/ai-shapes";
+import { AIParseError, parseAiJson } from "@/lib/parse-ai-json";
 import {
   fetchWeather,
   fetchHistoricalWeather,
@@ -9,8 +11,11 @@ import {
   HourlyForecast,
 } from "@/lib/weather";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
+import { requireApiKey } from "@/lib/api-auth";
 
 export async function GET(req: NextRequest) {
+  const unauthed = requireApiKey(req);
+  if (unauthed) return unauthed;
   const limited = rateLimit(req);
   if (limited) return limited;
 
@@ -152,16 +157,14 @@ JSON format:
 
 Return ONLY valid JSON, no markdown.`;
 
-    const client = new Anthropic({ apiKey: process.env.WW_ANTHROPIC_API_KEY! });
-    const message = await client.messages.create({
-      model: "claude-sonnet-4-5-20250929",
+    const message = await anthropic.messages.create({
+      model: CLAUDE_MODEL,
       max_tokens: 1000,
       messages: [{ role: "user", content: prompt }],
     });
 
     const text = message.content[0].type === "text" ? message.content[0].text : "";
-    const cleaned = text.replace(/```json?\s*/g, "").replace(/```\s*/g, "").trim();
-    const packingList = JSON.parse(cleaned);
+    const packingList = assertPackingList(parseAiJson(text));
 
     return NextResponse.json({
       location: locationName,
@@ -170,6 +173,13 @@ Return ONLY valid JSON, no markdown.`;
       isHistorical,
     });
   } catch (error) {
+    if (error instanceof AIParseError || error instanceof AIShapeError) {
+      console.error("Trip AI response error:", error.message);
+      return NextResponse.json(
+        { error: "The packing list response was malformed — try again" },
+        { status: 502 },
+      );
+    }
     console.error("Trip API error:", error);
     return NextResponse.json({ error: "Failed to generate packing list" }, { status: 500 });
   }
