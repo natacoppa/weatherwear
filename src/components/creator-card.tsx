@@ -1,233 +1,172 @@
-import { safeHref } from "@/lib/safe-href";
 import type { CreatorOutfit, CreatorOutfitItem } from "@/lib/types";
+import { safeHref } from "@/lib/safe-href";
+import { MomentSection } from "./moment-section";
 import { OutfitCollage } from "./outfit-collage";
-import { Scallop } from "./scallop";
 
-function CreatorProductLink({ item, label }: { item: CreatorOutfitItem | null; label: string }) {
+// Row of a labeled creator product. Mirrors DayCard's OutfitRow visually —
+// same label + link style — but the link includes brand/price metadata and
+// opens the real ShopMy affiliate URL.
+function CreatorRow({ label, item }: { label: string; item: CreatorOutfitItem | null }) {
   if (!item) return null;
   return (
     <div>
-      <p className="text-[9px] uppercase tracking-[0.15em] text-ink-faint mb-0.5">{label}</p>
+      <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1.5">{label}</p>
       <a
         href={safeHref(item.url)}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-[13px] text-ink-subtle leading-relaxed underline decoration-rule-dashed underline-offset-2 hover:decoration-olive transition-colors"
+        className="text-[14px] text-foreground leading-snug hover:text-clay transition-colors"
       >
         {item.title}{" "}
-        <span className="text-[11px] text-ink-faint no-underline">
+        <span className="text-[11px] text-ink-faint">
           — {item.brand}
           {item.price ? ` $${item.price}` : ""}
         </span>{" "}
-        <span className="text-[10px] text-ink-whisper no-underline">↗</span>
+        <span className="text-[10px] text-ink-whisper">↗</span>
       </a>
-    </div>
-  );
-}
-
-// Timeline-dot moment block — only used inside CreatorCard.
-function CreatorMoment({
-  kicker,
-  timeRange,
-  temp,
-  tempSub,
-  summary,
-  dotColor,
-  showConnector = true,
-  children,
-}: {
-  kicker: string;
-  timeRange: string;
-  temp?: React.ReactNode;
-  tempSub?: React.ReactNode;
-  summary: string;
-  dotColor: "gold" | "oat" | "slate";
-  showConnector?: boolean;
-  children: React.ReactNode;
-}) {
-  const dotClass = { gold: "border-gold", oat: "border-oat", slate: "border-slate" }[dotColor];
-  return (
-    <div className="relative pl-6 pb-5">
-      {showConnector && <div className="absolute left-[7px] top-[10px] bottom-0 w-px border-l border-dashed border-rule-dashed" />}
-      <div className={`absolute left-0 top-[3px] w-[15px] h-[15px] rounded-full border-2 ${dotClass} bg-card`} />
-      <div className="flex items-start justify-between mb-3">
-        <div>
-          <p className="text-[10px] uppercase tracking-[0.18em] text-olive font-medium">{kicker}</p>
-          <p className="text-[11px] text-ink-faint">{timeRange}</p>
-        </div>
-        {temp && (
-          <div className="text-right">
-            {temp}
-            {tempSub}
-          </div>
-        )}
-      </div>
-      <p className="text-[12px] text-ink-soft italic mb-3">{summary}</p>
-      {children}
     </div>
   );
 }
 
 export function CreatorCard({ result }: { result: CreatorOutfit }) {
   const o = result.outfit;
-  const feelsLow =
-    result.moments.length > 0 ? Math.min(...result.moments.map((m) => m.shadeFeel)) : Math.round(result.day.tempMin);
-  const feelsHigh =
-    result.moments.length > 0 ? Math.max(...result.moments.map((m) => m.sunFeel)) : Math.round(result.day.tempMax);
+  const rainFallback = result.day.precipitationProbability;
+  const showRain = rainFallback > 20;
 
   return (
-    <div className="space-y-3">
-      <div className="rounded-3xl bg-card border border-border overflow-hidden">
-        <div className="p-5 pb-4">
-          <p className="text-[10px] uppercase tracking-[0.18em] text-ink-soft mb-1">Styled by @{result.creator}</p>
-          <p className="text-[10px] text-ink-faint mb-3">{result.location}</p>
-          <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-snug">{o.headline}</p>
-          <div className="flex gap-5 mt-4">
+    <div className="md:grid md:grid-cols-[1fr_minmax(0,460px)] md:gap-10 lg:gap-14">
+      {/* LEFT — text content (mirrors DayCard) */}
+      <div className="order-2 md:order-1">
+        {/* Header */}
+        <div className="mb-6 md:mb-8">
+          <p className="text-[11px] uppercase tracking-[0.22em] text-ink-soft mb-3">
+            {result.location} · Styled by @{result.creator}
+          </p>
+          <h2 className="font-[var(--font-serif)] text-[32px] md:text-[44px] text-foreground leading-[1.05] tracking-[-0.02em] mb-5">
+            {o.headline}
+          </h2>
+          <div className="flex gap-8">
             <div>
-              <p className="text-[9px] uppercase tracking-[0.15em] text-ink-soft">Feels like</p>
-              <p className="text-[13px] font-medium text-foreground">{feelsLow}–{feelsHigh}°</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Range</p>
+              <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">
+                {Math.round(result.day.tempMin)}–{Math.round(result.day.tempMax)}°
+              </p>
             </div>
             <div>
-              <p className="text-[9px] uppercase tracking-[0.15em] text-ink-soft">UV</p>
-              <p className="text-[13px] font-medium text-foreground">{result.day.uvIndexMax}</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">UV</p>
+              <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{result.day.uvIndexMax}</p>
             </div>
-            {result.day.precipitationProbability > 20 && (
+            {showRain && (
               <div>
-                <p className="text-[9px] uppercase tracking-[0.15em] text-ink-soft">Rain</p>
-                <p className="text-[13px] font-medium text-foreground">{result.day.precipitationProbability}%</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Rain</p>
+                <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{rainFallback}%</p>
               </div>
             )}
           </div>
         </div>
 
-        <Scallop />
+        <div className="border-t border-border" />
 
-        <div className="px-5 pt-4 pb-2">
-          {/* Walk out */}
-          <CreatorMoment
-            kicker="Walk out the door"
-            timeRange={result.moments[0]?.timeRange || "7–9am"}
-            summary={o.walkOut.summary}
-            dotColor="gold"
-            temp={
-              result.moments[0] && (
-                <span className="font-[var(--font-serif)] text-[28px] leading-none text-foreground">
-                  {result.moments[0].sunFeel}°
-                </span>
-              )
-            }
-            tempSub={result.moments[0] && <p className="text-[10px] text-ink-faint">{result.moments[0].shadeFeel}° shade</p>}
-          >
-            <div className="space-y-2">
-              <CreatorProductLink item={o.walkOut.top} label="Top" />
-              {o.walkOut.layer && <CreatorProductLink item={o.walkOut.layer} label="Layer" />}
-              <CreatorProductLink item={o.walkOut.bottom} label="Bottom" />
-              <CreatorProductLink item={o.walkOut.shoes} label="Shoes" />
-            </div>
-            {o.walkOut.accessories.length > 0 && (
-              <div className="flex flex-wrap gap-1.5 mt-2.5">
-                {o.walkOut.accessories.map((a, j) => (
+        {/* Morning */}
+        <MomentSection
+          label="Morning"
+          timeRange={result.moments[0]?.timeRange || "7–9am"}
+          temp={result.moments[0] ? `${result.moments[0].sunFeel}°` : undefined}
+          tempSub={result.moments[0] ? `${result.moments[0].shadeFeel}° in shade` : undefined}
+          summary={o.walkOut.summary}
+        >
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+            <CreatorRow label="Top" item={o.walkOut.top} />
+            <CreatorRow label="Layer" item={o.walkOut.layer} />
+            <CreatorRow label="Bottom" item={o.walkOut.bottom} />
+            <CreatorRow label="Shoes" item={o.walkOut.shoes} />
+          </div>
+          {o.walkOut.accessories.length > 0 && (
+            <div className="mt-5 pt-4 border-t border-border">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2">Accessories</p>
+              <div className="flex flex-wrap gap-x-4 gap-y-1">
+                {o.walkOut.accessories.map((a) => (
                   <a
-                    key={j}
+                    key={a.index}
                     href={safeHref(a.url)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[10px] text-olive bg-olive/10 px-2 py-0.5 rounded-full hover:bg-olive/20 transition-colors"
+                    className="text-[13px] text-ink-subtle hover:text-clay transition-colors"
                   >
-                    {a.title} ↗
+                    {a.title} <span className="text-[10px] text-ink-whisper">↗</span>
                   </a>
                 ))}
               </div>
-            )}
-          </CreatorMoment>
+            </div>
+          )}
+        </MomentSection>
 
-          {/* Midday */}
-          <CreatorMoment
-            kicker="Midday shift"
-            timeRange={result.moments[1]?.timeRange || "11am–3pm"}
-            summary={o.carry.summary}
-            dotColor="oat"
-            temp={
-              result.moments[1] && (
-                <span className="font-[var(--font-serif)] text-[28px] leading-none text-foreground">
-                  {result.moments[1].sunFeel}°
-                </span>
-              )
-            }
-            tempSub={result.moments[1] && <p className="text-[10px] text-ink-faint">{result.moments[1].shadeFeel}° shade</p>}
-          >
-            {o.carry.remove.length > 0 && (
-              <div className="mb-2">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-clay-warm mb-1">Take off</p>
-                {o.carry.remove.map((item, j) => (
-                  <p key={j} className="text-[13px] text-ink-subtle">{item}</p>
-                ))}
-              </div>
-            )}
-            {o.carry.add.length > 0 && (
-              <div className="mb-2">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-olive mb-1">Put on</p>
-                {o.carry.add.map((item, j) => (
-                  <p key={j} className="text-[13px] text-ink-subtle">{item}</p>
-                ))}
-              </div>
-            )}
-            <p className="text-[11px] text-ink-faint">{o.carry.note}</p>
-          </CreatorMoment>
+        <div className="border-t border-border" />
 
-          {/* Evening */}
-          <CreatorMoment
-            kicker="By evening"
-            timeRange={result.moments[2]?.timeRange || "6–10pm"}
-            summary={o.evening.summary}
-            dotColor="slate"
-            showConnector={false}
-            temp={
-              result.moments[2] && (
-                <span className="font-[var(--font-serif)] text-[28px] leading-none text-foreground">
-                  {result.moments[2].shadeFeel}°
-                </span>
-              )
-            }
-            tempSub={
-              result.moments[2] && result.moments[2].windSpeed > 5 && (
-                <p className="text-[10px] text-ink-faint">wind chill</p>
-              )
-            }
-          >
-            {o.evening.add.length > 0 && (
-              <div className="mb-2">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-olive mb-1">Put back on</p>
-                {o.evening.add.map((item, j) => (
-                  <p key={j} className="text-[13px] text-ink-subtle">{item}</p>
-                ))}
-              </div>
-            )}
-            <p className="text-[11px] text-ink-faint">{o.evening.note}</p>
-          </CreatorMoment>
-        </div>
+        {/* Midday */}
+        <MomentSection
+          label="Midday"
+          timeRange={result.moments[1]?.timeRange || "11am–3pm"}
+          temp={result.moments[1] ? `${result.moments[1].sunFeel}°` : undefined}
+          tempSub={result.moments[1] ? `${result.moments[1].shadeFeel}° in shade` : undefined}
+          summary={o.carry.summary}
+        >
+          {o.carry.remove.length > 0 && (
+            <div className="mb-4">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-clay-warm mb-2">Take off</p>
+              {o.carry.remove.map((item, j) => (
+                <p key={j} className="text-[14px] text-foreground">{item}</p>
+              ))}
+            </div>
+          )}
+          {o.carry.add.length > 0 && (
+            <div className="mb-4">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-olive mb-2">Put on</p>
+              {o.carry.add.map((item, j) => (
+                <p key={j} className="text-[14px] text-foreground">{item}</p>
+              ))}
+            </div>
+          )}
+          {o.carry.note && <p className="text-[12px] text-ink-faint italic">{o.carry.note}</p>}
+        </MomentSection>
+
+        <div className="border-t border-border" />
+
+        {/* Evening */}
+        <MomentSection
+          label="Evening"
+          timeRange={result.moments[2]?.timeRange || "6–10pm"}
+          temp={result.moments[2] ? `${result.moments[2].shadeFeel}°` : undefined}
+          tempSub={result.moments[2]?.windSpeed && result.moments[2].windSpeed > 5 ? "with wind chill" : undefined}
+          summary={o.evening.summary}
+        >
+          {o.evening.add.length > 0 && (
+            <div className="mb-4">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-olive mb-2">Put back on</p>
+              {o.evening.add.map((item, j) => (
+                <p key={j} className="text-[14px] text-foreground">{item}</p>
+              ))}
+            </div>
+          )}
+          {o.evening.note && <p className="text-[12px] text-ink-faint italic">{o.evening.note}</p>}
+        </MomentSection>
 
         {/* Bag */}
         {o.bagEssentials.length > 0 && (
           <>
-            <div className="mx-5 border-t border-dashed border-rule-dashed" />
-            <div className="px-5 py-4">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-ink-soft mb-2">In your bag</p>
-              <div className="flex flex-wrap gap-1.5">
-                {o.bagEssentials.map((item, i) => (
-                  <span key={i} className="text-[11px] text-ink-subtle bg-muted px-2.5 py-1 rounded-full">
-                    {item}
-                  </span>
-                ))}
-              </div>
+            <div className="border-t border-border" />
+            <div className="py-6">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-3">In your bag</p>
+              <p className="text-[14px] text-foreground">{o.bagEssentials.join(" · ")}</p>
             </div>
           </>
         )}
+      </div>
 
-        {/* Outfit collage */}
-        <div className="mx-5 border-t border-dashed border-rule-dashed" />
-        <div className="p-5">
-          <p className="text-[10px] uppercase tracking-[0.18em] text-ink-soft mb-3">The look</p>
+      {/* RIGHT — shop-the-look collage (top on mobile, sticky on desktop) */}
+      <div className="order-1 md:order-2 mb-6 md:mb-0">
+        <div className="md:sticky md:top-5">
+          <p className="text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-3">The look</p>
           <OutfitCollage items={[o.walkOut.top, o.walkOut.layer, o.walkOut.bottom, o.walkOut.shoes, ...o.walkOut.accessories]} />
         </div>
       </div>
