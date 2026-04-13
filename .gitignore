@@ -40,3 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 test-outfit.png
+
+# local-only / large exploration
+/video
+/logo-concepts
+/plans
+/src/app/page-v1.tsx
