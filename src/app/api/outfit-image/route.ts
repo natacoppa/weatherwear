@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
+import { requireApiKey } from "@/lib/api-auth";
 
 export async function POST(req: NextRequest) {
+  const unauthed = requireApiKey(req);
+  if (unauthed) return unauthed;
   const limited = rateLimit(req);
   if (limited) return limited;
   try {

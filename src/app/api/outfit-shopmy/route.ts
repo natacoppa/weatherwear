@@ -5,6 +5,7 @@ import { AIShapeError, assertCreatorOutfitRaw } from "@/lib/ai-shapes";
 import { AIParseError, parseAiJson } from "@/lib/parse-ai-json";
 import { fetchWeather, geocode, calculateFeelsLike, HourlyForecast } from "@/lib/weather";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
+import { requireApiKey } from "@/lib/api-auth";
 import fs from "fs";
 import path from "path";
 
@@ -71,6 +72,8 @@ function analyzeMoment(hours: HourlyForecast[], elevation: number, label: string
 // ── Route ───────────────────────────────────────────────────────────
 
 export async function GET(req: NextRequest) {
+  const unauthed = requireApiKey(req);
+  if (unauthed) return unauthed;
   const limited = rateLimit(req);
   if (limited) return limited;
 

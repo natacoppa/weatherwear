@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { TodayResult } from "@/lib/types";
+import { apiFetch } from "@/lib/api-fetch";
 
 // Session-scoped cache — survives DayCard prop changes so navigating
 // forward/back through days doesn't refetch. Keyed on
@@ -31,7 +32,7 @@ export function useOutfitImage(result: TodayResult): {
   useEffect(() => {
     if (cache.has(key)) return;
     const ctrl = new AbortController();
-    fetch("/api/outfit-image", {
+    apiFetch("/api/outfit-image", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

@@ -9,6 +9,7 @@ import {
   HourlyForecast,
 } from "@/lib/weather";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
+import { requireApiKey } from "@/lib/api-auth";
 
 interface MomentWeather {
   label: string;
@@ -56,6 +57,8 @@ function analyzeMoment(
 }
 
 export async function GET(req: NextRequest) {
+  const unauthed = requireApiKey(req);
+  if (unauthed) return unauthed;
   const limited = rateLimit(req);
   if (limited) return limited;
 
