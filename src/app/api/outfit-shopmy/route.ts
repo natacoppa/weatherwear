@@ -215,7 +215,22 @@ Weather: ${Math.round(dayData.tempMin)}°–${Math.round(dayData.tempMax)}°F. $
 
 Style direction: ${styleDirection}
 
-Look at the actual images. Consider the colors, textures, proportions, and how each piece would look worn together. Style this like you'd style a real client — every item should earn its place in the outfit. If something doesn't work visually, don't include it. A perfect 3-piece outfit beats a mediocre 5-piece one.
+CRITICAL — match clothing weight to ACTUAL temperature. A thin t-shirt
+under a coat at 48°F is wrong even if it looks good. The base layer
+has to earn its place on its own at the coldest moment of the day:
+
+- Over 75°F = lightweight breathable only (thin cotton tees, linen, silk camis). No wool, no cashmere, no coats.
+- 65–75°F = light cotton / thin knit base, maybe a light jacket for evening.
+- 55–65°F = medium base layer (long-sleeve cotton, fine merino, light knit) + jacket.
+- 45–55°F = warm base (merino crew, cashmere sweater, turtleneck, thick knit) + substantial coat. DO NOT pick a thin t-shirt here.
+- 35–45°F = cashmere/wool sweater + proper winter coat + closed warm shoes.
+- Under 35°F = heavy parka, thermal base, insulated boots.
+
+The morning base layer must still work at midday peak — if midday is
+warm enough to shed the coat, the base underneath should be comfortable
+at that temp without a layer over it.
+
+Look at the actual product images above. Consider colors, textures, proportions, and how pieces look worn together. Style like a real client — every item earns its place. A perfect 3-piece outfit beats a mediocre 5-piece one. If the catalog has no appropriate warm base at the current temp, set "top" to null rather than forcing an inappropriate thin tee.
 
 The outfit should adapt through the day: what to wear walking out, what to adjust at midday, what to put back on by evening.
 
