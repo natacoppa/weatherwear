@@ -5,8 +5,9 @@ import type { CreatorOutfitItem } from "@/lib/types";
 //   top row:    accessories stack | main garment | layer
 //   bottom row: shoes             | bottom
 // Images are proxied through /api/img so ShopMy/LTK CDNs hotlink. Raw
-// <img> is intentional here — see Phase 2 decision in the refactor plan:
+// <img> is intentional — see Phase 2 decision in the refactor plan:
 // next/image + custom loader would double-proxy through serverless.
+/* eslint-disable @next/next/no-img-element */
 export function OutfitCollage({ items }: { items: (CreatorOutfitItem | null)[] }) {
   const valid = items.filter(Boolean) as CreatorOutfitItem[];
   if (valid.length === 0) return null;

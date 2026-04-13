@@ -15,14 +15,15 @@ function OutfitRow({ label, text }: { label: string; text: string }) {
   );
 }
 
+// DayCard is mounted with a `key` derived from location+date by its parent,
+// so the initial state here is only ever seen on first mount.
 export function DayCard({ result }: { result: TodayResult }) {
   const [outfitImage, setOutfitImage] = useState<string | null>(null);
-  const [imageLoading, setImageLoading] = useState(false);
+  const [imageLoading, setImageLoading] = useState(true);
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    setOutfitImage(null);
-    setImageLoading(true);
+    const ctrl = new AbortController();
     fetch("/api/outfit-image", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -31,14 +32,22 @@ export function DayCard({ result }: { result: TodayResult }) {
         location: result.location,
         temp: (result.day.tempMin + result.day.tempMax) / 2,
       }),
+      signal: ctrl.signal,
     })
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data?.image) setOutfitImage(data.image);
       })
-      .catch(() => {})
-      .finally(() => setImageLoading(false));
-  }, [result.location, result.day.date, result.outfit.headline]);
+      .catch(() => {
+        /* aborted or network error — silent */
+      })
+      .finally(() => {
+        if (!ctrl.signal.aborted) setImageLoading(false);
+      });
+    return () => ctrl.abort();
+    // Parent re-keys the component on day change, so deps are stable after mount.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleShare = async () => {
     const text =

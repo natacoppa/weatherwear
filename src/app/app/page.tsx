@@ -209,7 +209,7 @@ export default function AppPage() {
                 →
               </button>
             </div>
-            <DayCard result={todayResult} />
+            <DayCard key={`${todayResult.location}|${todayResult.day.date}`} result={todayResult} />
           </div>
         )}
 
@@ -397,7 +397,7 @@ export default function AppPage() {
                       Close
                     </button>
                   </div>
-                  <DayCard result={drillDay} />
+                  <DayCard key={`${drillDay.location}|${drillDay.day.date}`} result={drillDay} />
                 </div>
               </>
             )}

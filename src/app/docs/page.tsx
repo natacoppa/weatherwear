@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Nav } from "@/components/nav";
 
 function CodeBlock({ children }: { children: string }) {
   return (
@@ -48,17 +49,7 @@ function ParamTable({ params }: { params: { name: string; type: string; required
 export default function DocsPage() {
   return (
     <main className="min-h-screen bg-background">
-      {/* Nav */}
-      <nav className="w-full max-w-[860px] mx-auto px-6 py-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <img src="/logo-1.svg" alt="WeatherWear" className="w-6 h-6" />
-          <span className="font-[var(--font-serif)] text-[18px] text-foreground">WeatherWear</span>
-        </Link>
-        <Link href="/app"
-          className="text-[13px] font-medium text-white bg-olive px-4 py-2 rounded-xl hover:bg-olive/90 transition-colors">
-          Open App
-        </Link>
-      </nav>
+      <Nav showCta />
 
       <div className="max-w-[860px] mx-auto px-6 pt-12 md:pt-20 pb-20">
         <p className="text-[11px] uppercase tracking-[0.25em] text-olive font-medium mb-4">API Reference</p>
@@ -246,11 +237,12 @@ export default function DocsPage() {
 
       {/* Footer */}
       <footer className="max-w-[860px] mx-auto px-6 py-10 border-t border-border flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <img src="/logo-1.svg" alt="WeatherWear" className="w-5 h-5 opacity-50" />
-          <span className="text-[13px] text-ink-faint">WeatherWear</span>
+        <Link href="/" className="font-[var(--font-serif)] text-[14px] text-ink-faint hover:text-foreground transition-colors">
+          Well Suited
         </Link>
-        <Link href="/app" className="text-[13px] text-ink-faint hover:text-olive transition-colors">Open App</Link>
+        <Link href="/app" className="text-[13px] text-ink-faint hover:text-foreground transition-colors">
+          Open App
+        </Link>
       </footer>
     </main>
   );

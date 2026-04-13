@@ -15,10 +15,18 @@ function read(): string[] {
 }
 
 export function useRecents() {
+  // Start empty to match the server render, then hydrate from localStorage
+  // on mount. The initial setRecents in the effect is the documented Next.js
+  // pattern for SSR-safe localStorage access.
   const [recents, setRecents] = useState<string[]>([]);
 
   useEffect(() => {
-    setRecents(read());
+    const stored = read();
+    // Documented Next.js/React pattern: hydrate client-only state after mount
+    // to avoid SSR/client mismatch. The "cascading render" here is intentional
+    // and one-shot — no render loop.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (stored.length > 0) setRecents(stored);
   }, []);
 
   const add = useCallback((city: string) => {
