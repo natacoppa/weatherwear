@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect, useRef, useMemo } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 // ── Types ────────────────────────────────────────────────────────────
 
@@ -86,8 +86,8 @@ function shopUrl(text: string) {
 function ShopLink({ text }: { text: string }) {
   return (
     <a href={shopUrl(text)} target="_blank" rel="noopener noreferrer"
-      className="text-[14px] text-[#3a3530] leading-snug hover:text-[#c4725c] transition-colors">
-      {text} <span className="text-[10px] text-[#c0b4a0]">↗</span>
+      className="text-[14px] text-foreground leading-snug hover:text-clay transition-colors">
+      {text} <span className="text-[10px] text-ink-whisper">↗</span>
     </a>
   );
 }
@@ -95,8 +95,8 @@ function ShopLink({ text }: { text: string }) {
 function PackLink({ text }: { text: string }) {
   return (
     <a href={shopUrl(text)} target="_blank" rel="noopener noreferrer"
-      className="block text-[13px] text-[#5a5248] leading-relaxed underline decoration-[#d4ccc0] underline-offset-2 hover:decoration-[#6b7c5e] transition-colors">
-      {text} <span className="text-[10px] text-[#c0b4a0] no-underline">↗</span>
+      className="block text-[13px] text-ink-subtle leading-relaxed underline decoration-rule-dashed underline-offset-2 hover:decoration-olive transition-colors">
+      {text} <span className="text-[10px] text-ink-whisper no-underline">↗</span>
     </a>
   );
 }
@@ -104,7 +104,7 @@ function PackLink({ text }: { text: string }) {
 function Scallop() {
   return (
     <div className="w-full h-3 overflow-hidden" style={{
-      backgroundImage: "radial-gradient(circle at 6px 6px, #faf8f4 5.5px, transparent 6px)",
+      backgroundImage: "radial-gradient(circle at 6px 6px, var(--background) 5.5px, transparent 6px)",
       backgroundSize: "10px 12px",
       backgroundRepeat: "repeat-x",
       backgroundPosition: "center",
@@ -133,9 +133,9 @@ function StylistVoice({ phrases }: { phrases: string[] }) {
 
   const current = phrases[phraseIdx];
   return (
-    <p className="font-[var(--font-serif)] text-[18px] md:text-[22px] text-[#3a3530] italic leading-[1.4] text-center min-h-[3em]">
+    <p className="font-[var(--font-serif)] text-[18px] md:text-[22px] text-foreground italic leading-[1.4] text-center min-h-[3em]">
       {current.slice(0, charIdx)}
-      <span className="inline-block w-[2px] h-[0.9em] bg-[#c4725c] ml-1 -mb-[0.1em] animate-[blink_1s_steps(2)_infinite]" />
+      <span className="inline-block w-[2px] h-[0.9em] bg-clay ml-1 -mb-[0.1em] animate-[blink_1s_steps(2)_infinite]" />
     </p>
   );
 }
@@ -143,7 +143,7 @@ function StylistVoice({ phrases }: { phrases: string[] }) {
 function TodayLoader() {
   return (
     <div className="flex flex-col items-center gap-6 py-16 md:py-24 max-w-[560px] mx-auto px-4">
-      <p className="text-[10px] uppercase tracking-[0.3em] text-[#c0b4a0]">Reading your day</p>
+      <p className="text-[10px] uppercase tracking-[0.3em] text-ink-whisper">Reading your day</p>
       <StylistVoice phrases={[
         "Pulling the hourly forecast…",
         "It's cool now, warmer by noon, breezy after sunset…",
@@ -152,7 +152,6 @@ function TodayLoader() {
         "Adding a piece you can shed, then put back on…",
         "Almost dressed.",
       ]} />
-      <style>{`@keyframes blink { 0%, 50% { opacity: 1 } 50.01%, 100% { opacity: 0 } }`}</style>
     </div>
   );
 }
@@ -160,7 +159,7 @@ function TodayLoader() {
 function TripLoader() {
   return (
     <div className="flex flex-col items-center gap-6 py-16 md:py-24 max-w-[560px] mx-auto px-4">
-      <p className="text-[10px] uppercase tracking-[0.3em] text-[#c0b4a0]">Building your list</p>
+      <p className="text-[10px] uppercase tracking-[0.3em] text-ink-whisper">Building your list</p>
       <StylistVoice phrases={[
         "Reading the week ahead…",
         "Mostly mild, with a Tuesday rain spell…",
@@ -169,7 +168,6 @@ function TripLoader() {
         "Editing for one consolidated bag…",
         "Almost packed.",
       ]} />
-      <style>{`@keyframes blink { 0%, 50% { opacity: 1 } 50.01%, 100% { opacity: 0 } }`}</style>
     </div>
   );
 }
@@ -293,12 +291,12 @@ export default function AppPage() {
   const fmt = (d: string) => new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
 
   return (
-    <main className="flex-1 w-full bg-[#faf8f4]">
+    <main className="flex-1 w-full bg-background">
       {/* Nav — matches landing page */}
       <nav className="w-full max-w-[1200px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
-        <a href="/" className="font-[var(--font-serif)] text-[20px] md:text-[22px] text-[#3a3530] tracking-[-0.01em]">Well Suited</a>
+        <a href="/" className="font-[var(--font-serif)] text-[20px] md:text-[22px] text-foreground tracking-[-0.01em]">Well Suited</a>
         <div className="flex items-center gap-6">
-          <a href="/docs" className="text-[13px] text-[#8a8078] hover:text-[#3a3530] transition-colors">API</a>
+          <a href="/docs" className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">API</a>
         </div>
       </nav>
 
@@ -313,22 +311,22 @@ export default function AppPage() {
             /* ─── Collapsed summary bar ─── */
             return (
               <div className="mb-6 md:mb-10 flex items-center justify-between gap-4 flex-wrap">
-                <div className="flex items-baseline gap-2 flex-wrap text-[14px] text-[#3a3530]">
+                <div className="flex items-baseline gap-2 flex-wrap text-[14px] text-foreground">
                   <span className="font-medium">{query || (todayResult?.location || tripResult?.location || creatorResult?.location || "").split(",")[0]}</span>
                   {mode === "trip" && tripResult && (
                     <>
-                      <span className="text-[#d4ccc0]">·</span>
-                      <span className="text-[#8a8078]">{fmt(tripResult.days[0].date)} – {fmt(tripResult.days[tripResult.days.length - 1].date)}</span>
+                      <span className="text-rule-dashed">·</span>
+                      <span className="text-muted-foreground">{fmt(tripResult.days[0].date)} – {fmt(tripResult.days[tripResult.days.length - 1].date)}</span>
                     </>
                   )}
-                  <span className="text-[#d4ccc0]">·</span>
-                  <span className="text-[#8a8078]">
+                  <span className="text-rule-dashed">·</span>
+                  <span className="text-muted-foreground">
                     {mode === "today" ? "Today" : "Trip"}
                     {selectedCreatorName && <span> · styled by {selectedCreatorName}</span>}
                   </span>
                 </div>
                 <button onClick={() => setEditingSearch(true)}
-                  className="text-[13px] text-[#3a3530] bg-[#3a3530]/[0.06] hover:bg-[#3a3530]/[0.1] px-4 py-1.5 rounded-full transition-colors">
+                  className="text-[13px] text-foreground bg-primary/[0.06] hover:bg-primary/[0.1] px-4 py-1.5 rounded-full transition-colors">
                   Edit
                 </button>
               </div>
@@ -340,10 +338,10 @@ export default function AppPage() {
             <>
               {/* Mode toggle + Style by — compact row */}
               <div className="flex items-center justify-between gap-3 mb-4">
-                <div className="flex gap-1 p-1 rounded-full bg-[#ece6dc] w-fit">
+                <div className="flex gap-1 p-1 rounded-full bg-muted w-fit">
                   {(["today", "trip"] as Mode[]).map((m) => (
                     <button key={m} onClick={() => { setMode(m); setDrillDay(null); }}
-                      className={`px-5 py-1.5 rounded-full text-[12px] font-medium transition-all ${mode === m ? "bg-[#3a3530] text-[#faf8f4] shadow-sm" : "text-[#a09080] hover:text-[#5a5248]"}`}
+                      className={`px-5 py-1.5 rounded-full text-[12px] font-medium transition-all ${mode === m ? "bg-primary text-primary-foreground shadow-sm" : "text-ink-soft hover:text-ink-subtle"}`}
                     >{m === "today" ? "Today" : "Trip"}</button>
                   ))}
                 </div>
@@ -351,12 +349,12 @@ export default function AppPage() {
                 {/* Style by — matching pill */}
                 <div className="relative inline-flex items-center">
                   <div className={`flex items-center gap-1.5 h-9 px-4 rounded-full pointer-events-none transition-colors ${
-                    selectedCreator ? "bg-[#3a3530] text-white" : "bg-[#ece6dc] text-[#3a3530]"
+                    selectedCreator ? "bg-primary text-white" : "bg-muted text-foreground"
                   }`}>
                     <span className="text-[12px] font-medium">
                       {selectedCreatorName ? `Styled by ${selectedCreatorName}` : "Styled by anyone"}
                     </span>
-                    <span className={`text-[10px] ${selectedCreator ? "text-white/60" : "text-[#a09080]"}`}>▾</span>
+                    <span className={`text-[10px] ${selectedCreator ? "text-white/60" : "text-ink-soft"}`}>▾</span>
                   </div>
                   <select
                     value={selectedCreator}
@@ -376,22 +374,22 @@ export default function AppPage() {
                 <div className="flex items-center gap-2">
                   <input type="text" placeholder={selectedCreator ? `City to style with ${selectedCreatorName || ""}...` : mode === "today" ? "Enter a city..." : "Where are you going?"}
                     value={query} onChange={(e) => setQuery(e.target.value)}
-                    className="flex-1 min-w-0 h-12 px-5 rounded-full bg-white border border-[#e0d8cc] text-[15px] text-[#3a3530] placeholder:text-[#c0b8a8] outline-none focus:border-[#c4725c] transition-colors"
+                    className="flex-1 min-w-0 h-12 px-5 rounded-full bg-white border border-input text-[15px] text-foreground placeholder:text-ink-whisper outline-none focus:border-clay transition-colors"
                   />
                   {mode === "trip" && (
-                    <div className="hidden md:flex items-center gap-1 h-12 px-4 rounded-full bg-white border border-[#e0d8cc] text-[13px] text-[#3a3530]">
+                    <div className="hidden md:flex items-center gap-1 h-12 px-4 rounded-full bg-white border border-input text-[13px] text-foreground">
                       <input type="date" value={tripStart}
                         onChange={(e) => { setTripStart(e.target.value); if (e.target.value > tripEnd) setTripEnd(e.target.value); }}
                         min={new Date().toISOString().split("T")[0]}
-                        className="bg-transparent outline-none border-0 text-[13px] text-[#3a3530] cursor-pointer" />
-                      <span className="text-[#d4ccc0]">—</span>
+                        className="bg-transparent outline-none border-0 text-[13px] text-foreground cursor-pointer" />
+                      <span className="text-rule-dashed">—</span>
                       <input type="date" value={tripEnd}
                         onChange={(e) => setTripEnd(e.target.value)} min={tripStart}
-                        className="bg-transparent outline-none border-0 text-[13px] text-[#3a3530] cursor-pointer" />
+                        className="bg-transparent outline-none border-0 text-[13px] text-foreground cursor-pointer" />
                     </div>
                   )}
                   <button type="submit" disabled={loading || !query.trim()}
-                    className="h-12 px-6 rounded-full bg-[#3a3530] text-white text-[14px] font-medium disabled:opacity-30 hover:bg-[#2a2520] transition-colors shrink-0"
+                    className="h-12 px-6 rounded-full bg-primary text-white text-[14px] font-medium disabled:opacity-30 hover:bg-primary-hover transition-colors shrink-0"
                   >{mode === "today" ? "Go" : "Pack"}</button>
                 </div>
               </form>
@@ -402,11 +400,11 @@ export default function AppPage() {
                   <input type="date" value={tripStart}
                     onChange={(e) => { setTripStart(e.target.value); if (e.target.value > tripEnd) setTripEnd(e.target.value); }}
                     min={new Date().toISOString().split("T")[0]}
-                    className="flex-1 min-w-0 h-10 px-3 rounded-full bg-white border border-[#e0d8cc] text-[13px] text-[#3a3530] outline-none" />
-                  <span className="text-[#d4ccc0] text-[13px]">—</span>
+                    className="flex-1 min-w-0 h-10 px-3 rounded-full bg-white border border-input text-[13px] text-foreground outline-none" />
+                  <span className="text-rule-dashed text-[13px]">—</span>
                   <input type="date" value={tripEnd}
                     onChange={(e) => setTripEnd(e.target.value)} min={tripStart}
-                    className="flex-1 min-w-0 h-10 px-3 rounded-full bg-white border border-[#e0d8cc] text-[13px] text-[#3a3530] outline-none" />
+                    className="flex-1 min-w-0 h-10 px-3 rounded-full bg-white border border-input text-[13px] text-foreground outline-none" />
                 </div>
               )}
 
@@ -415,7 +413,7 @@ export default function AppPage() {
           );
         })()}
 
-      {error && <div className="rounded-2xl bg-[#ffeee8] text-[#c06040] text-[13px] p-3 mb-4">{error}</div>}
+      {error && <div className="rounded-2xl bg-destructive/10 text-destructive text-[13px] p-3 mb-4">{error}</div>}
       {loading && (mode === "today" ? <TodayLoader /> : <TripLoader />)}
 
       {/* ═══════════ TODAY MODE ═══════════ */}
@@ -423,10 +421,10 @@ export default function AppPage() {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <button onClick={() => handleDayNav(-1)} disabled={dayIndex <= 0}
-              className="w-8 h-8 rounded-full bg-white border border-[#e0d8cc] text-[#3a3530] text-[13px] flex items-center justify-center disabled:opacity-20 hover:border-[#c4725c] transition-colors">←</button>
-            <p className="text-[14px] text-[#3a3530] font-medium">{dayLabel(todayResult)}</p>
+              className="w-8 h-8 rounded-full bg-white border border-input text-foreground text-[13px] flex items-center justify-center disabled:opacity-20 hover:border-clay transition-colors">←</button>
+            <p className="text-[14px] text-foreground font-medium">{dayLabel(todayResult)}</p>
             <button onClick={() => handleDayNav(1)} disabled={dayIndex >= todayResult.totalDays - 1}
-              className="w-8 h-8 rounded-full bg-white border border-[#e0d8cc] text-[#3a3530] text-[13px] flex items-center justify-center disabled:opacity-20 hover:border-[#c4725c] transition-colors">→</button>
+              className="w-8 h-8 rounded-full bg-white border border-input text-foreground text-[13px] flex items-center justify-center disabled:opacity-20 hover:border-clay transition-colors">→</button>
           </div>
           <DayCard result={todayResult} />
         </div>
@@ -437,43 +435,43 @@ export default function AppPage() {
         <div>
           {/* Header */}
           <div className="mb-8 md:mb-10">
-            <p className="text-[11px] uppercase tracking-[0.22em] text-[#a09080] mb-3">Packing for</p>
+            <p className="text-[11px] uppercase tracking-[0.22em] text-ink-soft mb-3">Packing for</p>
             <div className="flex items-end justify-between gap-6 flex-wrap">
               <div>
-                <h2 className="font-[var(--font-serif)] text-[40px] md:text-[56px] text-[#3a3530] leading-[1.0] tracking-[-0.02em]">{tripResult.location.split(",")[0]}</h2>
+                <h2 className="font-[var(--font-serif)] text-[40px] md:text-[56px] text-foreground leading-[1.0] tracking-[-0.02em]">{tripResult.location.split(",")[0]}</h2>
                 {tripResult.location.split(",").slice(1).join(",").trim() && (
-                  <p className="text-[14px] text-[#a09080] mt-2">{tripResult.location.split(",").slice(1).join(",").trim()}</p>
+                  <p className="text-[14px] text-ink-soft mt-2">{tripResult.location.split(",").slice(1).join(",").trim()}</p>
                 )}
               </div>
               <div className="flex gap-8 md:gap-10">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1">Dates</p>
-                  <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-none">{fmt(tripResult.days[0].date)} – {fmt(tripResult.days[tripResult.days.length - 1].date)}</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Dates</p>
+                  <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{fmt(tripResult.days[0].date)} – {fmt(tripResult.days[tripResult.days.length - 1].date)}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1">Days</p>
-                  <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-none">{tripResult.days.length}</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Days</p>
+                  <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{tripResult.days.length}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1">Temps</p>
-                  <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-none">{tripResult.days[0].tempRange}</p>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Temps</p>
+                  <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{tripResult.days[0].tempRange}</p>
                 </div>
                 {tripResult.days.some((d) => d.precipChance > 30) && (
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1">Rain</p>
-                    <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-none">{Math.max(...tripResult.days.map((d) => d.precipChance))}%</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Rain</p>
+                    <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{Math.max(...tripResult.days.map((d) => d.precipChance))}%</p>
                   </div>
                 )}
               </div>
             </div>
-            {tripResult.isHistorical && <p className="text-[11px] text-[#b0a090] italic mt-4">Based on typical conditions for these dates</p>}
+            {tripResult.isHistorical && <p className="text-[11px] text-ink-faint italic mt-4">Based on typical conditions for these dates</p>}
           </div>
 
-          <div className="border-t border-[#e8e0d4]" />
+          <div className="border-t border-border" />
 
           {/* Day strip */}
           <div className="py-6 md:py-7">
-            <p className="text-[10px] uppercase tracking-[0.22em] text-[#a09080] mb-3">Day by day</p>
+            <p className="text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-3">Day by day</p>
             <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide">
               {tripResult.days.map((day, i) => {
                 const isActive = drillDay?.day.date === day.date;
@@ -481,36 +479,36 @@ export default function AppPage() {
                   <button key={day.date}
                     onClick={() => { setDrillDay(null); fetchDrillDay(query, i); }}
                     className={`flex flex-col items-center py-2.5 px-4 rounded-2xl border shrink-0 transition-all ${
-                      isActive ? "bg-[#3a3530] border-[#3a3530] text-white" : "bg-white border-[#e0d8cc] text-[#3a3530] hover:border-[#c4725c]"
+                      isActive ? "bg-primary border-primary text-white" : "bg-white border-input text-foreground hover:border-clay"
                     }`}>
-                    <span className={`text-[10px] uppercase tracking-[0.18em] ${isActive ? "text-white/70" : "text-[#a09080]"}`}>{day.dayName.slice(0, 3)}</span>
-                    <span className={`font-[var(--font-serif)] text-[18px] leading-none mt-1 ${isActive ? "text-white" : "text-[#3a3530]"}`}>{day.tempRange}</span>
-                    {day.precipChance > 30 && <span className={`text-[10px] mt-0.5 ${isActive ? "text-white/70" : "text-[#c09070]"}`}>{day.precipChance}% rain</span>}
+                    <span className={`text-[10px] uppercase tracking-[0.18em] ${isActive ? "text-white/70" : "text-ink-soft"}`}>{day.dayName.slice(0, 3)}</span>
+                    <span className={`font-[var(--font-serif)] text-[18px] leading-none mt-1 ${isActive ? "text-white" : "text-foreground"}`}>{day.tempRange}</span>
+                    {day.precipChance > 30 && <span className={`text-[10px] mt-0.5 ${isActive ? "text-white/70" : "text-clay-warm"}`}>{day.precipChance}% rain</span>}
                   </button>
                 );
               })}
             </div>
           </div>
 
-          <div className="border-t border-[#e8e0d4]" />
+          <div className="border-t border-border" />
 
           {/* Headline + summary */}
           <div className="py-6 md:py-8 grid md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-8 md:gap-12">
-            <h3 className="font-[var(--font-serif)] text-[26px] md:text-[34px] text-[#3a3530] leading-[1.15] tracking-[-0.01em]">
+            <h3 className="font-[var(--font-serif)] text-[26px] md:text-[34px] text-foreground leading-[1.15] tracking-[-0.01em]">
               {tripResult.packingList.headline}
             </h3>
-            <p className="text-[15px] text-[#8a8078] leading-relaxed md:pt-2">{tripResult.packingList.weatherSummary}</p>
+            <p className="text-[15px] text-muted-foreground leading-relaxed md:pt-2">{tripResult.packingList.weatherSummary}</p>
           </div>
 
-          <div className="border-t border-[#e8e0d4]" />
+          <div className="border-t border-border" />
 
           {/* Packing categories — 2-column grid on desktop */}
           <div className="py-6 md:py-8">
-            <p className="text-[10px] uppercase tracking-[0.22em] text-[#a09080] mb-6">The list</p>
+            <p className="text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-6">The list</p>
             <div className="grid md:grid-cols-2 gap-8 md:gap-12">
               {tripResult.packingList.categories.map((cat) => (
                 <div key={cat.name}>
-                  <h4 className="font-[var(--font-serif)] text-[20px] text-[#3a3530] mb-3">{cat.name}</h4>
+                  <h4 className="font-[var(--font-serif)] text-[20px] text-foreground mb-3">{cat.name}</h4>
                   <div className="space-y-1.5">
                     {cat.items.map((item, j) => <PackLink key={j} text={item} />)}
                   </div>
@@ -522,20 +520,20 @@ export default function AppPage() {
           {/* Skip list + pro tip */}
           {(tripResult.packingList.skipList.length > 0 || tripResult.packingList.proTip) && (
             <>
-              <div className="border-t border-[#e8e0d4]" />
+              <div className="border-t border-border" />
               <div className="py-6 md:py-8 grid md:grid-cols-2 gap-8 md:gap-12">
                 {tripResult.packingList.skipList.length > 0 && (
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.22em] text-[#c09070] mb-3">Leave at home</p>
+                    <p className="text-[10px] uppercase tracking-[0.22em] text-clay-warm mb-3">Leave at home</p>
                     <div className="space-y-1">
-                      {tripResult.packingList.skipList.map((s, j) => <p key={j} className="text-[14px] text-[#8a8078] leading-relaxed">{s}</p>)}
+                      {tripResult.packingList.skipList.map((s, j) => <p key={j} className="text-[14px] text-muted-foreground leading-relaxed">{s}</p>)}
                     </div>
                   </div>
                 )}
                 {tripResult.packingList.proTip && (
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.22em] text-[#6b7c5e] mb-3">Pro tip</p>
-                    <p className="text-[14px] text-[#3a3530] leading-relaxed italic">{tripResult.packingList.proTip}</p>
+                    <p className="text-[10px] uppercase tracking-[0.22em] text-olive mb-3">Pro tip</p>
+                    <p className="text-[14px] text-foreground leading-relaxed italic">{tripResult.packingList.proTip}</p>
                   </div>
                 )}
               </div>
@@ -545,23 +543,23 @@ export default function AppPage() {
           {/* Drill-down */}
           {drillLoading && (
             <>
-              <div className="border-t border-[#e8e0d4]" />
+              <div className="border-t border-border" />
               <div className="flex flex-col items-center gap-4 py-12">
-                <div className="w-full max-w-[200px] h-1.5 rounded-full overflow-hidden bg-[#ece6dc]">
-                  <div className="h-full rounded-full" style={{ background: "linear-gradient(90deg, #d4b896, #6b7c5e, #d4b896)", backgroundSize: "300% 100%", animation: "breatheBar 6s ease-in-out infinite" }} />
+                <div className="w-full max-w-[200px] h-1.5 rounded-full overflow-hidden bg-muted">
+                  <div className="h-full rounded-full" style={{ background: "linear-gradient(90deg, var(--oat-light), var(--olive), var(--oat-light))", backgroundSize: "300% 100%", animation: "breatheBar 6s ease-in-out infinite" }} />
                 </div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[#c0b4a0]">Reading the day</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-ink-whisper">Reading the day</p>
               </div>
             </>
           )}
 
           {drillDay && !drillLoading && (
             <>
-              <div className="border-t border-[#e8e0d4]" />
+              <div className="border-t border-border" />
               <div className="pt-8 md:pt-10 pb-4">
                 <div className="flex items-center justify-between mb-6">
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-[#a09080]">{dayLabel(drillDay)} — full outfit</p>
-                  <button onClick={() => setDrillDay(null)} className="text-[12px] text-[#b0a490] hover:text-[#3a3530]">Close</button>
+                  <p className="text-[11px] uppercase tracking-[0.22em] text-ink-soft">{dayLabel(drillDay)} — full outfit</p>
+                  <button onClick={() => setDrillDay(null)} className="text-[12px] text-ink-faint hover:text-foreground">Close</button>
                 </div>
                 <DayCard result={drillDay} />
               </div>
@@ -580,13 +578,13 @@ export default function AppPage() {
         <div className="mt-12 md:mt-20 max-w-[640px] mx-auto">
           {recents.length > 0 && (
             <div className="mb-8 text-center">
-              <p className="text-[11px] uppercase tracking-[0.18em] text-[#b0a490] mb-3">Recent</p>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-ink-faint mb-3">Recent</p>
               <div className="flex flex-wrap justify-center gap-2">
                 {recents.map((r) => (
                   <button
                     key={r}
                     onClick={() => { setQuery(r); doSearch(r); }}
-                    className="text-[13px] text-[#3a3530] bg-white border border-[#e0d8cc] hover:border-[#c4725c] px-4 py-2 rounded-full transition-colors"
+                    className="text-[13px] text-foreground bg-white border border-input hover:border-clay px-4 py-2 rounded-full transition-colors"
                   >
                     {r}
                   </button>
@@ -595,17 +593,17 @@ export default function AppPage() {
             </div>
           )}
           <div className="text-center pt-4">
-            <p className="font-[var(--font-serif)] text-[32px] md:text-[44px] text-[#3a3530] leading-tight tracking-[-0.02em] mb-3">
+            <p className="font-[var(--font-serif)] text-[32px] md:text-[44px] text-foreground leading-tight tracking-[-0.02em] mb-3">
               {mode === "today" ? "Dress for the day." : "Where to?"}
             </p>
-            <p className="text-[15px] text-[#b0a490] mb-8 max-w-[420px] mx-auto leading-relaxed">
+            <p className="text-[15px] text-ink-faint mb-8 max-w-[420px] mx-auto leading-relaxed">
               {mode === "today" ? "Enter a city and we'll read the forecast." : "Enter a destination and we'll pack your bag."}
               {selectedCreator && <span> Styled with {creators.find((c) => c.username === selectedCreator)?.name}'s pieces.</span>}
             </p>
             <div className="flex flex-wrap justify-center gap-2">
               {["Los Angeles", "New York", "London", "Tokyo", "Paris"].map((city) => (
                 <button key={city} onClick={() => { setQuery(city); doSearch(city); }}
-                  className="text-[13px] text-[#3a3530] bg-white border border-[#e0d8cc] hover:border-[#c4725c] px-4 py-2 rounded-full transition-colors">
+                  className="text-[13px] text-foreground bg-white border border-input hover:border-clay px-4 py-2 rounded-full transition-colors">
                   {city}
                 </button>
               ))}
@@ -630,10 +628,10 @@ function CreatorProductLink({ item, label }: { item: CreatorOutfitItem | null; l
   if (!item) return null;
   return (
     <div>
-      <p className="text-[9px] uppercase tracking-[0.15em] text-[#b0a490] mb-0.5">{label}</p>
+      <p className="text-[9px] uppercase tracking-[0.15em] text-ink-faint mb-0.5">{label}</p>
       <a href={item.url || "#"} target="_blank" rel="noopener noreferrer"
-        className="text-[13px] text-[#5a5248] leading-relaxed underline decoration-[#d4ccc0] underline-offset-2 hover:decoration-[#6b7c5e] transition-colors">
-        {item.title} <span className="text-[11px] text-[#b0a490] no-underline">— {item.brand}{item.price ? ` $${item.price}` : ""}</span> <span className="text-[10px] text-[#c0b4a0] no-underline">↗</span>
+        className="text-[13px] text-ink-subtle leading-relaxed underline decoration-rule-dashed underline-offset-2 hover:decoration-olive transition-colors">
+        {item.title} <span className="text-[11px] text-ink-faint no-underline">— {item.brand}{item.price ? ` $${item.price}` : ""}</span> <span className="text-[10px] text-ink-whisper no-underline">↗</span>
       </a>
     </div>
   );
@@ -644,7 +642,7 @@ function OutfitCollage({ items }: { items: (CreatorOutfitItem | null)[] }) {
   if (valid.length === 0) return null;
 
   return (
-    <div className="relative bg-[#eee8df] rounded-2xl p-4 min-h-[300px]">
+    <div className="relative bg-card rounded-2xl p-4 min-h-[300px]">
       {/* Top row: small accessories + main garment */}
       <div className="flex items-start gap-3 mb-3">
         <div className="flex flex-col gap-2 w-[68px] shrink-0 pt-1">
@@ -693,19 +691,19 @@ function CreatorCard({ result }: { result: CreatorOutfit }) {
 
   return (
     <div className="space-y-3">
-      <div className="rounded-3xl bg-[#f5f0ea] border border-[#e8e0d4] overflow-hidden">
+      <div className="rounded-3xl bg-card border border-border overflow-hidden">
         <div className="p-5 pb-4">
-          <p className="text-[10px] uppercase tracking-[0.18em] text-[#a09080] mb-1">Styled by @{result.creator}</p>
-          <p className="text-[10px] text-[#b0a490] mb-3">{result.location}</p>
-          <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-snug">{o.headline}</p>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-ink-soft mb-1">Styled by @{result.creator}</p>
+          <p className="text-[10px] text-ink-faint mb-3">{result.location}</p>
+          <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-snug">{o.headline}</p>
           {(() => {
             const feelsLow = result.moments.length > 0 ? Math.min(...result.moments.map(m => m.shadeFeel)) : Math.round(result.day.tempMin);
             const feelsHigh = result.moments.length > 0 ? Math.max(...result.moments.map(m => m.sunFeel)) : Math.round(result.day.tempMax);
             return (
               <div className="flex gap-5 mt-4">
-                <div><p className="text-[9px] uppercase tracking-[0.15em] text-[#a09080]">Feels like</p><p className="text-[13px] font-medium text-[#3a3530]">{feelsLow}–{feelsHigh}°</p></div>
-                <div><p className="text-[9px] uppercase tracking-[0.15em] text-[#a09080]">UV</p><p className="text-[13px] font-medium text-[#3a3530]">{result.day.uvIndexMax}</p></div>
-                {result.day.precipitationProbability > 20 && <div><p className="text-[9px] uppercase tracking-[0.15em] text-[#a09080]">Rain</p><p className="text-[13px] font-medium text-[#3a3530]">{result.day.precipitationProbability}%</p></div>}
+                <div><p className="text-[9px] uppercase tracking-[0.15em] text-ink-soft">Feels like</p><p className="text-[13px] font-medium text-foreground">{feelsLow}–{feelsHigh}°</p></div>
+                <div><p className="text-[9px] uppercase tracking-[0.15em] text-ink-soft">UV</p><p className="text-[13px] font-medium text-foreground">{result.day.uvIndexMax}</p></div>
+                {result.day.precipitationProbability > 20 && <div><p className="text-[9px] uppercase tracking-[0.15em] text-ink-soft">Rain</p><p className="text-[13px] font-medium text-foreground">{result.day.precipitationProbability}%</p></div>}
               </div>
             );
           })()}
@@ -716,21 +714,21 @@ function CreatorCard({ result }: { result: CreatorOutfit }) {
         {/* Walk out — same layout as regular outfit */}
         <div className="px-5 pt-4 pb-2">
           <div className="relative pl-6 pb-5">
-            <div className="absolute left-[7px] top-[10px] bottom-0 w-px border-l border-dashed border-[#d4ccc0]" />
-            <div className="absolute left-0 top-[3px] w-[15px] h-[15px] rounded-full border-2 border-[#d4a860] bg-[#f5f0ea]" />
+            <div className="absolute left-[7px] top-[10px] bottom-0 w-px border-l border-dashed border-rule-dashed" />
+            <div className="absolute left-0 top-[3px] w-[15px] h-[15px] rounded-full border-2 border-gold bg-card" />
             <div className="flex items-start justify-between mb-3">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.18em] text-[#6b7c5e] font-medium">Walk out the door</p>
-                <p className="text-[11px] text-[#b0a490]">{result.moments[0]?.timeRange || "7–9am"}</p>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-olive font-medium">Walk out the door</p>
+                <p className="text-[11px] text-ink-faint">{result.moments[0]?.timeRange || "7–9am"}</p>
               </div>
               {result.moments[0] && (
                 <div className="text-right">
-                  <span className="font-[var(--font-serif)] text-[28px] leading-none text-[#3a3530]">{result.moments[0].sunFeel}°</span>
-                  <p className="text-[10px] text-[#b0a490]">{result.moments[0].shadeFeel}° shade</p>
+                  <span className="font-[var(--font-serif)] text-[28px] leading-none text-foreground">{result.moments[0].sunFeel}°</span>
+                  <p className="text-[10px] text-ink-faint">{result.moments[0].shadeFeel}° shade</p>
                 </div>
               )}
             </div>
-            <p className="text-[12px] text-[#a09080] italic mb-3">{o.walkOut.summary}</p>
+            <p className="text-[12px] text-ink-soft italic mb-3">{o.walkOut.summary}</p>
             <div className="space-y-2">
               <CreatorProductLink item={o.walkOut.top} label="Top" />
               {o.walkOut.layer && <CreatorProductLink item={o.walkOut.layer} label="Layer" />}
@@ -741,7 +739,7 @@ function CreatorCard({ result }: { result: CreatorOutfit }) {
               <div className="flex flex-wrap gap-1.5 mt-2.5">
                 {o.walkOut.accessories.map((a, j) => (
                   <a key={j} href={a.url || "#"} target="_blank" rel="noopener noreferrer"
-                    className="text-[10px] text-[#6b7c5e] bg-[#6b7c5e]/8 px-2 py-0.5 rounded-full hover:bg-[#6b7c5e]/15 transition-colors">
+                    className="text-[10px] text-olive bg-olive/8 px-2 py-0.5 rounded-full hover:bg-olive/15 transition-colors">
                     {a.title} ↗
                   </a>
                 ))}
@@ -751,79 +749,79 @@ function CreatorCard({ result }: { result: CreatorOutfit }) {
 
           {/* Midday */}
           <div className="relative pl-6 pb-5">
-            <div className="absolute left-[7px] top-[10px] bottom-0 w-px border-l border-dashed border-[#d4ccc0]" />
-            <div className="absolute left-0 top-[3px] w-[15px] h-[15px] rounded-full border-2 border-[#c4a882] bg-[#f5f0ea]" />
+            <div className="absolute left-[7px] top-[10px] bottom-0 w-px border-l border-dashed border-rule-dashed" />
+            <div className="absolute left-0 top-[3px] w-[15px] h-[15px] rounded-full border-2 border-oat bg-card" />
             <div className="flex items-start justify-between mb-3">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.18em] text-[#6b7c5e] font-medium">Midday shift</p>
-                <p className="text-[11px] text-[#b0a490]">{result.moments[1]?.timeRange || "11am–3pm"}</p>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-olive font-medium">Midday shift</p>
+                <p className="text-[11px] text-ink-faint">{result.moments[1]?.timeRange || "11am–3pm"}</p>
               </div>
               {result.moments[1] && (
                 <div className="text-right">
-                  <span className="font-[var(--font-serif)] text-[28px] leading-none text-[#3a3530]">{result.moments[1].sunFeel}°</span>
-                  <p className="text-[10px] text-[#b0a490]">{result.moments[1].shadeFeel}° shade</p>
+                  <span className="font-[var(--font-serif)] text-[28px] leading-none text-foreground">{result.moments[1].sunFeel}°</span>
+                  <p className="text-[10px] text-ink-faint">{result.moments[1].shadeFeel}° shade</p>
                 </div>
               )}
             </div>
-            <p className="text-[12px] text-[#a09080] italic mb-3">{o.carry.summary}</p>
+            <p className="text-[12px] text-ink-soft italic mb-3">{o.carry.summary}</p>
             {o.carry.remove.length > 0 && (
               <div className="mb-2">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-[#c09070] mb-1">Take off</p>
-                {o.carry.remove.map((item, j) => <p key={j} className="text-[13px] text-[#5a5248]">{item}</p>)}
+                <p className="text-[9px] uppercase tracking-[0.15em] text-clay-warm mb-1">Take off</p>
+                {o.carry.remove.map((item, j) => <p key={j} className="text-[13px] text-ink-subtle">{item}</p>)}
               </div>
             )}
             {o.carry.add.length > 0 && (
               <div className="mb-2">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-[#6b7c5e] mb-1">Put on</p>
-                {o.carry.add.map((item, j) => <p key={j} className="text-[13px] text-[#5a5248]">{item}</p>)}
+                <p className="text-[9px] uppercase tracking-[0.15em] text-olive mb-1">Put on</p>
+                {o.carry.add.map((item, j) => <p key={j} className="text-[13px] text-ink-subtle">{item}</p>)}
               </div>
             )}
-            <p className="text-[11px] text-[#b0a490]">{o.carry.note}</p>
+            <p className="text-[11px] text-ink-faint">{o.carry.note}</p>
           </div>
 
           {/* Evening */}
           <div className="relative pl-6 pb-5">
-            <div className="absolute left-0 top-[3px] w-[15px] h-[15px] rounded-full border-2 border-[#8890a0] bg-[#f5f0ea]" />
+            <div className="absolute left-0 top-[3px] w-[15px] h-[15px] rounded-full border-2 border-slate bg-card" />
             <div className="flex items-start justify-between mb-3">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.18em] text-[#6b7c5e] font-medium">By evening</p>
-                <p className="text-[11px] text-[#b0a490]">{result.moments[2]?.timeRange || "6–10pm"}</p>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-olive font-medium">By evening</p>
+                <p className="text-[11px] text-ink-faint">{result.moments[2]?.timeRange || "6–10pm"}</p>
               </div>
               {result.moments[2] && (
                 <div className="text-right">
-                  <span className="font-[var(--font-serif)] text-[28px] leading-none text-[#3a3530]">{result.moments[2].shadeFeel}°</span>
-                  {result.moments[2].windSpeed > 5 && <p className="text-[10px] text-[#b0a490]">wind chill</p>}
+                  <span className="font-[var(--font-serif)] text-[28px] leading-none text-foreground">{result.moments[2].shadeFeel}°</span>
+                  {result.moments[2].windSpeed > 5 && <p className="text-[10px] text-ink-faint">wind chill</p>}
                 </div>
               )}
             </div>
-            <p className="text-[12px] text-[#a09080] italic mb-3">{o.evening.summary}</p>
+            <p className="text-[12px] text-ink-soft italic mb-3">{o.evening.summary}</p>
             {o.evening.add.length > 0 && (
               <div className="mb-2">
-                <p className="text-[9px] uppercase tracking-[0.15em] text-[#6b7c5e] mb-1">Put back on</p>
-                {o.evening.add.map((item, j) => <p key={j} className="text-[13px] text-[#5a5248]">{item}</p>)}
+                <p className="text-[9px] uppercase tracking-[0.15em] text-olive mb-1">Put back on</p>
+                {o.evening.add.map((item, j) => <p key={j} className="text-[13px] text-ink-subtle">{item}</p>)}
               </div>
             )}
-            <p className="text-[11px] text-[#b0a490]">{o.evening.note}</p>
+            <p className="text-[11px] text-ink-faint">{o.evening.note}</p>
           </div>
         </div>
 
         {/* Bag */}
         {o.bagEssentials.length > 0 && (
           <>
-            <div className="mx-5 border-t border-dashed border-[#d4ccc0]" />
+            <div className="mx-5 border-t border-dashed border-rule-dashed" />
             <div className="px-5 py-4">
-              <p className="text-[10px] uppercase tracking-[0.18em] text-[#a09080] mb-2">In your bag</p>
+              <p className="text-[10px] uppercase tracking-[0.18em] text-ink-soft mb-2">In your bag</p>
               <div className="flex flex-wrap gap-1.5">
-                {o.bagEssentials.map((item, i) => <span key={i} className="text-[11px] text-[#5a5248] bg-[#ece6dc] px-2.5 py-1 rounded-full">{item}</span>)}
+                {o.bagEssentials.map((item, i) => <span key={i} className="text-[11px] text-ink-subtle bg-muted px-2.5 py-1 rounded-full">{item}</span>)}
               </div>
             </div>
           </>
         )}
 
         {/* Outfit collage — replaces the AI generated image */}
-        <div className="mx-5 border-t border-dashed border-[#d4ccc0]" />
+        <div className="mx-5 border-t border-dashed border-rule-dashed" />
         <div className="p-5">
-          <p className="text-[10px] uppercase tracking-[0.18em] text-[#a09080] mb-3">The look</p>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-ink-soft mb-3">The look</p>
           <OutfitCollage items={[o.walkOut.top, o.walkOut.layer, o.walkOut.bottom, o.walkOut.shoes, ...o.walkOut.accessories]} />
         </div>
       </div>
@@ -881,29 +879,29 @@ function DayCard({ result }: { result: TodayResult }) {
       <div className="order-2 md:order-1">
         {/* Header */}
         <div className="mb-6 md:mb-8">
-          <p className="text-[11px] uppercase tracking-[0.22em] text-[#a09080] mb-3">{result.location}</p>
-          <h2 className="font-[var(--font-serif)] text-[32px] md:text-[44px] text-[#3a3530] leading-[1.05] tracking-[-0.02em] mb-5">
+          <p className="text-[11px] uppercase tracking-[0.22em] text-ink-soft mb-3">{result.location}</p>
+          <h2 className="font-[var(--font-serif)] text-[32px] md:text-[44px] text-foreground leading-[1.05] tracking-[-0.02em] mb-5">
             {result.outfit.headline}
           </h2>
           <div className="flex gap-8">
             <div>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1">Range</p>
-              <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-none">{Math.round(result.day.tempMin)}–{Math.round(result.day.tempMax)}°</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Range</p>
+              <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{Math.round(result.day.tempMin)}–{Math.round(result.day.tempMax)}°</p>
             </div>
             <div>
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1">UV</p>
-              <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-none">{result.day.uvIndexMax}</p>
+              <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">UV</p>
+              <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{result.day.uvIndexMax}</p>
             </div>
             {result.day.precipitationProbability > 20 && (
               <div>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1">Rain</p>
-                <p className="font-[var(--font-serif)] text-[20px] text-[#3a3530] leading-none">{result.day.precipitationProbability}%</p>
+                <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1">Rain</p>
+                <p className="font-[var(--font-serif)] text-[20px] text-foreground leading-none">{result.day.precipitationProbability}%</p>
               </div>
             )}
           </div>
         </div>
 
-        <div className="border-t border-[#e8e0d4]" />
+        <div className="border-t border-border" />
 
         {/* Morning */}
         <MomentSection
@@ -920,14 +918,14 @@ function DayCard({ result }: { result: TodayResult }) {
             <OutfitRow label="Shoes" text={result.outfit.walkOut.shoes} />
           </div>
           {result.outfit.walkOut.accessories.length > 0 && (
-            <div className="mt-5 pt-4 border-t border-[#e8e0d4]">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-2">Accessories</p>
-              <p className="text-[13px] text-[#5a5248]">{result.outfit.walkOut.accessories.join(" · ")}</p>
+            <div className="mt-5 pt-4 border-t border-border">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-2">Accessories</p>
+              <p className="text-[13px] text-ink-subtle">{result.outfit.walkOut.accessories.join(" · ")}</p>
             </div>
           )}
         </MomentSection>
 
-        <div className="border-t border-[#e8e0d4]" />
+        <div className="border-t border-border" />
 
         {/* Midday */}
         <MomentSection
@@ -939,20 +937,20 @@ function DayCard({ result }: { result: TodayResult }) {
         >
           {result.outfit.carry.remove.length > 0 && (
             <div className="mb-4">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#c09070] mb-2">Take off</p>
-              {result.outfit.carry.remove.map((item, j) => <p key={j} className="text-[14px] text-[#3a3530]">{item}</p>)}
+              <p className="text-[10px] uppercase tracking-[0.2em] text-clay-warm mb-2">Take off</p>
+              {result.outfit.carry.remove.map((item, j) => <p key={j} className="text-[14px] text-foreground">{item}</p>)}
             </div>
           )}
           {result.outfit.carry.add.length > 0 && (
             <div className="mb-4">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#6b7c5e] mb-2">Put on</p>
-              {result.outfit.carry.add.map((item, j) => <p key={j} className="text-[14px] text-[#3a3530]">{item}</p>)}
+              <p className="text-[10px] uppercase tracking-[0.2em] text-olive mb-2">Put on</p>
+              {result.outfit.carry.add.map((item, j) => <p key={j} className="text-[14px] text-foreground">{item}</p>)}
             </div>
           )}
-          {result.outfit.carry.note && <p className="text-[12px] text-[#b0a490] italic">{result.outfit.carry.note}</p>}
+          {result.outfit.carry.note && <p className="text-[12px] text-ink-faint italic">{result.outfit.carry.note}</p>}
         </MomentSection>
 
-        <div className="border-t border-[#e8e0d4]" />
+        <div className="border-t border-border" />
 
         {/* Evening */}
         <MomentSection
@@ -964,20 +962,20 @@ function DayCard({ result }: { result: TodayResult }) {
         >
           {result.outfit.evening.add.length > 0 && (
             <div className="mb-4">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-[#6b7c5e] mb-2">Put back on</p>
-              {result.outfit.evening.add.map((item, j) => <p key={j} className="text-[14px] text-[#3a3530]">{item}</p>)}
+              <p className="text-[10px] uppercase tracking-[0.2em] text-olive mb-2">Put back on</p>
+              {result.outfit.evening.add.map((item, j) => <p key={j} className="text-[14px] text-foreground">{item}</p>)}
             </div>
           )}
-          {result.outfit.evening.note && <p className="text-[12px] text-[#b0a490] italic">{result.outfit.evening.note}</p>}
+          {result.outfit.evening.note && <p className="text-[12px] text-ink-faint italic">{result.outfit.evening.note}</p>}
         </MomentSection>
 
         {/* Bag */}
         {result.outfit.bagEssentials.length > 0 && (
           <>
-            <div className="border-t border-[#e8e0d4]" />
+            <div className="border-t border-border" />
             <div className="py-6">
-              <p className="text-[10px] uppercase tracking-[0.22em] text-[#a09080] mb-3">In your bag</p>
-              <p className="text-[14px] text-[#3a3530]">{result.outfit.bagEssentials.join(" · ")}</p>
+              <p className="text-[10px] uppercase tracking-[0.22em] text-ink-soft mb-3">In your bag</p>
+              <p className="text-[14px] text-foreground">{result.outfit.bagEssentials.join(" · ")}</p>
             </div>
           </>
         )}
@@ -985,7 +983,7 @@ function DayCard({ result }: { result: TodayResult }) {
         {/* Share */}
         <button
           onClick={handleShare}
-          className="w-full md:w-auto md:px-8 py-3.5 rounded-full bg-[#3a3530] text-white text-[14px] font-medium tracking-wide hover:bg-[#2a2520] transition-colors mt-2"
+          className="w-full md:w-auto md:px-8 py-3.5 rounded-full bg-primary text-white text-[14px] font-medium tracking-wide hover:bg-primary-hover transition-colors mt-2"
         >
           Share this look →
         </button>
@@ -995,13 +993,12 @@ function DayCard({ result }: { result: TodayResult }) {
       <div className="order-1 md:order-2 mb-6 md:mb-0">
         <div className="md:sticky md:top-5">
           {imageLoading && (
-            <div className="rounded-3xl bg-[#ece6dc] aspect-[3/4] flex items-center justify-center">
+            <div className="rounded-3xl bg-muted aspect-[3/4] flex items-center justify-center">
               <div className="flex flex-col items-center gap-3">
-                <div className="w-full max-w-[120px] h-1.5 rounded-full overflow-hidden bg-[#e0d8cc]">
-                  <div className="h-full rounded-full" style={{ background: "linear-gradient(90deg, #d4b896, #6b7c5e, #d4b896)", backgroundSize: "300% 100%", animation: "breatheBar 6s ease-in-out infinite" }} />
+                <div className="w-full max-w-[120px] h-1.5 rounded-full overflow-hidden bg-input">
+                  <div className="h-full rounded-full" style={{ background: "linear-gradient(90deg, var(--oat-light), var(--olive), var(--oat-light))", backgroundSize: "300% 100%", animation: "breatheBar 6s ease-in-out infinite" }} />
                 </div>
-                <p className="text-[10px] text-[#b0a490] uppercase tracking-[0.2em]">Styling your look</p>
-                <style>{`@keyframes breatheBar { 0%, 100% { background-position: 0% 50%; opacity: 0.7; } 50% { background-position: 100% 50%; opacity: 1; } }`}</style>
+                <p className="text-[10px] text-ink-faint uppercase tracking-[0.2em]">Styling your look</p>
               </div>
             </div>
           )}
@@ -1013,8 +1010,8 @@ function DayCard({ result }: { result: TodayResult }) {
             />
           )}
           {!imageLoading && !outfitImage && (
-            <div className="rounded-3xl bg-[#ece6dc] aspect-[3/4] flex items-center justify-center">
-              <p className="text-[11px] text-[#b0a490] uppercase tracking-[0.2em]">Couldn&apos;t generate image</p>
+            <div className="rounded-3xl bg-muted aspect-[3/4] flex items-center justify-center">
+              <p className="text-[11px] text-ink-faint uppercase tracking-[0.2em]">Couldn&apos;t generate image</p>
             </div>
           )}
         </div>
@@ -1030,17 +1027,17 @@ function MomentSection({ label, timeRange, temp, tempSub, summary, children }: {
     <div className="py-6 md:py-7">
       <div className="flex items-baseline justify-between mb-3">
         <div className="flex items-baseline gap-4">
-          <h3 className="font-[var(--font-serif)] text-[22px] md:text-[26px] text-[#3a3530] leading-none">{label}</h3>
-          <p className="text-[11px] uppercase tracking-[0.2em] text-[#a09080]">{timeRange}</p>
+          <h3 className="font-[var(--font-serif)] text-[22px] md:text-[26px] text-foreground leading-none">{label}</h3>
+          <p className="text-[11px] uppercase tracking-[0.2em] text-ink-soft">{timeRange}</p>
         </div>
         {temp && (
           <div className="text-right">
-            <span className="font-[var(--font-serif)] text-[32px] md:text-[38px] leading-none text-[#3a3530]">{temp}</span>
-            {tempSub && <p className="text-[10px] text-[#b0a490] mt-1">{tempSub}</p>}
+            <span className="font-[var(--font-serif)] text-[32px] md:text-[38px] leading-none text-foreground">{temp}</span>
+            {tempSub && <p className="text-[10px] text-ink-faint mt-1">{tempSub}</p>}
           </div>
         )}
       </div>
-      {summary && <p className="text-[14px] text-[#8a8078] leading-relaxed mb-5 italic">{summary}</p>}
+      {summary && <p className="text-[14px] text-muted-foreground leading-relaxed mb-5 italic">{summary}</p>}
       {children}
     </div>
   );
@@ -1049,7 +1046,7 @@ function MomentSection({ label, timeRange, temp, tempSub, summary, children }: {
 function OutfitRow({ label, text }: { label: string; text: string }) {
   return (
     <div>
-      <p className="text-[10px] uppercase tracking-[0.2em] text-[#a09080] mb-1.5">{label}</p>
+      <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1.5">{label}</p>
       <ShopLink text={text} />
     </div>
   );
