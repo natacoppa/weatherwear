@@ -1,52 +1,37 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { TodayResult } from "@/lib/types";
+import { shopUrl } from "@/lib/shop";
+import { useOutfitImage } from "@/hooks/use-outfit-image";
 import { BreatheBar } from "./breathe-bar";
 import { MomentSection } from "./moment-section";
-import { ShopLink } from "./shop-link";
 
 function OutfitRow({ label, text }: { label: string; text: string }) {
   return (
     <div>
       <p className="text-[10px] uppercase tracking-[0.2em] text-ink-soft mb-1.5">{label}</p>
-      <ShopLink text={text} />
+      <a
+        href={shopUrl(text)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[14px] text-foreground leading-snug hover:text-clay transition-colors"
+      >
+        {text} <span className="text-[10px] text-ink-whisper">↗</span>
+      </a>
     </div>
   );
 }
 
-// DayCard is mounted with a `key` derived from location+date by its parent,
-// so the initial state here is only ever seen on first mount.
 export function DayCard({ result }: { result: TodayResult }) {
-  const [outfitImage, setOutfitImage] = useState<string | null>(null);
-  const [imageLoading, setImageLoading] = useState(true);
+  const { image: outfitImage, loading: imageLoading } = useOutfitImage(result);
   const [copied, setCopied] = useState(false);
+  const copiedTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const ctrl = new AbortController();
-    fetch("/api/outfit-image", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        outfit: result.outfit,
-        location: result.location,
-        temp: (result.day.tempMin + result.day.tempMax) / 2,
-      }),
-      signal: ctrl.signal,
-    })
-      .then((res) => (res.ok ? res.json() : null))
-      .then((data) => {
-        if (data?.image) setOutfitImage(data.image);
-      })
-      .catch(() => {
-        /* aborted or network error — silent */
-      })
-      .finally(() => {
-        if (!ctrl.signal.aborted) setImageLoading(false);
-      });
-    return () => ctrl.abort();
-    // Parent re-keys the component on day change, so deps are stable after mount.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => {
+      if (copiedTimer.current) clearTimeout(copiedTimer.current);
+    };
   }, []);
 
   const handleShare = async () => {
@@ -69,7 +54,8 @@ export function DayCard({ result }: { result: TodayResult }) {
     } else {
       await navigator.clipboard.writeText(text);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      if (copiedTimer.current) clearTimeout(copiedTimer.current);
+      copiedTimer.current = setTimeout(() => setCopied(false), 2000);
     }
   };
 

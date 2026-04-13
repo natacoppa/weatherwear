@@ -1,15 +1,16 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { CreatorCard } from "@/components/creator-card";
 import { DayCard } from "@/components/day-card";
 import { Nav } from "@/components/nav";
 import { OutfitLoader } from "@/components/outfit-loader";
-import { PackLink } from "@/components/pack-link";
 import { SearchControls } from "@/components/search-controls";
 import { useRecents } from "@/hooks/use-recents";
-import type { CreatorInfo, CreatorOutfit, Mode, TodayResult, TripResult } from "@/lib/types";
+import { useSearchForm, type SearchFormState } from "@/hooks/use-search-form";
+import { shopUrl } from "@/lib/shop";
+import type { CreatorInfo, CreatorOutfit, TodayResult, TripResult } from "@/lib/types";
 
 const fmt = (d: string) =>
   new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
@@ -25,33 +26,18 @@ function dayLabel(result: TodayResult) {
 }
 
 export default function AppPage() {
-  const [mode, setMode] = useState<Mode>("today");
-  const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
-  const [editingSearch, setEditingSearch] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { recents, add: addRecent } = useRecents();
 
-  // Today
+  // Fetch results — 4 parallel states; discriminated union deferred per
+  // original plan. Race safety comes from AbortController refs below.
   const [todayResult, setTodayResult] = useState<TodayResult | null>(null);
   const [dayIndex, setDayIndex] = useState(0);
-
-  // Trip
   const [tripResult, setTripResult] = useState<TripResult | null>(null);
-  const [tripStart, setTripStart] = useState(() => new Date().toISOString().split("T")[0]);
-  const [tripEnd, setTripEnd] = useState(() => {
-    const d = new Date();
-    d.setDate(d.getDate() + 3);
-    return d.toISOString().split("T")[0];
-  });
-
-  // Trip → day drill-down
   const [drillDay, setDrillDay] = useState<TodayResult | null>(null);
   const [drillLoading, setDrillLoading] = useState(false);
-
-  // Creator
   const [creators, setCreators] = useState<CreatorInfo[]>([]);
-  const [selectedCreator, setSelectedCreator] = useState("");
   const [creatorResult, setCreatorResult] = useState<CreatorOutfit | null>(null);
 
   useEffect(() => {
@@ -61,96 +47,146 @@ export default function AppPage() {
       .catch(() => {});
   }, []);
 
+  // Single AbortController for the primary mode fetch (today/trip/creator).
+  // Drill-down has its own controller so it can run in parallel with a
+  // trip-view result that's already on screen.
+  const primaryCtrl = useRef<AbortController | null>(null);
+  const drillCtrl = useRef<AbortController | null>(null);
+
+  // Read the body once; fall back gracefully for non-JSON (502 gateway HTML etc.).
+  async function readError(res: Response): Promise<string> {
+    try {
+      const body = (await res.json()) as { error?: string };
+      return body.error || `HTTP ${res.status}`;
+    } catch {
+      return `HTTP ${res.status}`;
+    }
+  }
+  const isAbort = (e: unknown) => e instanceof DOMException && e.name === "AbortError";
+
   const fetchToday = useCallback(async (q: string, day: number) => {
+    primaryCtrl.current?.abort();
+    const ctrl = new AbortController();
+    primaryCtrl.current = ctrl;
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${day}`);
-      if (!res.ok) throw new Error((await res.json()).error);
-      const data = await res.json();
+      const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${day}`, { signal: ctrl.signal });
+      if (!res.ok) throw new Error(await readError(res));
+      const data = (await res.json()) as TodayResult;
       setTodayResult(data);
       setDayIndex(data.dayIndex);
     } catch (e) {
+      if (isAbort(e)) return;
       setError(e instanceof Error ? e.message : "Error");
     } finally {
-      setLoading(false);
+      if (primaryCtrl.current === ctrl) setLoading(false);
     }
   }, []);
 
-  const fetchTrip = useCallback(
-    async (q: string) => {
-      setLoading(true);
-      setError(null);
-      setDrillDay(null);
-      try {
-        const res = await fetch(`/api/trip?q=${encodeURIComponent(q)}&startDate=${tripStart}&endDate=${tripEnd}`);
-        if (!res.ok) throw new Error((await res.json()).error);
-        setTripResult(await res.json());
-      } catch (e) {
-        setError(e instanceof Error ? e.message : "Error");
-      } finally {
-        setLoading(false);
-      }
-    },
-    [tripStart, tripEnd],
-  );
+  const fetchTrip = useCallback(async (q: string, start: string, end: string) => {
+    primaryCtrl.current?.abort();
+    drillCtrl.current?.abort();
+    const ctrl = new AbortController();
+    primaryCtrl.current = ctrl;
+    setLoading(true);
+    setError(null);
+    setDrillDay(null);
+    try {
+      const res = await fetch(
+        `/api/trip?q=${encodeURIComponent(q)}&startDate=${start}&endDate=${end}`,
+        { signal: ctrl.signal },
+      );
+      if (!res.ok) throw new Error(await readError(res));
+      setTripResult((await res.json()) as TripResult);
+    } catch (e) {
+      if (isAbort(e)) return;
+      setError(e instanceof Error ? e.message : "Error");
+    } finally {
+      if (primaryCtrl.current === ctrl) setLoading(false);
+    }
+  }, []);
 
   const fetchDrillDay = useCallback(async (q: string, dayIdx: number) => {
+    drillCtrl.current?.abort();
+    const ctrl = new AbortController();
+    drillCtrl.current = ctrl;
     setDrillLoading(true);
     try {
-      const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${dayIdx}`);
-      if (!res.ok) throw new Error((await res.json()).error);
-      setDrillDay(await res.json());
+      const res = await fetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${dayIdx}`, { signal: ctrl.signal });
+      if (!res.ok) throw new Error(await readError(res));
+      setDrillDay((await res.json()) as TodayResult);
     } catch (e) {
-      // Surface drill-down failures to the user instead of silently swallowing.
+      if (isAbort(e)) return;
       setDrillDay(null);
       setError(e instanceof Error ? e.message : "Couldn't load that day");
     } finally {
-      setDrillLoading(false);
+      if (drillCtrl.current === ctrl) setDrillLoading(false);
     }
   }, []);
 
   const fetchCreatorOutfit = useCallback(async (q: string, creator: string) => {
+    primaryCtrl.current?.abort();
+    const ctrl = new AbortController();
+    primaryCtrl.current = ctrl;
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/outfit-shopmy?q=${encodeURIComponent(q)}&creator=${encodeURIComponent(creator)}`);
-      if (!res.ok) throw new Error((await res.json()).error);
-      setCreatorResult(await res.json());
+      const res = await fetch(
+        `/api/outfit-shopmy?q=${encodeURIComponent(q)}&creator=${encodeURIComponent(creator)}`,
+        { signal: ctrl.signal },
+      );
+      if (!res.ok) throw new Error(await readError(res));
+      setCreatorResult((await res.json()) as CreatorOutfit);
     } catch (e) {
+      if (isAbort(e)) return;
       setError(e instanceof Error ? e.message : "Error");
     } finally {
-      setLoading(false);
+      if (primaryCtrl.current === ctrl) setLoading(false);
     }
   }, []);
 
-  const doSearch = (q: string) => {
-    addRecent(q);
-    if (selectedCreator) {
-      fetchCreatorOutfit(q, selectedCreator);
-    } else if (mode === "today") {
-      setDayIndex(0);
-      fetchToday(q, 0);
-    } else if (mode === "trip") {
-      fetchTrip(q);
-    }
-  };
+  const { state: formState, handlers: formHandlers } = useSearchForm({
+    onSubmit: (s: SearchFormState) => {
+      addRecent(s.query);
+      if (s.selectedCreator) {
+        fetchCreatorOutfit(s.query, s.selectedCreator);
+      } else if (s.mode === "today") {
+        setDayIndex(0);
+        fetchToday(s.query, 0);
+      } else if (s.mode === "trip") {
+        fetchTrip(s.query, s.tripStart, s.tripEnd);
+      }
+    },
+    onModeChange: () => {
+      primaryCtrl.current?.abort();
+      drillCtrl.current?.abort();
+      setError(null);
+      setLoading(false);
+      setDrillDay(null);
+      setDrillLoading(false);
+      setTodayResult(null);
+      setTripResult(null);
+    },
+    onCreatorChange: () => {
+      primaryCtrl.current?.abort();
+      setCreatorResult(null);
+      setError(null);
+      setLoading(false);
+    },
+  });
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!query.trim()) return;
-    doSearch(query.trim());
-    setEditingSearch(false);
-  };
-
-  const handleDayNav = (dir: number) => {
-    if (!query.trim()) return;
-    const next = dayIndex + dir;
-    if (todayResult && next >= 0 && next < todayResult.totalDays) fetchToday(query.trim(), next);
-  };
+  const handleDayNav = useCallback(
+    (dir: number) => {
+      if (!formState.query.trim() || !todayResult) return;
+      const next = dayIndex + dir;
+      if (next >= 0 && next < todayResult.totalDays) fetchToday(formState.query.trim(), next);
+    },
+    [dayIndex, fetchToday, formState.query, todayResult],
+  );
 
   const hasResult = todayResult || tripResult || creatorResult;
-  const collapsed = !editingSearch && (loading || !!hasResult);
+  const collapsed = !formState.editingSearch && (loading || !!hasResult);
   const resultLocation = todayResult?.location || tripResult?.location || creatorResult?.location;
   const tripDateRange = tripResult
     ? `${fmt(tripResult.days[0].date)} – ${fmt(tripResult.days[tripResult.days.length - 1].date)}`
@@ -162,33 +198,16 @@ export default function AppPage() {
 
       <div className="w-full max-w-[1100px] mx-auto px-5 md:px-10 pt-4 md:pt-8 pb-16">
         <SearchControls
-          collapsed={collapsed}
-          mode={mode}
-          query={query}
-          selectedCreator={selectedCreator}
-          creators={creators}
-          loading={loading}
-          tripStart={tripStart}
-          tripEnd={tripEnd}
-          resultLocation={resultLocation}
-          tripDateRange={tripDateRange}
-          onModeChange={(m) => {
-            setMode(m);
-            setDrillDay(null);
-          }}
-          onQueryChange={setQuery}
-          onCreatorChange={setSelectedCreator}
-          onTripStartChange={setTripStart}
-          onTripEndChange={setTripEnd}
-          onSubmit={handleSearch}
-          onEdit={() => setEditingSearch(true)}
+          state={formState}
+          handlers={formHandlers}
+          meta={{ collapsed, loading, creators, resultLocation, tripDateRange }}
         />
 
         {error && <div className="rounded-2xl bg-destructive/10 text-destructive text-[13px] p-3 mb-4">{error}</div>}
-        {loading && <OutfitLoader variant={mode} />}
+        {loading && <OutfitLoader variant={formState.mode} />}
 
         {/* ═══════════ TODAY ═══════════ */}
-        {mode === "today" && todayResult && !loading && (
+        {formState.mode === "today" && todayResult && !loading && (
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <button
@@ -209,12 +228,12 @@ export default function AppPage() {
                 →
               </button>
             </div>
-            <DayCard key={`${todayResult.location}|${todayResult.day.date}`} result={todayResult} />
+            <DayCard result={todayResult} />
           </div>
         )}
 
         {/* ═══════════ TRIP ═══════════ */}
-        {mode === "trip" && tripResult && !loading && (
+        {formState.mode === "trip" && tripResult && !loading && (
           <div>
             {/* Header */}
             <div className="mb-8 md:mb-10">
@@ -277,7 +296,7 @@ export default function AppPage() {
                       key={day.date}
                       onClick={() => {
                         setDrillDay(null);
-                        fetchDrillDay(query, i);
+                        fetchDrillDay(formState.query, i);
                       }}
                       className={`flex flex-col items-center py-2.5 px-4 rounded-2xl border shrink-0 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                         isActive
@@ -327,7 +346,15 @@ export default function AppPage() {
                     <h4 className="font-[var(--font-serif)] text-[20px] text-foreground mb-3">{cat.name}</h4>
                     <div className="space-y-1.5">
                       {cat.items.map((item, j) => (
-                        <PackLink key={j} text={item} />
+                        <a
+                          key={j}
+                          href={shopUrl(item)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block text-[13px] text-ink-subtle leading-relaxed underline decoration-rule-dashed underline-offset-2 hover:decoration-olive transition-colors"
+                        >
+                          {item} <span className="text-[10px] text-ink-whisper no-underline">↗</span>
+                        </a>
                       ))}
                     </div>
                   </div>
@@ -397,7 +424,7 @@ export default function AppPage() {
                       Close
                     </button>
                   </div>
-                  <DayCard key={`${drillDay.location}|${drillDay.day.date}`} result={drillDay} />
+                  <DayCard result={drillDay} />
                 </div>
               </>
             )}
@@ -405,7 +432,7 @@ export default function AppPage() {
         )}
 
         {/* ═══════════ CREATOR RESULT ═══════════ */}
-        {selectedCreator && creatorResult && !loading && <CreatorCard result={creatorResult} />}
+        {formState.selectedCreator && creatorResult && !loading && <CreatorCard result={creatorResult} />}
 
         {/* Empty + recents */}
         {!loading && !error && !todayResult && !tripResult && !creatorResult && (
@@ -417,10 +444,7 @@ export default function AppPage() {
                   {recents.map((r) => (
                     <button
                       key={r}
-                      onClick={() => {
-                        setQuery(r);
-                        doSearch(r);
-                      }}
+                      onClick={() => formHandlers.submitWith(r)}
                       className="text-[13px] text-foreground bg-popover border border-input hover:border-clay px-4 py-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                     >
                       {r}
@@ -431,24 +455,21 @@ export default function AppPage() {
             )}
             <div className="text-center pt-4">
               <p className="font-[var(--font-serif)] text-[32px] md:text-[44px] text-foreground leading-tight tracking-[-0.02em] mb-3">
-                {mode === "today" ? "Dress for the day." : "Where to?"}
+                {formState.mode === "today" ? "Dress for the day." : "Where to?"}
               </p>
               <p className="text-[15px] text-ink-faint mb-8 max-w-[420px] mx-auto leading-relaxed">
-                {mode === "today"
+                {formState.mode === "today"
                   ? "Enter a city and we'll read the forecast."
                   : "Enter a destination and we'll pack your bag."}
-                {selectedCreator && (
-                  <span> Styled with {creators.find((c) => c.username === selectedCreator)?.name}&apos;s pieces.</span>
+                {formState.selectedCreator && (
+                  <span> Styled with {creators.find((c) => c.username === formState.selectedCreator)?.name}&apos;s pieces.</span>
                 )}
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 {["Los Angeles", "New York", "London", "Tokyo", "Paris"].map((city) => (
                   <button
                     key={city}
-                    onClick={() => {
-                      setQuery(city);
-                      doSearch(city);
-                    }}
+                    onClick={() => formHandlers.submitWith(city)}
                     className="text-[13px] text-foreground bg-popover border border-input hover:border-clay px-4 py-2 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                   >
                     {city}

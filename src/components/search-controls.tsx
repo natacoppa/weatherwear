@@ -1,6 +1,15 @@
 "use client";
 
+import type { SearchFormHandlers, SearchFormState } from "@/hooks/use-search-form";
 import type { CreatorInfo, Mode } from "@/lib/types";
+
+export interface SearchControlsMeta {
+  collapsed: boolean;
+  loading: boolean;
+  creators: CreatorInfo[];
+  resultLocation?: string;
+  tripDateRange?: string;
+}
 
 const TODAY_ISO = () => new Date().toISOString().split("T")[0];
 
@@ -109,42 +118,25 @@ function CreatorPicker({
 }
 
 export function SearchControls({
-  collapsed,
-  mode,
-  query,
-  selectedCreator,
-  creators,
-  loading,
-  tripStart,
-  tripEnd,
-  resultLocation,
-  tripDateRange,
-  onModeChange,
-  onQueryChange,
-  onCreatorChange,
-  onTripStartChange,
-  onTripEndChange,
-  onSubmit,
-  onEdit,
+  state,
+  handlers,
+  meta,
 }: {
-  collapsed: boolean;
-  mode: Mode;
-  query: string;
-  selectedCreator: string;
-  creators: CreatorInfo[];
-  loading: boolean;
-  tripStart: string;
-  tripEnd: string;
-  resultLocation?: string;
-  tripDateRange?: string;
-  onModeChange: (m: Mode) => void;
-  onQueryChange: (q: string) => void;
-  onCreatorChange: (u: string) => void;
-  onTripStartChange: (d: string) => void;
-  onTripEndChange: (d: string) => void;
-  onSubmit: (e: React.FormEvent) => void;
-  onEdit: () => void;
+  state: SearchFormState;
+  handlers: SearchFormHandlers;
+  meta: SearchControlsMeta;
 }) {
+  const { mode, query, selectedCreator, tripStart, tripEnd } = state;
+  const { creators, collapsed, loading, resultLocation, tripDateRange } = meta;
+  const {
+    onModeChange,
+    onQueryChange,
+    onCreatorChange,
+    onTripStartChange,
+    onTripEndChange,
+    onSubmit,
+    onEdit,
+  } = handlers;
   const selectedName = creators.find((c) => c.username === selectedCreator)?.name;
 
   if (collapsed) {
@@ -191,10 +183,7 @@ export function SearchControls({
                 type="date"
                 aria-label="Trip start date"
                 value={tripStart}
-                onChange={(e) => {
-                  onTripStartChange(e.target.value);
-                  if (e.target.value > tripEnd) onTripEndChange(e.target.value);
-                }}
+                onChange={(e) => onTripStartChange(e.target.value)}
                 min={TODAY_ISO()}
                 className="bg-transparent outline-none border-0 text-[13px] text-foreground cursor-pointer"
               />
@@ -225,10 +214,7 @@ export function SearchControls({
             type="date"
             aria-label="Trip start date"
             value={tripStart}
-            onChange={(e) => {
-              onTripStartChange(e.target.value);
-              if (e.target.value > tripEnd) onTripEndChange(e.target.value);
-            }}
+            onChange={(e) => onTripStartChange(e.target.value)}
             min={TODAY_ISO()}
             className="flex-1 min-w-0 h-10 px-3 rounded-full bg-popover border border-input text-[13px] text-foreground outline-none"
           />
