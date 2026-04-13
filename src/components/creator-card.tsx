@@ -1,3 +1,4 @@
+import { safeHref } from "@/lib/safe-href";
 import type { CreatorOutfit, CreatorOutfitItem } from "@/lib/types";
 import { OutfitCollage } from "./outfit-collage";
 import { Scallop } from "./scallop";
@@ -8,7 +9,7 @@ function CreatorProductLink({ item, label }: { item: CreatorOutfitItem | null; l
     <div>
       <p className="text-[9px] uppercase tracking-[0.15em] text-ink-faint mb-0.5">{label}</p>
       <a
-        href={item.url || "#"}
+        href={safeHref(item.url)}
         target="_blank"
         rel="noopener noreferrer"
         className="text-[13px] text-ink-subtle leading-relaxed underline decoration-rule-dashed underline-offset-2 hover:decoration-olive transition-colors"
@@ -128,7 +129,7 @@ export function CreatorCard({ result }: { result: CreatorOutfit }) {
                 {o.walkOut.accessories.map((a, j) => (
                   <a
                     key={j}
-                    href={a.url || "#"}
+                    href={safeHref(a.url)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[10px] text-olive bg-olive/10 px-2 py-0.5 rounded-full hover:bg-olive/20 transition-colors"

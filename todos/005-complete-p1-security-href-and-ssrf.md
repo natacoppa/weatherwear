@@ -1,6 +1,6 @@
 ---
-status: pending
-priority: p2
+status: complete
+priority: p1
 issue_id: "005"
 tags: [code-review, security, xss, ssrf]
 dependencies: []
