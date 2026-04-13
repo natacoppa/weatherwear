@@ -1,0 +1,970 @@
+{
+  "username": "courtneygrow",
+  "name": "Courtney Grow",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-6380-1683292822686",
+  "scrapedAt": "2026-04-11T18:01:52.925Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 2116520,
+      "title": "Linda Short",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772512784402",
+      "url": "https://alfieparis.com/products/the-linda-shorts-olive",
+      "price": 340,
+      "brand": "Alfie",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2149206,
+      "title": "Archive Reissue Cotton Graphic T-Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772817618441",
+      "url": "https://bananarepublic.gap.com/browse/product.do?pid=906999002",
+      "price": 60,
+      "brand": "Banana Republic",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 229367,
+      "title": "The Sweatshirt",
+      "image": "https://cdn.shopify.com/s/files/1/2624/5712/files/250527_STILL_HERE_54_Colors_Sweatshirt_in_White_3770.jpg?v=1750194009",
+      "url": "https://www.stillhere.nyc/products/the-sweatshirt-in-plum",
+      "price": 160,
+      "brand": "Still Here",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 2267646,
+      "title": "MADGE Cashmere Tank Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774183287542",
+      "url": "https://ely-ely.com/products/madge-tank-top-sweater",
+      "price": 274,
+      "brand": "Ely Ely",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 299340,
+      "title": "Sport Jean",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775832182508",
+      "url": "https://www.stillhere.nyc/products/sport-jean-in-pear",
+      "price": 325,
+      "brand": "Still Here",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 645043,
+      "title": "The Boxer Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768689392464",
+      "url": "https://alfieparis.com/products/the-boxer-shorts-blue-striped-cotton",
+      "price": 170,
+      "brand": "Alfie",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 273854,
+      "title": "Techno Taffeta Barrel Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1752927767973",
+      "url": "https://chanluu.com/products/techno-taffeta-barrel-pant-black",
+      "price": 275,
+      "brand": "Chan Luu",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1816218,
+      "title": "Verne Jean",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769184060579",
+      "url": "https://aflalonyc.com/products/verne-jean-nihon-rinse",
+      "price": 430,
+      "brand": "Aflalo",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1880975,
+      "title": "Toggle Tank Top",
+      "image": "https://static.shopmy.us/uploads/b8957f3f-c072-44c2-8c9b-93508b8efc15_26218_Still_Here_SS26_Ecomm_Toggle_Tank_Burnt_Orange_243.webp",
+      "url": "https://www.stillhere.nyc/products/toggle-tank-in-grey",
+      "price": 185,
+      "brand": "Still Here",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2196826,
+      "title": "Lizette Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773309392223",
+      "url": "https://heirlome.com/products/lizette-top",
+      "price": 990,
+      "brand": "HEIRLOME",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1893332,
+      "title": "Zuri Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770103085084",
+      "url": "https://staud.clothing/products/zuri-dress-coastal-charm",
+      "price": 1295,
+      "brand": "STAUD",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 286790,
+      "title": "Techno Dupion Panel Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774632481906",
+      "url": "https://chanluu.com/products/techno-taffeta-mesh-dress-sage",
+      "price": 295,
+      "brand": "Chan Luu",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2418675,
+      "title": "Three Tier Dome Earring",
+      "image": "https://www.ninarunsdorf.com/cdn/shop/files/250312_CodyLidtke_NinaRunsdorf_187.jpg?v=1742262643&width=2400",
+      "url": "https://ninarunsdorf.com/products/three-tier-dome-earring",
+      "price": 650,
+      "brand": "Nina Runsdorf",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1459842,
+      "title": "Greta Silk Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764902258784",
+      "url": "https://staud.clothing/products/greta-silk-dress-soil",
+      "price": 695,
+      "brand": "STAUD",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2191536,
+      "title": "Naia Bracelet",
+      "image": "https://www.eliou.com/cdn/shop/files/NaiaBracelet.jpg?v=1771883593&width=4182",
+      "url": "https://eliou.com/products/naia-bracelet",
+      "price": 150,
+      "brand": "éliou",
+      "category": "Bracelets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2003102,
+      "title": "Techno Dupion Mesh Dress",
+      "image": "https://chanluu.com/cdn/shop/files/PC-DR-3509_BLACK_01_1_c3801afe-d5bb-4c2b-907c-753b87bd2871_1024x.jpg?v=1771025290",
+      "url": "https://chanluu.com/products/techno-dupion-mesh-dress-black",
+      "price": 295,
+      "brand": "Chan Luu",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2141577,
+      "title": "Caspia Hoop Earrings ",
+      "image": "https://chanluu.com/cdn/shop/files/EGZ-5981_ONYX_01_1_1024x.jpg?v=1761324230",
+      "url": "https://chanluu.com/products/caspia-hoop-earrings-onyx",
+      "price": 295,
+      "brand": "Chan Luu",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2204298,
+      "title": "Garnet Regina Chandelier Earrings",
+      "image": "http://dandelionjewelry.com/cdn/shop/files/ear-gpl-regina-chandelier-earrings-garnet-1192376197.webp?v=1757612014",
+      "url": "https://dandelionjewelry.com/products/eg-5913-garnet",
+      "price": 175,
+      "brand": "Dandelion Jewelry",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1993192,
+      "title": "Scroll Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771431333867",
+      "url": "https://modaoperandi.com/women/p/high-sport/scroll-pant/722482",
+      "price": 1240,
+      "brand": "High Sport",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1811213,
+      "title": "Life Jean",
+      "image": "https://cdn.shopify.com/s/files/1/2624/5712/files/251211_Still_Here_December_Ecomm_Life_Jean_II_0358.jpg?v=1767885779",
+      "url": "https://www.stillhere.nyc/products/life-jean-in-indigo-indigo",
+      "price": 280,
+      "brand": "Still Here",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 234787,
+      "title": "Cypra Bag Charm",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1743884356289",
+      "url": "https://eliou.com/products/cypra-key-chain",
+      "price": 220,
+      "brand": "éliou",
+      "category": "Bag Charms & Keychains",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2091856,
+      "title": "The Long Sleeve Shirt",
+      "image": "https://www.stillhere.nyc/cdn/shop/files/251211_Still_Here_December_Ecomm_Long_Sleeve_Shirt_Sap_0254.jpg?v=1767641528&width=1920",
+      "url": "https://www.stillhere.nyc/products/the-long-sleeve-shirt-in-gum",
+      "price": 130,
+      "brand": "Still Here",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 231679,
+      "title": "Oslo Trouser",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-5308896-1716473807751-0429kayla-106_bf4e0bcc-5840-4bd6-a014-41bc29c2a29a.jpg",
+      "url": "https://shop-peche.com/products/oslo-trouser",
+      "price": 135,
+      "brand": "Pêche",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 662826,
+      "title": "Pvc Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774042832731",
+      "url": "https://revolve.com/pvc-shoulder-bag/dp/VLAR-WY1",
+      "price": 472,
+      "brand": "VAILLANT",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2131901,
+      "title": "George Tee",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772648730086",
+      "url": "https://sorbarasnewyork.com/products/george-tee",
+      "price": 55,
+      "brand": null,
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 172488,
+      "title": "Fern Top",
+      "image": "https://thelinebyk.com/cdn/shop/files/fern-top-vanilla-the-line-by-k-423332_1296x.jpg?v=1712796921",
+      "url": "https://thelinebyk.com/products/fern-top-black",
+      "price": 175,
+      "brand": "The Line by K",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 145927,
+      "title": "Mizumi Earrings",
+      "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/f9de40c2-afde-48f1-ae78-0cbcd9c09023_download-2025-10-24T004322.299.png",
+      "url": "https://chanluu.com/products/mizumi-earrings-white-mop",
+      "price": 195,
+      "brand": "Chan Luu",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1902783,
+      "title": "Cotton Cashmere Tee",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770187419647",
+      "url": "https://shoprlt.com/products/rlt-cotton-cashmere-tee",
+      "price": 95,
+      "brand": "RLT",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2142248,
+      "title": "Cabris Swimsuit",
+      "image": "https://images.squarespace-cdn.com/content/v1/64b650249d46cf7f989611bb/1a2aa5ff-b92a-4fa8-b97d-0a412f6217be/20252507-emmavermaase-DUCIEL-18%252BKopie.jpg?format=1500w",
+      "url": "https://duciel.studio/category/p/cabris-swimsuit-white",
+      "price": 170,
+      "brand": "DU CIEL",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 909881,
+      "title": "The Reconstituted Denim Bullion Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760091281292",
+      "url": "https://nordstrom.com/s/8289135",
+      "price": null,
+      "brand": "Conner Ives",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 169700,
+      "title": "River Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1714070840886",
+      "url": "https://endclothing.com/us/monokel-river-sunglasses-mn-b6-blk-gre.html",
+      "price": null,
+      "brand": "Monokel",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 2141877,
+      "title": "Aliere Short Sleeve Triquini Style Bodysuit with Side Cut Outs ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772741401622",
+      "url": "https://palomawool.com/products/aliere-short-sleeve-triquini-style-bodysuit-cut-outs-sequin",
+      "price": 730,
+      "brand": "Paloma Wool",
+      "category": "Bodysuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 189672,
+      "title": "August Bikini Top",
+      "image": "https://production-shopmyshelf-uploads.s3.amazonaws.com/img-product-1723818782371",
+      "url": "https://modaoperandi.com/women/p/mare-perpetua/august-balconette-bikini-top-2/649406",
+      "price": 120,
+      "brand": "Mare Perpetua",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 520999,
+      "title": "Gary Maxi Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765355183668",
+      "url": "https://www.sezane.com/us-en/product/gary-maxi-bag/choco",
+      "price": null,
+      "brand": "Sézane",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 171053,
+      "title": "Eden Woven Leather Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774605033544",
+      "url": "https://simkhai.com/products/eden-open-weave-ballet-flat-ivory",
+      "price": 248,
+      "brand": "SIMKHAI",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 164495,
+      "title": "K. Jacques x Ciao Lucia Wrap Sandal ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774643381222",
+      "url": "https://ciaolucia.com/products/k-jacques-x-ciao-lucia-style-2",
+      "price": 290,
+      "brand": "Ciao Lucia",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 175770,
+      "title": "Le Havre Fringed Cotton Gauze Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/327e58f5-0112-4e60-b885-c05433c982ee_pretty-prod-1753285961123.jpeg",
+      "url": "https://staud.clothing/products/le-havre-dress-black",
+      "price": 295,
+      "brand": "STAUD",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 438077,
+      "title": "Carnival Mini Game",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755280207838",
+      "url": "https://marialarosa.it/en/products/carnival-mini-game-wbs25-2mlr",
+      "price": 541,
+      "brand": "Maria La Rosa",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1363622,
+      "title": "Orbit Crossbody Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764139704890",
+      "url": "https://ossanewyork.com/products/orbit-crossbody",
+      "price": 115,
+      "brand": "ossa new york",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 91876,
+      "title": "Dane Anklet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753431168373",
+      "url": "https://jenny-bird.com/products/the-dane-anklet-stack-silver",
+      "price": 236,
+      "brand": "Jenny Bird",
+      "category": "Anklets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 400608,
+      "title": "Market Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754915264000",
+      "url": "https://nordstrom.com/s/8309422",
+      "price": null,
+      "brand": "Puebco",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 169557,
+      "title": "Elsa Mesh Ballet Flats with Memory Foam Insole ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760185533407",
+      "url": "https://target.com/p/-/A-92611477",
+      "price": 35,
+      "brand": "Wild Fable",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 236990,
+      "title": "The Gabi Thong Slide Sandal",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/product-adjusted-1764262642534",
+      "url": "https://shopbop.com/greene-flip-flop-madewell/vp/v=1/1561815195.htm",
+      "price": 78,
+      "brand": "Madewell",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 2093979,
+      "title": "Knickerbocker",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772236770446",
+      "url": "https://fruitybooty.co.uk/products/purple-shortie",
+      "price": 64,
+      "brand": "Fruity Booty",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 1776245,
+      "title": "Sézane x SEA NY Denim Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/1d3e0975-e2be-464b-9cff-81347a72a0d5imgi_1_vifnul2hl6nicju4vitm_processed_by_imagy.jpg",
+      "url": "https://www.sezane.com/us-en/product/denim-tote-bag-sezane-x-sea-ny/embroidered-blue-denim",
+      "price": 65,
+      "brand": "Sézane",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1803473,
+      "title": "1/4 Zip Heatmap Fleece Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769357427147",
+      "url": "https://revolve.com/casablanca-14-zip-fleece-jacket-in-heatmap/dp/CBLN-MO30",
+      "price": 1190,
+      "brand": "Casablanca",
+      "category": "Men's Coats, Jackets & Blazers",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 203836,
+      "title": "Utania Blossom Sheer Tulle Embellished Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1729970201125",
+      "url": "https://www.ssense.com/en-us/women/product/cecilie-bahnsen/black-utania-tank-top/16644641",
+      "price": 690,
+      "brand": "Cecilie Bahnsen",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1898294,
+      "title": "Organza Tunic Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770140126143",
+      "url": "https://shopcadets.com/products/organza-tunic",
+      "price": 148,
+      "brand": "Cadets",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2116520,
+      "title": "Linda Short",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772512784402",
+      "url": "https://alfieparis.com/products/the-linda-shorts-olive",
+      "price": 340,
+      "brand": "Alfie",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2149206,
+      "title": "Archive Reissue Cotton Graphic T-Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772817618441",
+      "url": "https://bananarepublic.gap.com/browse/product.do?pid=906999002",
+      "price": 60,
+      "brand": "Banana Republic",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 229367,
+      "title": "The Sweatshirt",
+      "image": "https://cdn.shopify.com/s/files/1/2624/5712/files/250527_STILL_HERE_54_Colors_Sweatshirt_in_White_3770.jpg?v=1750194009",
+      "url": "https://www.stillhere.nyc/products/the-sweatshirt-in-plum",
+      "price": 160,
+      "brand": "Still Here",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 2267646,
+      "title": "MADGE Cashmere Tank Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774183287542",
+      "url": "https://ely-ely.com/products/madge-tank-top-sweater",
+      "price": 274,
+      "brand": "Ely Ely",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 299340,
+      "title": "Sport Jean",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775832182508",
+      "url": "https://www.stillhere.nyc/products/sport-jean-in-pear",
+      "price": 325,
+      "brand": "Still Here",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 645043,
+      "title": "The Boxer Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768689392464",
+      "url": "https://alfieparis.com/products/the-boxer-shorts-blue-striped-cotton",
+      "price": 170,
+      "brand": "Alfie",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 273854,
+      "title": "Techno Taffeta Barrel Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1752927767973",
+      "url": "https://chanluu.com/products/techno-taffeta-barrel-pant-black",
+      "price": 275,
+      "brand": "Chan Luu",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1816218,
+      "title": "Verne Jean",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769184060579",
+      "url": "https://aflalonyc.com/products/verne-jean-nihon-rinse",
+      "price": 430,
+      "brand": "Aflalo",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1880975,
+      "title": "Toggle Tank Top",
+      "image": "https://static.shopmy.us/uploads/b8957f3f-c072-44c2-8c9b-93508b8efc15_26218_Still_Here_SS26_Ecomm_Toggle_Tank_Burnt_Orange_243.webp",
+      "url": "https://www.stillhere.nyc/products/toggle-tank-in-grey",
+      "price": 185,
+      "brand": "Still Here",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2196826,
+      "title": "Lizette Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773309392223",
+      "url": "https://heirlome.com/products/lizette-top",
+      "price": 990,
+      "brand": "HEIRLOME",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1893332,
+      "title": "Zuri Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770103085084",
+      "url": "https://staud.clothing/products/zuri-dress-coastal-charm",
+      "price": 1295,
+      "brand": "STAUD",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 286790,
+      "title": "Techno Dupion Panel Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774632481906",
+      "url": "https://chanluu.com/products/techno-taffeta-mesh-dress-sage",
+      "price": 295,
+      "brand": "Chan Luu",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2418675,
+      "title": "Three Tier Dome Earring",
+      "image": "https://www.ninarunsdorf.com/cdn/shop/files/250312_CodyLidtke_NinaRunsdorf_187.jpg?v=1742262643&width=2400",
+      "url": "https://ninarunsdorf.com/products/three-tier-dome-earring",
+      "price": 650,
+      "brand": "Nina Runsdorf",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1459842,
+      "title": "Greta Silk Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764902258784",
+      "url": "https://staud.clothing/products/greta-silk-dress-soil",
+      "price": 695,
+      "brand": "STAUD",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2191536,
+      "title": "Naia Bracelet",
+      "image": "https://www.eliou.com/cdn/shop/files/NaiaBracelet.jpg?v=1771883593&width=4182",
+      "url": "https://eliou.com/products/naia-bracelet",
+      "price": 150,
+      "brand": "éliou",
+      "category": "Bracelets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2003102,
+      "title": "Techno Dupion Mesh Dress",
+      "image": "https://chanluu.com/cdn/shop/files/PC-DR-3509_BLACK_01_1_c3801afe-d5bb-4c2b-907c-753b87bd2871_1024x.jpg?v=1771025290",
+      "url": "https://chanluu.com/products/techno-dupion-mesh-dress-black",
+      "price": 295,
+      "brand": "Chan Luu",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2141577,
+      "title": "Caspia Hoop Earrings ",
+      "image": "https://chanluu.com/cdn/shop/files/EGZ-5981_ONYX_01_1_1024x.jpg?v=1761324230",
+      "url": "https://chanluu.com/products/caspia-hoop-earrings-onyx",
+      "price": 295,
+      "brand": "Chan Luu",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2204298,
+      "title": "Garnet Regina Chandelier Earrings",
+      "image": "http://dandelionjewelry.com/cdn/shop/files/ear-gpl-regina-chandelier-earrings-garnet-1192376197.webp?v=1757612014",
+      "url": "https://dandelionjewelry.com/products/eg-5913-garnet",
+      "price": 175,
+      "brand": "Dandelion Jewelry",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1993192,
+      "title": "Scroll Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771431333867",
+      "url": "https://modaoperandi.com/women/p/high-sport/scroll-pant/722482",
+      "price": 1240,
+      "brand": "High Sport",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1811213,
+      "title": "Life Jean",
+      "image": "https://cdn.shopify.com/s/files/1/2624/5712/files/251211_Still_Here_December_Ecomm_Life_Jean_II_0358.jpg?v=1767885779",
+      "url": "https://www.stillhere.nyc/products/life-jean-in-indigo-indigo",
+      "price": 280,
+      "brand": "Still Here",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 234787,
+      "title": "Cypra Bag Charm",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1743884356289",
+      "url": "https://eliou.com/products/cypra-key-chain",
+      "price": 220,
+      "brand": "éliou",
+      "category": "Bag Charms & Keychains",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2091856,
+      "title": "The Long Sleeve Shirt",
+      "image": "https://www.stillhere.nyc/cdn/shop/files/251211_Still_Here_December_Ecomm_Long_Sleeve_Shirt_Sap_0254.jpg?v=1767641528&width=1920",
+      "url": "https://www.stillhere.nyc/products/the-long-sleeve-shirt-in-gum",
+      "price": 130,
+      "brand": "Still Here",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 231679,
+      "title": "Oslo Trouser",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-5308896-1716473807751-0429kayla-106_bf4e0bcc-5840-4bd6-a014-41bc29c2a29a.jpg",
+      "url": "https://shop-peche.com/products/oslo-trouser",
+      "price": 135,
+      "brand": "Pêche",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 662826,
+      "title": "Pvc Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774042832731",
+      "url": "https://revolve.com/pvc-shoulder-bag/dp/VLAR-WY1",
+      "price": 472,
+      "brand": "VAILLANT",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2131901,
+      "title": "George Tee",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772648730086",
+      "url": "https://sorbarasnewyork.com/products/george-tee",
+      "price": 55,
+      "brand": null,
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 172488,
+      "title": "Fern Top",
+      "image": "https://thelinebyk.com/cdn/shop/files/fern-top-vanilla-the-line-by-k-423332_1296x.jpg?v=1712796921",
+      "url": "https://thelinebyk.com/products/fern-top-black",
+      "price": 175,
+      "brand": "The Line by K",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 145927,
+      "title": "Mizumi Earrings",
+      "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/f9de40c2-afde-48f1-ae78-0cbcd9c09023_download-2025-10-24T004322.299.png",
+      "url": "https://chanluu.com/products/mizumi-earrings-white-mop",
+      "price": 195,
+      "brand": "Chan Luu",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1902783,
+      "title": "Cotton Cashmere Tee",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770187419647",
+      "url": "https://shoprlt.com/products/rlt-cotton-cashmere-tee",
+      "price": 95,
+      "brand": "RLT",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2142248,
+      "title": "Cabris Swimsuit",
+      "image": "https://images.squarespace-cdn.com/content/v1/64b650249d46cf7f989611bb/1a2aa5ff-b92a-4fa8-b97d-0a412f6217be/20252507-emmavermaase-DUCIEL-18%252BKopie.jpg?format=1500w",
+      "url": "https://duciel.studio/category/p/cabris-swimsuit-white",
+      "price": 170,
+      "brand": "DU CIEL",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 909881,
+      "title": "The Reconstituted Denim Bullion Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760091281292",
+      "url": "https://nordstrom.com/s/8289135",
+      "price": null,
+      "brand": "Conner Ives",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 169700,
+      "title": "River Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1714070840886",
+      "url": "https://endclothing.com/us/monokel-river-sunglasses-mn-b6-blk-gre.html",
+      "price": null,
+      "brand": "Monokel",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 2141877,
+      "title": "Aliere Short Sleeve Triquini Style Bodysuit with Side Cut Outs ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772741401622",
+      "url": "https://palomawool.com/products/aliere-short-sleeve-triquini-style-bodysuit-cut-outs-sequin",
+      "price": 730,
+      "brand": "Paloma Wool",
+      "category": "Bodysuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 189672,
+      "title": "August Bikini Top",
+      "image": "https://production-shopmyshelf-uploads.s3.amazonaws.com/img-product-1723818782371",
+      "url": "https://modaoperandi.com/women/p/mare-perpetua/august-balconette-bikini-top-2/649406",
+      "price": 120,
+      "brand": "Mare Perpetua",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 520999,
+      "title": "Gary Maxi Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765355183668",
+      "url": "https://www.sezane.com/us-en/product/gary-maxi-bag/choco",
+      "price": null,
+      "brand": "Sézane",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 171053,
+      "title": "Eden Woven Leather Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774605033544",
+      "url": "https://simkhai.com/products/eden-open-weave-ballet-flat-ivory",
+      "price": 248,
+      "brand": "SIMKHAI",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 164495,
+      "title": "K. Jacques x Ciao Lucia Wrap Sandal ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774643381222",
+      "url": "https://ciaolucia.com/products/k-jacques-x-ciao-lucia-style-2",
+      "price": 290,
+      "brand": "Ciao Lucia",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 175770,
+      "title": "Le Havre Fringed Cotton Gauze Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/327e58f5-0112-4e60-b885-c05433c982ee_pretty-prod-1753285961123.jpeg",
+      "url": "https://staud.clothing/products/le-havre-dress-black",
+      "price": 295,
+      "brand": "STAUD",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 438077,
+      "title": "Carnival Mini Game",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755280207838",
+      "url": "https://marialarosa.it/en/products/carnival-mini-game-wbs25-2mlr",
+      "price": 541,
+      "brand": "Maria La Rosa",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1363622,
+      "title": "Orbit Crossbody Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764139704890",
+      "url": "https://ossanewyork.com/products/orbit-crossbody",
+      "price": 115,
+      "brand": "ossa new york",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 91876,
+      "title": "Dane Anklet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753431168373",
+      "url": "https://jenny-bird.com/products/the-dane-anklet-stack-silver",
+      "price": 236,
+      "brand": "Jenny Bird",
+      "category": "Anklets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 400608,
+      "title": "Market Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754915264000",
+      "url": "https://nordstrom.com/s/8309422",
+      "price": null,
+      "brand": "Puebco",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 169557,
+      "title": "Elsa Mesh Ballet Flats with Memory Foam Insole ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760185533407",
+      "url": "https://target.com/p/-/A-92611477",
+      "price": 35,
+      "brand": "Wild Fable",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 236990,
+      "title": "The Gabi Thong Slide Sandal",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/product-adjusted-1764262642534",
+      "url": "https://shopbop.com/greene-flip-flop-madewell/vp/v=1/1561815195.htm",
+      "price": 78,
+      "brand": "Madewell",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 2093979,
+      "title": "Knickerbocker",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772236770446",
+      "url": "https://fruitybooty.co.uk/products/purple-shortie",
+      "price": 64,
+      "brand": "Fruity Booty",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 1776245,
+      "title": "Sézane x SEA NY Denim Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/1d3e0975-e2be-464b-9cff-81347a72a0d5imgi_1_vifnul2hl6nicju4vitm_processed_by_imagy.jpg",
+      "url": "https://www.sezane.com/us-en/product/denim-tote-bag-sezane-x-sea-ny/embroidered-blue-denim",
+      "price": 65,
+      "brand": "Sézane",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1803473,
+      "title": "1/4 Zip Heatmap Fleece Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769357427147",
+      "url": "https://revolve.com/casablanca-14-zip-fleece-jacket-in-heatmap/dp/CBLN-MO30",
+      "price": 1190,
+      "brand": "Casablanca",
+      "category": "Men's Coats, Jackets & Blazers",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 203836,
+      "title": "Utania Blossom Sheer Tulle Embellished Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1729970201125",
+      "url": "https://www.ssense.com/en-us/women/product/cecilie-bahnsen/black-utania-tank-top/16644641",
+      "price": 690,
+      "brand": "Cecilie Bahnsen",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1898294,
+      "title": "Organza Tunic Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770140126143",
+      "url": "https://shopcadets.com/products/organza-tunic",
+      "price": 148,
+      "brand": "Cadets",
+      "category": "Tops",
+      "department": "Apparel"
+    }
+  ],
+  "curatorId": 6380
+}

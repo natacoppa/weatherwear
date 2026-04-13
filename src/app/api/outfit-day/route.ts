@@ -6,6 +6,7 @@ import {
   calculateFeelsLike,
   HourlyForecast,
 } from "@/lib/weather";
+import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 
 interface MomentWeather {
   label: string;
@@ -53,6 +54,9 @@ function analyzeMoment(
 }
 
 export async function GET(req: NextRequest) {
+  const limited = rateLimit(req);
+  if (limited) return limited;
+
   const { searchParams } = new URL(req.url);
   const query = searchParams.get("q");
   const day = parseInt(searchParams.get("day") || "0", 10);
@@ -186,4 +190,8 @@ Return ONLY valid JSON.`;
     console.error("Outfit day API error:", error);
     return NextResponse.json({ error: "Failed to generate outfit" }, { status: 500 });
   }
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: corsHeaders() });
 }

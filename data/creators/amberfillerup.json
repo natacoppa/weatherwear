@@ -1,0 +1,970 @@
+{
+  "username": "amberfillerup",
+  "name": "Amber Fillerup",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-29897-1695143475809",
+  "scrapedAt": "2026-04-11T18:02:16.336Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 110263,
+      "title": "Balla Ballerina Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761951774511",
+      "url": "https://revolve.com/dear-frances-balla-flat-in-black/dp/DFRA-WZ5",
+      "price": 466,
+      "brand": "Dear Frances",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 154973,
+      "title": "Call The Shots Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709585507368",
+      "url": "https://quay.com/products/call-the-shots",
+      "price": 75,
+      "brand": "Quay",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 1309966,
+      "title": "Good Karma Long-Sleeve Onesie",
+      "image": "https://static.shopmy.us/uploads/c58b53a6-dd8b-4433-98ee-ca124ec1ca92_image-1769166546559",
+      "url": "https://freepeople.com/shop/good-karma-long-sleeve-onesie",
+      "price": 108,
+      "brand": "FP Movement",
+      "category": "Bodysuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 137319,
+      "title": "Rosalia Tencel Modal Romper",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1699384215436",
+      "url": "https://eberjey.com/products/rosalia-tencel-modal-chemise-navy",
+      "price": null,
+      "brand": "Eberjey",
+      "category": "Pajamas & Loungewear",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 116266,
+      "title": "Hills Blazer",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-116266-1692546706402-zoom-1748030-1688148091351-SDYS-WO15_V1.jpg",
+      "url": "https://revolve.com/sndys-hills-blazer-in-black/dp/SDYS-WO15",
+      "price": 85,
+      "brand": "SNDYS",
+      "category": "Blazers",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 107015,
+      "title": "The Carrie Tube",
+      "image": "https://images.urbndata.com/is/image/FreePeople/57240541_014_a?$feed-main$",
+      "url": "https://freepeople.com/shop/the-carrie-tube",
+      "price": 30,
+      "brand": "Intimately",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 171970,
+      "title": "Cami Bodysuit",
+      "image": "https://cdn.shopify.com/s/files/1/0654/5565/3115/files/NUD929_W-026_CAMI-BODYSUIT_WHITE_OF_Front_Crop_1.jpg?v=1711468362",
+      "url": "https://nuuds.com/products/womens-cami-bodysuit-olive",
+      "price": 36,
+      "brand": "Auden",
+      "category": "Bodysuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 293087,
+      "title": "Waimea Slouchy Solid Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/73ff08cd-f64f-4fa7-8e64-d86077452a19_image-1753286847111",
+      "url": "https://freepeople.com/shop/waimea-slouchy-solid-shorts",
+      "price": 88,
+      "brand": "Free People",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 243634,
+      "title": "The Racer Top",
+      "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/camii/camii30287102ca/camii30287102ca_1652814383247_2-0.jpg",
+      "url": "https://caminyc.com/products/the-racer-charmeuse-white",
+      "price": 195,
+      "brand": "Cami NYC",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 87281,
+      "title": "Pointelle-Knit Cotton-Jersey Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774044319546",
+      "url": "https://leset.com/products/pointelle-classic-cardigan-black",
+      "price": 120,
+      "brand": "LESET",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 486100,
+      "title": "Rayssa Cable Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/44dde37c-9836-4236-a97b-a416f01b50fd_image-1755780543102",
+      "url": "https://fwrd.com/product-helsa-rayssa-cable-cardigan-in-black/HLSA-WK24/",
+      "price": 237.55,
+      "brand": "Helsa",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 100019,
+      "title": "Horseshoe Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772028585046",
+      "url": "https://www.ssense.com/en-us/women/product/citizens-of-humanity/indigo-horseshoe-jeans/14541821",
+      "price": 280,
+      "brand": "Citizens of Humanity",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 160952,
+      "title": " Good Luck Barrel Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758315836181",
+      "url": "https://revolve.com/free-people-lucky-you-mid-rise-in-ultra-light-beam/dp/FREE-WJ291",
+      "price": 98,
+      "brand": "We The Free",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 99187,
+      "title": "Luna Mesh Ballerina Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767116183280",
+      "url": "https://www.ssense.com/en-us/women/product/le-monde-beryl/gold-luna-ballerina-flats/17045261",
+      "price": 152,
+      "brand": "Le Monde Béryl",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 2023253,
+      "title": "Balla Mesh Cobalt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771514975428",
+      "url": "https://dearfrances.com/products/balla-mesh-coffee",
+      "price": 395,
+      "brand": "Dear Frances",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 121227,
+      "title": "Agathea Chunky Loafers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760032661572",
+      "url": "https://thereformation.com/products/agathea-chunky-loafer/1309368BNW.html",
+      "price": 298,
+      "brand": "Reformation",
+      "category": "Loafers",
+      "department": "Footwear"
+    },
+    {
+      "id": 202445,
+      "title": "Wish Star Low Boots in Suede with Embroidered Star",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775716522598",
+      "url": "https://revolve.com/golden-goose-wish-star-low-boot-in-silver/dp/GGOR-WZ601",
+      "price": 811,
+      "brand": "Golden Goose",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 123971,
+      "title": "Micro Flare Denim Minidress",
+      "image": "https://image.s5a.com/is/image/saksoff5th/0400018857478?dpr=on,2",
+      "url": "https://shopbop.com/micro-flare-denim-dress-frame/vp/v=1/1598293387.htm",
+      "price": 298,
+      "brand": "FRAME",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 109842,
+      "title": "Aries Cut Out Gown",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774112538471",
+      "url": "https://us.sirthelabel.com/products/aries-cut-out-gown-black",
+      "price": 520,
+      "brand": "SIR.",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 161074,
+      "title": "Suddenly Fine Maxi Slip Dress",
+      "image": "https://images.urbndata.com/is/image/FreePeople/80162696_021_a/?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=1314",
+      "url": "https://freepeople.com/shop/suddenly-fine-maxi-slip",
+      "price": 98,
+      "brand": "Free People",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 472154,
+      "title": "Long Sleeve Crewneck Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766140396508",
+      "url": "https://eterne.com/products/long-sleeve-crewneck-dress-mini-black",
+      "price": 195,
+      "brand": "ÉTERNE",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 136172,
+      "title": "Nevita Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775145680981",
+      "url": "https://shopdoen.com/products/nevita-dress-driftwood",
+      "price": 145,
+      "brand": "DÔEN",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 107012,
+      "title": "Olympic Cat Eye Sunglasses",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-107012-1688575560554-pretty-prod-1688575558977",
+      "url": "https://freepeople.com/shop/olympic-cat-eye-sunglasses",
+      "price": 20,
+      "brand": "Free People",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 38618,
+      "title": "Outta Love Oval Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775687030112",
+      "url": "https://beauandro.com/products/le-specs-sunglasses-outta-love-in-vintage-tort",
+      "price": 65,
+      "brand": "Le Specs",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 155341,
+      "title": "Vida Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664055665",
+      "url": "https://brinkerandeliza.com/products/vida-necklace",
+      "price": 254.4,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155340,
+      "title": "Mojave Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664045185",
+      "url": "https://brinkerandeliza.com/products/mojave-necklace-1",
+      "price": 71.2,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155339,
+      "title": "Honeymoon Earrings",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664033579",
+      "url": "https://brinkerandeliza.com/products/honeymoon-earrings-1",
+      "price": 110.6,
+      "brand": "Brinker + Eliza",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 223976,
+      "title": "LW40088U Paulas Ibiza Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761328793721",
+      "url": "https://www.ssense.com/en-us/women/product/loewe/orange-flower-sunglasses/13702051",
+      "price": 380,
+      "brand": "Loewe",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 143142,
+      "title": "Camila Lace Socks",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1702918754373",
+      "url": "https://freepeople.com/shop/camila-lace-socks",
+      "price": null,
+      "brand": "Free People",
+      "category": "Socks",
+      "department": "Apparel"
+    },
+    {
+      "id": 155338,
+      "title": "Capri Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664025939",
+      "url": "https://brinkerandeliza.com/products/capri-necklace-1",
+      "price": 148.5,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155335,
+      "title": "Treasure Trove Bracelet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709663754639",
+      "url": "https://brinkerandeliza.com/products/treasure-trove-bracelet",
+      "price": 218,
+      "brand": "Brinker + Eliza",
+      "category": "Bracelets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155334,
+      "title": "Golden Girl Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709663747217",
+      "url": "https://brinkerandeliza.com/products/golden-girl-necklace-1",
+      "price": 148,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155315,
+      "title": "Carpe Diem Necklace",
+      "image": "https://cdn.shopify.com/s/files/1/0246/5520/0308/products/image_17769755-19b3-4c63-af87-814ce21af1df.jpg?v=1626383050",
+      "url": "https://brinkerandeliza.com/products/carpe-diem-necklace",
+      "price": 258,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155304,
+      "title": "Tripp 24K Gold-Plated Multi-Gem Necklace",
+      "image": "https://static.shopmy.us/uploads/a57bc78c-c589-4be7-8098-512a7274cfc4_beliz3045613970_1763139139396_2-0_1010x1790.jpg",
+      "url": "https://brinkerandeliza.com/products/tripp-necklace",
+      "price": 188,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1029496,
+      "title": "M.M.LaFleur x Senreve Maestra Bag ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761218302341",
+      "url": "https://mmlafleur.com/products/mm-senreve-maestra-chablis",
+      "price": 549,
+      "brand": "M.M.LaFleur",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 304926,
+      "title": "Jona Belt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753457512526",
+      "url": "https://freepeople.com/shop/we-the-free-jona-belt",
+      "price": 38,
+      "brand": "We The Free",
+      "category": "Belts",
+      "department": "Apparel"
+    },
+    {
+      "id": 143074,
+      "title": " Cool Down Beanie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759998859201",
+      "url": "https://freepeople.com/shop/movement-cool-down-beanie",
+      "price": 25,
+      "brand": "FP Movement",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 549047,
+      "title": "Logo Baseball Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756496200702",
+      "url": "https://freepeople.com/shop/movement-logo-baseball-cap",
+      "price": 38,
+      "brand": "FP Movement",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 107559,
+      "title": "Inca Raffia Bucket Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755628168567",
+      "url": "https://revolve.com/lack-of-color-the-inca-bucket-hat-in-natural/dp/LACK-WA33",
+      "price": 149,
+      "brand": "Lack of Color",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 109620,
+      "title": "Wave Bucket Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757059710032",
+      "url": "https://revolve.com/lack-of-color-wave-bucket-hat-in-beige/dp/LACK-WA27",
+      "price": 89,
+      "brand": "Lack of Color",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 98136,
+      "title": "Domino One-Piece Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773530117528",
+      "url": "https://www.ssense.com/en-us/women/product/hunza-g/black-square-neck-swimsuit/16866001",
+      "price": 204,
+      "brand": "Hunza G",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 113606,
+      "title": "Gold Chain Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1722529385749",
+      "url": "https://www.mytheresa.com/us/en/women/same-gold-chain-swimsuit-brown-p00770308",
+      "price": null,
+      "brand": "SAME LOS ANGELES",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 113612,
+      "title": "Double Layer Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1722529433217",
+      "url": "https://www.mytheresa.com/us/en/women/same-double-layer-one-piece-swimsuit-multicoloured-p00770231",
+      "price": 167,
+      "brand": "SAME LOS ANGELES",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 110924,
+      "title": "Domino Swim",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768069538109",
+      "url": "https://revolve.com/hunza-g-domino-one-piece-in-blush/dp/HUNG-WX19",
+      "price": 255,
+      "brand": "Hunza G",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 143078,
+      "title": " Good Karma Onesie",
+      "image": "https://static.shopmy.us/uploads/df3f6c1d-1232-4750-b4d7-d1d168b17cec_image-1772824139628",
+      "url": "https://freepeople.com/shop/good-karma-onesie2",
+      "price": 98,
+      "brand": "FP Movement",
+      "category": "Jumpsuits & Playsuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 107168,
+      "title": "Good Karma Running Shorts",
+      "image": "https://images.urbndata.com/is/image/FreePeople/52837242_436_0/?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=1314",
+      "url": "https://freepeople.com/shop/good-karma-running-shorts",
+      "price": 40,
+      "brand": "FP Movement",
+      "category": "Running & Bike Shorts",
+      "department": "Activewear"
+    },
+    {
+      "id": 107161,
+      "title": "Happiness Runs Crop Tank",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/2777ef78-7e85-4ea4-b07d-22003e6ade95imgi_182_e57b60ec-a4e9-483b-9e91-c75fabfc2e20.jpeg",
+      "url": "https://freepeople.com/shop/happiness-runs-crop-tank",
+      "price": 30,
+      "brand": "Free People",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 119506,
+      "title": " Courtside Tennis Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753162292178",
+      "url": "https://www.mytheresa.com/us/en/women/alo-yoga-courtside-tennis-dress-black-p01042375",
+      "price": 140,
+      "brand": "Alo",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 110263,
+      "title": "Balla Ballerina Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761951774511",
+      "url": "https://revolve.com/dear-frances-balla-flat-in-black/dp/DFRA-WZ5",
+      "price": 466,
+      "brand": "Dear Frances",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 154973,
+      "title": "Call The Shots Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709585507368",
+      "url": "https://quay.com/products/call-the-shots",
+      "price": 75,
+      "brand": "Quay",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 1309966,
+      "title": "Good Karma Long-Sleeve Onesie",
+      "image": "https://static.shopmy.us/uploads/c58b53a6-dd8b-4433-98ee-ca124ec1ca92_image-1769166546559",
+      "url": "https://freepeople.com/shop/good-karma-long-sleeve-onesie",
+      "price": 108,
+      "brand": "FP Movement",
+      "category": "Bodysuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 137319,
+      "title": "Rosalia Tencel Modal Romper",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1699384215436",
+      "url": "https://eberjey.com/products/rosalia-tencel-modal-chemise-navy",
+      "price": null,
+      "brand": "Eberjey",
+      "category": "Pajamas & Loungewear",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 116266,
+      "title": "Hills Blazer",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-116266-1692546706402-zoom-1748030-1688148091351-SDYS-WO15_V1.jpg",
+      "url": "https://revolve.com/sndys-hills-blazer-in-black/dp/SDYS-WO15",
+      "price": 85,
+      "brand": "SNDYS",
+      "category": "Blazers",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 107015,
+      "title": "The Carrie Tube",
+      "image": "https://images.urbndata.com/is/image/FreePeople/57240541_014_a?$feed-main$",
+      "url": "https://freepeople.com/shop/the-carrie-tube",
+      "price": 30,
+      "brand": "Intimately",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 171970,
+      "title": "Cami Bodysuit",
+      "image": "https://cdn.shopify.com/s/files/1/0654/5565/3115/files/NUD929_W-026_CAMI-BODYSUIT_WHITE_OF_Front_Crop_1.jpg?v=1711468362",
+      "url": "https://nuuds.com/products/womens-cami-bodysuit-olive",
+      "price": 36,
+      "brand": "Auden",
+      "category": "Bodysuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 293087,
+      "title": "Waimea Slouchy Solid Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/73ff08cd-f64f-4fa7-8e64-d86077452a19_image-1753286847111",
+      "url": "https://freepeople.com/shop/waimea-slouchy-solid-shorts",
+      "price": 88,
+      "brand": "Free People",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 243634,
+      "title": "The Racer Top",
+      "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/camii/camii30287102ca/camii30287102ca_1652814383247_2-0.jpg",
+      "url": "https://caminyc.com/products/the-racer-charmeuse-white",
+      "price": 195,
+      "brand": "Cami NYC",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 87281,
+      "title": "Pointelle-Knit Cotton-Jersey Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774044319546",
+      "url": "https://leset.com/products/pointelle-classic-cardigan-black",
+      "price": 120,
+      "brand": "LESET",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 486100,
+      "title": "Rayssa Cable Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/44dde37c-9836-4236-a97b-a416f01b50fd_image-1755780543102",
+      "url": "https://fwrd.com/product-helsa-rayssa-cable-cardigan-in-black/HLSA-WK24/",
+      "price": 237.55,
+      "brand": "Helsa",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 100019,
+      "title": "Horseshoe Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772028585046",
+      "url": "https://www.ssense.com/en-us/women/product/citizens-of-humanity/indigo-horseshoe-jeans/14541821",
+      "price": 280,
+      "brand": "Citizens of Humanity",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 160952,
+      "title": " Good Luck Barrel Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758315836181",
+      "url": "https://revolve.com/free-people-lucky-you-mid-rise-in-ultra-light-beam/dp/FREE-WJ291",
+      "price": 98,
+      "brand": "We The Free",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 99187,
+      "title": "Luna Mesh Ballerina Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767116183280",
+      "url": "https://www.ssense.com/en-us/women/product/le-monde-beryl/gold-luna-ballerina-flats/17045261",
+      "price": 152,
+      "brand": "Le Monde Béryl",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 2023253,
+      "title": "Balla Mesh Cobalt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771514975428",
+      "url": "https://dearfrances.com/products/balla-mesh-coffee",
+      "price": 395,
+      "brand": "Dear Frances",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 121227,
+      "title": "Agathea Chunky Loafers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760032661572",
+      "url": "https://thereformation.com/products/agathea-chunky-loafer/1309368BNW.html",
+      "price": 298,
+      "brand": "Reformation",
+      "category": "Loafers",
+      "department": "Footwear"
+    },
+    {
+      "id": 202445,
+      "title": "Wish Star Low Boots in Suede with Embroidered Star",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775716522598",
+      "url": "https://revolve.com/golden-goose-wish-star-low-boot-in-silver/dp/GGOR-WZ601",
+      "price": 811,
+      "brand": "Golden Goose",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 123971,
+      "title": "Micro Flare Denim Minidress",
+      "image": "https://image.s5a.com/is/image/saksoff5th/0400018857478?dpr=on,2",
+      "url": "https://shopbop.com/micro-flare-denim-dress-frame/vp/v=1/1598293387.htm",
+      "price": 298,
+      "brand": "FRAME",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 109842,
+      "title": "Aries Cut Out Gown",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774112538471",
+      "url": "https://us.sirthelabel.com/products/aries-cut-out-gown-black",
+      "price": 520,
+      "brand": "SIR.",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 161074,
+      "title": "Suddenly Fine Maxi Slip Dress",
+      "image": "https://images.urbndata.com/is/image/FreePeople/80162696_021_a/?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=1314",
+      "url": "https://freepeople.com/shop/suddenly-fine-maxi-slip",
+      "price": 98,
+      "brand": "Free People",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 472154,
+      "title": "Long Sleeve Crewneck Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766140396508",
+      "url": "https://eterne.com/products/long-sleeve-crewneck-dress-mini-black",
+      "price": 195,
+      "brand": "ÉTERNE",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 136172,
+      "title": "Nevita Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775145680981",
+      "url": "https://shopdoen.com/products/nevita-dress-driftwood",
+      "price": 145,
+      "brand": "DÔEN",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 107012,
+      "title": "Olympic Cat Eye Sunglasses",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-107012-1688575560554-pretty-prod-1688575558977",
+      "url": "https://freepeople.com/shop/olympic-cat-eye-sunglasses",
+      "price": 20,
+      "brand": "Free People",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 38618,
+      "title": "Outta Love Oval Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775687030112",
+      "url": "https://beauandro.com/products/le-specs-sunglasses-outta-love-in-vintage-tort",
+      "price": 65,
+      "brand": "Le Specs",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 155341,
+      "title": "Vida Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664055665",
+      "url": "https://brinkerandeliza.com/products/vida-necklace",
+      "price": 254.4,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155340,
+      "title": "Mojave Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664045185",
+      "url": "https://brinkerandeliza.com/products/mojave-necklace-1",
+      "price": 71.2,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155339,
+      "title": "Honeymoon Earrings",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664033579",
+      "url": "https://brinkerandeliza.com/products/honeymoon-earrings-1",
+      "price": 110.6,
+      "brand": "Brinker + Eliza",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 223976,
+      "title": "LW40088U Paulas Ibiza Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761328793721",
+      "url": "https://www.ssense.com/en-us/women/product/loewe/orange-flower-sunglasses/13702051",
+      "price": 380,
+      "brand": "Loewe",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 143142,
+      "title": "Camila Lace Socks",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1702918754373",
+      "url": "https://freepeople.com/shop/camila-lace-socks",
+      "price": null,
+      "brand": "Free People",
+      "category": "Socks",
+      "department": "Apparel"
+    },
+    {
+      "id": 155338,
+      "title": "Capri Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709664025939",
+      "url": "https://brinkerandeliza.com/products/capri-necklace-1",
+      "price": 148.5,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155335,
+      "title": "Treasure Trove Bracelet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709663754639",
+      "url": "https://brinkerandeliza.com/products/treasure-trove-bracelet",
+      "price": 218,
+      "brand": "Brinker + Eliza",
+      "category": "Bracelets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155334,
+      "title": "Golden Girl Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1709663747217",
+      "url": "https://brinkerandeliza.com/products/golden-girl-necklace-1",
+      "price": 148,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155315,
+      "title": "Carpe Diem Necklace",
+      "image": "https://cdn.shopify.com/s/files/1/0246/5520/0308/products/image_17769755-19b3-4c63-af87-814ce21af1df.jpg?v=1626383050",
+      "url": "https://brinkerandeliza.com/products/carpe-diem-necklace",
+      "price": 258,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 155304,
+      "title": "Tripp 24K Gold-Plated Multi-Gem Necklace",
+      "image": "https://static.shopmy.us/uploads/a57bc78c-c589-4be7-8098-512a7274cfc4_beliz3045613970_1763139139396_2-0_1010x1790.jpg",
+      "url": "https://brinkerandeliza.com/products/tripp-necklace",
+      "price": 188,
+      "brand": "Brinker + Eliza",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1029496,
+      "title": "M.M.LaFleur x Senreve Maestra Bag ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761218302341",
+      "url": "https://mmlafleur.com/products/mm-senreve-maestra-chablis",
+      "price": 549,
+      "brand": "M.M.LaFleur",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 304926,
+      "title": "Jona Belt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753457512526",
+      "url": "https://freepeople.com/shop/we-the-free-jona-belt",
+      "price": 38,
+      "brand": "We The Free",
+      "category": "Belts",
+      "department": "Apparel"
+    },
+    {
+      "id": 143074,
+      "title": " Cool Down Beanie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759998859201",
+      "url": "https://freepeople.com/shop/movement-cool-down-beanie",
+      "price": 25,
+      "brand": "FP Movement",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 549047,
+      "title": "Logo Baseball Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756496200702",
+      "url": "https://freepeople.com/shop/movement-logo-baseball-cap",
+      "price": 38,
+      "brand": "FP Movement",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 107559,
+      "title": "Inca Raffia Bucket Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755628168567",
+      "url": "https://revolve.com/lack-of-color-the-inca-bucket-hat-in-natural/dp/LACK-WA33",
+      "price": 149,
+      "brand": "Lack of Color",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 109620,
+      "title": "Wave Bucket Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757059710032",
+      "url": "https://revolve.com/lack-of-color-wave-bucket-hat-in-beige/dp/LACK-WA27",
+      "price": 89,
+      "brand": "Lack of Color",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 98136,
+      "title": "Domino One-Piece Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773530117528",
+      "url": "https://www.ssense.com/en-us/women/product/hunza-g/black-square-neck-swimsuit/16866001",
+      "price": 204,
+      "brand": "Hunza G",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 113606,
+      "title": "Gold Chain Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1722529385749",
+      "url": "https://www.mytheresa.com/us/en/women/same-gold-chain-swimsuit-brown-p00770308",
+      "price": null,
+      "brand": "SAME LOS ANGELES",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 113612,
+      "title": "Double Layer Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1722529433217",
+      "url": "https://www.mytheresa.com/us/en/women/same-double-layer-one-piece-swimsuit-multicoloured-p00770231",
+      "price": 167,
+      "brand": "SAME LOS ANGELES",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 110924,
+      "title": "Domino Swim",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768069538109",
+      "url": "https://revolve.com/hunza-g-domino-one-piece-in-blush/dp/HUNG-WX19",
+      "price": 255,
+      "brand": "Hunza G",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 143078,
+      "title": " Good Karma Onesie",
+      "image": "https://static.shopmy.us/uploads/df3f6c1d-1232-4750-b4d7-d1d168b17cec_image-1772824139628",
+      "url": "https://freepeople.com/shop/good-karma-onesie2",
+      "price": 98,
+      "brand": "FP Movement",
+      "category": "Jumpsuits & Playsuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 107168,
+      "title": "Good Karma Running Shorts",
+      "image": "https://images.urbndata.com/is/image/FreePeople/52837242_436_0/?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=1314",
+      "url": "https://freepeople.com/shop/good-karma-running-shorts",
+      "price": 40,
+      "brand": "FP Movement",
+      "category": "Running & Bike Shorts",
+      "department": "Activewear"
+    },
+    {
+      "id": 107161,
+      "title": "Happiness Runs Crop Tank",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/2777ef78-7e85-4ea4-b07d-22003e6ade95imgi_182_e57b60ec-a4e9-483b-9e91-c75fabfc2e20.jpeg",
+      "url": "https://freepeople.com/shop/happiness-runs-crop-tank",
+      "price": 30,
+      "brand": "Free People",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 119506,
+      "title": " Courtside Tennis Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753162292178",
+      "url": "https://www.mytheresa.com/us/en/women/alo-yoga-courtside-tennis-dress-black-p01042375",
+      "price": 140,
+      "brand": "Alo",
+      "category": "Dresses",
+      "department": "Apparel"
+    }
+  ],
+  "curatorId": 29897
+}

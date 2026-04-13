@@ -1,0 +1,970 @@
+{
+  "username": "alyssainthecity",
+  "name": "Alyssa Coscarelli",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-23309-1769218972402",
+  "scrapedAt": "2026-04-11T18:01:44.439Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 307713,
+      "title": "Sequin-Embellished Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754063181295",
+      "url": "https://www.ssense.com/en-us/women/product/jw-anderson/blue-sequin-bag/17638511",
+      "price": 222,
+      "brand": "JW Anderson",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 401716,
+      "title": "Sakura Soft Unlined Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754921655094",
+      "url": "https://palomawool.com/products/sakura-soft-unlined-bag-three-exterior-pockets-yellow",
+      "price": null,
+      "brand": "Paloma Wool",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 192411,
+      "title": "Peep-Toes Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765545674892",
+      "url": "https://www.ssense.com/en-us/men/product/dries-van-noten/white-leather-sneakers/16144731",
+      "price": 490,
+      "brand": "Dries Van Noten",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 607398,
+      "title": "Leather Paddington Tote",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763610715260",
+      "url": "https://therealreal.com/products/women/handbags/handle-bags/chloe-leather-paddington-scxcr",
+      "price": 1277.5,
+      "brand": "Chloé",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1349497,
+      "title": "Cici Petite Sterling and 18-Karat Ring",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764016566422",
+      "url": "https://net-a-porter.com/en-us/shop/product/spinelli-kilcollin/jewelry-and-watches/ring-stacks/cici-petite-sterling-silver-and-18-karat-gold-ring/46376663162952124",
+      "price": 1900,
+      "brand": "Spinelli Kilcollin",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 470171,
+      "title": "Romy Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764930702218",
+      "url": "https://ysl.com/en-us/pr/sl-815-romy-813861391.html",
+      "price": 520,
+      "brand": "SAINT LAURENT",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 1969414,
+      "title": "The Rollneck Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770905416321",
+      "url": "https://jcrew.com/p/womens/categories/clothing/sweaters/pullovers/the-rollnecktrade-by-buci/CS710",
+      "price": 180,
+      "brand": "BUCI",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 645785,
+      "title": "Flutter Silk Top ",
+      "image": "https://static.shopmy.us/uploads/32af0928-dc55-42f8-8c9f-c4db329f18a7_FLUTTER_TOP_PLUM_2_LR.jpg",
+      "url": "https://danafoleynyc.com/products/flutter-top-pink",
+      "price": 250,
+      "brand": "Dana Foley NYC",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 262482,
+      "title": "Cashmere Cardigan",
+      "image": "https://static.shopmy.us/uploads/d776d2db-55a3-4a47-95eb-047a1a246af9_xlarge_1200x160019.jpg",
+      "url": "https://jcrew.com/p/womens/categories/clothing/sweaters/cardigan/featherweight-cashmere-shrunken-cardigan-sweater/BZ400",
+      "price": 142.99,
+      "brand": "J.Crew",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 585361,
+      "title": "Aris Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/64da945a-b926-4fb4-aa81-d1557996b82c_image-1756796157238",
+      "url": "https://shop-peche.com/products/aris-top",
+      "price": 130,
+      "brand": "Pêche",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2300733,
+      "title": "Garrett Leight x Dôen Ingenue Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774396046512",
+      "url": "https://shopbop.com/doen-ingenue-sun-garrett-leight/vp/v=1/1516193606.htm",
+      "price": 425,
+      "brand": "Garrett Leight",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 845379,
+      "title": "Modern Rib Henley T-Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760006412704",
+      "url": "https://gap.com/browse/product.do?pid=521667052",
+      "price": 15,
+      "brand": "GAP",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1350551,
+      "title": "Unisex Flight Padded Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764026584833",
+      "url": "https://en.dunststudio.com/product/unisex-flight-padded-jacket-beige/7977",
+      "price": 265,
+      "brand": "Dunst",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1355370,
+      "title": "Mallory Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764070903619",
+      "url": "https://danafoleynyc.com/products/mallory-top-black",
+      "price": 625,
+      "brand": "Dana Foley NYC",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1367301,
+      "title": "suede Mules Clogs",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764159471962",
+      "url": "https://us.vestiairecollective.com/women-shoes/mules-clogs/prada",
+      "price": 810,
+      "brand": "Prada",
+      "category": "Clogs",
+      "department": "Footwear"
+    },
+    {
+      "id": 1019156,
+      "title": "Madonna Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761133001671",
+      "url": "https://shoprumored.com/products/madonna-coat-arctic-fox",
+      "price": 80.4,
+      "brand": "Rumored",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 253214,
+      "title": "Gabin Maxi Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1752151661004",
+      "url": "https://www.sezane.com/us/product/gabin-maxi-bag/camel",
+      "price": null,
+      "brand": "Sézane",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 203094,
+      "title": "CashSoft Crop Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760011471248",
+      "url": "https://gap.com/browse/product.do?pid=800546032",
+      "price": 41,
+      "brand": "GAP",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1653669,
+      "title": "Paneled Fleece Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767797728612",
+      "url": "https://net-a-porter.com/en-us/shop/product/colleen-allen/clothing/smart/paneled-fleece-jacket/46376663163040213",
+      "price": 1150,
+      "brand": "Colleen Allen",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1358002,
+      "title": "Double Cowl Lady Length Dress",
+      "image": "https://static.shopmy.us/uploads/fb8b2035-3842-4253-917a-aab04799ae11_HolidayEcom2025Look17_0cb05104-c6e7-4f47-b8f0-427dac2606ec_600x_1120x1680.jpg",
+      "url": "https://mirrorpalais.com/products/double-cowl-lady-length-dress-creme",
+      "price": null,
+      "brand": "Mirror Palais",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 520902,
+      "title": "Gabriel Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-1767533303197",
+      "url": "https://www.sezane.com/us-en/product/gabriel-coat/beige-black-and-camel-coloured-check",
+      "price": null,
+      "brand": "Sézane",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1928709,
+      "title": "High Collar Leather Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772054266127",
+      "url": "https://theory.com/women/womens-outerwear/high-collar-jacket-in-leather/black/199045156374.html",
+      "price": 1495,
+      "brand": "Theory",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 369553,
+      "title": "The Finch Trench Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775480988878",
+      "url": "https://aritzia.com/us/en/product/new-the-finch-mid-trench-coat/127629004.html",
+      "price": 228,
+      "brand": "Aritzia",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1460665,
+      "title": "Garance Cotton-Poplin Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764912198967",
+      "url": "https://modaoperandi.com/women/p/merlette/garance/726206",
+      "price": 580,
+      "brand": "Merlette",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1348854,
+      "title": "Striped Alpaca Scarf",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764011876154",
+      "url": "https://www.ssense.com/en-us/women/product/marni/green-and-gray-striped-alpaca-scarf/17993741",
+      "price": 495,
+      "brand": "Marni",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 541723,
+      "title": "Twin Turnlock Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756332541573",
+      "url": "https://us.levelshoes.com/coach-twin-turnlock-bag-brown-leather-women-shoulder-bags-96g4z2.html",
+      "price": 450,
+      "brand": "COACH",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1350325,
+      "title": "Grisette Pencil Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764023909051",
+      "url": "https://fanciclub.com/product/grisette-pencil-midi-skirt",
+      "price": null,
+      "brand": "Fancì Club",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 329241,
+      "title": "Felix Twill Trouser",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/a727f17c-fbad-499a-b970-9c0c1566bba8_image-1753868744637",
+      "url": "https://damsonmadder.com/products/felix-twill-jeans-olive",
+      "price": 85,
+      "brand": "Damson Madder",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1746387,
+      "title": "Chunky Scarf",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768329292721",
+      "url": "https://www.uniqlo.com/us/en/products/E465876-000/00",
+      "price": null,
+      "brand": "UNIQLO",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 756165,
+      "title": "Wool Frill Neck Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758622502293",
+      "url": "https://mymum-madeit.com/products/wool-frill-neck-jacket-fawn",
+      "price": 249,
+      "brand": "My Mum Made It",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 304460,
+      "title": "Organic Cotton Robe",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773850373368",
+      "url": "https://shopbop.com/hommey-robe/vp/v=1/1519601015.htm",
+      "price": 129,
+      "brand": "HOMMEY",
+      "category": "Robes",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1953784,
+      "title": "Leather Beret Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770735653328",
+      "url": "https://freepeople.com/shop/leather-beret",
+      "price": 278,
+      "brand": "Nicholas K",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 181725,
+      "title": "Prismatic Leather Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755676671644",
+      "url": "https://paris64.com/products/prismatic-palma-chocolate",
+      "price": 349,
+      "brand": "PARIS/64",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 459151,
+      "title": "Soft Leather Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770799417666",
+      "url": "https://stories.com/en_usd/bags/totes/product.suede-tote-bag-black.1262536002.html",
+      "price": 259,
+      "brand": "& Other Stories",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1354307,
+      "title": "Padded Windbreaker Jacket ",
+      "image": "https://static.shopmy.us/uploads/45338b61-6e34-445e-abc8-cda591adfada_imgi_58_ADANOLA_25_OCT_Look_07_012.jpg",
+      "url": "https://adanola.com/products/padded-windbreaker-jacket-college-blue",
+      "price": 100,
+      "brand": "Adanola",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 780810,
+      "title": "Origami Baguette Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772545074075",
+      "url": "https://altuzarra.com/products/origami-baguette-black-crystal",
+      "price": null,
+      "brand": "Altuzarra",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1973304,
+      "title": "Cadanet Striped Wool Top",
+      "image": "https://cdn.modaoperandi.com/assets/images/products/1067415/716008/large_zankov-multi-cadanet-striped-wool-top.jpg?_v=1770842313",
+      "url": "https://modaoperandi.com/women/p/zankov/cadanet-striped-wool-top/716008",
+      "price": 618,
+      "brand": "Zankov",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1857782,
+      "title": "Cotton Wool Lightweight Vneck",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769668776692",
+      "url": "https://440me.com/products/cotton-wool-lightweight-vneck",
+      "price": 178,
+      "brand": "440ME",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 239027,
+      "title": "A Hat Named Wanda",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755721444162",
+      "url": "https://emilydawnlong.com/products/a-hat-named-wanda-solid-hickory-copy",
+      "price": 210,
+      "brand": "Emily Dawn Long",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1745267,
+      "title": "Leather Handbag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768319054605",
+      "url": "https://editorialist.com/p/dunst-bag-38573273",
+      "price": 192,
+      "brand": "Dunst",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1047950,
+      "title": "Kale Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764730624015",
+      "url": "https://www.ssense.com/en-es/women/product/sandy-liang/black-kale-tank-top/18759071",
+      "price": 320,
+      "brand": "Sandy Liang",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1175192,
+      "title": "The Leather Card Case Card Holder",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764011936664",
+      "url": "https://www.ssense.com/en-us/women/product/marc-jacobs/pink-the-leather-card-case-card-holder/16279211",
+      "price": 75,
+      "brand": "Marc Jacobs",
+      "category": "Wallets",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1270343,
+      "title": "Simone Cashmere Whipstitch Scarf Bandana",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763319052919",
+      "url": "https://shopbop.com/simone-whipstitch-cashmere-bandana-scarf/vp/v=1/1562255325.htm",
+      "price": 198,
+      "brand": "LELET NY",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 197243,
+      "title": "Easton Denim Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772200926197",
+      "url": "https://merlettenyc.com/products/easton-denim-jacket-in-mid-blue-wash",
+      "price": 495,
+      "brand": "Merlette",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 200930,
+      "title": "Kyoto Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756277375523",
+      "url": "https://shopbop.com/kw012-kyoto-jeanerica/vp/v=1/1563409231.htm",
+      "price": 231,
+      "brand": "Jeanerica",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 248874,
+      "title": "Hoodess",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1751392433087",
+      "url": "https://maccapani.store/products/hoodess-black-25em2m0e06040799000",
+      "price": 420,
+      "brand": "Maccapani",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1058247,
+      "title": "Jorja Puff Sleeve Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766666857200",
+      "url": "https://revolve.com/aligne-jorja-puff-sleeve-top-in-black/dp/AGNE-WS20",
+      "price": 215,
+      "brand": "ALIGNE",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1267201,
+      "title": "Leather Paddington Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772362338670",
+      "url": "https://www.mytheresa.com/us/en/women/chloe-paddington-leather-shoulder-bag-black-p01105777",
+      "price": null,
+      "brand": "Chloé",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 307713,
+      "title": "Sequin-Embellished Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754063181295",
+      "url": "https://www.ssense.com/en-us/women/product/jw-anderson/blue-sequin-bag/17638511",
+      "price": 222,
+      "brand": "JW Anderson",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 401716,
+      "title": "Sakura Soft Unlined Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754921655094",
+      "url": "https://palomawool.com/products/sakura-soft-unlined-bag-three-exterior-pockets-yellow",
+      "price": null,
+      "brand": "Paloma Wool",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 192411,
+      "title": "Peep-Toes Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765545674892",
+      "url": "https://www.ssense.com/en-us/men/product/dries-van-noten/white-leather-sneakers/16144731",
+      "price": 490,
+      "brand": "Dries Van Noten",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 607398,
+      "title": "Leather Paddington Tote",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763610715260",
+      "url": "https://therealreal.com/products/women/handbags/handle-bags/chloe-leather-paddington-scxcr",
+      "price": 1277.5,
+      "brand": "Chloé",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1349497,
+      "title": "Cici Petite Sterling and 18-Karat Ring",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764016566422",
+      "url": "https://net-a-porter.com/en-us/shop/product/spinelli-kilcollin/jewelry-and-watches/ring-stacks/cici-petite-sterling-silver-and-18-karat-gold-ring/46376663162952124",
+      "price": 1900,
+      "brand": "Spinelli Kilcollin",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 470171,
+      "title": "Romy Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764930702218",
+      "url": "https://ysl.com/en-us/pr/sl-815-romy-813861391.html",
+      "price": 520,
+      "brand": "SAINT LAURENT",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 1969414,
+      "title": "The Rollneck Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770905416321",
+      "url": "https://jcrew.com/p/womens/categories/clothing/sweaters/pullovers/the-rollnecktrade-by-buci/CS710",
+      "price": 180,
+      "brand": "BUCI",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 645785,
+      "title": "Flutter Silk Top ",
+      "image": "https://static.shopmy.us/uploads/32af0928-dc55-42f8-8c9f-c4db329f18a7_FLUTTER_TOP_PLUM_2_LR.jpg",
+      "url": "https://danafoleynyc.com/products/flutter-top-pink",
+      "price": 250,
+      "brand": "Dana Foley NYC",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 262482,
+      "title": "Cashmere Cardigan",
+      "image": "https://static.shopmy.us/uploads/d776d2db-55a3-4a47-95eb-047a1a246af9_xlarge_1200x160019.jpg",
+      "url": "https://jcrew.com/p/womens/categories/clothing/sweaters/cardigan/featherweight-cashmere-shrunken-cardigan-sweater/BZ400",
+      "price": 142.99,
+      "brand": "J.Crew",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 585361,
+      "title": "Aris Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/64da945a-b926-4fb4-aa81-d1557996b82c_image-1756796157238",
+      "url": "https://shop-peche.com/products/aris-top",
+      "price": 130,
+      "brand": "Pêche",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2300733,
+      "title": "Garrett Leight x Dôen Ingenue Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774396046512",
+      "url": "https://shopbop.com/doen-ingenue-sun-garrett-leight/vp/v=1/1516193606.htm",
+      "price": 425,
+      "brand": "Garrett Leight",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 845379,
+      "title": "Modern Rib Henley T-Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760006412704",
+      "url": "https://gap.com/browse/product.do?pid=521667052",
+      "price": 15,
+      "brand": "GAP",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1350551,
+      "title": "Unisex Flight Padded Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764026584833",
+      "url": "https://en.dunststudio.com/product/unisex-flight-padded-jacket-beige/7977",
+      "price": 265,
+      "brand": "Dunst",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1355370,
+      "title": "Mallory Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764070903619",
+      "url": "https://danafoleynyc.com/products/mallory-top-black",
+      "price": 625,
+      "brand": "Dana Foley NYC",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1367301,
+      "title": "suede Mules Clogs",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764159471962",
+      "url": "https://us.vestiairecollective.com/women-shoes/mules-clogs/prada",
+      "price": 810,
+      "brand": "Prada",
+      "category": "Clogs",
+      "department": "Footwear"
+    },
+    {
+      "id": 1019156,
+      "title": "Madonna Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761133001671",
+      "url": "https://shoprumored.com/products/madonna-coat-arctic-fox",
+      "price": 80.4,
+      "brand": "Rumored",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 253214,
+      "title": "Gabin Maxi Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1752151661004",
+      "url": "https://www.sezane.com/us/product/gabin-maxi-bag/camel",
+      "price": null,
+      "brand": "Sézane",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 203094,
+      "title": "CashSoft Crop Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760011471248",
+      "url": "https://gap.com/browse/product.do?pid=800546032",
+      "price": 41,
+      "brand": "GAP",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1653669,
+      "title": "Paneled Fleece Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767797728612",
+      "url": "https://net-a-porter.com/en-us/shop/product/colleen-allen/clothing/smart/paneled-fleece-jacket/46376663163040213",
+      "price": 1150,
+      "brand": "Colleen Allen",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1358002,
+      "title": "Double Cowl Lady Length Dress",
+      "image": "https://static.shopmy.us/uploads/fb8b2035-3842-4253-917a-aab04799ae11_HolidayEcom2025Look17_0cb05104-c6e7-4f47-b8f0-427dac2606ec_600x_1120x1680.jpg",
+      "url": "https://mirrorpalais.com/products/double-cowl-lady-length-dress-creme",
+      "price": null,
+      "brand": "Mirror Palais",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 520902,
+      "title": "Gabriel Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-1767533303197",
+      "url": "https://www.sezane.com/us-en/product/gabriel-coat/beige-black-and-camel-coloured-check",
+      "price": null,
+      "brand": "Sézane",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1928709,
+      "title": "High Collar Leather Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772054266127",
+      "url": "https://theory.com/women/womens-outerwear/high-collar-jacket-in-leather/black/199045156374.html",
+      "price": 1495,
+      "brand": "Theory",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 369553,
+      "title": "The Finch Trench Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775480988878",
+      "url": "https://aritzia.com/us/en/product/new-the-finch-mid-trench-coat/127629004.html",
+      "price": 228,
+      "brand": "Aritzia",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1460665,
+      "title": "Garance Cotton-Poplin Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764912198967",
+      "url": "https://modaoperandi.com/women/p/merlette/garance/726206",
+      "price": 580,
+      "brand": "Merlette",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1348854,
+      "title": "Striped Alpaca Scarf",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764011876154",
+      "url": "https://www.ssense.com/en-us/women/product/marni/green-and-gray-striped-alpaca-scarf/17993741",
+      "price": 495,
+      "brand": "Marni",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 541723,
+      "title": "Twin Turnlock Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756332541573",
+      "url": "https://us.levelshoes.com/coach-twin-turnlock-bag-brown-leather-women-shoulder-bags-96g4z2.html",
+      "price": 450,
+      "brand": "COACH",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1350325,
+      "title": "Grisette Pencil Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764023909051",
+      "url": "https://fanciclub.com/product/grisette-pencil-midi-skirt",
+      "price": null,
+      "brand": "Fancì Club",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 329241,
+      "title": "Felix Twill Trouser",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/a727f17c-fbad-499a-b970-9c0c1566bba8_image-1753868744637",
+      "url": "https://damsonmadder.com/products/felix-twill-jeans-olive",
+      "price": 85,
+      "brand": "Damson Madder",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1746387,
+      "title": "Chunky Scarf",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768329292721",
+      "url": "https://www.uniqlo.com/us/en/products/E465876-000/00",
+      "price": null,
+      "brand": "UNIQLO",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 756165,
+      "title": "Wool Frill Neck Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758622502293",
+      "url": "https://mymum-madeit.com/products/wool-frill-neck-jacket-fawn",
+      "price": 249,
+      "brand": "My Mum Made It",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 304460,
+      "title": "Organic Cotton Robe",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773850373368",
+      "url": "https://shopbop.com/hommey-robe/vp/v=1/1519601015.htm",
+      "price": 129,
+      "brand": "HOMMEY",
+      "category": "Robes",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1953784,
+      "title": "Leather Beret Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770735653328",
+      "url": "https://freepeople.com/shop/leather-beret",
+      "price": 278,
+      "brand": "Nicholas K",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 181725,
+      "title": "Prismatic Leather Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755676671644",
+      "url": "https://paris64.com/products/prismatic-palma-chocolate",
+      "price": 349,
+      "brand": "PARIS/64",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 459151,
+      "title": "Soft Leather Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770799417666",
+      "url": "https://stories.com/en_usd/bags/totes/product.suede-tote-bag-black.1262536002.html",
+      "price": 259,
+      "brand": "& Other Stories",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1354307,
+      "title": "Padded Windbreaker Jacket ",
+      "image": "https://static.shopmy.us/uploads/45338b61-6e34-445e-abc8-cda591adfada_imgi_58_ADANOLA_25_OCT_Look_07_012.jpg",
+      "url": "https://adanola.com/products/padded-windbreaker-jacket-college-blue",
+      "price": 100,
+      "brand": "Adanola",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 780810,
+      "title": "Origami Baguette Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772545074075",
+      "url": "https://altuzarra.com/products/origami-baguette-black-crystal",
+      "price": null,
+      "brand": "Altuzarra",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1973304,
+      "title": "Cadanet Striped Wool Top",
+      "image": "https://cdn.modaoperandi.com/assets/images/products/1067415/716008/large_zankov-multi-cadanet-striped-wool-top.jpg?_v=1770842313",
+      "url": "https://modaoperandi.com/women/p/zankov/cadanet-striped-wool-top/716008",
+      "price": 618,
+      "brand": "Zankov",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1857782,
+      "title": "Cotton Wool Lightweight Vneck",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769668776692",
+      "url": "https://440me.com/products/cotton-wool-lightweight-vneck",
+      "price": 178,
+      "brand": "440ME",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 239027,
+      "title": "A Hat Named Wanda",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755721444162",
+      "url": "https://emilydawnlong.com/products/a-hat-named-wanda-solid-hickory-copy",
+      "price": 210,
+      "brand": "Emily Dawn Long",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1745267,
+      "title": "Leather Handbag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768319054605",
+      "url": "https://editorialist.com/p/dunst-bag-38573273",
+      "price": 192,
+      "brand": "Dunst",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1047950,
+      "title": "Kale Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764730624015",
+      "url": "https://www.ssense.com/en-es/women/product/sandy-liang/black-kale-tank-top/18759071",
+      "price": 320,
+      "brand": "Sandy Liang",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1175192,
+      "title": "The Leather Card Case Card Holder",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764011936664",
+      "url": "https://www.ssense.com/en-us/women/product/marc-jacobs/pink-the-leather-card-case-card-holder/16279211",
+      "price": 75,
+      "brand": "Marc Jacobs",
+      "category": "Wallets",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1270343,
+      "title": "Simone Cashmere Whipstitch Scarf Bandana",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763319052919",
+      "url": "https://shopbop.com/simone-whipstitch-cashmere-bandana-scarf/vp/v=1/1562255325.htm",
+      "price": 198,
+      "brand": "LELET NY",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 197243,
+      "title": "Easton Denim Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772200926197",
+      "url": "https://merlettenyc.com/products/easton-denim-jacket-in-mid-blue-wash",
+      "price": 495,
+      "brand": "Merlette",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 200930,
+      "title": "Kyoto Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756277375523",
+      "url": "https://shopbop.com/kw012-kyoto-jeanerica/vp/v=1/1563409231.htm",
+      "price": 231,
+      "brand": "Jeanerica",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 248874,
+      "title": "Hoodess",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1751392433087",
+      "url": "https://maccapani.store/products/hoodess-black-25em2m0e06040799000",
+      "price": 420,
+      "brand": "Maccapani",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1058247,
+      "title": "Jorja Puff Sleeve Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766666857200",
+      "url": "https://revolve.com/aligne-jorja-puff-sleeve-top-in-black/dp/AGNE-WS20",
+      "price": 215,
+      "brand": "ALIGNE",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1267201,
+      "title": "Leather Paddington Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772362338670",
+      "url": "https://www.mytheresa.com/us/en/women/chloe-paddington-leather-shoulder-bag-black-p01105777",
+      "price": null,
+      "brand": "Chloé",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    }
+  ],
+  "curatorId": 23309
+}

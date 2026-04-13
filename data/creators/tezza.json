@@ -1,0 +1,970 @@
+{
+  "username": "tezza",
+  "name": "Tezza Barton",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-42535-1708526578153",
+  "scrapedAt": "2026-04-11T18:01:55.002Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 170420,
+      "title": "The Beach Towel",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774965100275",
+      "url": "https://businessandpleasureco.com/products/the-beach-towel-hanalei-bay-blue-jacquard",
+      "price": 89,
+      "brand": "Business & Pleasure Co. ",
+      "category": "Beach Towels",
+      "department": "Swimwear"
+    },
+    {
+      "id": 304704,
+      "title": "Justina Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765376172920",
+      "url": "https://modaoperandi.com/women/p/anna-october/justina/685615",
+      "price": 654,
+      "brand": "Anna October",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 581418,
+      "title": "Le Cambon 35 Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771953892840",
+      "url": "https://manuatelier.com/products/le-cambon-35-velvet-green-suede",
+      "price": 820,
+      "brand": "Manu Atelier",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2233393,
+      "title": "Tailored Blazer",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/a331213f-7448-4a81-9982-43f6d4f717dfMAGF-WO52_V1_1199x1799.png",
+      "url": "https://fwrd.com/product-magda-butrym-tailored-blazer-in-beige/MAGF-WO52/",
+      "price": 2345,
+      "brand": "Magda Butrym",
+      "category": "Blazers",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 497937,
+      "title": "Isla Appliquéd Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755886390238",
+      "url": "https://revolve.com/herskind-isla-dress-in-pale-lime/dp/HSKI-WD11",
+      "price": 395,
+      "brand": "Herskind",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 223621,
+      "title": "The Hudson Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764931533894",
+      "url": "https://goop.com/products/demellier-hudson-bag",
+      "price": 745,
+      "brand": "DeMellier",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1525546,
+      "title": "Classic Fit Oxford Workshirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765478533349",
+      "url": "https://nordstrom.com/s/8565982",
+      "price": 130,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 1854149,
+      "title": "Wide Leg Trousers",
+      "image": "https://static.shopmy.us/uploads/da7817dd-a0ec-4173-9a6c-3807b0a0d47e_resized-image-2026-01-28T201939.060.png",
+      "url": "https://fwrd.com/product-magda-butrym-wide-leg-trouser-in-orange/MAGF-WP26/",
+      "price": 1175,
+      "brand": "Magda Butrym",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 2302834,
+      "title": "Button-Down Collar Striped Cotton Oxford Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774418882953",
+      "url": "https://mrporter.com/en-us/mens/product/polo-ralph-lauren/clothing/striped-shirts/button-down-collar-striped-cotton-oxford-shirt/46376663162940992",
+      "price": 125,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 116829,
+      "title": "Jeany Silk Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1752778438026",
+      "url": "https://thereformation.com/products/jeany-silk-dress/1311710NVY.html",
+      "price": 348,
+      "brand": "Reformation",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1940459,
+      "title": "Classic Fit Cotton Oxford Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770602463198",
+      "url": "https://ralphlauren.com/women-clothing-shirts-blouses/classic-fit-striped-cotton-oxford-shirt-/0080281140.html",
+      "price": 148,
+      "brand": "Ralph Lauren",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1289049,
+      "title": "Structured Medium Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763482651368",
+      "url": "https://wolfandbadger.com/ruby-cherry-red-structured-tote-medium",
+      "price": 80,
+      "brand": "Fable England",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2082870,
+      "title": "Sumba Beaded Underwire Bikini Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772133233059",
+      "url": "https://cleonie.com/products/sumba-beaded-kini-top-black",
+      "price": null,
+      "brand": null,
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 2346948,
+      "title": "Custom Fit Oxford Shirt Multi",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774907048526",
+      "url": "https://careofcarl.com/en/polo-ralph-lauren-custom-fit-oxford-shirt-multi",
+      "price": 156,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 2005028,
+      "title": "Wedge Sandal with Studs",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771339423491",
+      "url": "https://fwrd.com/product-magda-butrym-wedge-sandal-in-brown/MAGF-WZ64/",
+      "price": 1305,
+      "brand": "Magda Butrym",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 852172,
+      "title": "Oxford Colour-Block Cotton Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759574308852",
+      "url": "https://farfetch.com/shopping/men/polo-ralph-lauren-oxford-colour-block-cotton-shirt-item-22349125.aspx",
+      "price": 228,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 742405,
+      "title": "Reformation x Nara Smith Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758493756847",
+      "url": "https://thereformation.com/products/nara-shoulder-bag/1319202EDO.html",
+      "price": 448,
+      "brand": "Reformation",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1141280,
+      "title": "Oversized Seraphina Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772978631648",
+      "url": "https://thereformation.com/products/oversized-seraphina-tote/1319204.html",
+      "price": 598,
+      "brand": "Reformation",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 597777,
+      "title": "Halter-Neck Combo Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756913521722",
+      "url": "https://shop.mango.com/us/en/p/women/dresses-and-jumpsuits/dresses/halter-neck-combo-dress_17023796",
+      "price": 149.99,
+      "brand": "MANGO",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 884396,
+      "title": "Logo Engraved Eclectic Earrings",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/94dd7403-f968-4719-94d3-54088aec5dffaXlyAxxbQg67BpDZ4puaSQ_284b0c02_1200x1600.png",
+      "url": "https://www.ssense.com/en-us/women/product/chloe/gold-the-chloe-eclectic-earrings/16998511",
+      "price": 750,
+      "brand": "Chloé",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2009179,
+      "title": "Zw Collection Frayed Denim Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771380020654",
+      "url": "https://zara.com/us/en/zw-collection-frayed-denim-shorts-p05216054.html",
+      "price": 69.9,
+      "brand": "Zara",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 454717,
+      "title": "Crinoline Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/75f821d2-b711-4621-8cab-6664fb23588e_image-1755503691470",
+      "url": "https://fwrd.com/product-alaia-crinoline-pant-in-jaune-pale/ALIA-WP77/",
+      "price": 3100,
+      "brand": "Alaïa",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1848591,
+      "title": "Heritage Wide-Leg Utility Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775159495897",
+      "url": "https://bananarepublic.gap.com/browse/product.do?pid=8751830220202",
+      "price": 150,
+      "brand": "Banana Republic",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 2082591,
+      "title": "Talha Flat Sandal",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772130983976",
+      "url": "https://fwrd.com/product-saint-laurent-talha-flat-sandal-in-dark-macadamia/SLAU-WZ1441/",
+      "price": 990,
+      "brand": "SAINT LAURENT",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 106770,
+      "title": "Janessa Leone x  FWRD Teagan Straw Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760087286346",
+      "url": "https://veronicabeard.com/products/teagan-raffia-straw-bucket-hat-natural",
+      "price": 277,
+      "brand": "Janessa Leoné",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1973745,
+      "title": "Embroidered Ring",
+      "image": "https://www.driesvannoten.com/cdn/shop/files/261-018238-0098-952_0.jpg?v=1765378379&width=1024",
+      "url": "https://farfetch.com/de/shopping/women/dries-van-noten-beaded-ring-item-33110218.aspx",
+      "price": 365,
+      "brand": "Dries Van Noten",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1940027,
+      "title": "Pack of 2 Maxi Stone Rings",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/53ee19a8-8631-4004-b016-1b6393b08b5304736026808-e1_1350x1375.jpg",
+      "url": "https://zara.com/us/en/pack-of-2-maxi-stone-rings-p04736026.html",
+      "price": 29.9,
+      "brand": "Zara",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 251036,
+      "title": "Cassandra Flat Sandal",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775798427045",
+      "url": "https://schutz-shoes.com/products/nylle-patent-sandal-u26-heel-height-flat-s2057101890005",
+      "price": 118,
+      "brand": "Schutz",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 1888753,
+      "title": "Leonor Foldable Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770048887423",
+      "url": "https://fwrd.com/product-helen-kaminski-leonor-foldable-tote-bag-in-nutshell-multi/HELF-WY3/",
+      "price": 310,
+      "brand": "Helen Kaminski",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 797619,
+      "title": "Silk Musseline Top With Ruffles",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758984700703",
+      "url": "https://bergdorfgoodman.com/p/chloe-silk-musseline-top-with-ruffles-prod187680052",
+      "price": 1300,
+      "brand": "Chloé",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1567060,
+      "title": "Uma Maxi Dress",
+      "image": "https://static.shopmy.us/uploads/53fe7447-fd27-4708-9f65-f9dab96921d6_resized-image-2026-01-31T194011.237.png",
+      "url": "https://retrofete.com/products/uma-maxi-dress-esp",
+      "price": 325,
+      "brand": "Shani Shemer",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1423400,
+      "title": "Concha Necklace",
+      "image": "https://static.shopmy.us/uploads/d4e89c01-13c9-4913-b572-7f4473528521_imgi_1_w2000_q601.jpg",
+      "url": "https://shopjulietta.com/products/concha-necklace",
+      "price": 287,
+      "brand": "JULIETTA",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1116235,
+      "title": "Shadow Kaftan",
+      "image": "https://static.shopmy.us/uploads/b6533f1d-ecc1-492c-8708-bb11f7a7b448_resized-image-2025-12-17T124834.959.png",
+      "url": "https://fwrd.com/mobile/product-bode-shadow-kaftan-in-black/BOFE-WD48/",
+      "price": 950,
+      "brand": "BODE",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1471453,
+      "title": "Fleur Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765010408173",
+      "url": "https://ronnykobo.com/products/fleur-dress",
+      "price": 349,
+      "brand": "Ronny Kobo",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1246971,
+      "title": "Nebula Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1763069752106",
+      "url": "https://sachatelier.com/en/products/casquete-nelura-plata",
+      "price": 286,
+      "brand": "Sach Atelier",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1778118,
+      "title": "Spots Print Scarf",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771435291208",
+      "url": "https://shop.mango.com/us/en/p/women/scarves-and-foulards/foulards/spots-print-scarf_27024434",
+      "price": 35.99,
+      "brand": "MANGO",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 392953,
+      "title": "Twill Bermuda Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772832260074",
+      "url": "https://revolve.com/enza-costa-twill-bermuda-short-in-fatigue/dp/ENZA-WF17",
+      "price": 275,
+      "brand": "Enza Costa",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2082875,
+      "title": "Sumba Beaded Bikini Brief ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772133271241",
+      "url": "https://cleonie.com/products/sumba-beaded-brief-black",
+      "price": null,
+      "brand": null,
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 1848364,
+      "title": "901 Howl Oversized Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771693841333",
+      "url": "https://ysl.com/en-us/pr/sl-901-howl-814259792.html",
+      "price": 595,
+      "brand": "SAINT LAURENT",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 322080,
+      "title": "Bronson Pilot Acetate Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763739842801",
+      "url": "https://www.ssense.com/en-us/men/product/tom-ford/brown-pilot-glasses/15479491",
+      "price": 360,
+      "brand": "Tom Ford",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 848549,
+      "title": "Emery Top ",
+      "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/73936d36-26c6-4eb6-b29f-f6b4b8ab0f77_LPAR-WS695_V11.jpg",
+      "url": "https://revolve.com/lpa-emery-top-in-burgundy/dp/LPAR-WS730",
+      "price": 159,
+      "brand": "LPA",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 591822,
+      "title": "Suede Trim Denim Button Up Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1756850526362",
+      "url": "https://cinqasept.nyc/products/suede-combo-autumn-top-in-dark-sepia-fontaine",
+      "price": 98.75,
+      "brand": "Cinq à Sept",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 227261,
+      "title": "Pierre Embellished Gown",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772572331090",
+      "url": "https://rachelgilbert.us/products/pierre-mini-citrus",
+      "price": 2395,
+      "brand": "Rachel Gilbert",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1966852,
+      "title": "Pointelle Knit Flared Sleeve Jumper",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770870883043",
+      "url": "https://zara.com/us/en/pointelle-knit-flared-sleeve-jumper-p03646003.html",
+      "price": 45.9,
+      "brand": "Zara",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1710281,
+      "title": "Olivia Brief",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772128757448",
+      "url": "https://modaoperandi.com/women/p/bond-eye/olivia-brief/705107",
+      "price": 90,
+      "brand": "BOND EYE",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 1752038,
+      "title": "Sherazade Dress",
+      "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/imara/imara3108588757/imara3108588757_1768237381707_2-0.jpg",
+      "url": "https://revolve.com/isabel-marant-etoile-sherazade-dress-in-sahara/dp/ISAR-WD94",
+      "price": 655,
+      "brand": "Isabel Marant",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 282283,
+      "title": "Nando Lounge Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770311903859",
+      "url": "https://leset.com/products/nando-lounge-pant-black",
+      "price": 150,
+      "brand": "LESET",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1905965,
+      "title": "SL 902 Howl D-Frame Acetate Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773651556899",
+      "url": "https://net-a-porter.com/en-us/shop/product/saint-laurent-eyewear/accessories/d-frame/sl-902-howl-d-frame-acetate-sunglasses/46376663163051417",
+      "price": 595,
+      "brand": "SAINT LAURENT",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 170420,
+      "title": "The Beach Towel",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774965100275",
+      "url": "https://businessandpleasureco.com/products/the-beach-towel-hanalei-bay-blue-jacquard",
+      "price": 89,
+      "brand": "Business & Pleasure Co. ",
+      "category": "Beach Towels",
+      "department": "Swimwear"
+    },
+    {
+      "id": 304704,
+      "title": "Justina Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765376172920",
+      "url": "https://modaoperandi.com/women/p/anna-october/justina/685615",
+      "price": 654,
+      "brand": "Anna October",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 581418,
+      "title": "Le Cambon 35 Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771953892840",
+      "url": "https://manuatelier.com/products/le-cambon-35-velvet-green-suede",
+      "price": 820,
+      "brand": "Manu Atelier",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2233393,
+      "title": "Tailored Blazer",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/a331213f-7448-4a81-9982-43f6d4f717dfMAGF-WO52_V1_1199x1799.png",
+      "url": "https://fwrd.com/product-magda-butrym-tailored-blazer-in-beige/MAGF-WO52/",
+      "price": 2345,
+      "brand": "Magda Butrym",
+      "category": "Blazers",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 497937,
+      "title": "Isla Appliquéd Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755886390238",
+      "url": "https://revolve.com/herskind-isla-dress-in-pale-lime/dp/HSKI-WD11",
+      "price": 395,
+      "brand": "Herskind",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 223621,
+      "title": "The Hudson Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764931533894",
+      "url": "https://goop.com/products/demellier-hudson-bag",
+      "price": 745,
+      "brand": "DeMellier",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1525546,
+      "title": "Classic Fit Oxford Workshirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765478533349",
+      "url": "https://nordstrom.com/s/8565982",
+      "price": 130,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 1854149,
+      "title": "Wide Leg Trousers",
+      "image": "https://static.shopmy.us/uploads/da7817dd-a0ec-4173-9a6c-3807b0a0d47e_resized-image-2026-01-28T201939.060.png",
+      "url": "https://fwrd.com/product-magda-butrym-wide-leg-trouser-in-orange/MAGF-WP26/",
+      "price": 1175,
+      "brand": "Magda Butrym",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 2302834,
+      "title": "Button-Down Collar Striped Cotton Oxford Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774418882953",
+      "url": "https://mrporter.com/en-us/mens/product/polo-ralph-lauren/clothing/striped-shirts/button-down-collar-striped-cotton-oxford-shirt/46376663162940992",
+      "price": 125,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 116829,
+      "title": "Jeany Silk Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1752778438026",
+      "url": "https://thereformation.com/products/jeany-silk-dress/1311710NVY.html",
+      "price": 348,
+      "brand": "Reformation",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1940459,
+      "title": "Classic Fit Cotton Oxford Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770602463198",
+      "url": "https://ralphlauren.com/women-clothing-shirts-blouses/classic-fit-striped-cotton-oxford-shirt-/0080281140.html",
+      "price": 148,
+      "brand": "Ralph Lauren",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1289049,
+      "title": "Structured Medium Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763482651368",
+      "url": "https://wolfandbadger.com/ruby-cherry-red-structured-tote-medium",
+      "price": 80,
+      "brand": "Fable England",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2082870,
+      "title": "Sumba Beaded Underwire Bikini Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772133233059",
+      "url": "https://cleonie.com/products/sumba-beaded-kini-top-black",
+      "price": null,
+      "brand": null,
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 2346948,
+      "title": "Custom Fit Oxford Shirt Multi",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774907048526",
+      "url": "https://careofcarl.com/en/polo-ralph-lauren-custom-fit-oxford-shirt-multi",
+      "price": 156,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 2005028,
+      "title": "Wedge Sandal with Studs",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771339423491",
+      "url": "https://fwrd.com/product-magda-butrym-wedge-sandal-in-brown/MAGF-WZ64/",
+      "price": 1305,
+      "brand": "Magda Butrym",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 852172,
+      "title": "Oxford Colour-Block Cotton Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759574308852",
+      "url": "https://farfetch.com/shopping/men/polo-ralph-lauren-oxford-colour-block-cotton-shirt-item-22349125.aspx",
+      "price": 228,
+      "brand": "Polo Ralph Lauren",
+      "category": "Men's Tops",
+      "department": "Men's Apparel & Accessories"
+    },
+    {
+      "id": 742405,
+      "title": "Reformation x Nara Smith Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758493756847",
+      "url": "https://thereformation.com/products/nara-shoulder-bag/1319202EDO.html",
+      "price": 448,
+      "brand": "Reformation",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1141280,
+      "title": "Oversized Seraphina Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772978631648",
+      "url": "https://thereformation.com/products/oversized-seraphina-tote/1319204.html",
+      "price": 598,
+      "brand": "Reformation",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 597777,
+      "title": "Halter-Neck Combo Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756913521722",
+      "url": "https://shop.mango.com/us/en/p/women/dresses-and-jumpsuits/dresses/halter-neck-combo-dress_17023796",
+      "price": 149.99,
+      "brand": "MANGO",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 884396,
+      "title": "Logo Engraved Eclectic Earrings",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/94dd7403-f968-4719-94d3-54088aec5dffaXlyAxxbQg67BpDZ4puaSQ_284b0c02_1200x1600.png",
+      "url": "https://www.ssense.com/en-us/women/product/chloe/gold-the-chloe-eclectic-earrings/16998511",
+      "price": 750,
+      "brand": "Chloé",
+      "category": "Earrings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2009179,
+      "title": "Zw Collection Frayed Denim Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771380020654",
+      "url": "https://zara.com/us/en/zw-collection-frayed-denim-shorts-p05216054.html",
+      "price": 69.9,
+      "brand": "Zara",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 454717,
+      "title": "Crinoline Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/75f821d2-b711-4621-8cab-6664fb23588e_image-1755503691470",
+      "url": "https://fwrd.com/product-alaia-crinoline-pant-in-jaune-pale/ALIA-WP77/",
+      "price": 3100,
+      "brand": "Alaïa",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1848591,
+      "title": "Heritage Wide-Leg Utility Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775159495897",
+      "url": "https://bananarepublic.gap.com/browse/product.do?pid=8751830220202",
+      "price": 150,
+      "brand": "Banana Republic",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 2082591,
+      "title": "Talha Flat Sandal",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772130983976",
+      "url": "https://fwrd.com/product-saint-laurent-talha-flat-sandal-in-dark-macadamia/SLAU-WZ1441/",
+      "price": 990,
+      "brand": "SAINT LAURENT",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 106770,
+      "title": "Janessa Leone x  FWRD Teagan Straw Hat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760087286346",
+      "url": "https://veronicabeard.com/products/teagan-raffia-straw-bucket-hat-natural",
+      "price": 277,
+      "brand": "Janessa Leoné",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1973745,
+      "title": "Embroidered Ring",
+      "image": "https://www.driesvannoten.com/cdn/shop/files/261-018238-0098-952_0.jpg?v=1765378379&width=1024",
+      "url": "https://farfetch.com/de/shopping/women/dries-van-noten-beaded-ring-item-33110218.aspx",
+      "price": 365,
+      "brand": "Dries Van Noten",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1940027,
+      "title": "Pack of 2 Maxi Stone Rings",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/53ee19a8-8631-4004-b016-1b6393b08b5304736026808-e1_1350x1375.jpg",
+      "url": "https://zara.com/us/en/pack-of-2-maxi-stone-rings-p04736026.html",
+      "price": 29.9,
+      "brand": "Zara",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 251036,
+      "title": "Cassandra Flat Sandal",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775798427045",
+      "url": "https://schutz-shoes.com/products/nylle-patent-sandal-u26-heel-height-flat-s2057101890005",
+      "price": 118,
+      "brand": "Schutz",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 1888753,
+      "title": "Leonor Foldable Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770048887423",
+      "url": "https://fwrd.com/product-helen-kaminski-leonor-foldable-tote-bag-in-nutshell-multi/HELF-WY3/",
+      "price": 310,
+      "brand": "Helen Kaminski",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 797619,
+      "title": "Silk Musseline Top With Ruffles",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758984700703",
+      "url": "https://bergdorfgoodman.com/p/chloe-silk-musseline-top-with-ruffles-prod187680052",
+      "price": 1300,
+      "brand": "Chloé",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1567060,
+      "title": "Uma Maxi Dress",
+      "image": "https://static.shopmy.us/uploads/53fe7447-fd27-4708-9f65-f9dab96921d6_resized-image-2026-01-31T194011.237.png",
+      "url": "https://retrofete.com/products/uma-maxi-dress-esp",
+      "price": 325,
+      "brand": "Shani Shemer",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1423400,
+      "title": "Concha Necklace",
+      "image": "https://static.shopmy.us/uploads/d4e89c01-13c9-4913-b572-7f4473528521_imgi_1_w2000_q601.jpg",
+      "url": "https://shopjulietta.com/products/concha-necklace",
+      "price": 287,
+      "brand": "JULIETTA",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1116235,
+      "title": "Shadow Kaftan",
+      "image": "https://static.shopmy.us/uploads/b6533f1d-ecc1-492c-8708-bb11f7a7b448_resized-image-2025-12-17T124834.959.png",
+      "url": "https://fwrd.com/mobile/product-bode-shadow-kaftan-in-black/BOFE-WD48/",
+      "price": 950,
+      "brand": "BODE",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1471453,
+      "title": "Fleur Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765010408173",
+      "url": "https://ronnykobo.com/products/fleur-dress",
+      "price": 349,
+      "brand": "Ronny Kobo",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1246971,
+      "title": "Nebula Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1763069752106",
+      "url": "https://sachatelier.com/en/products/casquete-nelura-plata",
+      "price": 286,
+      "brand": "Sach Atelier",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1778118,
+      "title": "Spots Print Scarf",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771435291208",
+      "url": "https://shop.mango.com/us/en/p/women/scarves-and-foulards/foulards/spots-print-scarf_27024434",
+      "price": 35.99,
+      "brand": "MANGO",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 392953,
+      "title": "Twill Bermuda Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772832260074",
+      "url": "https://revolve.com/enza-costa-twill-bermuda-short-in-fatigue/dp/ENZA-WF17",
+      "price": 275,
+      "brand": "Enza Costa",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2082875,
+      "title": "Sumba Beaded Bikini Brief ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772133271241",
+      "url": "https://cleonie.com/products/sumba-beaded-brief-black",
+      "price": null,
+      "brand": null,
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 1848364,
+      "title": "901 Howl Oversized Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771693841333",
+      "url": "https://ysl.com/en-us/pr/sl-901-howl-814259792.html",
+      "price": 595,
+      "brand": "SAINT LAURENT",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 322080,
+      "title": "Bronson Pilot Acetate Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763739842801",
+      "url": "https://www.ssense.com/en-us/men/product/tom-ford/brown-pilot-glasses/15479491",
+      "price": 360,
+      "brand": "Tom Ford",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 848549,
+      "title": "Emery Top ",
+      "image": "https://production-shopmyshelf-uploads.s3-us-east-2.amazonaws.com/73936d36-26c6-4eb6-b29f-f6b4b8ab0f77_LPAR-WS695_V11.jpg",
+      "url": "https://revolve.com/lpa-emery-top-in-burgundy/dp/LPAR-WS730",
+      "price": 159,
+      "brand": "LPA",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 591822,
+      "title": "Suede Trim Denim Button Up Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1756850526362",
+      "url": "https://cinqasept.nyc/products/suede-combo-autumn-top-in-dark-sepia-fontaine",
+      "price": 98.75,
+      "brand": "Cinq à Sept",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 227261,
+      "title": "Pierre Embellished Gown",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772572331090",
+      "url": "https://rachelgilbert.us/products/pierre-mini-citrus",
+      "price": 2395,
+      "brand": "Rachel Gilbert",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1966852,
+      "title": "Pointelle Knit Flared Sleeve Jumper",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770870883043",
+      "url": "https://zara.com/us/en/pointelle-knit-flared-sleeve-jumper-p03646003.html",
+      "price": 45.9,
+      "brand": "Zara",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1710281,
+      "title": "Olivia Brief",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772128757448",
+      "url": "https://modaoperandi.com/women/p/bond-eye/olivia-brief/705107",
+      "price": 90,
+      "brand": "BOND EYE",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 1752038,
+      "title": "Sherazade Dress",
+      "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/imara/imara3108588757/imara3108588757_1768237381707_2-0.jpg",
+      "url": "https://revolve.com/isabel-marant-etoile-sherazade-dress-in-sahara/dp/ISAR-WD94",
+      "price": 655,
+      "brand": "Isabel Marant",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 282283,
+      "title": "Nando Lounge Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770311903859",
+      "url": "https://leset.com/products/nando-lounge-pant-black",
+      "price": 150,
+      "brand": "LESET",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1905965,
+      "title": "SL 902 Howl D-Frame Acetate Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773651556899",
+      "url": "https://net-a-porter.com/en-us/shop/product/saint-laurent-eyewear/accessories/d-frame/sl-902-howl-d-frame-acetate-sunglasses/46376663163051417",
+      "price": 595,
+      "brand": "SAINT LAURENT",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    }
+  ],
+  "curatorId": 42535
+}

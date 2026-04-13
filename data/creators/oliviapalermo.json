@@ -1,0 +1,970 @@
+{
+  "username": "oliviapalermo",
+  "name": "Olivia Palermo",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-7656-1662737031438",
+  "scrapedAt": "2026-04-11T18:02:08.425Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 343300,
+      "title": "Georgia Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754064434235",
+      "url": "https://us.strathberry.com/products/georgia-mini-caramel",
+      "price": 548,
+      "brand": "Strathberry",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1512815,
+      "title": "Pointed Toe Bliss Flat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765377689181",
+      "url": "https://stuartweitzman.com/products/bliss-flat/SI820-Q2X.html",
+      "price": 348,
+      "brand": "Stuart Weitzman",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 226592,
+      "title": "Velodrome Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775834540169",
+      "url": "https://revolve.com/le-specs-velodrome-in-black/dp/LSPE-WA296",
+      "price": 55,
+      "brand": "Le Specs",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 232772,
+      "title": "Larroudé x Markarian Mule",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763802373356",
+      "url": "https://larroude.com/products/floral-larroude-x-markarian-mule-embroidery-gold-fabric",
+      "price": 350,
+      "brand": "Larroudé",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 280220,
+      "title": "Mini Balloon Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/b4f5a984-66c3-43e0-8884-d05d30338d4f_image-1753096707260",
+      "url": "https://shopbop.com/mini-balloon-skirt-rotate/vp/v=1/1512114628.htm",
+      "price": 240,
+      "brand": "ROTATE",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 323506,
+      "title": "Quincy Wide-Leg Jean",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775142740651",
+      "url": "https://lagence.com/products/quincy-wide-leg-jean-lynnwood",
+      "price": 147.5,
+      "brand": "L'AGENCE",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 334606,
+      "title": "Secret Mosaic Metallic Leather Clutch Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763164551652",
+      "url": "https://neimanmarcus.com/p/serapian-secret-mosaic-metallic-leather-clutch-bag-prod272530071",
+      "price": 3075,
+      "brand": "Serapian",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1247270,
+      "title": "Camera Clutch Bag Cosmo Jet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763076938038",
+      "url": "https://www.bergdorfgoodman.com/p/judith-leiber-couture-camera-clutch-bag-cosmo-jet-prod170030026?childItemId=BGL6JM6_01",
+      "price": null,
+      "brand": "Judith Leiber Couture",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 283492,
+      "title": "Bellen Ruffled Minidress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774188119831",
+      "url": "https://www.mytheresa.com/us/en/women/bananhot-bellen-ruffled-minidress-white-p01041514",
+      "price": 335,
+      "brand": "Bananhot",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 153482,
+      "title": "Kenlie Taffeta Knit Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765528321881",
+      "url": "https://simkhai.com/products/kenlie-mock-neck-midi-dress-black-multi",
+      "price": 845,
+      "brand": "SIMKHAI",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 212831,
+      "title": "Curly Rock Shearling-Trimmed Leather Snow Boots",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771690364569",
+      "url": "https://saksfifthavenue.com/product/inuikii-curly-rock-shearling-sneaker-boots-0400014671284.html",
+      "price": 183.37,
+      "brand": "Inuikii",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 1751442,
+      "title": "Venetian Sequin-Embellished Minidress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768389670377",
+      "url": "https://saksfifthavenue.com/product/Bronx-and-Banco-Venetian-Sequin-Embellished-Minidress-0400021805983.html",
+      "price": null,
+      "brand": "Bronx and Banco",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 226577,
+      "title": "Drizzle Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756136037600",
+      "url": "https://kits.com/glasses/GL00804/Kar%C3%BCn-Drizzle-Sun.html",
+      "price": 87,
+      "brand": "Kits",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 130566,
+      "title": "Houndstooth Trench Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1697461565648",
+      "url": "https://us.sandro-paris.com/en/p/houndstooth-trench-coat/SFPOU00579_B198.html",
+      "price": null,
+      "brand": "Sandro",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 194936,
+      "title": "Warm Carnation Johnson Midi-Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758020171593",
+      "url": "https://cinqasept.nyc/products/johnson-dress-in-black",
+      "price": 222.5,
+      "brand": "Cinq à Sept",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 137549,
+      "title": "Osmio Fair-Isle Embellished Wool-Cashmere Sweater",
+      "image": "https://images.lvrcdn.com/Big76I/50R/039_9ba75240-bc88-468d-aaa7-e6eecb35fb76.JPG",
+      "url": "https://luisaviaroma.com/en-us/p/max-mara/women/76I-50R039",
+      "price": null,
+      "brand": "Max Mara",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 188730,
+      "title": "Grace Box",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1723555956090",
+      "url": "https://therealreal.com/products/women/handbags/handle-bags/mark-cross-leather-handle-bag-ly698",
+      "price": 162.5,
+      "brand": "Mark Cross",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 107724,
+      "title": "Rocky Pants",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-107724-1689078236080-rfete302481a3d7_1643750117432_2-0.jpg",
+      "url": "https://shopbop.com/rocky-pant-retrofete/vp/v=1/1505577732.htm",
+      "price": null,
+      "brand": "Retrofete",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 291028,
+      "title": "Cut Out Long Sleeve Blouse",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753268254141",
+      "url": "https://farfetch.com/shopping/women/pinko-cut-out-long-sleeve-blouse-item-23887295.aspx",
+      "price": 326,
+      "brand": "PINKO",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 152268,
+      "title": "24/7 Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773624105006",
+      "url": "https://ladoublej.com/en/ready-to-wear/our-categories/shorts-and-pants/24%2F7-pants-tulip-green-TRO0069JCQ134TUL05GR02.html",
+      "price": 570,
+      "brand": "La DoubleJ",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 514190,
+      "title": "Lauren Midi Knit Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/4b47d6f0-b663-4991-b1b9-e9b37f116198HLSA-WQ68_V2_1199x1799.jpg",
+      "url": "https://revolve.com/helsa-lauren-midi-knit-skirt-in-beige/dp/HLSA-WQ68",
+      "price": 299,
+      "brand": "Helsa",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 189231,
+      "title": "Checked Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.amazonaws.com/img-product-1723657795879",
+      "url": "https://go.shopmy.us/p-12264614",
+      "price": null,
+      "brand": "AREA",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 118970,
+      "title": "Kris Pump",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1709155735667",
+      "url": "https://shopbop.com/kris-velvet-pump-larroude/vp/v=1/1505563027.htm",
+      "price": 350,
+      "brand": "Larroudé",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 209781,
+      "title": "Soleil Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1733079016411",
+      "url": "https://altuzarra.com/products/soleil-sweater-ivory-fairisle",
+      "price": null,
+      "brand": "Altuzarra",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1335306,
+      "title": "Grand Fleurus Penny Loafers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763900344979",
+      "url": "https://toddsnyder.com/products/baudoin-lange-grand-fleurus-penny-loaf-dk-browndark-brown",
+      "price": 840,
+      "brand": "Baudoin & Lange",
+      "category": "Men's Loafers",
+      "department": "Men's Footwear"
+    },
+    {
+      "id": 692987,
+      "title": "Tech-Twill Tapered Ski Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757954603007",
+      "url": "https://net-a-porter.com/en-us/shop/product/moncler-grenoble/sport/pants/tech-twill-tapered-ski-pants/1647597352219543",
+      "price": 760,
+      "brand": "Moncler Grenoble",
+      "category": "Skiwear & Equipment",
+      "department": "Activewear"
+    },
+    {
+      "id": 175551,
+      "title": "Ines Flat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767861851278",
+      "url": "https://bloomingdales.com/shop/product/larroude-womens-ines-buckled-slingback-flats?ID=5287283",
+      "price": 315,
+      "brand": "Larroudé",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 351415,
+      "title": "Jayde Leather Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754224104643",
+      "url": "https://lagence.com/products/jayde-collarless-jacket-cardamom",
+      "price": 1995,
+      "brand": "L'AGENCE",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 193728,
+      "title": "Margot Polka Dot Silk Minidress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1725976289770",
+      "url": "https://saksfifthavenue.com/product/Alexia-Mar%C3%ADa-Margot-Polka-Dot-Silk-Minidress-0400020314820.html",
+      "price": 1750,
+      "brand": "Alexia María",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 53487,
+      "title": "Air Heart Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1762529348628",
+      "url": "https://beauandro.com/products/air-heart-in-mink",
+      "price": 75,
+      "brand": "Le Specs",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 174659,
+      "title": "Marlin Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1716225460392",
+      "url": "https://shopbop.com/marlin-dress-silvia-tcherassi/vp/v=1/1551231348.htm",
+      "price": 920,
+      "brand": "Silvia Tcherassi",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 109607,
+      "title": "Kaleidoscope Aries Printed Shirt Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766049216230",
+      "url": "https://www.mytheresa.com/en-us/zimmermann-kaleidoscope-aries-cotton-blend-shirt-dress-2382503.html",
+      "price": null,
+      "brand": "ZIMMERMANN",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 114545,
+      "title": "Marsden Over-The-Knee Stretch Vegan Leather Boots",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-114545-1691983460273-zoom-645527-1663695350731-0400014385132_BLACK",
+      "url": "https://www.net-a-porter.com/en-us/shop/product/gianvito-rossi/shoes/knee-high/marsden-20-faux-leather-over-the-knee-boots/22250442025928769",
+      "price": null,
+      "brand": "Gianvito Rossi",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 862876,
+      "title": "Mariah Turtleneck Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760844621107",
+      "url": "https://neimanmarcus.com/p/tanya-taylor-mariah-turtleneck-sweater-prod284500190",
+      "price": 198,
+      "brand": "Tanya Taylor",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 519922,
+      "title": "Dandelion Canvas Loafers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756119718107",
+      "url": "https://www.mytheresa.com/us/en/men/christian-louboutin-dandelion-canvas-loafers-blue-p01008388",
+      "price": 945,
+      "brand": "Christian Louboutin",
+      "category": "Men's Loafers",
+      "department": "Men's Footwear"
+    },
+    {
+      "id": 153390,
+      "title": "Lenny Mini Dress",
+      "image": "https://cdn-images.farfetch-contents.com/20/53/56/73/20535673_50972635_1000.jpg",
+      "url": "https://revolve.com/simkhai-lenny-mini-dress-in-black/dp/JSKI-WD269",
+      "price": 362,
+      "brand": "SIMKHAI",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 216776,
+      "title": "Nano Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764975852054",
+      "url": "https://jp.strathberry.com/products/the-strathberry-nano-tote-bottle-green",
+      "price": null,
+      "brand": "Strathberry",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 583705,
+      "title": "East/West Mini Crystal-Embellished Leather Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756760160567",
+      "url": "https://saksfifthavenue.com/product/strathberry-east%2Fwest-mini-crystal-embellished-leather-shoulder-bag-0400020186205.html",
+      "price": 364.87,
+      "brand": "Strathberry",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 179662,
+      "title": "Lana Osette Bucket Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766180261303",
+      "url": "https://saksfifthavenue.com/product/strathberry-lana-osette-leather-bucket-bag-0400020186185.html",
+      "price": 495,
+      "brand": "Strathberry",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 475261,
+      "title": "Mini Lizard-Embossed Leather Top Handle Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755694459616",
+      "url": "https://saksfifthavenue.com/product/strathberry-mini-lizard-embossed-leather-top-handle-bag-0400022139612.html",
+      "price": 312.37,
+      "brand": "Strathberry",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 533326,
+      "title": "Multrees Crocodile-Embossed Leather Chain Wallet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756229073360",
+      "url": "https://us.strathberry.com/products/multrees-chain-wallet-vanilla-diamond",
+      "price": 445,
+      "brand": "Strathberry",
+      "category": "Wallets",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 216778,
+      "title": "Mosaic Nano Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774112109342",
+      "url": "https://us.strathberry.com/products/mosaic-nano-tan-with-vanilla-stitch",
+      "price": 595,
+      "brand": "Strathberry",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 330876,
+      "title": "Nano Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775471843259",
+      "url": "https://us.strathberry.com/products/nano-tote-white-wildflower-print",
+      "price": 555,
+      "brand": "Strathberry",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 216777,
+      "title": "Mini Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756030033984",
+      "url": "https://us.strathberry.com/products/the-strathberry-mini-tote-oat",
+      "price": 595,
+      "brand": "Strathberry",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 152547,
+      "title": "High Kick Top ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768479857019",
+      "url": "https://us.ladoublej.com/en/ready-to-wear/our-categories/knitwear/high-kick-top-blue-PUL0167KNI091VA196BU05.html",
+      "price": 950,
+      "brand": "La DoubleJ",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1105156,
+      "title": "Ma-1 Shell Bomber Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761842260981",
+      "url": "https://net-a-porter.com/en-us/shop/product/sacai/clothing/casual-jackets/ma-1-shell-bomber-jacket/43769801097562065",
+      "price": 835,
+      "brand": "Sacai",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 697744,
+      "title": "Brynlee Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758017467033",
+      "url": "https://khaite.com/products/brynlee-skirt-in-black",
+      "price": 1188,
+      "brand": "KHAITE",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 223936,
+      "title": "Satin Touch Dots Tights",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/fd6f149b-fbbb-440c-b92e-4e7ffd63e253imgi_1_17656_8163_005_B2BL.jpg",
+      "url": "https://revolve.com/wolford-satin-touch-dots-tights-in-black/dp/WFOR-WA68",
+      "price": 55,
+      "brand": "Wolford",
+      "category": "Tights",
+      "department": "Apparel"
+    },
+    {
+      "id": 343300,
+      "title": "Georgia Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754064434235",
+      "url": "https://us.strathberry.com/products/georgia-mini-caramel",
+      "price": 548,
+      "brand": "Strathberry",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1512815,
+      "title": "Pointed Toe Bliss Flat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765377689181",
+      "url": "https://stuartweitzman.com/products/bliss-flat/SI820-Q2X.html",
+      "price": 348,
+      "brand": "Stuart Weitzman",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 226592,
+      "title": "Velodrome Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775834540169",
+      "url": "https://revolve.com/le-specs-velodrome-in-black/dp/LSPE-WA296",
+      "price": 55,
+      "brand": "Le Specs",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 232772,
+      "title": "Larroudé x Markarian Mule",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763802373356",
+      "url": "https://larroude.com/products/floral-larroude-x-markarian-mule-embroidery-gold-fabric",
+      "price": 350,
+      "brand": "Larroudé",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 280220,
+      "title": "Mini Balloon Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/b4f5a984-66c3-43e0-8884-d05d30338d4f_image-1753096707260",
+      "url": "https://shopbop.com/mini-balloon-skirt-rotate/vp/v=1/1512114628.htm",
+      "price": 240,
+      "brand": "ROTATE",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 323506,
+      "title": "Quincy Wide-Leg Jean",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775142740651",
+      "url": "https://lagence.com/products/quincy-wide-leg-jean-lynnwood",
+      "price": 147.5,
+      "brand": "L'AGENCE",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 334606,
+      "title": "Secret Mosaic Metallic Leather Clutch Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763164551652",
+      "url": "https://neimanmarcus.com/p/serapian-secret-mosaic-metallic-leather-clutch-bag-prod272530071",
+      "price": 3075,
+      "brand": "Serapian",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1247270,
+      "title": "Camera Clutch Bag Cosmo Jet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763076938038",
+      "url": "https://www.bergdorfgoodman.com/p/judith-leiber-couture-camera-clutch-bag-cosmo-jet-prod170030026?childItemId=BGL6JM6_01",
+      "price": null,
+      "brand": "Judith Leiber Couture",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 283492,
+      "title": "Bellen Ruffled Minidress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774188119831",
+      "url": "https://www.mytheresa.com/us/en/women/bananhot-bellen-ruffled-minidress-white-p01041514",
+      "price": 335,
+      "brand": "Bananhot",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 153482,
+      "title": "Kenlie Taffeta Knit Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765528321881",
+      "url": "https://simkhai.com/products/kenlie-mock-neck-midi-dress-black-multi",
+      "price": 845,
+      "brand": "SIMKHAI",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 212831,
+      "title": "Curly Rock Shearling-Trimmed Leather Snow Boots",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771690364569",
+      "url": "https://saksfifthavenue.com/product/inuikii-curly-rock-shearling-sneaker-boots-0400014671284.html",
+      "price": 183.37,
+      "brand": "Inuikii",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 1751442,
+      "title": "Venetian Sequin-Embellished Minidress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768389670377",
+      "url": "https://saksfifthavenue.com/product/Bronx-and-Banco-Venetian-Sequin-Embellished-Minidress-0400021805983.html",
+      "price": null,
+      "brand": "Bronx and Banco",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 226577,
+      "title": "Drizzle Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756136037600",
+      "url": "https://kits.com/glasses/GL00804/Kar%C3%BCn-Drizzle-Sun.html",
+      "price": 87,
+      "brand": "Kits",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 130566,
+      "title": "Houndstooth Trench Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1697461565648",
+      "url": "https://us.sandro-paris.com/en/p/houndstooth-trench-coat/SFPOU00579_B198.html",
+      "price": null,
+      "brand": "Sandro",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 194936,
+      "title": "Warm Carnation Johnson Midi-Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758020171593",
+      "url": "https://cinqasept.nyc/products/johnson-dress-in-black",
+      "price": 222.5,
+      "brand": "Cinq à Sept",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 137549,
+      "title": "Osmio Fair-Isle Embellished Wool-Cashmere Sweater",
+      "image": "https://images.lvrcdn.com/Big76I/50R/039_9ba75240-bc88-468d-aaa7-e6eecb35fb76.JPG",
+      "url": "https://luisaviaroma.com/en-us/p/max-mara/women/76I-50R039",
+      "price": null,
+      "brand": "Max Mara",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 188730,
+      "title": "Grace Box",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1723555956090",
+      "url": "https://therealreal.com/products/women/handbags/handle-bags/mark-cross-leather-handle-bag-ly698",
+      "price": 162.5,
+      "brand": "Mark Cross",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 107724,
+      "title": "Rocky Pants",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-107724-1689078236080-rfete302481a3d7_1643750117432_2-0.jpg",
+      "url": "https://shopbop.com/rocky-pant-retrofete/vp/v=1/1505577732.htm",
+      "price": null,
+      "brand": "Retrofete",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 291028,
+      "title": "Cut Out Long Sleeve Blouse",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753268254141",
+      "url": "https://farfetch.com/shopping/women/pinko-cut-out-long-sleeve-blouse-item-23887295.aspx",
+      "price": 326,
+      "brand": "PINKO",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 152268,
+      "title": "24/7 Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773624105006",
+      "url": "https://ladoublej.com/en/ready-to-wear/our-categories/shorts-and-pants/24%2F7-pants-tulip-green-TRO0069JCQ134TUL05GR02.html",
+      "price": 570,
+      "brand": "La DoubleJ",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 514190,
+      "title": "Lauren Midi Knit Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/4b47d6f0-b663-4991-b1b9-e9b37f116198HLSA-WQ68_V2_1199x1799.jpg",
+      "url": "https://revolve.com/helsa-lauren-midi-knit-skirt-in-beige/dp/HLSA-WQ68",
+      "price": 299,
+      "brand": "Helsa",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 189231,
+      "title": "Checked Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.amazonaws.com/img-product-1723657795879",
+      "url": "https://go.shopmy.us/p-12264614",
+      "price": null,
+      "brand": "AREA",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 118970,
+      "title": "Kris Pump",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1709155735667",
+      "url": "https://shopbop.com/kris-velvet-pump-larroude/vp/v=1/1505563027.htm",
+      "price": 350,
+      "brand": "Larroudé",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 209781,
+      "title": "Soleil Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1733079016411",
+      "url": "https://altuzarra.com/products/soleil-sweater-ivory-fairisle",
+      "price": null,
+      "brand": "Altuzarra",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1335306,
+      "title": "Grand Fleurus Penny Loafers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763900344979",
+      "url": "https://toddsnyder.com/products/baudoin-lange-grand-fleurus-penny-loaf-dk-browndark-brown",
+      "price": 840,
+      "brand": "Baudoin & Lange",
+      "category": "Men's Loafers",
+      "department": "Men's Footwear"
+    },
+    {
+      "id": 692987,
+      "title": "Tech-Twill Tapered Ski Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757954603007",
+      "url": "https://net-a-porter.com/en-us/shop/product/moncler-grenoble/sport/pants/tech-twill-tapered-ski-pants/1647597352219543",
+      "price": 760,
+      "brand": "Moncler Grenoble",
+      "category": "Skiwear & Equipment",
+      "department": "Activewear"
+    },
+    {
+      "id": 175551,
+      "title": "Ines Flat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767861851278",
+      "url": "https://bloomingdales.com/shop/product/larroude-womens-ines-buckled-slingback-flats?ID=5287283",
+      "price": 315,
+      "brand": "Larroudé",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 351415,
+      "title": "Jayde Leather Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754224104643",
+      "url": "https://lagence.com/products/jayde-collarless-jacket-cardamom",
+      "price": 1995,
+      "brand": "L'AGENCE",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 193728,
+      "title": "Margot Polka Dot Silk Minidress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1725976289770",
+      "url": "https://saksfifthavenue.com/product/Alexia-Mar%C3%ADa-Margot-Polka-Dot-Silk-Minidress-0400020314820.html",
+      "price": 1750,
+      "brand": "Alexia María",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 53487,
+      "title": "Air Heart Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1762529348628",
+      "url": "https://beauandro.com/products/air-heart-in-mink",
+      "price": 75,
+      "brand": "Le Specs",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 174659,
+      "title": "Marlin Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1716225460392",
+      "url": "https://shopbop.com/marlin-dress-silvia-tcherassi/vp/v=1/1551231348.htm",
+      "price": 920,
+      "brand": "Silvia Tcherassi",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 109607,
+      "title": "Kaleidoscope Aries Printed Shirt Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766049216230",
+      "url": "https://www.mytheresa.com/en-us/zimmermann-kaleidoscope-aries-cotton-blend-shirt-dress-2382503.html",
+      "price": null,
+      "brand": "ZIMMERMANN",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 114545,
+      "title": "Marsden Over-The-Knee Stretch Vegan Leather Boots",
+      "image": "https://production-shopmyshelf-pins.s3.us-east-2.amazonaws.com/zoom-product-114545-1691983460273-zoom-645527-1663695350731-0400014385132_BLACK",
+      "url": "https://www.net-a-porter.com/en-us/shop/product/gianvito-rossi/shoes/knee-high/marsden-20-faux-leather-over-the-knee-boots/22250442025928769",
+      "price": null,
+      "brand": "Gianvito Rossi",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 862876,
+      "title": "Mariah Turtleneck Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760844621107",
+      "url": "https://neimanmarcus.com/p/tanya-taylor-mariah-turtleneck-sweater-prod284500190",
+      "price": 198,
+      "brand": "Tanya Taylor",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 519922,
+      "title": "Dandelion Canvas Loafers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756119718107",
+      "url": "https://www.mytheresa.com/us/en/men/christian-louboutin-dandelion-canvas-loafers-blue-p01008388",
+      "price": 945,
+      "brand": "Christian Louboutin",
+      "category": "Men's Loafers",
+      "department": "Men's Footwear"
+    },
+    {
+      "id": 153390,
+      "title": "Lenny Mini Dress",
+      "image": "https://cdn-images.farfetch-contents.com/20/53/56/73/20535673_50972635_1000.jpg",
+      "url": "https://revolve.com/simkhai-lenny-mini-dress-in-black/dp/JSKI-WD269",
+      "price": 362,
+      "brand": "SIMKHAI",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 216776,
+      "title": "Nano Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764975852054",
+      "url": "https://jp.strathberry.com/products/the-strathberry-nano-tote-bottle-green",
+      "price": null,
+      "brand": "Strathberry",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 583705,
+      "title": "East/West Mini Crystal-Embellished Leather Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756760160567",
+      "url": "https://saksfifthavenue.com/product/strathberry-east%2Fwest-mini-crystal-embellished-leather-shoulder-bag-0400020186205.html",
+      "price": 364.87,
+      "brand": "Strathberry",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 179662,
+      "title": "Lana Osette Bucket Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766180261303",
+      "url": "https://saksfifthavenue.com/product/strathberry-lana-osette-leather-bucket-bag-0400020186185.html",
+      "price": 495,
+      "brand": "Strathberry",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 475261,
+      "title": "Mini Lizard-Embossed Leather Top Handle Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755694459616",
+      "url": "https://saksfifthavenue.com/product/strathberry-mini-lizard-embossed-leather-top-handle-bag-0400022139612.html",
+      "price": 312.37,
+      "brand": "Strathberry",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 533326,
+      "title": "Multrees Crocodile-Embossed Leather Chain Wallet",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756229073360",
+      "url": "https://us.strathberry.com/products/multrees-chain-wallet-vanilla-diamond",
+      "price": 445,
+      "brand": "Strathberry",
+      "category": "Wallets",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 216778,
+      "title": "Mosaic Nano Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774112109342",
+      "url": "https://us.strathberry.com/products/mosaic-nano-tan-with-vanilla-stitch",
+      "price": 595,
+      "brand": "Strathberry",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 330876,
+      "title": "Nano Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775471843259",
+      "url": "https://us.strathberry.com/products/nano-tote-white-wildflower-print",
+      "price": 555,
+      "brand": "Strathberry",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 216777,
+      "title": "Mini Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756030033984",
+      "url": "https://us.strathberry.com/products/the-strathberry-mini-tote-oat",
+      "price": 595,
+      "brand": "Strathberry",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 152547,
+      "title": "High Kick Top ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768479857019",
+      "url": "https://us.ladoublej.com/en/ready-to-wear/our-categories/knitwear/high-kick-top-blue-PUL0167KNI091VA196BU05.html",
+      "price": 950,
+      "brand": "La DoubleJ",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1105156,
+      "title": "Ma-1 Shell Bomber Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761842260981",
+      "url": "https://net-a-porter.com/en-us/shop/product/sacai/clothing/casual-jackets/ma-1-shell-bomber-jacket/43769801097562065",
+      "price": 835,
+      "brand": "Sacai",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 697744,
+      "title": "Brynlee Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758017467033",
+      "url": "https://khaite.com/products/brynlee-skirt-in-black",
+      "price": 1188,
+      "brand": "KHAITE",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 223936,
+      "title": "Satin Touch Dots Tights",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/fd6f149b-fbbb-440c-b92e-4e7ffd63e253imgi_1_17656_8163_005_B2BL.jpg",
+      "url": "https://revolve.com/wolford-satin-touch-dots-tights-in-black/dp/WFOR-WA68",
+      "price": 55,
+      "brand": "Wolford",
+      "category": "Tights",
+      "department": "Apparel"
+    }
+  ],
+  "curatorId": 7656
+}

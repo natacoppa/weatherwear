@@ -1,0 +1,970 @@
+{
+  "username": "juliamarieb",
+  "name": "Julia Marie B",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-99055-1769442047105",
+  "scrapedAt": "2026-04-11T18:02:18.590Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 933758,
+      "title": "Shay Wool Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/2e5e7c9f-d30a-4dce-aa99-e95cee4b9064imgi_2_hanifa-443TylerHookscopy_13d2eb02-e97a-4856-9ee9-953138270b46.jpeg",
+      "url": "https://hanifa.co/products/wool-pants",
+      "price": 199,
+      "brand": "Hanifa",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1283001,
+      "title": "Radiance Knit Shawl",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1763443244797",
+      "url": "https://jluxlabel.com/products/ivory-radiance-knit-shawl",
+      "price": 198,
+      "brand": "JLUXLABEL",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1259385,
+      "title": "Roll Call Set",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1763197759216",
+      "url": "https://freepeople.com/shop/roll-call-set",
+      "price": null,
+      "brand": "FP Movement",
+      "category": "Matching Sets",
+      "department": "Apparel"
+    },
+    {
+      "id": 796025,
+      "title": "Fur Real Hoodie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758970061685",
+      "url": "https://freepeople.com/shop/fur-real-hoodie",
+      "price": 168,
+      "brand": "FP Movement",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 937885,
+      "title": "Logo Wool-Blend Newsboy Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760376145662",
+      "url": "https://www.mytheresa.com/us/en/women/ruslan-baginskiy-logo-wool-blend-newsboy-cap-brown-p01071352",
+      "price": 355,
+      "brand": "Ruslan Baginskiy",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 710491,
+      "title": "Visetos Boston Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758139732623",
+      "url": "https://nordstrom.com/s/8421230",
+      "price": null,
+      "brand": "MCM",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1711847,
+      "title": "Wool Flexfit 504",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767903710448",
+      "url": "https://kangol.com/products/wool-flexfit-504",
+      "price": 45,
+      "brand": "Kangol",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 214433,
+      "title": "Stretch Cotton Jersey Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760725867441",
+      "url": "https://macys.com/shop/product/maldon-imported-sea-salt-flakes-8.5-oz-3-pack?ID=14952386",
+      "price": 29.97,
+      "brand": "SKIMS",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 249168,
+      "title": "Cozy Sweatfleece Boyfriend 1/2 Zip Sweatshirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770953318207",
+      "url": "https://aritzia.com/us/en/product/cozy-sweatfleece-boyfriend-1%2F2-zip-sweatshirt/116267047.html",
+      "price": 37.99,
+      "brand": "Aritzia",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1839423,
+      "title": "Originals Neuclassic Track Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769469042705",
+      "url": "https://footlocker.com/product/~/JI8495.html",
+      "price": 85,
+      "brand": "adidas",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1089427,
+      "title": "Adicolor Neuclassics Track Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761731752247",
+      "url": "https://adidas.com/us/adicolor-neuclassics-track-pants/JI8516.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1258008,
+      "title": "Classic Sweatpant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772492091197",
+      "url": "https://revolve.com/fear-of-god-essentials-classic-fit-fleece-sweatpant-in-homestead-heather/dp/FALF-MP33",
+      "price": 93,
+      "brand": "Fear of God ESSENTIALS",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1672333,
+      "title": "90's Raglan Hoodie",
+      "image": "https://static.shopmy.us/uploads/73bfd7e4-8f79-4d6f-afef-a071b3338c0e_resized-image-2026-01-05T233032.349.png",
+      "url": "https://revolve.com/fear-of-god-essentials-90s-raglan-hoodie-in-oatmeal-heather/dp/FIAR-WK12",
+      "price": 150,
+      "brand": "Fear of God ESSENTIALS",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 258512,
+      "title": "Trf High-Waist Crossover Waist Wide Leg Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775707243264",
+      "url": "https://zara.com/us/en/trf-high-waist-wide-leg-crossover-jeans-p04365032.html",
+      "price": 69.9,
+      "brand": "Zara",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 263938,
+      "title": "Adicolor Satin Wide Leg Track Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774883277914",
+      "url": "https://adidas.com/us/adicolor-satin-wide-leg-track-pants/IU2520.html",
+      "price": 85,
+      "brand": "adidas",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 472702,
+      "title": "Maude Knit Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1762398022642",
+      "url": "https://revolve.com/helsa-maude-knit-top-in-black/dp/HLSA-WS180",
+      "price": 228,
+      "brand": "Helsa",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 249380,
+      "title": "Cozy Sweatfleece Mega Jogger",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773321169056",
+      "url": "https://aritzia.com/en/product/cozy-fleece-mega-sweatpant%E2%84%A2/116237.html",
+      "price": 78,
+      "brand": "Aritzia",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 931751,
+      "title": "TRF Mid-Rise Ripped Baggy Balloon Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760322816800",
+      "url": "https://zara.com/us/en/trf-mid-rise-baggy-balloon-jeans-p08727245.html",
+      "price": null,
+      "brand": "Zara",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1512501,
+      "title": "Copenhagen Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765375017068",
+      "url": "https://12pmstudios.com/products/copenhagen",
+      "price": 145,
+      "brand": "12PM Studios",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 324289,
+      "title": "Elena Shirt-Dress In Cotton Poplin",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757618235932",
+      "url": "https://jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/tall-elena-shirtdress-in-cotton-poplin/BY832",
+      "price": 104.99,
+      "brand": "J.Crew",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 206302,
+      "title": "Stephanie Jacket",
+      "image": "https://static.shopmy.us/uploads/f5c5e811-409d-4194-b06b-66a6b178221e_resized-image-2026-01-15T121132.200.png",
+      "url": "https://revolve.com/afrm-stephanie-jacket-in-taupe/dp/AFFM-WO26",
+      "price": 198,
+      "brand": "AFRM",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1753199,
+      "title": "Matryx Combat Boot",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768407388011",
+      "url": "https://nordstrom.com/s/7155850",
+      "price": null,
+      "brand": "Steve Madden",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 263425,
+      "title": "Metallic Chainlink Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-1757320216247",
+      "url": "https://jcrew.com/p/BS719",
+      "price": 44.99,
+      "brand": "J.Crew",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1746451,
+      "title": "Visetos X-Mini Heritage Top Handle",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768329916814",
+      "url": "https://fashionphile.com/products/mcm-visetos-x-mini-heritage-top-handle-satchel-cognac-1193911",
+      "price": 520,
+      "brand": "MCM",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 280098,
+      "title": "Bubble Initial Ring",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753095164183",
+      "url": "https://baublebar.com/products/pave-bubble-initial-ring",
+      "price": 68,
+      "brand": "BaubleBar",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1080985,
+      "title": "Sportswear Tech Fleece High-Waisted Pleated Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761663717368",
+      "url": "https://nike.com/t/sportswear-tech-fleece-womens-high-waisted-pleated-pants-llJXWj",
+      "price": 96.97,
+      "brand": "Nike",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1016989,
+      "title": "Nolan High-Rise Wide-Leg Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761119445745",
+      "url": "https://net-a-porter.com/en-us/shop/product/agolde/clothing/wide-leg/nolan-high-rise-wide-leg-jeans/1647597332884235",
+      "price": 140,
+      "brand": "AGOLDE",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 372442,
+      "title": "The Essential Curve Suede Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773159304976",
+      "url": "https://madewell.com/p/womens/accessories/bags/crossbody-bags/the-essential-curve-medium-shoulder-bag/NW361",
+      "price": 198,
+      "brand": "Madewell",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1719296,
+      "title": "Golden Plate Vanity Case Handbags",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767989989324",
+      "url": "https://therealreal.com/products/women/handbags/handle-bags/chanel-golden-plate-vanity-case-r6o9m",
+      "price": null,
+      "brand": "CHANEL",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1404897,
+      "title": "Pilot Jones Longline Puffer Vest in Faux Leather",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/05352a58-dc27-4236-85ec-7ce101b09d28download%20-%202025-11-30T074605.567.jpeg",
+      "url": "https://shopakira.com/products/pilot-jones-longline-puffer-vest-in-faux-leather",
+      "price": 99.9,
+      "brand": "AKIRA",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 710066,
+      "title": "Ottomar Luggage Tag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758135065625",
+      "url": "https://nordstrom.com/s/8484898",
+      "price": null,
+      "brand": "MCM",
+      "category": "Luggage Tags",
+      "department": "Luggage & Travel"
+    },
+    {
+      "id": 468723,
+      "title": "Furgora 504",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768238598345",
+      "url": "https://kangol.com/products/furgora-504",
+      "price": 65,
+      "brand": "Kangol",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 250191,
+      "title": "Cozy Sweatfleece Mega Flutter Sweatpant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771942822768",
+      "url": "https://aritzia.com/us/en/product/cozy-sweatfleece-mega-flutter%E2%84%A2-sweatpant/122890095.html",
+      "price": 38.99,
+      "brand": "Aritzia",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 269389,
+      "title": "Club C Grounds UK Shoes",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766629873543",
+      "url": "https://madewell.com/p/womens/labels-we-love/reebok/reebokreg-club-c-grounds-uk-sneakers/NR442",
+      "price": 49.99,
+      "brand": "Reebok",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 1294187,
+      "title": "Originals Funnel Neck Quarter Zip Sweatshirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767117024301",
+      "url": "https://adidas.com/us/adidas-originals-funnel-neck-quarter-zip-sweatshirt-%0A/KR7653.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 442369,
+      "title": "Cozy Sweatfleece Perfect Crop Hoodie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763673477098",
+      "url": "https://aritzia.com/us/en/product/cozy-sweatfleece-perfect-crop-hoodie/127523002.html",
+      "price": 78,
+      "brand": "Aritzia",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 176576,
+      "title": "Mayfair x @iscreamcolour Angel Numbers Cloud Crewneck",
+      "image": "https://cdn.shopify.com/s/files/1/0253/2769/7969/files/TMG121520250229.jpg?v=1767048956",
+      "url": "https://themayfairgroupllc.com/products/mayfair-x-iscreamcolour-angel-number-cloud-crewneck",
+      "price": 64,
+      "brand": "The Mayfair Group",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 981812,
+      "title": "Alpine Faux Fur Half Zip",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/c0c21f2a-e0e4-49a7-a7dd-3603b58cc8b9_image-1760774477232",
+      "url": "https://freepeople.com/shop/alpine-faux-fur-half-zip",
+      "price": 69.95,
+      "brand": "FP Movement",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1362084,
+      "title": "Fresh Powder Pom Beanie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764124660685",
+      "url": "https://freepeople.com/shop/fresh-powder-pom-beanie",
+      "price": 38,
+      "brand": "FP Movement",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 263373,
+      "title": "Smocked Maxi Dress in Cotton Voile",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769004095626",
+      "url": "https://jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/smocked-maxi-dress-in-cotton-voile/CI259",
+      "price": 99.5,
+      "brand": "J.Crew",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 567074,
+      "title": "Abby Halter Linen Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/117da06d-14eb-4152-b57d-1f1570b4bec1_image-1756562794113",
+      "url": "https://dissh.com/products/abby-black-halter-midi-dress",
+      "price": 100,
+      "brand": "DISSH",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 751927,
+      "title": "Amanda Jumpsuit ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1758576903413",
+      "url": "https://hanifa.co/products/amanda-jumpsuit",
+      "price": 274,
+      "brand": "Hanifa",
+      "category": "Jumpsuits & Playsuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 403005,
+      "title": "Samba LT Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765542911041",
+      "url": "https://us.levelshoes.com/adidas-samba-lt-sneakers-animal-print-pony-hair-women-low-tops-g1zp8b.html",
+      "price": 130,
+      "brand": "adidas",
+      "category": "Men's Sneakers",
+      "department": "Men's Footwear"
+    },
+    {
+      "id": 1030935,
+      "title": "Small Aren Visteos Boston Coated Canvas Satchel",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761227094460",
+      "url": "https://nordstrom.com/s/7588565",
+      "price": null,
+      "brand": "MCM",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 482020,
+      "title": "Samba LT Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756406832137",
+      "url": "https://www.mytheresa.com/us/en/women/adidas-samba-lt-calf-hair-sneakers-brown-p01085598",
+      "price": null,
+      "brand": "adidas",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 231952,
+      "title": "Italian Leather Patchwork Crossbody Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760813563934",
+      "url": "https://quince.com/women/italian-leather-patchwork-crossbody",
+      "price": 159.9,
+      "brand": "Quince",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 430158,
+      "title": "Off Placed 3-Stripes Zip Up",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757763635535",
+      "url": "https://adidas.com/us/off-placed-3-stripes-zip-up/JW3609.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 389472,
+      "title": "Off Placed 3-Stripes Wide Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757703249203",
+      "url": "https://adidas.com/us/off-placed-3-stripes-wide-pant/JW3621.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 933758,
+      "title": "Shay Wool Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/2e5e7c9f-d30a-4dce-aa99-e95cee4b9064imgi_2_hanifa-443TylerHookscopy_13d2eb02-e97a-4856-9ee9-953138270b46.jpeg",
+      "url": "https://hanifa.co/products/wool-pants",
+      "price": 199,
+      "brand": "Hanifa",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1283001,
+      "title": "Radiance Knit Shawl",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1763443244797",
+      "url": "https://jluxlabel.com/products/ivory-radiance-knit-shawl",
+      "price": 198,
+      "brand": "JLUXLABEL",
+      "category": "Scarves & Wraps",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1259385,
+      "title": "Roll Call Set",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1763197759216",
+      "url": "https://freepeople.com/shop/roll-call-set",
+      "price": null,
+      "brand": "FP Movement",
+      "category": "Matching Sets",
+      "department": "Apparel"
+    },
+    {
+      "id": 796025,
+      "title": "Fur Real Hoodie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758970061685",
+      "url": "https://freepeople.com/shop/fur-real-hoodie",
+      "price": 168,
+      "brand": "FP Movement",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 937885,
+      "title": "Logo Wool-Blend Newsboy Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760376145662",
+      "url": "https://www.mytheresa.com/us/en/women/ruslan-baginskiy-logo-wool-blend-newsboy-cap-brown-p01071352",
+      "price": 355,
+      "brand": "Ruslan Baginskiy",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 710491,
+      "title": "Visetos Boston Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758139732623",
+      "url": "https://nordstrom.com/s/8421230",
+      "price": null,
+      "brand": "MCM",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1711847,
+      "title": "Wool Flexfit 504",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767903710448",
+      "url": "https://kangol.com/products/wool-flexfit-504",
+      "price": 45,
+      "brand": "Kangol",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 214433,
+      "title": "Stretch Cotton Jersey Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760725867441",
+      "url": "https://macys.com/shop/product/maldon-imported-sea-salt-flakes-8.5-oz-3-pack?ID=14952386",
+      "price": 29.97,
+      "brand": "SKIMS",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 249168,
+      "title": "Cozy Sweatfleece Boyfriend 1/2 Zip Sweatshirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770953318207",
+      "url": "https://aritzia.com/us/en/product/cozy-sweatfleece-boyfriend-1%2F2-zip-sweatshirt/116267047.html",
+      "price": 37.99,
+      "brand": "Aritzia",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1839423,
+      "title": "Originals Neuclassic Track Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769469042705",
+      "url": "https://footlocker.com/product/~/JI8495.html",
+      "price": 85,
+      "brand": "adidas",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1089427,
+      "title": "Adicolor Neuclassics Track Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761731752247",
+      "url": "https://adidas.com/us/adicolor-neuclassics-track-pants/JI8516.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1258008,
+      "title": "Classic Sweatpant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772492091197",
+      "url": "https://revolve.com/fear-of-god-essentials-classic-fit-fleece-sweatpant-in-homestead-heather/dp/FALF-MP33",
+      "price": 93,
+      "brand": "Fear of God ESSENTIALS",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 1672333,
+      "title": "90's Raglan Hoodie",
+      "image": "https://static.shopmy.us/uploads/73bfd7e4-8f79-4d6f-afef-a071b3338c0e_resized-image-2026-01-05T233032.349.png",
+      "url": "https://revolve.com/fear-of-god-essentials-90s-raglan-hoodie-in-oatmeal-heather/dp/FIAR-WK12",
+      "price": 150,
+      "brand": "Fear of God ESSENTIALS",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 258512,
+      "title": "Trf High-Waist Crossover Waist Wide Leg Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775707243264",
+      "url": "https://zara.com/us/en/trf-high-waist-wide-leg-crossover-jeans-p04365032.html",
+      "price": 69.9,
+      "brand": "Zara",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 263938,
+      "title": "Adicolor Satin Wide Leg Track Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774883277914",
+      "url": "https://adidas.com/us/adicolor-satin-wide-leg-track-pants/IU2520.html",
+      "price": 85,
+      "brand": "adidas",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 472702,
+      "title": "Maude Knit Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1762398022642",
+      "url": "https://revolve.com/helsa-maude-knit-top-in-black/dp/HLSA-WS180",
+      "price": 228,
+      "brand": "Helsa",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 249380,
+      "title": "Cozy Sweatfleece Mega Jogger",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773321169056",
+      "url": "https://aritzia.com/en/product/cozy-fleece-mega-sweatpant%E2%84%A2/116237.html",
+      "price": 78,
+      "brand": "Aritzia",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 931751,
+      "title": "TRF Mid-Rise Ripped Baggy Balloon Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760322816800",
+      "url": "https://zara.com/us/en/trf-mid-rise-baggy-balloon-jeans-p08727245.html",
+      "price": null,
+      "brand": "Zara",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1512501,
+      "title": "Copenhagen Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765375017068",
+      "url": "https://12pmstudios.com/products/copenhagen",
+      "price": 145,
+      "brand": "12PM Studios",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 324289,
+      "title": "Elena Shirt-Dress In Cotton Poplin",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757618235932",
+      "url": "https://jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/tall-elena-shirtdress-in-cotton-poplin/BY832",
+      "price": 104.99,
+      "brand": "J.Crew",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 206302,
+      "title": "Stephanie Jacket",
+      "image": "https://static.shopmy.us/uploads/f5c5e811-409d-4194-b06b-66a6b178221e_resized-image-2026-01-15T121132.200.png",
+      "url": "https://revolve.com/afrm-stephanie-jacket-in-taupe/dp/AFFM-WO26",
+      "price": 198,
+      "brand": "AFRM",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1753199,
+      "title": "Matryx Combat Boot",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768407388011",
+      "url": "https://nordstrom.com/s/7155850",
+      "price": null,
+      "brand": "Steve Madden",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 263425,
+      "title": "Metallic Chainlink Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-1757320216247",
+      "url": "https://jcrew.com/p/BS719",
+      "price": 44.99,
+      "brand": "J.Crew",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1746451,
+      "title": "Visetos X-Mini Heritage Top Handle",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768329916814",
+      "url": "https://fashionphile.com/products/mcm-visetos-x-mini-heritage-top-handle-satchel-cognac-1193911",
+      "price": 520,
+      "brand": "MCM",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 280098,
+      "title": "Bubble Initial Ring",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753095164183",
+      "url": "https://baublebar.com/products/pave-bubble-initial-ring",
+      "price": 68,
+      "brand": "BaubleBar",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1080985,
+      "title": "Sportswear Tech Fleece High-Waisted Pleated Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761663717368",
+      "url": "https://nike.com/t/sportswear-tech-fleece-womens-high-waisted-pleated-pants-llJXWj",
+      "price": 96.97,
+      "brand": "Nike",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1016989,
+      "title": "Nolan High-Rise Wide-Leg Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761119445745",
+      "url": "https://net-a-porter.com/en-us/shop/product/agolde/clothing/wide-leg/nolan-high-rise-wide-leg-jeans/1647597332884235",
+      "price": 140,
+      "brand": "AGOLDE",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 372442,
+      "title": "The Essential Curve Suede Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773159304976",
+      "url": "https://madewell.com/p/womens/accessories/bags/crossbody-bags/the-essential-curve-medium-shoulder-bag/NW361",
+      "price": 198,
+      "brand": "Madewell",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1719296,
+      "title": "Golden Plate Vanity Case Handbags",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767989989324",
+      "url": "https://therealreal.com/products/women/handbags/handle-bags/chanel-golden-plate-vanity-case-r6o9m",
+      "price": null,
+      "brand": "CHANEL",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1404897,
+      "title": "Pilot Jones Longline Puffer Vest in Faux Leather",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/05352a58-dc27-4236-85ec-7ce101b09d28download%20-%202025-11-30T074605.567.jpeg",
+      "url": "https://shopakira.com/products/pilot-jones-longline-puffer-vest-in-faux-leather",
+      "price": 99.9,
+      "brand": "AKIRA",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 710066,
+      "title": "Ottomar Luggage Tag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758135065625",
+      "url": "https://nordstrom.com/s/8484898",
+      "price": null,
+      "brand": "MCM",
+      "category": "Luggage Tags",
+      "department": "Luggage & Travel"
+    },
+    {
+      "id": 468723,
+      "title": "Furgora 504",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768238598345",
+      "url": "https://kangol.com/products/furgora-504",
+      "price": 65,
+      "brand": "Kangol",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 250191,
+      "title": "Cozy Sweatfleece Mega Flutter Sweatpant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771942822768",
+      "url": "https://aritzia.com/us/en/product/cozy-sweatfleece-mega-flutter%E2%84%A2-sweatpant/122890095.html",
+      "price": 38.99,
+      "brand": "Aritzia",
+      "category": "Sweatpants & Joggers",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 269389,
+      "title": "Club C Grounds UK Shoes",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766629873543",
+      "url": "https://madewell.com/p/womens/labels-we-love/reebok/reebokreg-club-c-grounds-uk-sneakers/NR442",
+      "price": 49.99,
+      "brand": "Reebok",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 1294187,
+      "title": "Originals Funnel Neck Quarter Zip Sweatshirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767117024301",
+      "url": "https://adidas.com/us/adidas-originals-funnel-neck-quarter-zip-sweatshirt-%0A/KR7653.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 442369,
+      "title": "Cozy Sweatfleece Perfect Crop Hoodie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763673477098",
+      "url": "https://aritzia.com/us/en/product/cozy-sweatfleece-perfect-crop-hoodie/127523002.html",
+      "price": 78,
+      "brand": "Aritzia",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 176576,
+      "title": "Mayfair x @iscreamcolour Angel Numbers Cloud Crewneck",
+      "image": "https://cdn.shopify.com/s/files/1/0253/2769/7969/files/TMG121520250229.jpg?v=1767048956",
+      "url": "https://themayfairgroupllc.com/products/mayfair-x-iscreamcolour-angel-number-cloud-crewneck",
+      "price": 64,
+      "brand": "The Mayfair Group",
+      "category": "Sweatshirts & Hoodies",
+      "department": "Sleep & Loungewear"
+    },
+    {
+      "id": 981812,
+      "title": "Alpine Faux Fur Half Zip",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/c0c21f2a-e0e4-49a7-a7dd-3603b58cc8b9_image-1760774477232",
+      "url": "https://freepeople.com/shop/alpine-faux-fur-half-zip",
+      "price": 69.95,
+      "brand": "FP Movement",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1362084,
+      "title": "Fresh Powder Pom Beanie",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764124660685",
+      "url": "https://freepeople.com/shop/fresh-powder-pom-beanie",
+      "price": 38,
+      "brand": "FP Movement",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 263373,
+      "title": "Smocked Maxi Dress in Cotton Voile",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769004095626",
+      "url": "https://jcrew.com/p/womens/categories/clothing/dresses-and-jumpsuits/smocked-maxi-dress-in-cotton-voile/CI259",
+      "price": 99.5,
+      "brand": "J.Crew",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 567074,
+      "title": "Abby Halter Linen Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/117da06d-14eb-4152-b57d-1f1570b4bec1_image-1756562794113",
+      "url": "https://dissh.com/products/abby-black-halter-midi-dress",
+      "price": 100,
+      "brand": "DISSH",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 751927,
+      "title": "Amanda Jumpsuit ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1758576903413",
+      "url": "https://hanifa.co/products/amanda-jumpsuit",
+      "price": 274,
+      "brand": "Hanifa",
+      "category": "Jumpsuits & Playsuits",
+      "department": "Apparel"
+    },
+    {
+      "id": 403005,
+      "title": "Samba LT Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765542911041",
+      "url": "https://us.levelshoes.com/adidas-samba-lt-sneakers-animal-print-pony-hair-women-low-tops-g1zp8b.html",
+      "price": 130,
+      "brand": "adidas",
+      "category": "Men's Sneakers",
+      "department": "Men's Footwear"
+    },
+    {
+      "id": 1030935,
+      "title": "Small Aren Visteos Boston Coated Canvas Satchel",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761227094460",
+      "url": "https://nordstrom.com/s/7588565",
+      "price": null,
+      "brand": "MCM",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 482020,
+      "title": "Samba LT Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756406832137",
+      "url": "https://www.mytheresa.com/us/en/women/adidas-samba-lt-calf-hair-sneakers-brown-p01085598",
+      "price": null,
+      "brand": "adidas",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 231952,
+      "title": "Italian Leather Patchwork Crossbody Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760813563934",
+      "url": "https://quince.com/women/italian-leather-patchwork-crossbody",
+      "price": 159.9,
+      "brand": "Quince",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 430158,
+      "title": "Off Placed 3-Stripes Zip Up",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757763635535",
+      "url": "https://adidas.com/us/off-placed-3-stripes-zip-up/JW3609.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 389472,
+      "title": "Off Placed 3-Stripes Wide Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757703249203",
+      "url": "https://adidas.com/us/off-placed-3-stripes-wide-pant/JW3621.html",
+      "price": null,
+      "brand": "adidas",
+      "category": "Pants",
+      "department": "Apparel"
+    }
+  ],
+  "curatorId": 99055
+}

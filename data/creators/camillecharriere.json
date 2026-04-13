@@ -1,0 +1,970 @@
+{
+  "username": "camillecharriere",
+  "name": "Camille Charrière ",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-282987-1761675032581",
+  "scrapedAt": "2026-04-11T18:01:48.536Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 2083120,
+      "title": "Beaded and Crystal-Embellished Baguette",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772135126621",
+      "url": "https://breakarchive.com/products/rare-2000s-fendi-beaded-crystal-embellished-baguette-shoulder-bag",
+      "price": 3750,
+      "brand": "FENDI",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1784857,
+      "title": "Wool Jacket",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/52950787-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-clothing/jackets/alexander-mcqueen/black-wool-alexander-mcqueen-jacket-52950787.shtml",
+      "price": 1722,
+      "brand": "Alexander Mcqueen",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1764257,
+      "title": "Wool Fringe Jacket  ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768553013368",
+      "url": "https://theluxurycloset.com/us-en/women/chanel-black-wool-fringe-jacket-m-p1055126",
+      "price": 225,
+      "brand": "CHANEL",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1761269,
+      "title": "Slim 2.0 105mm Heel (Limited Edition)",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775761482898",
+      "url": "https://bergdorfgoodman.com/p/105mm-sandal-prod197200069",
+      "price": 2230,
+      "brand": "Giuseppe Zanotti",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 1784838,
+      "title": "Leather Bag Charm",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/32549130-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-jewellery/bag-charms/louis-vuitton/burgundy-leather-louis-vuitton-bag-charm-32549130.shtml",
+      "price": 390,
+      "brand": "Louis Vuitton",
+      "category": "Bag Charms & Keychains",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1762228,
+      "title": "Cotton Quilted Medium Bandana Flap Blue",
+      "image": "https://www.fashionphile.com/cdn/shop/files/27d443f42feb49e7bfb6f7fd2992e331.jpg?v=1749622695&width=1946",
+      "url": "https://fashionphile.com/products/chanel-cotton-quilted-medium-bandana-flap-blue-664988",
+      "price": 1950,
+      "brand": "CHANEL",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 871401,
+      "title": "Leather Heels",
+      "image": "https://static.shopmy.us/uploads/3bb51efc-5627-43c6-84cd-d4a8ec85959e_image-1774451629998",
+      "url": "https://us.vestiairecollective.com/women-shoes/heels/celine",
+      "price": 62,
+      "brand": "Celine",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 729809,
+      "title": "Wellington Boots",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763942935918",
+      "url": "https://us.vestiairecollective.com/women-shoes/boots/chanel/beige-rubber-chanel-boots-60676178.shtml",
+      "price": 2739,
+      "brand": "CHANEL",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 1759226,
+      "title": "2014 Star Stitch Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768483893175",
+      "url": "https://farfetch.com/shopping/women/chanel-pre-owned-2014-star-stitch-shoulder-bag-item-30399207.aspx",
+      "price": 8955,
+      "brand": "CHANEL",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 272087,
+      "title": "Tank Louis Watch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766790269390",
+      "url": "https://harrods.com/en-gb/p/cartier-large-yellow-gold-tank-louis-cartier-watch-255mm-000000000007818182",
+      "price": 12600,
+      "brand": "Cartier",
+      "category": "Watches",
+      "department": "Jewelry"
+    },
+    {
+      "id": 816857,
+      "title": "Jimmy Choo x Conner Ives Gloria Calf Hair Mules",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759196458297",
+      "url": "https://www.mytheresa.com/us/en/women/jimmy-choo-gloria-85-leopard-print-calf-hair-mules-beige-p01108803",
+      "price": 1125,
+      "brand": "Jimmy Choo",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 1096674,
+      "title": "Medium Suede Bowling Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770157649488",
+      "url": "https://prada.com/us/en/p/prada-bowling-medium-top-handle-leather-bag/1BB145_2HMZ_F0046_V_OOO",
+      "price": 4800,
+      "brand": "Prada",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 548750,
+      "title": "Le City First Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770229986089",
+      "url": "https://saksfifthavenue.com/product/Balenciaga-Le-City-Medium-Tote-Bag-0400021182413.html",
+      "price": 2850,
+      "brand": "Balenciaga",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1446959,
+      "title": "Pearlescent Beaded Baguette Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764792982362",
+      "url": "https://breakarchive.com/products/rare-fendi-pearlescent-beaded-baguette-bag",
+      "price": 1390,
+      "brand": "FENDI",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 108828,
+      "title": "Boat & Tote Open Top",
+      "image": "https://cdni.llbean.net/is/image/wim/112636_38875_41?hei=1379&wid=1200&resMode=sharp2&defaultImage=llbprod/A0211793_2",
+      "url": "https://llbean.com/llb/shop/677?productId=7183",
+      "price": 39.95,
+      "brand": "L.L.Bean",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2082697,
+      "title": "Rare Louis Vuitton x Takashi Murakami Cherry Keepall 45cm",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772131778248",
+      "url": "https://breakarchive.com/products/rare-louis-vuitton-x-takashi-murakami-cherry-keepall-45cm-6",
+      "price": 5650,
+      "brand": "Louis Vuitton",
+      "category": "Weekenders & Duffles",
+      "department": "Luggage & Travel"
+    },
+    {
+      "id": 1203578,
+      "title": "The Teacup Bra",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1762727082223",
+      "url": "https://coucouintimates.com/products/the-teacup-cotton-jersey-sky-blue",
+      "price": 75,
+      "brand": "Cou Cou Intimates",
+      "category": "Lingerie & Intimates",
+      "department": "Intimates & Shapewear"
+    },
+    {
+      "id": 349356,
+      "title": "The Rina Long Sleeve Cotton Jersey Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754160981009",
+      "url": "https://coucouintimates.com/products/the-rina-long-sleeve-cotton-jersey-black",
+      "price": 68,
+      "brand": "Cou Cou Intimates",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1784867,
+      "title": "Santos Galbée Gold Watch",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/61930459-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-accessories/watches/cartier/silver-yellow-gold-santos-galbee-cartier-watch-61930459.shtml",
+      "price": 4500,
+      "brand": "Cartier",
+      "category": "Watches",
+      "department": "Jewelry"
+    },
+    {
+      "id": 644057,
+      "title": "Textured Leather Bomber Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757445824023",
+      "url": "https://net-a-porter.com/en-us/shop/product/saint-laurent/clothing/biker-jackets/textured-leather-bomber-jacket/46376663162967142",
+      "price": 7200,
+      "brand": "SAINT LAURENT",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 393172,
+      "title": "Tong 75 Suede Wedge Sandals",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757357206620",
+      "url": "https://net-a-porter.com/en-us/shop/product/alaia/shoes/mules/tong-75-suede-wedge-sandals/46376663162837918",
+      "price": 1300,
+      "brand": "Alaïa",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 1621679,
+      "title": "Pom Pom Sock",
+      "image": "https://cdn.shopify.com/s/files/1/0573/7663/7120/files/6D1A4347-D449-4A78-8384-CF5B7B0891AB.jpg?v=1762183544",
+      "url": "https://connerives.com/products/grey-pom-pom-sock",
+      "price": null,
+      "brand": "Conner Ives",
+      "category": "Socks",
+      "department": "Apparel"
+    },
+    {
+      "id": 1806060,
+      "title": "Spring 1996 Gucci by Tom Ford Yellow GG Python Snakeskin Slip On Long Boots",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769076166777",
+      "url": "https://1stdibs.com/fashion/clothing/shoes/spring-1996-gucci-tom-ford-yellow-gg-python-snakeskin-slip-on-long-boots/id-v_3437733",
+      "price": null,
+      "brand": "Gucci",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 1586029,
+      "title": "V-Neck Cashmere Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766082072306",
+      "url": "https://net-a-porter.com/en-us/shop/product/saint-laurent/clothing/v-neck/cashmere-sweater/46376663163020873",
+      "price": 1900,
+      "brand": "SAINT LAURENT",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1784850,
+      "title": "Wool Cardigan",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/61524194-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-clothing/knitwear/celine/multicolour-wool-celine-knitwear-61524194.shtml",
+      "price": 2590,
+      "brand": "Celine",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 440739,
+      "title": "Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759442863531",
+      "url": "https://fwrd.com/product-saint-laurent-mini-dress-in-kaki/SLAU-WD223/",
+      "price": 1740.22,
+      "brand": "SAINT LAURENT",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1768758,
+      "title": "Bag Charm",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768602182362",
+      "url": "https://vestiairecollective.com/women-jewellery/bag-charms/saint-laurent/silver-metal-saint-laurent-bag-charm-61514194.shtml",
+      "price": 145,
+      "brand": "SAINT LAURENT",
+      "category": "Bag Charms & Keychains",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1608441,
+      "title": "Jane Calf Hair Ballet Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774972546244",
+      "url": "https://nordstrom.com/s/8573202",
+      "price": 1080,
+      "brand": "KHAITE",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 208979,
+      "title": "Teardrop Pouch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772824906619",
+      "url": "https://www.ssense.com/en-us/women/product/sophie-buhai/black-teardrop-pouch/16625411",
+      "price": 975,
+      "brand": "Sophie Buhai",
+      "category": "Wristlets",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 191748,
+      "title": "Olivia Premium Tights",
+      "image": "https://static.shopmy.us/uploads/38826b72-f3a0-4915-920f-ea9f813de475_111001002-olivia-premium-tights-nearly-black-swedish-stockings-2_x2400.jpg",
+      "url": "https://modaoperandi.com/women/p/swedish-stockings/olivia-premium-tights-2/712229",
+      "price": 48,
+      "brand": "Swedish Stockings",
+      "category": "Tights",
+      "department": "Apparel"
+    },
+    {
+      "id": 1788114,
+      "title": "New Fur Jacket 'ESHU' A/W 2000",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768869410792",
+      "url": "https://1stdibs.com/fashion/clothing/coats-outerwear/alexander-mcqueen-new-fur-jacket-eshu-w-2000/id-v_5065901",
+      "price": null,
+      "brand": "McQueen",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1760556,
+      "title": "Lucite Crystal Rigid Choker Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/a970005b-98e4-4d97-a3c9-eeb965d80a03imgi_116_IMG_9364_master.jpg",
+      "url": "https://1stdibs.com/jewelry/necklaces/choker-necklaces/yves-saint-laurent-ysl-tom-ford-lucite-crystal-rigid-choker-necklace-2003/id-v_25660652",
+      "price": null,
+      "brand": "SAINT LAURENT",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 963878,
+      "title": "Burgundy Masai Choker And Earrings Set",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760603934042",
+      "url": "https://1stdibs.com/jewelry/necklaces/multi-strand-necklaces/christian-dior-galliano-s-s-1998-burgundy-masai-choker-earrings-set/id-v_26945492",
+      "price": null,
+      "brand": "1stDibs",
+      "category": "Jewelry Sets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1760550,
+      "title": "Gold 23C Monte Carlo Charms Hanger Brooch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/d6c170b1-8705-40f7-89ef-d1349995f0ceimgi_7_v_26061342_1745526409871_bg_processed.jpg",
+      "url": "https://1stdibs.com/jewelry/brooches/brooches/chanel-gold-23c-monte-carlo-charms-hanger-brooch/id-v_26061342",
+      "price": null,
+      "brand": "CHANEL",
+      "category": "Brooches, Pins & Patches",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2061369,
+      "title": "Hero Top Sylva",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771934808232",
+      "url": "https://officialsylva.com/shop/p/spring-bowl-rltkk-jy5sr-fjw6l-dp8lg-fbmgj-cs6n2-zpp9a-x7c9k-c68b7-wbdw3",
+      "price": 195,
+      "brand": "SYLVA",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 516541,
+      "title": "Sequin Ballet Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763135863098",
+      "url": "https://us.vestiairecollective.com/women-shoes/flats/chanel/black-cloth-chanel-flats-54264495.shtml",
+      "price": 1668,
+      "brand": "CHANEL",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 1615767,
+      "title": "Panthea Medium Quilted Leather Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766480253355",
+      "url": "https://www.mytheresa.com/us/en/women/valentino-garavani-growl-medium-quilted-leather-tote-bag-black-p01094046",
+      "price": 3800,
+      "brand": "Valentino Garavani",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 234468,
+      "title": "Ambient Stirrup Legging",
+      "image": "https://static.shopmy.us/uploads/b1407f1b-dd4a-43ad-b99e-ee6b28b37833_image-1770033920669",
+      "url": "https://michiny.com/products/ambient-stirrup-legging",
+      "price": 158,
+      "brand": "Michi",
+      "category": "Leggings",
+      "department": "Activewear"
+    },
+    {
+      "id": 1424618,
+      "title": "Demi Couture Sandwashed Silk Tapestry Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764651403693",
+      "url": "https://connerives.com/products/rust-mini-dress",
+      "price": null,
+      "brand": "Conner Ives",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 143451,
+      "title": "Cendrillon Ballerinas Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775496826590",
+      "url": "https://repetto.com/products/porte-cle-cendrillon-1",
+      "price": 49,
+      "brand": "REPETTO",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 1767887,
+      "title": "Stand Collar Fur Jacket",
+      "image": "https://static.shopmy.us/uploads/187579af-cb57-4442-949e-89ab07613cf9_WSGFX20300_1_enlarged_1380x1820.jpg",
+      "url": "https://therealreal.com/products/women/clothing/jackets/saga-fox-fox-faux-fur-jacket-sk27w",
+      "price": null,
+      "brand": "Sage",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 633699,
+      "title": "Cashmere and Modal Tights",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/ba338788-df82-4b51-9699-b7ab8f0c4db9MIC0642240-FI.jpeg",
+      "url": "https://calzedonia.com/us/product/soft_modal_and_cashmere_blend_tights-MIC048.html",
+      "price": 27,
+      "brand": "Calzedonia",
+      "category": "Tights",
+      "department": "Apparel"
+    },
+    {
+      "id": 1765242,
+      "title": "100% Lambskin Leather Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768566563928",
+      "url": "https://zeyneparcay.com/products/leather-coat",
+      "price": 3250,
+      "brand": "Zeynep Arcay",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 711257,
+      "title": "Fille Jumper",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758148513047",
+      "url": "https://gimaguas.com/products/fille-jumper-dark-grey",
+      "price": 233,
+      "brand": "Gimaguas",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1022079,
+      "title": "Bailarina Eyelets Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761150624855",
+      "url": "https://gimaguas.com/products/bailarina-eyelets-white",
+      "price": 269,
+      "brand": "Gimaguas",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 1764847,
+      "title": "Ultrasoft Cashmere Cable Knit And Rhinestone Crewneck",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768561423526",
+      "url": "https://www.falconeri.com/us/product/ultrasoft_cashmere_cable_knit_and_rhinestone_crewneck-DML485I.html",
+      "price": 1100,
+      "brand": "Falconeri",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1591711,
+      "title": "Cable Knit Palazzo Pants with Rhinestones in Ultrasoft Cashmere",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766143573386",
+      "url": "https://www.falconeri.com/us/product/cable-knit_palazzo_pants_with_rhinestones_in_ultrasoft_cashmere-DPL485H.html",
+      "price": 1100,
+      "brand": "Falconeri",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1765091,
+      "title": "Ultrasoft Cashmere Cable Knit and Rhinestone Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768564646709",
+      "url": "https://www.falconeri.com/us/product/ultrasoft_cashmere_cable_knit_and_rhinestone_cap-DZ00336.html",
+      "price": 245,
+      "brand": "Falconeri",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 2083120,
+      "title": "Beaded and Crystal-Embellished Baguette",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772135126621",
+      "url": "https://breakarchive.com/products/rare-2000s-fendi-beaded-crystal-embellished-baguette-shoulder-bag",
+      "price": 3750,
+      "brand": "FENDI",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1784857,
+      "title": "Wool Jacket",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/52950787-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-clothing/jackets/alexander-mcqueen/black-wool-alexander-mcqueen-jacket-52950787.shtml",
+      "price": 1722,
+      "brand": "Alexander Mcqueen",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1764257,
+      "title": "Wool Fringe Jacket  ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768553013368",
+      "url": "https://theluxurycloset.com/us-en/women/chanel-black-wool-fringe-jacket-m-p1055126",
+      "price": 225,
+      "brand": "CHANEL",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1761269,
+      "title": "Slim 2.0 105mm Heel (Limited Edition)",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775761482898",
+      "url": "https://bergdorfgoodman.com/p/105mm-sandal-prod197200069",
+      "price": 2230,
+      "brand": "Giuseppe Zanotti",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 1784838,
+      "title": "Leather Bag Charm",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/32549130-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-jewellery/bag-charms/louis-vuitton/burgundy-leather-louis-vuitton-bag-charm-32549130.shtml",
+      "price": 390,
+      "brand": "Louis Vuitton",
+      "category": "Bag Charms & Keychains",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1762228,
+      "title": "Cotton Quilted Medium Bandana Flap Blue",
+      "image": "https://www.fashionphile.com/cdn/shop/files/27d443f42feb49e7bfb6f7fd2992e331.jpg?v=1749622695&width=1946",
+      "url": "https://fashionphile.com/products/chanel-cotton-quilted-medium-bandana-flap-blue-664988",
+      "price": 1950,
+      "brand": "CHANEL",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 871401,
+      "title": "Leather Heels",
+      "image": "https://static.shopmy.us/uploads/3bb51efc-5627-43c6-84cd-d4a8ec85959e_image-1774451629998",
+      "url": "https://us.vestiairecollective.com/women-shoes/heels/celine",
+      "price": 62,
+      "brand": "Celine",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 729809,
+      "title": "Wellington Boots",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763942935918",
+      "url": "https://us.vestiairecollective.com/women-shoes/boots/chanel/beige-rubber-chanel-boots-60676178.shtml",
+      "price": 2739,
+      "brand": "CHANEL",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 1759226,
+      "title": "2014 Star Stitch Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768483893175",
+      "url": "https://farfetch.com/shopping/women/chanel-pre-owned-2014-star-stitch-shoulder-bag-item-30399207.aspx",
+      "price": 8955,
+      "brand": "CHANEL",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 272087,
+      "title": "Tank Louis Watch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766790269390",
+      "url": "https://harrods.com/en-gb/p/cartier-large-yellow-gold-tank-louis-cartier-watch-255mm-000000000007818182",
+      "price": 12600,
+      "brand": "Cartier",
+      "category": "Watches",
+      "department": "Jewelry"
+    },
+    {
+      "id": 816857,
+      "title": "Jimmy Choo x Conner Ives Gloria Calf Hair Mules",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759196458297",
+      "url": "https://www.mytheresa.com/us/en/women/jimmy-choo-gloria-85-leopard-print-calf-hair-mules-beige-p01108803",
+      "price": 1125,
+      "brand": "Jimmy Choo",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 1096674,
+      "title": "Medium Suede Bowling Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770157649488",
+      "url": "https://prada.com/us/en/p/prada-bowling-medium-top-handle-leather-bag/1BB145_2HMZ_F0046_V_OOO",
+      "price": 4800,
+      "brand": "Prada",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 548750,
+      "title": "Le City First Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770229986089",
+      "url": "https://saksfifthavenue.com/product/Balenciaga-Le-City-Medium-Tote-Bag-0400021182413.html",
+      "price": 2850,
+      "brand": "Balenciaga",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1446959,
+      "title": "Pearlescent Beaded Baguette Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764792982362",
+      "url": "https://breakarchive.com/products/rare-fendi-pearlescent-beaded-baguette-bag",
+      "price": 1390,
+      "brand": "FENDI",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 108828,
+      "title": "Boat & Tote Open Top",
+      "image": "https://cdni.llbean.net/is/image/wim/112636_38875_41?hei=1379&wid=1200&resMode=sharp2&defaultImage=llbprod/A0211793_2",
+      "url": "https://llbean.com/llb/shop/677?productId=7183",
+      "price": 39.95,
+      "brand": "L.L.Bean",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2082697,
+      "title": "Rare Louis Vuitton x Takashi Murakami Cherry Keepall 45cm",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772131778248",
+      "url": "https://breakarchive.com/products/rare-louis-vuitton-x-takashi-murakami-cherry-keepall-45cm-6",
+      "price": 5650,
+      "brand": "Louis Vuitton",
+      "category": "Weekenders & Duffles",
+      "department": "Luggage & Travel"
+    },
+    {
+      "id": 1203578,
+      "title": "The Teacup Bra",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1762727082223",
+      "url": "https://coucouintimates.com/products/the-teacup-cotton-jersey-sky-blue",
+      "price": 75,
+      "brand": "Cou Cou Intimates",
+      "category": "Lingerie & Intimates",
+      "department": "Intimates & Shapewear"
+    },
+    {
+      "id": 349356,
+      "title": "The Rina Long Sleeve Cotton Jersey Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1754160981009",
+      "url": "https://coucouintimates.com/products/the-rina-long-sleeve-cotton-jersey-black",
+      "price": 68,
+      "brand": "Cou Cou Intimates",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 1784867,
+      "title": "Santos Galbée Gold Watch",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/61930459-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-accessories/watches/cartier/silver-yellow-gold-santos-galbee-cartier-watch-61930459.shtml",
+      "price": 4500,
+      "brand": "Cartier",
+      "category": "Watches",
+      "department": "Jewelry"
+    },
+    {
+      "id": 644057,
+      "title": "Textured Leather Bomber Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757445824023",
+      "url": "https://net-a-porter.com/en-us/shop/product/saint-laurent/clothing/biker-jackets/textured-leather-bomber-jacket/46376663162967142",
+      "price": 7200,
+      "brand": "SAINT LAURENT",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 393172,
+      "title": "Tong 75 Suede Wedge Sandals",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757357206620",
+      "url": "https://net-a-porter.com/en-us/shop/product/alaia/shoes/mules/tong-75-suede-wedge-sandals/46376663162837918",
+      "price": 1300,
+      "brand": "Alaïa",
+      "category": "Heels",
+      "department": "Footwear"
+    },
+    {
+      "id": 1621679,
+      "title": "Pom Pom Sock",
+      "image": "https://cdn.shopify.com/s/files/1/0573/7663/7120/files/6D1A4347-D449-4A78-8384-CF5B7B0891AB.jpg?v=1762183544",
+      "url": "https://connerives.com/products/grey-pom-pom-sock",
+      "price": null,
+      "brand": "Conner Ives",
+      "category": "Socks",
+      "department": "Apparel"
+    },
+    {
+      "id": 1806060,
+      "title": "Spring 1996 Gucci by Tom Ford Yellow GG Python Snakeskin Slip On Long Boots",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769076166777",
+      "url": "https://1stdibs.com/fashion/clothing/shoes/spring-1996-gucci-tom-ford-yellow-gg-python-snakeskin-slip-on-long-boots/id-v_3437733",
+      "price": null,
+      "brand": "Gucci",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 1586029,
+      "title": "V-Neck Cashmere Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766082072306",
+      "url": "https://net-a-porter.com/en-us/shop/product/saint-laurent/clothing/v-neck/cashmere-sweater/46376663163020873",
+      "price": 1900,
+      "brand": "SAINT LAURENT",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1784850,
+      "title": "Wool Cardigan",
+      "image": "https://images.vestiairecollective.com/images/resized/w=1024,h=1024,q=75,f=auto,/produit/61524194-1_2.jpg",
+      "url": "https://vestiairecollective.com/women-clothing/knitwear/celine/multicolour-wool-celine-knitwear-61524194.shtml",
+      "price": 2590,
+      "brand": "Celine",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 440739,
+      "title": "Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759442863531",
+      "url": "https://fwrd.com/product-saint-laurent-mini-dress-in-kaki/SLAU-WD223/",
+      "price": 1740.22,
+      "brand": "SAINT LAURENT",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1768758,
+      "title": "Bag Charm",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768602182362",
+      "url": "https://vestiairecollective.com/women-jewellery/bag-charms/saint-laurent/silver-metal-saint-laurent-bag-charm-61514194.shtml",
+      "price": 145,
+      "brand": "SAINT LAURENT",
+      "category": "Bag Charms & Keychains",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1608441,
+      "title": "Jane Calf Hair Ballet Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774972546244",
+      "url": "https://nordstrom.com/s/8573202",
+      "price": 1080,
+      "brand": "KHAITE",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 208979,
+      "title": "Teardrop Pouch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772824906619",
+      "url": "https://www.ssense.com/en-us/women/product/sophie-buhai/black-teardrop-pouch/16625411",
+      "price": 975,
+      "brand": "Sophie Buhai",
+      "category": "Wristlets",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 191748,
+      "title": "Olivia Premium Tights",
+      "image": "https://static.shopmy.us/uploads/38826b72-f3a0-4915-920f-ea9f813de475_111001002-olivia-premium-tights-nearly-black-swedish-stockings-2_x2400.jpg",
+      "url": "https://modaoperandi.com/women/p/swedish-stockings/olivia-premium-tights-2/712229",
+      "price": 48,
+      "brand": "Swedish Stockings",
+      "category": "Tights",
+      "department": "Apparel"
+    },
+    {
+      "id": 1788114,
+      "title": "New Fur Jacket 'ESHU' A/W 2000",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768869410792",
+      "url": "https://1stdibs.com/fashion/clothing/coats-outerwear/alexander-mcqueen-new-fur-jacket-eshu-w-2000/id-v_5065901",
+      "price": null,
+      "brand": "McQueen",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1760556,
+      "title": "Lucite Crystal Rigid Choker Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/a970005b-98e4-4d97-a3c9-eeb965d80a03imgi_116_IMG_9364_master.jpg",
+      "url": "https://1stdibs.com/jewelry/necklaces/choker-necklaces/yves-saint-laurent-ysl-tom-ford-lucite-crystal-rigid-choker-necklace-2003/id-v_25660652",
+      "price": null,
+      "brand": "SAINT LAURENT",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 963878,
+      "title": "Burgundy Masai Choker And Earrings Set",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760603934042",
+      "url": "https://1stdibs.com/jewelry/necklaces/multi-strand-necklaces/christian-dior-galliano-s-s-1998-burgundy-masai-choker-earrings-set/id-v_26945492",
+      "price": null,
+      "brand": "1stDibs",
+      "category": "Jewelry Sets",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1760550,
+      "title": "Gold 23C Monte Carlo Charms Hanger Brooch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/d6c170b1-8705-40f7-89ef-d1349995f0ceimgi_7_v_26061342_1745526409871_bg_processed.jpg",
+      "url": "https://1stdibs.com/jewelry/brooches/brooches/chanel-gold-23c-monte-carlo-charms-hanger-brooch/id-v_26061342",
+      "price": null,
+      "brand": "CHANEL",
+      "category": "Brooches, Pins & Patches",
+      "department": "Jewelry"
+    },
+    {
+      "id": 2061369,
+      "title": "Hero Top Sylva",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771934808232",
+      "url": "https://officialsylva.com/shop/p/spring-bowl-rltkk-jy5sr-fjw6l-dp8lg-fbmgj-cs6n2-zpp9a-x7c9k-c68b7-wbdw3",
+      "price": 195,
+      "brand": "SYLVA",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 516541,
+      "title": "Sequin Ballet Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763135863098",
+      "url": "https://us.vestiairecollective.com/women-shoes/flats/chanel/black-cloth-chanel-flats-54264495.shtml",
+      "price": 1668,
+      "brand": "CHANEL",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 1615767,
+      "title": "Panthea Medium Quilted Leather Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766480253355",
+      "url": "https://www.mytheresa.com/us/en/women/valentino-garavani-growl-medium-quilted-leather-tote-bag-black-p01094046",
+      "price": 3800,
+      "brand": "Valentino Garavani",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 234468,
+      "title": "Ambient Stirrup Legging",
+      "image": "https://static.shopmy.us/uploads/b1407f1b-dd4a-43ad-b99e-ee6b28b37833_image-1770033920669",
+      "url": "https://michiny.com/products/ambient-stirrup-legging",
+      "price": 158,
+      "brand": "Michi",
+      "category": "Leggings",
+      "department": "Activewear"
+    },
+    {
+      "id": 1424618,
+      "title": "Demi Couture Sandwashed Silk Tapestry Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764651403693",
+      "url": "https://connerives.com/products/rust-mini-dress",
+      "price": null,
+      "brand": "Conner Ives",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 143451,
+      "title": "Cendrillon Ballerinas Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775496826590",
+      "url": "https://repetto.com/products/porte-cle-cendrillon-1",
+      "price": 49,
+      "brand": "REPETTO",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 1767887,
+      "title": "Stand Collar Fur Jacket",
+      "image": "https://static.shopmy.us/uploads/187579af-cb57-4442-949e-89ab07613cf9_WSGFX20300_1_enlarged_1380x1820.jpg",
+      "url": "https://therealreal.com/products/women/clothing/jackets/saga-fox-fox-faux-fur-jacket-sk27w",
+      "price": null,
+      "brand": "Sage",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 633699,
+      "title": "Cashmere and Modal Tights",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/ba338788-df82-4b51-9699-b7ab8f0c4db9MIC0642240-FI.jpeg",
+      "url": "https://calzedonia.com/us/product/soft_modal_and_cashmere_blend_tights-MIC048.html",
+      "price": 27,
+      "brand": "Calzedonia",
+      "category": "Tights",
+      "department": "Apparel"
+    },
+    {
+      "id": 1765242,
+      "title": "100% Lambskin Leather Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768566563928",
+      "url": "https://zeyneparcay.com/products/leather-coat",
+      "price": 3250,
+      "brand": "Zeynep Arcay",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 711257,
+      "title": "Fille Jumper",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758148513047",
+      "url": "https://gimaguas.com/products/fille-jumper-dark-grey",
+      "price": 233,
+      "brand": "Gimaguas",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1022079,
+      "title": "Bailarina Eyelets Flats",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761150624855",
+      "url": "https://gimaguas.com/products/bailarina-eyelets-white",
+      "price": 269,
+      "brand": "Gimaguas",
+      "category": "Flats",
+      "department": "Footwear"
+    },
+    {
+      "id": 1764847,
+      "title": "Ultrasoft Cashmere Cable Knit And Rhinestone Crewneck",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768561423526",
+      "url": "https://www.falconeri.com/us/product/ultrasoft_cashmere_cable_knit_and_rhinestone_crewneck-DML485I.html",
+      "price": 1100,
+      "brand": "Falconeri",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 1591711,
+      "title": "Cable Knit Palazzo Pants with Rhinestones in Ultrasoft Cashmere",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766143573386",
+      "url": "https://www.falconeri.com/us/product/cable-knit_palazzo_pants_with_rhinestones_in_ultrasoft_cashmere-DPL485H.html",
+      "price": 1100,
+      "brand": "Falconeri",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1765091,
+      "title": "Ultrasoft Cashmere Cable Knit and Rhinestone Cap",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768564646709",
+      "url": "https://www.falconeri.com/us/product/ultrasoft_cashmere_cable_knit_and_rhinestone_cap-DZ00336.html",
+      "price": 245,
+      "brand": "Falconeri",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    }
+  ],
+  "curatorId": 282987
+}

@@ -1,0 +1,110 @@
+{
+  "username": "jessicawang",
+  "name": "Jessica Wang",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-75506-1726976358707",
+  "scrapedAt": "2026-04-11T18:02:18.930Z",
+  "productCount": 10,
+  "products": [
+    {
+      "id": 500052,
+      "title": "Black Bird Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/6f6e5f32-f811-46ed-858a-35dc98490a86imgi_148_REGRADE_250930_Unreal_Fur_Ecom_URF-NA_BLACK_BIRD_21177_1333x.jpg",
+      "url": "https://unrealfur.com/products/the-black-bird-coat-1",
+      "price": 599,
+      "brand": "Unreal Fur",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 138050,
+      "title": "Fuchsia Blazer",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774738459471",
+      "url": "https://veronicabeard.com/products/miller-dickey-jacket-navy-silver",
+      "price": 795,
+      "brand": "Veronica Beard",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 594880,
+      "title": "Rhinestone Embellished Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757419048354",
+      "url": "https://www2.hm.com/en_us/productpage.1253893001.html",
+      "price": 19.99,
+      "brand": "H&M",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 1160885,
+      "title": "Halter Cutout Gown",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1762343183510",
+      "url": "https://revolve.com/kim-shui-halter-cutout-gown-in-white/dp/KIMR-WD64",
+      "price": 556,
+      "brand": "Kim Shui",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 379590,
+      "title": "Silicone Pasties",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757939069231",
+      "url": "https://www.intimissimi.com/us/product/silicone_pasties-AI00CC.html",
+      "price": 9,
+      "brand": "Intimissimi",
+      "category": "Fashion Tape & Pasties",
+      "department": "Intimates & Shapewear"
+    },
+    {
+      "id": 119171,
+      "title": "Cashmere Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768068211302",
+      "url": "https://www.cos.com/en_usd/men/menswear/knitwear/jumpers/product.pure-cashmere-sweater-grey.1003078005.html",
+      "price": 279,
+      "brand": "COS",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 134542,
+      "title": "Kate Hi Boot",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755783911642",
+      "url": "https://larroude.com/products/light-kate-hi-boot-blue-suede",
+      "price": 173,
+      "brand": "Larroudé",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 100019,
+      "title": "Horseshoe Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772028585046",
+      "url": "https://www.ssense.com/en-us/women/product/citizens-of-humanity/indigo-horseshoe-jeans/14541821",
+      "price": 280,
+      "brand": "Citizens of Humanity",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 136682,
+      "title": "Stealth Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756853282571",
+      "url": "https://revolve.com/guest-in-residence-stealth-cardigan-in-stone/dp/GUER-WK43",
+      "price": 295,
+      "brand": "Guest in Residence",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 186340,
+      "title": "Caroline Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1752370050566",
+      "url": "https://frejanyc.com/products/caroline-bag-oat",
+      "price": 268,
+      "brand": "Freja",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    }
+  ],
+  "curatorId": 75506
+}

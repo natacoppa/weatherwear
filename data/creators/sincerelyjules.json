@@ -1,0 +1,430 @@
+{
+  "username": "sincerelyjules",
+  "name": "Julie Sariñana",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-199858-1772058669679",
+  "scrapedAt": "2026-04-11T18:02:03.879Z",
+  "productCount": 42,
+  "products": [
+    {
+      "id": 2247065,
+      "title": "Bazaar Bustier Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774425229339",
+      "url": "https://saintbernard.com/products/the-garment-womens-bazaar-bustier-top",
+      "price": 325,
+      "brand": "The Garment",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2228017,
+      "title": "Combination Flat Sandals",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773672917182",
+      "url": "https://zara.com/us/en/combination-flat-sandals-p15508710.html",
+      "price": 39.9,
+      "brand": "Zara",
+      "category": "Sandals",
+      "department": "Footwear"
+    },
+    {
+      "id": 2086094,
+      "title": "Round Frame Metal Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772305787240",
+      "url": "https://modaoperandi.com/women/p/saint-laurent-1/sl-862/727290",
+      "price": 535,
+      "brand": "SAINT LAURENT",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 986088,
+      "title": "Exclusive Resin Necklace",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/a04aa2df-382b-45b3-bbbc-dafc1c083077imgi_1_large_ben-amun-grey-exclusive-necklace-15_1199x1922.jpg",
+      "url": "https://modaoperandi.com/women/p/ben-amun/exclusive-necklace-13/709719",
+      "price": 280,
+      "brand": "Ben-Amun",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1098084,
+      "title": "The Amelia 18K Gold-Plated Ring",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1761801667887",
+      "url": "https://modaoperandi.com/women/p/lie-studio/the-amelia-ring/706013",
+      "price": 210,
+      "brand": "Lié Studio",
+      "category": "Rings",
+      "department": "Jewelry"
+    },
+    {
+      "id": 549999,
+      "title": "Strapless Knitted Top with Ruffles",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1756381650155",
+      "url": "https://shop.mango.com/us/en/p/women/tops/party/strapless-top-with-ruffles_17002914",
+      "price": 59.99,
+      "brand": "MANGO",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 268613,
+      "title": "Mini Jodie Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775663973650",
+      "url": "https://bottegaveneta.com/en-us/mini-jodie-black-809647341.html",
+      "price": 2950,
+      "brand": "Bottega Veneta",
+      "category": "Mini Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2091903,
+      "title": "Wrap Shirt with Bow",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772216376430",
+      "url": "https://shop.mango.com/us/en/p/women/shirts---blouses/linen/wrap-shirt-with-bow_27065828",
+      "price": 69.99,
+      "brand": "MANGO",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2200147,
+      "title": "Textured Swimsuit with Straps",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773338958529",
+      "url": "https://shop.mango.com/us/en/p/women/bikinis-and-swimsuits/swimwear/textured-swimsuit-with-straps_27066736",
+      "price": 79.99,
+      "brand": "MANGO",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 2200033,
+      "title": "Layered Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775206572896",
+      "url": "https://zara.com/us/en/layered-midi-skirt-p04387079.html",
+      "price": 45.9,
+      "brand": "Zara",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2261898,
+      "title": "Limited Edition Fringed Textured Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773968282099",
+      "url": "https://zara.com/us/en/limited-edition-fringed-textured-coat-p02361785.html",
+      "price": null,
+      "brand": "Zara",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 208828,
+      "title": "Adina Sweater",
+      "image": "https://cdn.shopify.com/s/files/1/1616/7625/files/P00062185AWROUGE_4124_retouched.jpg?v=1721435647",
+      "url": "https://revolve.com/pistola-adina-sweater-in-rouge/dp/PSTL-WK117",
+      "price": 148,
+      "brand": "Pistola Denim",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 2074482,
+      "title": "Stretch-Wool Blend Jumper",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772057404467",
+      "url": "https://selfridges.com/US/en/product/toteme-stretch-wool-blend-jumper_R04513869",
+      "price": null,
+      "brand": "TOTEME",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 48108,
+      "title": "90's Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773631308864",
+      "url": "https://www.ssense.com/en-us/women/product/the-row/white-round-90s-bag/16197661",
+      "price": 1300,
+      "brand": "The Row",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 323559,
+      "title": "The Cambon East West Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753785188824",
+      "url": "https://manuatelier.com/products/le-cambon-east-west-deep-brown-suede",
+      "price": 740,
+      "brand": "Manu Atelier",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 87649,
+      "title": "Cotton Rib T-Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775757929258",
+      "url": "https://skims.com/products/cotton-rib-t-shirt-cherry-blossom",
+      "price": 46,
+      "brand": "SKIMS",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 184061,
+      "title": "Le Teckel Small Shoulder Bag in Leather",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775140273622",
+      "url": "https://www.ssense.com/en-us/women/product/alaia/red-le-teckel-small-bag/16391051",
+      "price": 2250,
+      "brand": "Alaïa",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 1631562,
+      "title": "The Box Weave Stretch Kick Flare Pants",
+      "image": "https://shopdonni.com/cdn/shop/files/Donni_Fall-6904_1365x@2x.jpg?v=1750894446",
+      "url": "https://shopdonni.com/products/the-box-weave-stretch-kick-flare-in-jet",
+      "price": 158,
+      "brand": "DONNI.",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 2075052,
+      "title": "Suede Tailored Blazer",
+      "image": "https://cdn-images.farfetch-contents.com/32/35/45/29/32354529_62838929_1000.jpg",
+      "url": "https://farfetch.com/shopping/women/tonywack-suede-tailored-blazer-item-32354529.aspx",
+      "price": 875,
+      "brand": "TONYWACK",
+      "category": "Blazers",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 695406,
+      "title": "94 Baggy Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1757980479643",
+      "url": "https://levi.com/US/en_US/clothing/women/jeans/94-baggy-womens-jeans/p/A35100029",
+      "price": 54.98,
+      "brand": "Levi Strauss & Co.",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1430968,
+      "title": "Heavy Satin Draped Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1764691168905",
+      "url": "https://shopbop.com/heavy-satin-draped-top-asymmetric/vp/v=1/1510051169.htm",
+      "price": 395,
+      "brand": "Marques Almeida",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 143529,
+      "title": "Large Hop Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774924685856",
+      "url": "https://bottegaveneta.com/en-us/large-hop-fondant-763970V3IV12190.html",
+      "price": 5400,
+      "brand": "Bottega Veneta",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 142892,
+      "title": "Ayla Baggy Jean",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775791532996",
+      "url": "https://citizensofhumanity.com/products/ayla-baggy-cuffed-crop-pagoda",
+      "price": 258,
+      "brand": "Citizens of Humanity",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1020810,
+      "title": "Amélie Alpaca Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763675681103",
+      "url": "https://pipeandrow.com/products/le-bon-amelie-alpaca-charcoal",
+      "price": null,
+      "brand": "Le Bon Shoppe",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 223214,
+      "title": "The Dodger Sneak Jeans ",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/87f40471-ecbf-429c-8940-bab8bac72044MOTH-WJ2016_V1_1099x1649.jpg",
+      "url": "https://revolve.com/mother-the-dodger-sneak-jeans-in-floral-frenzy/dp/MOTH-WJ1894",
+      "price": 278,
+      "brand": "MOTHER",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 1614078,
+      "title": "Glenn Ribbed Wool Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766449630509",
+      "url": "https://net-a-porter.com/en-us/shop/product/daughter/clothing/v-neck/glenn-ribbed-wool-sweater/46376663162987038",
+      "price": 650,
+      "brand": "&Daughter",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 327232,
+      "title": "Le City Medium Washed Denim Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1764496789265",
+      "url": "https://balenciaga.com/en-us/le-city-bag-small-army-green-813654090.html",
+      "price": 2290,
+      "brand": "Balenciaga",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2074455,
+      "title": "Monogram Piston Shoulder Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772057067174",
+      "url": "https://fashionphile.com/products/gucci-monogram-piston-shoulder-bag-dark-brown-168808",
+      "price": 350,
+      "brand": "Gucci",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 896542,
+      "title": "Featherweight Cashmere Long Sleeve Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1760123629568",
+      "url": "https://skims.com/products/featherweight-cashmere-long-sleeve-top-egret",
+      "price": 168,
+      "brand": "SKIMS",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 694079,
+      "title": "Oversized Cashmere Sweater",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1759940431192",
+      "url": "https://skims.com/products/cashmere-oversized-sweater-umber",
+      "price": 238,
+      "brand": "SKIMS",
+      "category": "Sweaters",
+      "department": "Apparel"
+    },
+    {
+      "id": 349418,
+      "title": "Hendrix Suede Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/f238c046-37f5-4aa5-bc16-0e18ae291765imgi_37_DSI02007PAM.547_11.jpg",
+      "url": "https://dissh.com/products/hendrix-pampas-suede-jacket",
+      "price": 622,
+      "brand": "DISSH",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 101445,
+      "title": "Silky Simple Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1755630574872",
+      "url": "https://shopdonni.com/products/the-silk-simple-pant-navy",
+      "price": 364,
+      "brand": "DONNI.",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1606717,
+      "title": "True-Star Suede with Nappa Leather Star and Heel Tab Sneaker",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1766363894481",
+      "url": "https://bloomingdales.com/shop/product/golden-goose-womens-true-star-suede-sneakers?ID=5867835",
+      "price": 790,
+      "brand": "Golden Goose",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 292333,
+      "title": "Lady Datejust Watch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772427646226",
+      "url": "https://jomashop.com/rolex-watch-279173cdj.html",
+      "price": 17195,
+      "brand": "Rolex",
+      "category": "Watches",
+      "department": "Jewelry"
+    },
+    {
+      "id": 203017,
+      "title": "Cleo Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1729625115344",
+      "url": "https://vehla.com/products/cleo-black-smoke",
+      "price": 250,
+      "brand": "VEHLA",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 2076314,
+      "title": "Oversized Gabardine Bomber",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772075394021",
+      "url": "https://goat.com/apparel/marni-oversized-gabardine-bomber-buttercream-jumu0155ux-utc311-00w29",
+      "price": null,
+      "brand": "Marni",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1561075,
+      "title": "Mini Cylinder Perforated Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771318677604",
+      "url": "https://manuatelier.com/products/mini-cylinder-perforated-ecru-high-gloss-black-suede",
+      "price": 595,
+      "brand": "Manu Atelier",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 116326,
+      "title": "Nylon Snow Boots",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770967835429",
+      "url": "https://evereve.com/products/classic-ultra-mini-caribou",
+      "price": 160,
+      "brand": "Ugg",
+      "category": "Boots",
+      "department": "Footwear"
+    },
+    {
+      "id": 383925,
+      "title": "Le City East-West Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763714269396",
+      "url": "https://www.mytheresa.com/us/en/women/balenciaga-le-city-medium-leather-shoulder-bag-black-p01087337",
+      "price": 2390,
+      "brand": "Balenciaga",
+      "category": "Crossbody & Shoulder Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 315747,
+      "title": "Mallard Cardigan",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753669060962",
+      "url": "https://rachelantonoff.com/products/mallard-cardi",
+      "price": 385,
+      "brand": "Rachel Antonoff",
+      "category": "Cardigans",
+      "department": "Apparel"
+    },
+    {
+      "id": 305907,
+      "title": "Sleek Longline Tube Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/b91bb622-1ddc-450f-829f-e84aadc67e81imgi_1_100095729_7X6_3000x4000.jpg",
+      "url": "https://garageclothing.com/us/p/sleek-longline-tube-top/10009572904N.html",
+      "price": 26.95,
+      "brand": "Garage Clothing",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 201175,
+      "title": "Reid Sneakers - Men's",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1729004121180",
+      "url": "https://beckettsimonon.com/products/reid-sneakers-womens",
+      "price": 179,
+      "brand": "Beckett Simonon",
+      "category": "Men's Sneakers",
+      "department": "Men's Footwear"
+    }
+  ],
+  "curatorId": 199858
+}

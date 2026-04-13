@@ -1,0 +1,970 @@
+{
+  "username": "juliaberolzheimer",
+  "name": "Julia Berolzheimer",
+  "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-55642-1772306546543",
+  "scrapedAt": "2026-04-11T18:01:59.034Z",
+  "productCount": 96,
+  "products": [
+    {
+      "id": 235871,
+      "title": "The Taffeta Drawstring Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772741014628",
+      "url": "https://shopdonni.com/products/the-taffeta-drawstring-cargo-pant-bell-pepper",
+      "price": 436,
+      "brand": "DONNI.",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1496183,
+      "title": "Marilyn Denim Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765558128588",
+      "url": "https://alemais.com/products/marilyn-denim-mini-dress",
+      "price": 390,
+      "brand": "ALÉMAIS",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1906236,
+      "title": "The Arquette Denim Peplum Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775227068724",
+      "url": "https://ullajohnson.com/products/arquette-denim-jacket",
+      "price": 590,
+      "brand": "Ulla Johnson",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 248387,
+      "title": "Indra Short",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1753130680530",
+      "url": "https://agolde.com/products/indra-short-force",
+      "price": 178,
+      "brand": "AGOLDE",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2062521,
+      "title": "Connie Round Neck Linen Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773584357952",
+      "url": "https://aligne.co/products/connie-round-neck-linen-top-white",
+      "price": 119,
+      "brand": "ALIGNE",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 108542,
+      "title": "Felix Bucket",
+      "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/janes/janes3018511611/janes3018511611_1634850678191_2-0._QL100_.jpg",
+      "url": "https://revolve.com/janessa-leone-felix-hat-in-dark-earth/dp/JNES-WA133",
+      "price": 247,
+      "brand": "Janessa Leoné",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1670179,
+      "title": "The Silk Taffeta Drawstring Cargo Pants",
+      "image": "https://static.shopmy.us/uploads/ca92f62a-6144-455b-841b-dbf68682853d_imgi_206_donii3033512994_1775062998130_2-0._QL90_UX1128_.png",
+      "url": "https://shopbop.com/taffeta-gingham-drawstring-cargo-pan/vp/v=1/1578164929.htm",
+      "price": 436,
+      "brand": "DONNI.",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 606824,
+      "title": "Scarf Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775168036908",
+      "url": "https://ladoublej.com/en/ready-to-wear/our-categories/shirts-and-tops/scarf-top-blooming-tulip-placee-mint-TOP0160SIL009BTU01GR11.html",
+      "price": 590,
+      "brand": "La DoubleJ",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2273009,
+      "title": "Iris Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774104730428",
+      "url": "https://shopbop.com/iris-top-lisa-says-gah/vp/v=1/1534226228.htm",
+      "price": 158,
+      "brand": "Lisa Says Gah!",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 122293,
+      "title": "The Secret Sauce Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1762545461358",
+      "url": "https://ayr.com/products/the-secret-sauce-1",
+      "price": 265,
+      "brand": "AYR",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 194772,
+      "title": "La Classica Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768246115863",
+      "url": "https://commesi.com/products/la-shirt-classica-cotton-flannel",
+      "price": 295,
+      "brand": "Comme Si",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2000294,
+      "title": "Zuri Ballet Printed Linen Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771298432446",
+      "url": "https://alemais.com/products/zuri-ballet-sundress",
+      "price": 590,
+      "brand": "ALÉMAIS",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2237311,
+      "title": "Tessa Pants",
+      "image": "https://static.shopmy.us/uploads/7d5c7814-22de-47bf-b696-e77c29431372_EllieTankIvoryandTessaPantCocoGivernyPaisley_251.jpg",
+      "url": "https://juliaamory.com/products/tessa-pant-shell-palazzo-tile",
+      "price": 268,
+      "brand": "Julia Amory",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1738957,
+      "title": "Violet Cotton Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771862680957",
+      "url": "https://modaoperandi.com/women/p/sea/violet-ramie-dress-d2/716198",
+      "price": 425,
+      "brand": "Sea",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2172923,
+      "title": "D'Arcy Flare Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773091769899",
+      "url": "https://net-a-porter.com/en-us/shop/product/r13/clothing/flared/d-arcy-flared-jeans/46376663163048493",
+      "price": 995,
+      "brand": "R13",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 227923,
+      "title": "Basket Clutch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770248839411",
+      "url": "https://altuzarra.com/products/basket-clutch-mouton",
+      "price": 595,
+      "brand": "Altuzarra",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2275781,
+      "title": "Juliet Lace Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774973005359",
+      "url": "https://revolve.com/fleur-du-mal-juliet-lace-short-in-ivory/dp/FLER-WF15",
+      "price": 258,
+      "brand": "Fleur du Mal",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 248339,
+      "title": "Striped Polo Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/dd5f1676-0827-44bd-8819-c8c079b318be_image-1755336826031",
+      "url": "https://shopbop.com/striped-polo-le-bop/vp/v=1/1596630827.htm",
+      "price": 198,
+      "brand": "Le Bop",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 239154,
+      "title": "Maria High-Rise Relaxed Wide-Leg Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763588960580",
+      "url": "https://amodenim.com/products/maria-sun-kiss",
+      "price": 322,
+      "brand": "AMO Denim",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 179815,
+      "title": "Russel Denim Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753609700996",
+      "url": "https://nililotan.com/products/russel-denim-short-1",
+      "price": 295,
+      "brand": "NILI LOTAN",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2147254,
+      "title": "Joni Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/e71d288a-8f11-4332-8224-2a4c4af06db2_7177162D-65FA-4A4E-860C-3F9A07ECBCD9.jpg",
+      "url": "https://rachelcomey.com/products/joni-shorts",
+      "price": 495,
+      "brand": "Rachel Comey",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 282365,
+      "title": "The Tate",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753121227409",
+      "url": "https://ayr.com/products/the-tate",
+      "price": 195,
+      "brand": "AYR",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 128186,
+      "title": "The On The Loose Work Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1756233368622",
+      "url": "https://ruti.com/products/the-on-the-loose-work-pants-graphite",
+      "price": 199.2,
+      "brand": "Ruti",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1071929,
+      "title": "Vienna Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774471800542",
+      "url": "https://modaoperandi.com/women/p/chan-luu/vienna-light-weight-coat/735627",
+      "price": 590,
+      "brand": "Chan Luu",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 98136,
+      "title": "Domino One-Piece Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773530117528",
+      "url": "https://www.ssense.com/en-us/women/product/hunza-g/black-square-neck-swimsuit/16866001",
+      "price": 204,
+      "brand": "Hunza G",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 2263980,
+      "title": "Lewis Miller Flower Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773989935978",
+      "url": "https://kassatex.com/products/lewis-miller-flower-tote",
+      "price": 68,
+      "brand": "Kassatex",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2188522,
+      "title": "Sunday Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773239354376",
+      "url": "https://lakepajamas.com/products/white-sunday-dress",
+      "price": 278,
+      "brand": "LAKE",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 390995,
+      "title": "Midnight B1I Cat-Eye Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758308430576",
+      "url": "https://net-a-porter.com/en-us/shop/product/dior-eyewear/accessories/cat-eye/diormidnight-b1i-cat-eye-acetate-sunglasses/1647597302153452",
+      "price": 450,
+      "brand": "Dior",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 2135119,
+      "title": "Metal & Glass Pearls Necklace",
+      "image": "https://static.shopmy.us/uploads/7abf473a-b0d5-4196-92fe-86a65f2eb748_Screenshot2026-03-13at10.54.51AM.png",
+      "url": "https://chanel.com/us/fashion/p/ABH547B24230U9641/necklace-metal-glass-pearls",
+      "price": null,
+      "brand": "CHANEL",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1872785,
+      "title": "Floral Raffia Drop-Waist Sleeveless Ankle Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774641333496",
+      "url": "https://overthemoon.com/products/floral-raffia-square-neck-dress",
+      "price": 3290,
+      "brand": "Lela Rose",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1949273,
+      "title": "Gabe Jacket",
+      "image": "https://static.shopmy.us/uploads/9b21a653-ebdc-4836-be78-61dde2715956_GABEJACKETh.jpg",
+      "url": "https://tanyataylor.com/products/gabe-jacket-dark-khaki",
+      "price": 495,
+      "brand": "Tanya Taylor",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 2131188,
+      "title": "La Maregold x Follow Suit Izzy Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/e430668c-233b-4e5c-b8d7-2df7f7485a1cimgi_2_Screenshot2026-03-03at8.51.57AM.jpg",
+      "url": "https://lamaregold.com/products/izzy-top-palm-citron-floral-stripe",
+      "price": 128,
+      "brand": "La Maregold",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 2248707,
+      "title": "Indra Lace Stripe Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775676260492",
+      "url": "https://zimmermann.com/us/new-arrivals/indra-lace-stripe-midi-skirt-spliced.html",
+      "price": 1050,
+      "brand": "ZIMMERMANN",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 275323,
+      "title": "Air Pegasus 2005 Met Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768310570631",
+      "url": "https://shopbop.com/nike-air-pegasus-2005-met/vp/v=1/1550643455.htm",
+      "price": 155,
+      "brand": "Nike",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 2257969,
+      "title": "Riviere Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773935302513",
+      "url": "https://shopdoen.com/products/riviere-dress-black",
+      "price": 498,
+      "brand": "DÔEN",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1989942,
+      "title": "Knot Basket Small Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771179555820",
+      "url": "https://altuzarra.com/products/knot-basket-small-black",
+      "price": 695,
+      "brand": "Altuzarra",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2231851,
+      "title": "Fringed Knitted Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773702546632",
+      "url": "https://www.ssense.com/en-us/women/product/dries-van-noten/blue-fringed-midi-skirt/19222451",
+      "price": 895,
+      "brand": "Dries Van Noten",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 1730894,
+      "title": "Lana Scarf-Print Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768159710510",
+      "url": "https://veronicabeard.com/products/lana-scarf-print-midi-dress-blue-jay-multi",
+      "price": 598,
+      "brand": "Veronica Beard",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2147536,
+      "title": "Maria Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772801577834",
+      "url": "https://shopbop.com/db398-1244d-maria-amo/vp/v=1/1582656727.htm",
+      "price": 298,
+      "brand": "AMO Denim",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 2251022,
+      "title": "Priska Shirt Dress",
+      "image": "https://static.shopmy.us/uploads/43479e4d-fd47-4c3e-8e41-78935677a8d1_download-2026-03-18T212050.896.png",
+      "url": "https://apieceapart.com/products/priska-shirt-dress?id=d56f1a7c-cb91-4def-85a7-f1295a4bcd23",
+      "price": null,
+      "brand": "APIECE APART",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2229684,
+      "title": "Pheo Maxi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773684220705",
+      "url": "https://farfetch.com/shopping/women/by-malene-birger-pheo-maxi-skirt-item-34418286.aspx?pid=google_search",
+      "price": 335,
+      "brand": "BY MALENE BIRGER",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2197269,
+      "title": "Lace-Trimmed Distressed Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773314723319",
+      "url": "https://saksfifthavenue.com/product/dolce-gabbana-lace-trimmed-distressed-jeans-0400025077609.html",
+      "price": null,
+      "brand": "Dolce&Gabbana",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 2037628,
+      "title": "Strapless Woven Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771658231736",
+      "url": "https://net-a-porter.com/en-us/shop/product/another-tomorrow/clothing/midi-dresses/strapless-woven-midi-dress/46376663162972183",
+      "price": 2450,
+      "brand": "Another Tomorrow",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 271189,
+      "title": "Utility Trench Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1752848173073",
+      "url": "https://rhone.com/products/womens-utility-trench-coat_beige-safari",
+      "price": 328,
+      "brand": "Rhone",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1657141,
+      "title": "Exclusive Rayna Floral Crepe Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767116541253",
+      "url": "https://modaoperandi.com/women/p/leo-lin/rayna-bustier-maxi-dress-wildbloom-print/723087",
+      "price": 995,
+      "brand": "Leo Lin",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2256726,
+      "title": "Lahza Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773926105996",
+      "url": "https://merlettenyc.com/products/lahza-skirt-in-lime",
+      "price": 480,
+      "brand": "Merlette",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2188535,
+      "title": "Switch Skirt Set",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773238584837",
+      "url": "https://lakepajamas.com/products/diver-blue-bengal-stripe-switch-skirt-set",
+      "price": 248,
+      "brand": "LAKE",
+      "category": "Matching Sets",
+      "department": "Apparel"
+    },
+    {
+      "id": 1843819,
+      "title": "Luna Cotton-Blend Strapless Lace Gown",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769520725731",
+      "url": "https://modaoperandi.com/women/p/zimmermann/luna-floral-lace-bandeau-gown/721681",
+      "price": 2950,
+      "brand": "ZIMMERMANN",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 235871,
+      "title": "The Taffeta Drawstring Pant",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772741014628",
+      "url": "https://shopdonni.com/products/the-taffeta-drawstring-cargo-pant-bell-pepper",
+      "price": 436,
+      "brand": "DONNI.",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1496183,
+      "title": "Marilyn Denim Mini Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1765558128588",
+      "url": "https://alemais.com/products/marilyn-denim-mini-dress",
+      "price": 390,
+      "brand": "ALÉMAIS",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1906236,
+      "title": "The Arquette Denim Peplum Jacket",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775227068724",
+      "url": "https://ullajohnson.com/products/arquette-denim-jacket",
+      "price": 590,
+      "brand": "Ulla Johnson",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 248387,
+      "title": "Indra Short",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1753130680530",
+      "url": "https://agolde.com/products/indra-short-force",
+      "price": 178,
+      "brand": "AGOLDE",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2062521,
+      "title": "Connie Round Neck Linen Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773584357952",
+      "url": "https://aligne.co/products/connie-round-neck-linen-top-white",
+      "price": 119,
+      "brand": "ALIGNE",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 108542,
+      "title": "Felix Bucket",
+      "image": "https://m.media-amazon.com/images/G/01/Shopbop/p/prod/products/janes/janes3018511611/janes3018511611_1634850678191_2-0._QL100_.jpg",
+      "url": "https://revolve.com/janessa-leone-felix-hat-in-dark-earth/dp/JNES-WA133",
+      "price": 247,
+      "brand": "Janessa Leoné",
+      "category": "Hats",
+      "department": "Hats, Gloves & Scarves"
+    },
+    {
+      "id": 1670179,
+      "title": "The Silk Taffeta Drawstring Cargo Pants",
+      "image": "https://static.shopmy.us/uploads/ca92f62a-6144-455b-841b-dbf68682853d_imgi_206_donii3033512994_1775062998130_2-0._QL90_UX1128_.png",
+      "url": "https://shopbop.com/taffeta-gingham-drawstring-cargo-pan/vp/v=1/1578164929.htm",
+      "price": 436,
+      "brand": "DONNI.",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 606824,
+      "title": "Scarf Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775168036908",
+      "url": "https://ladoublej.com/en/ready-to-wear/our-categories/shirts-and-tops/scarf-top-blooming-tulip-placee-mint-TOP0160SIL009BTU01GR11.html",
+      "price": 590,
+      "brand": "La DoubleJ",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2273009,
+      "title": "Iris Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774104730428",
+      "url": "https://shopbop.com/iris-top-lisa-says-gah/vp/v=1/1534226228.htm",
+      "price": 158,
+      "brand": "Lisa Says Gah!",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 122293,
+      "title": "The Secret Sauce Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1762545461358",
+      "url": "https://ayr.com/products/the-secret-sauce-1",
+      "price": 265,
+      "brand": "AYR",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 194772,
+      "title": "La Classica Shirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768246115863",
+      "url": "https://commesi.com/products/la-shirt-classica-cotton-flannel",
+      "price": 295,
+      "brand": "Comme Si",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 2000294,
+      "title": "Zuri Ballet Printed Linen Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771298432446",
+      "url": "https://alemais.com/products/zuri-ballet-sundress",
+      "price": 590,
+      "brand": "ALÉMAIS",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2237311,
+      "title": "Tessa Pants",
+      "image": "https://static.shopmy.us/uploads/7d5c7814-22de-47bf-b696-e77c29431372_EllieTankIvoryandTessaPantCocoGivernyPaisley_251.jpg",
+      "url": "https://juliaamory.com/products/tessa-pant-shell-palazzo-tile",
+      "price": 268,
+      "brand": "Julia Amory",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1738957,
+      "title": "Violet Cotton Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771862680957",
+      "url": "https://modaoperandi.com/women/p/sea/violet-ramie-dress-d2/716198",
+      "price": 425,
+      "brand": "Sea",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2172923,
+      "title": "D'Arcy Flare Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773091769899",
+      "url": "https://net-a-porter.com/en-us/shop/product/r13/clothing/flared/d-arcy-flared-jeans/46376663163048493",
+      "price": 995,
+      "brand": "R13",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 227923,
+      "title": "Basket Clutch",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1770248839411",
+      "url": "https://altuzarra.com/products/basket-clutch-mouton",
+      "price": 595,
+      "brand": "Altuzarra",
+      "category": "Clutches",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2275781,
+      "title": "Juliet Lace Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774973005359",
+      "url": "https://revolve.com/fleur-du-mal-juliet-lace-short-in-ivory/dp/FLER-WF15",
+      "price": 258,
+      "brand": "Fleur du Mal",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 248339,
+      "title": "Striped Polo Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/dd5f1676-0827-44bd-8819-c8c079b318be_image-1755336826031",
+      "url": "https://shopbop.com/striped-polo-le-bop/vp/v=1/1596630827.htm",
+      "price": 198,
+      "brand": "Le Bop",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 239154,
+      "title": "Maria High-Rise Relaxed Wide-Leg Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1763588960580",
+      "url": "https://amodenim.com/products/maria-sun-kiss",
+      "price": 322,
+      "brand": "AMO Denim",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 179815,
+      "title": "Russel Denim Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753609700996",
+      "url": "https://nililotan.com/products/russel-denim-short-1",
+      "price": 295,
+      "brand": "NILI LOTAN",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2147254,
+      "title": "Joni Shorts",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/e71d288a-8f11-4332-8224-2a4c4af06db2_7177162D-65FA-4A4E-860C-3F9A07ECBCD9.jpg",
+      "url": "https://rachelcomey.com/products/joni-shorts",
+      "price": 495,
+      "brand": "Rachel Comey",
+      "category": "Shorts",
+      "department": "Apparel"
+    },
+    {
+      "id": 282365,
+      "title": "The Tate",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1753121227409",
+      "url": "https://ayr.com/products/the-tate",
+      "price": 195,
+      "brand": "AYR",
+      "category": "Tops",
+      "department": "Apparel"
+    },
+    {
+      "id": 128186,
+      "title": "The On The Loose Work Pants",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-product-1756233368622",
+      "url": "https://ruti.com/products/the-on-the-loose-work-pants-graphite",
+      "price": 199.2,
+      "brand": "Ruti",
+      "category": "Pants",
+      "department": "Apparel"
+    },
+    {
+      "id": 1071929,
+      "title": "Vienna Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774471800542",
+      "url": "https://modaoperandi.com/women/p/chan-luu/vienna-light-weight-coat/735627",
+      "price": 590,
+      "brand": "Chan Luu",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 98136,
+      "title": "Domino One-Piece Swimsuit",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773530117528",
+      "url": "https://www.ssense.com/en-us/women/product/hunza-g/black-square-neck-swimsuit/16866001",
+      "price": 204,
+      "brand": "Hunza G",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 2263980,
+      "title": "Lewis Miller Flower Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773989935978",
+      "url": "https://kassatex.com/products/lewis-miller-flower-tote",
+      "price": 68,
+      "brand": "Kassatex",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2188522,
+      "title": "Sunday Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773239354376",
+      "url": "https://lakepajamas.com/products/white-sunday-dress",
+      "price": 278,
+      "brand": "LAKE",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 390995,
+      "title": "Midnight B1I Cat-Eye Sunglasses",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1758308430576",
+      "url": "https://net-a-porter.com/en-us/shop/product/dior-eyewear/accessories/cat-eye/diormidnight-b1i-cat-eye-acetate-sunglasses/1647597302153452",
+      "price": 450,
+      "brand": "Dior",
+      "category": "Sunglasses",
+      "department": "Eyewear"
+    },
+    {
+      "id": 2135119,
+      "title": "Metal & Glass Pearls Necklace",
+      "image": "https://static.shopmy.us/uploads/7abf473a-b0d5-4196-92fe-86a65f2eb748_Screenshot2026-03-13at10.54.51AM.png",
+      "url": "https://chanel.com/us/fashion/p/ABH547B24230U9641/necklace-metal-glass-pearls",
+      "price": null,
+      "brand": "CHANEL",
+      "category": "Necklaces",
+      "department": "Jewelry"
+    },
+    {
+      "id": 1872785,
+      "title": "Floral Raffia Drop-Waist Sleeveless Ankle Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1774641333496",
+      "url": "https://overthemoon.com/products/floral-raffia-square-neck-dress",
+      "price": 3290,
+      "brand": "Lela Rose",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1949273,
+      "title": "Gabe Jacket",
+      "image": "https://static.shopmy.us/uploads/9b21a653-ebdc-4836-be78-61dde2715956_GABEJACKETh.jpg",
+      "url": "https://tanyataylor.com/products/gabe-jacket-dark-khaki",
+      "price": 495,
+      "brand": "Tanya Taylor",
+      "category": "Jackets",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 2131188,
+      "title": "La Maregold x Follow Suit Izzy Top",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/e430668c-233b-4e5c-b8d7-2df7f7485a1cimgi_2_Screenshot2026-03-03at8.51.57AM.jpg",
+      "url": "https://lamaregold.com/products/izzy-top-palm-citron-floral-stripe",
+      "price": 128,
+      "brand": "La Maregold",
+      "category": "Swimwear",
+      "department": "Swimwear"
+    },
+    {
+      "id": 2248707,
+      "title": "Indra Lace Stripe Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1775676260492",
+      "url": "https://zimmermann.com/us/new-arrivals/indra-lace-stripe-midi-skirt-spliced.html",
+      "price": 1050,
+      "brand": "ZIMMERMANN",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 275323,
+      "title": "Air Pegasus 2005 Met Sneakers",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768310570631",
+      "url": "https://shopbop.com/nike-air-pegasus-2005-met/vp/v=1/1550643455.htm",
+      "price": 155,
+      "brand": "Nike",
+      "category": "Sneakers",
+      "department": "Footwear"
+    },
+    {
+      "id": 2257969,
+      "title": "Riviere Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773935302513",
+      "url": "https://shopdoen.com/products/riviere-dress-black",
+      "price": 498,
+      "brand": "DÔEN",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 1989942,
+      "title": "Knot Basket Small Tote Bag",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771179555820",
+      "url": "https://altuzarra.com/products/knot-basket-small-black",
+      "price": 695,
+      "brand": "Altuzarra",
+      "category": "Tote Bags",
+      "department": "Bags & Purses"
+    },
+    {
+      "id": 2231851,
+      "title": "Fringed Knitted Midi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773702546632",
+      "url": "https://www.ssense.com/en-us/women/product/dries-van-noten/blue-fringed-midi-skirt/19222451",
+      "price": 895,
+      "brand": "Dries Van Noten",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 1730894,
+      "title": "Lana Scarf-Print Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1768159710510",
+      "url": "https://veronicabeard.com/products/lana-scarf-print-midi-dress-blue-jay-multi",
+      "price": 598,
+      "brand": "Veronica Beard",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2147536,
+      "title": "Maria Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1772801577834",
+      "url": "https://shopbop.com/db398-1244d-maria-amo/vp/v=1/1582656727.htm",
+      "price": 298,
+      "brand": "AMO Denim",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 2251022,
+      "title": "Priska Shirt Dress",
+      "image": "https://static.shopmy.us/uploads/43479e4d-fd47-4c3e-8e41-78935677a8d1_download-2026-03-18T212050.896.png",
+      "url": "https://apieceapart.com/products/priska-shirt-dress?id=d56f1a7c-cb91-4def-85a7-f1295a4bcd23",
+      "price": null,
+      "brand": "APIECE APART",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2229684,
+      "title": "Pheo Maxi Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773684220705",
+      "url": "https://farfetch.com/shopping/women/by-malene-birger-pheo-maxi-skirt-item-34418286.aspx?pid=google_search",
+      "price": 335,
+      "brand": "BY MALENE BIRGER",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2197269,
+      "title": "Lace-Trimmed Distressed Jeans",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773314723319",
+      "url": "https://saksfifthavenue.com/product/dolce-gabbana-lace-trimmed-distressed-jeans-0400025077609.html",
+      "price": null,
+      "brand": "Dolce&Gabbana",
+      "category": "Jeans",
+      "department": "Apparel"
+    },
+    {
+      "id": 2037628,
+      "title": "Strapless Woven Midi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1771658231736",
+      "url": "https://net-a-porter.com/en-us/shop/product/another-tomorrow/clothing/midi-dresses/strapless-woven-midi-dress/46376663162972183",
+      "price": 2450,
+      "brand": "Another Tomorrow",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 271189,
+      "title": "Utility Trench Coat",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1752848173073",
+      "url": "https://rhone.com/products/womens-utility-trench-coat_beige-safari",
+      "price": 328,
+      "brand": "Rhone",
+      "category": "Coats",
+      "department": "Coats & Outerwear"
+    },
+    {
+      "id": 1657141,
+      "title": "Exclusive Rayna Floral Crepe Maxi Dress",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1767116541253",
+      "url": "https://modaoperandi.com/women/p/leo-lin/rayna-bustier-maxi-dress-wildbloom-print/723087",
+      "price": 995,
+      "brand": "Leo Lin",
+      "category": "Dresses",
+      "department": "Apparel"
+    },
+    {
+      "id": 2256726,
+      "title": "Lahza Skirt",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773926105996",
+      "url": "https://merlettenyc.com/products/lahza-skirt-in-lime",
+      "price": 480,
+      "brand": "Merlette",
+      "category": "Skirts",
+      "department": "Apparel"
+    },
+    {
+      "id": 2188535,
+      "title": "Switch Skirt Set",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1773238584837",
+      "url": "https://lakepajamas.com/products/diver-blue-bengal-stripe-switch-skirt-set",
+      "price": 248,
+      "brand": "LAKE",
+      "category": "Matching Sets",
+      "department": "Apparel"
+    },
+    {
+      "id": 1843819,
+      "title": "Luna Cotton-Blend Strapless Lace Gown",
+      "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/pretty-prod-1769520725731",
+      "url": "https://modaoperandi.com/women/p/zimmermann/luna-floral-lace-bandeau-gown/721681",
+      "price": 2950,
+      "brand": "ZIMMERMANN",
+      "category": "Dresses",
+      "department": "Apparel"
+    }
+  ],
+  "curatorId": 55642
+}

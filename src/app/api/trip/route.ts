@@ -8,8 +8,12 @@ import {
   DayForecast,
   HourlyForecast,
 } from "@/lib/weather";
+import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 
 export async function GET(req: NextRequest) {
+  const limited = rateLimit(req);
+  if (limited) return limited;
+
   const { searchParams } = new URL(req.url);
   const query = searchParams.get("q");
   const startDate = searchParams.get("startDate");
@@ -169,4 +173,8 @@ Return ONLY valid JSON, no markdown.`;
     console.error("Trip API error:", error);
     return NextResponse.json({ error: "Failed to generate packing list" }, { status: 500 });
   }
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: corsHeaders() });
 }

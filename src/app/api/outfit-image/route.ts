@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 
 export async function POST(req: NextRequest) {
+  const limited = rateLimit(req);
+  if (limited) return limited;
   try {
     const { outfit, location, temp } = await req.json();
 
@@ -53,4 +56,8 @@ export async function POST(req: NextRequest) {
     console.error("Outfit image error:", error);
     return NextResponse.json({ error: "Failed to generate image" }, { status: 500 });
   }
+}
+
+export async function OPTIONS() {
+  return new NextResponse(null, { status: 204, headers: corsHeaders() });
 }

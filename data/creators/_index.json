@@ -1,0 +1,195 @@
+[
+  {
+    "username": "alyssainthecity",
+    "name": "Alyssa Coscarelli",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-23309-1769218972402",
+    "productCount": 96,
+    "topBrands": [
+      "JW Anderson",
+      "Paloma Wool",
+      "Dries Van Noten",
+      "Chloé",
+      "Spinelli Kilcollin"
+    ],
+    "curatorId": 23309
+  },
+  {
+    "username": "camillecharriere",
+    "name": "Camille Charrière ",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-282987-1761675032581",
+    "productCount": 96,
+    "topBrands": [
+      "FENDI",
+      "Alexander Mcqueen",
+      "CHANEL",
+      "Giuseppe Zanotti",
+      "Louis Vuitton"
+    ],
+    "curatorId": 282987
+  },
+  {
+    "username": "courtneygrow",
+    "name": "Courtney Grow",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-6380-1683292822686",
+    "productCount": 96,
+    "topBrands": [
+      "Alfie",
+      "Banana Republic",
+      "Still Here",
+      "Ely Ely",
+      "Chan Luu"
+    ],
+    "curatorId": 6380
+  },
+  {
+    "username": "tezza",
+    "name": "Tezza Barton",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-42535-1708526578153",
+    "productCount": 96,
+    "topBrands": [
+      "Business & Pleasure Co. ",
+      "Anna October",
+      "Manu Atelier",
+      "Magda Butrym",
+      "Herskind"
+    ],
+    "curatorId": 42535
+  },
+  {
+    "username": "juliaberolzheimer",
+    "name": "Julia Berolzheimer",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-55642-1772306546543",
+    "productCount": 96,
+    "topBrands": [
+      "DONNI.",
+      "ALÉMAIS",
+      "Ulla Johnson",
+      "AGOLDE",
+      "ALIGNE"
+    ],
+    "curatorId": 55642
+  },
+  {
+    "username": "weworewhat",
+    "name": "Danielle",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-51717-1713800677888",
+    "productCount": 96,
+    "topBrands": [
+      "FRAME",
+      "Electric Picks",
+      "Acne Studios",
+      "Rumored",
+      "Balenciaga"
+    ],
+    "curatorId": 51717
+  },
+  {
+    "username": "sincerelyjules",
+    "name": "Julie Sariñana",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-199858-1772058669679",
+    "productCount": 42,
+    "topBrands": [
+      "The Garment",
+      "Zara",
+      "SAINT LAURENT",
+      "Ben-Amun",
+      "Lié Studio"
+    ],
+    "curatorId": 199858
+  },
+  {
+    "username": "chrisellelim",
+    "name": "Chriselle Lim",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-5291-1753171027776",
+    "productCount": 96,
+    "topBrands": [
+      "Victoria Beckham",
+      "Jil Sander",
+      "Acne Studios",
+      "Issey Miyake",
+      "Guest House"
+    ],
+    "curatorId": 5291
+  },
+  {
+    "username": "oliviapalermo",
+    "name": "Olivia Palermo",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-7656-1662737031438",
+    "productCount": 96,
+    "topBrands": [
+      "Strathberry",
+      "Stuart Weitzman",
+      "Le Specs",
+      "Larroudé",
+      "ROTATE"
+    ],
+    "curatorId": 7656
+  },
+  {
+    "username": "brightonbutler",
+    "name": "Brighton Butler",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-52396-1714403832476",
+    "productCount": 96,
+    "topBrands": [
+      "ELAN",
+      "Xirena",
+      "Rhone",
+      "Tnuck Beach",
+      "Tanya Taylor"
+    ],
+    "curatorId": 52396
+  },
+  {
+    "username": "andicsinger",
+    "name": "Andy Csinger",
+    "image": null,
+    "productCount": 2,
+    "topBrands": [
+      "Darkpark",
+      "Prada"
+    ],
+    "curatorId": 47622
+  },
+  {
+    "username": "amberfillerup",
+    "name": "Amber Fillerup",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-29897-1695143475809",
+    "productCount": 96,
+    "topBrands": [
+      "Dear Frances",
+      "Quay",
+      "FP Movement",
+      "Eberjey",
+      "SNDYS"
+    ],
+    "curatorId": 29897
+  },
+  {
+    "username": "juliamarieb",
+    "name": "Julia Marie B",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-99055-1769442047105",
+    "productCount": 96,
+    "topBrands": [
+      "Hanifa",
+      "JLUXLABEL",
+      "FP Movement",
+      "Ruslan Baginskiy",
+      "MCM"
+    ],
+    "curatorId": 99055
+  },
+  {
+    "username": "jessicawang",
+    "name": "Jessica Wang",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-75506-1726976358707",
+    "productCount": 10,
+    "topBrands": [
+      "Unreal Fur",
+      "Veronica Beard",
+      "H&M",
+      "Kim Shui",
+      "Intimissimi"
+    ],
+    "curatorId": 75506
+  }
+]
