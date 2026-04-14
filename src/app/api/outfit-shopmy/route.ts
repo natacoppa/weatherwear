@@ -21,8 +21,8 @@ function rewriteImageUrl(url: string): string {
 
 // ── Load pre-scraped catalog from JSON ──────────────────────────────
 
-interface ShopMyProduct {
-  id: number;
+interface CatalogProduct {
+  id: string | number;
   title: string;
   image: string;
   url: string | null;
@@ -32,19 +32,31 @@ interface ShopMyProduct {
   department: string;
 }
 
-// ShopMy usernames are lowercase alphanumerics plus hyphen / underscore /
-// dot. Anything outside this character set is rejected before touching the
-// filesystem to prevent path traversal (e.g. `?creator=../../.env`).
+type CreatorSource = "shopmy" | "ltk";
+
+interface CreatorData {
+  products: CatalogProduct[];
+  curatorId: number | null; // ShopMy only
+  source: CreatorSource;
+}
+
+// Usernames are lowercase alphanumerics plus hyphen / underscore / dot.
+// Anything outside this is rejected before touching the filesystem to
+// prevent path traversal (e.g. `?creator=../../.env`).
 const VALID_USERNAME = /^[a-zA-Z0-9_.-]{1,64}$/;
 
-function loadCreatorData(
-  username: string,
-): { products: ShopMyProduct[]; curatorId: number | null } | null {
+function loadCreatorData(username: string): CreatorData | null {
   if (!VALID_USERNAME.test(username)) return null;
   const filePath = path.join(process.cwd(), "data/creators", `${username}.json`);
   try {
     const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-    return { products: data.products || [], curatorId: data.curatorId || null };
+    // Detect source: LTK data files have a profileId field; ShopMy has curatorId.
+    const source: CreatorSource = data.profileId ? "ltk" : "shopmy";
+    return {
+      products: data.products || [],
+      curatorId: data.curatorId || null,
+      source,
+    };
   } catch {
     return null;
   }
@@ -83,7 +95,7 @@ export async function GET(req: NextRequest) {
 
   try {
     if (!city || !creator) {
-      return NextResponse.json({ error: "Provide q (city) and creator (ShopMy username)" }, { status: 400 });
+      return NextResponse.json({ error: "Provide q (city) and creator (username)" }, { status: 400 });
     }
 
     const creatorData = loadCreatorData(creator);
@@ -120,20 +132,26 @@ export async function GET(req: NextRequest) {
       `${m.label} (${m.timeRange}): ${m.temp}°F air, sun feel ${m.sunFeel}°, shade feel ${m.shadeFeel}°, wind ${m.windSpeed}mph, UV ${m.uvIndex}, ${m.precipChance}% rain`
     ).join("\n");
 
-    // Filter to outfit-relevant categories
-    const relevant = catalog.filter((p) => ["Apparel", "Footwear", "Activewear", "Bags & Purses", "Accessories", "Coats & Outerwear"].includes(p.department));
+    // Filter to outfit-relevant departments. Include both ShopMy names
+    // (fine-grained: "Footwear", "Coats & Outerwear") and LTK names
+    // (keyword-classified: "Shoes", "Apparel" covers outerwear too).
+    const relevant = catalog.filter((p) =>
+      ["Apparel", "Footwear", "Shoes", "Activewear", "Bags & Purses", "Accessories", "Coats & Outerwear"].includes(p.department)
+    );
 
-    // Select ~16 items most relevant for an outfit (tops, bottoms, layers, shoes, 1-2 bags)
-    // Cardigans go in tops (as potential base layers), NOT in layers. Layers = jackets/coats only.
-    const tops = relevant.filter(p => ["Tops", "Sweaters", "Blouses", "Cardigans"].includes(p.category));
-    const layers = relevant.filter(p => ["Jackets", "Coats", "Blazers"].includes(p.category));
-    const bottoms = relevant.filter(p => ["Pants", "Jeans", "Skirts", "Shorts", "Trousers"].includes(p.category));
-    const shoes = relevant.filter(p => p.department === "Footwear");
+    // Select ~16 items most relevant for an outfit (tops, bottoms, layers, shoes, 1-2 bags).
+    // Category names differ between ShopMy (fine-grained: "Sweaters",
+    // "Jackets") and LTK (keyword-classified: "Knits", "Outerwear").
+    // Include both so the same filter works for either source.
+    const tops = relevant.filter(p => ["Tops", "Sweaters", "Blouses", "Cardigans", "Knits", "T-Shirts"].includes(p.category));
+    const layers = relevant.filter(p => ["Jackets", "Coats", "Blazers", "Outerwear", "Vests"].includes(p.category));
+    const bottoms = relevant.filter(p => ["Pants", "Jeans", "Skirts", "Shorts", "Trousers", "Bottoms"].includes(p.category));
+    const shoes = relevant.filter(p => p.department === "Footwear" || p.department === "Shoes");
     const bags = relevant.filter(p => p.department === "Bags & Purses").slice(0, 3);
     const dresses = relevant.filter(p => ["Dresses"].includes(p.category));
 
     // Combine with guaranteed slots per category, shuffle for variety
-    const candidateSet = new Set<number>();
+    const candidateSet = new Set<string | number>();
     const candidates: typeof relevant = [];
     function addFromPool(pool: typeof relevant, max: number) {
       const shuffled = [...pool].sort(() => Math.random() - 0.5);
@@ -163,7 +181,7 @@ export async function GET(req: NextRequest) {
     // tanking the whole request (Vercel Hobby tier has a 10s total
     // budget).
     const FETCH_TIMEOUT_MS = 3000;
-    const textLabel = (i: number, p: ShopMyProduct, suffix = "") =>
+    const textLabel = (i: number, p: CatalogProduct, suffix = "") =>
       `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"}${suffix}`;
 
     const blocks = await Promise.all(
@@ -280,14 +298,17 @@ Return ONLY valid JSON.`
       const mapped = resolveIndex(slot.index);
       if (mapped < 0 || mapped >= relevant.length) return null;
       const product = relevant[mapped];
-      const shopMyUrl = curatorId
-        ? `https://shopmy.us/shop/product/${product.id}?Curator_id=${curatorId}`
-        : product.url;
+      // ShopMy: construct affiliate URL from product ID + curatorId.
+      // LTK (+ any future source): the affiliate URL is already in product.url.
+      const url =
+        creatorData.source === "shopmy" && curatorId
+          ? `https://shopmy.us/shop/product/${product.id}?Curator_id=${curatorId}`
+          : product.url;
       return {
         index: mapped,
         title: product.title,
         image: product.image,
-        url: shopMyUrl,
+        url,
         price: product.price,
         brand: product.brand,
       };
