@@ -19,7 +19,7 @@ The curator uses a **time-window expansion** strategy: start with the last 3 mon
 
 **Core tension:** LTK creators can have 7,000+ products spanning years. Most old products are discontinued. But scraping only recent products (e.g., last 6 months) can leave some creators with only 20 items — not enough category coverage for outfit generation.
 
-**Priority decision: full outfit first.** A complete outfit with all slots filled matters more than perfect recency. Users can check availability themselves; a dead affiliate link is a minor friction, but a missing bottom/shoe slot makes the entire recommendation useless.
+**Priority decision: full outfit first.** A complete outfit with all slots filled matters more than perfect recency. Users can check availability themselves, and resale sites are good enough that "is this still in stock?" is not a meaningful product blocker. A dead affiliate link is minor friction; a missing bottom/shoe slot makes the entire recommendation useless.
 
 **Two-pass separation** keeps each script focused:
 - Scraper: reliable data extraction, no business logic
@@ -30,7 +30,14 @@ The curator uses a **time-window expansion** strategy: start with the last 3 mon
 ### 1. Filter at curation time, not scrape time
 Scraper dumps everything it can get. Curator makes quality decisions. This way we can re-curate with different parameters without re-scraping (which is slow + rate-limited).
 
-### 2. Time-window expansion for category coverage
+### 2. Merge sources only for the same creator
+If a creator exists in both LTK and ShopMy, merge those two inventories into one final catalog for that creator only. Never mix products across different creators.
+
+Example:
+- `aimeesong` LTK + `aimeesong` ShopMy → one final `aimeesong` catalog
+- `aimeesong` products never mix with `tezza`
+
+### 3. Time-window expansion for category coverage
 Per category, the curator:
 - Takes all products from the last **3 months**
 - If a category has fewer than its minimum, expands to **6 months** for just that category
@@ -38,7 +45,7 @@ Per category, the curator:
 - Then **all-time**
 - Newest products always preferred within each window
 
-### 3. Category minimums match route needs
+### 4. Category minimums match route needs
 The outfit-shopmy route's `addFromPool` calls define the floor:
 
 | Category | Minimum | What the route picks |
@@ -53,17 +60,25 @@ The outfit-shopmy route's `addFromPool` calls define the floor:
 
 If a creator can't hit these minimums even after expanding to all-time, flag them as "incomplete" in the index.
 
-### 4. Skip availability checks
-Product availability (`catalog_retailer_product_available`) is unreliable and single-retailer-scoped. A product marked "unavailable" at Nordstrom may still be on SSENSE. Trust recency as a rough proxy; don't make extra API calls.
+### 5. Skip availability checks
+Product availability (`catalog_retailer_product_available`) is unreliable and single-retailer-scoped. A product marked "unavailable" at Nordstrom may still be on SSENSE or available resale. Don't make extra API calls for stock checks.
 
-### 5. No caps — keep everything that passes the time-window
+### 6. No caps — keep everything that passes the time-window
 No hard limits per category or per total. If a creator has 200 shoes from the last 3 months, keep all 200. The route already shuffles + picks ~12 candidates via `addFromPool`, so a large catalog just means more variety across requests. Smaller files aren't worth losing products over.
 
-### 6. Store `addedAt` on each product
+### 7. Store `addedAt` on each product
 The curator preserves the `created_at` timestamp from LTK (or scrape date for ShopMy) as `addedAt`. Useful for:
 - Downstream recency weighting in the route
 - Debugging why a product was included
 - Future freshness indicators in the UI
+
+### 8. LTK is the better freshness source; ShopMy helps fill gaps
+LTK is the source that best supports "newest first" if we can capture a trustworthy timestamp. ShopMy is still useful, but more as coverage support than as a true freshness signal.
+
+Practical effect:
+- Use recent LTK products first where possible
+- Pull in ShopMy products when a creator is missing enough tops, bottoms, shoes, etc.
+- Best of both: LTK helps freshness, ShopMy helps coverage
 
 ## Architecture
 
@@ -91,6 +106,14 @@ for each category in [tops, layers, bottoms, shoes, dresses, bags]:
 
 output = flatten(catalog) + metadata
 ```
+
+## User-Facing Implications
+
+- Creator outfits should get more reliable because merged same-creator catalogs have better category coverage.
+- Some outfits may include older products if that's what it takes to complete the look.
+- Some creators may be flagged as "incomplete" if they still don't have enough useful product coverage.
+- We are explicitly not optimizing for "is this still in stock?" in this phase.
+- Variety should improve because the route gets a larger valid pool to shuffle from.
 
 ## Open Questions
 

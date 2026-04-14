@@ -1,6 +1,8 @@
 // Shared types for outfit / trip / creator responses.
 // Mirror the API route shapes in src/app/api/*.
 
+import type { CreatorCoverage, CreatorSource } from "@/lib/creator-catalog";
+
 export interface DayOutfit {
   headline: string;
   walkOut: {
@@ -70,6 +72,9 @@ export interface CreatorInfo {
   image: string | null;
   productCount: number;
   topBrands: string[];
+  sources?: CreatorSource[];
+  incomplete?: boolean;
+  coverage?: CreatorCoverage;
 }
 
 export interface CreatorOutfitItem {
@@ -85,6 +90,9 @@ export interface CreatorOutfit {
   location: string;
   creator: string;
   catalogSize: number;
+  incompleteCatalog?: boolean;
+  coverage?: CreatorCoverage;
+  catalogUpdatedAt?: string;
   day: DaySummary;
   moments: Moment[];
   outfit: {

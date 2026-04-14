@@ -6,8 +6,13 @@ import { AIParseError, parseAiJson } from "@/lib/parse-ai-json";
 import { fetchWeather, geocode, calculateFeelsLike, HourlyForecast } from "@/lib/weather";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 import { requireApiKey } from "@/lib/api-auth";
-import fs from "fs";
-import path from "path";
+import {
+  buildCreatorCandidateSet,
+  loadCuratedCreatorCatalog,
+  type CuratedCreatorCatalog,
+  type CuratedCreatorProduct,
+  VALID_CREATOR_USERNAME,
+} from "@/lib/creator-catalog";
 
 // ── Image URL rewriting (S3 → static.shopmy.us) ────────────────────
 
@@ -19,47 +24,11 @@ function rewriteImageUrl(url: string): string {
   return url;
 }
 
-// ── Load pre-scraped catalog from JSON ──────────────────────────────
+// ── Load curated catalog from JSON ──────────────────────────────────
 
-interface CatalogProduct {
-  id: string | number;
-  title: string;
-  image: string;
-  url: string | null;
-  price: number | null;
-  brand: string;
-  category: string;
-  department: string;
-}
-
-type CreatorSource = "shopmy" | "ltk";
-
-interface CreatorData {
-  products: CatalogProduct[];
-  curatorId: number | null; // ShopMy only
-  source: CreatorSource;
-}
-
-// Usernames are lowercase alphanumerics plus hyphen / underscore / dot.
-// Anything outside this is rejected before touching the filesystem to
-// prevent path traversal (e.g. `?creator=../../.env`).
-const VALID_USERNAME = /^[a-zA-Z0-9_.-]{1,64}$/;
-
-function loadCreatorData(username: string): CreatorData | null {
-  if (!VALID_USERNAME.test(username)) return null;
-  const filePath = path.join(process.cwd(), "data/creators", `${username}.json`);
-  try {
-    const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-    // Detect source: LTK data files have a profileId field; ShopMy has curatorId.
-    const source: CreatorSource = data.profileId ? "ltk" : "shopmy";
-    return {
-      products: data.products || [],
-      curatorId: data.curatorId || null,
-      source,
-    };
-  } catch {
-    return null;
-  }
+function loadCreatorData(username: string): CuratedCreatorCatalog | null {
+  if (!VALID_CREATOR_USERNAME.test(username)) return null;
+  return loadCuratedCreatorCatalog(username);
 }
 
 // ── Weather analysis ────────────────────────────────────────────────
@@ -103,7 +72,6 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: `No catalog found for @${creator}` }, { status: 404 });
     }
     const catalog = creatorData.products;
-    const curatorId = creatorData.curatorId;
 
     const geo = await geocode(city);
     if (!geo) return NextResponse.json({ error: "Location not found" }, { status: 404 });
@@ -132,45 +100,8 @@ export async function GET(req: NextRequest) {
       `${m.label} (${m.timeRange}): ${m.temp}°F air, sun feel ${m.sunFeel}°, shade feel ${m.shadeFeel}°, wind ${m.windSpeed}mph, UV ${m.uvIndex}, ${m.precipChance}% rain`
     ).join("\n");
 
-    // Filter to outfit-relevant departments. Include both ShopMy names
-    // (fine-grained: "Footwear", "Coats & Outerwear") and LTK names
-    // (keyword-classified: "Shoes", "Apparel" covers outerwear too).
-    const relevant = catalog.filter((p) =>
-      ["Apparel", "Footwear", "Shoes", "Activewear", "Bags & Purses", "Accessories", "Coats & Outerwear"].includes(p.department)
-    );
-
-    // Select ~16 items most relevant for an outfit (tops, bottoms, layers, shoes, 1-2 bags).
-    // Category names differ between ShopMy (fine-grained: "Sweaters",
-    // "Jackets") and LTK (keyword-classified: "Knits", "Outerwear").
-    // Include both so the same filter works for either source.
-    const tops = relevant.filter(p => ["Tops", "Sweaters", "Blouses", "Cardigans", "Knits", "T-Shirts"].includes(p.category));
-    const layers = relevant.filter(p => ["Jackets", "Coats", "Blazers", "Outerwear", "Vests"].includes(p.category));
-    const bottoms = relevant.filter(p => ["Pants", "Jeans", "Skirts", "Shorts", "Trousers", "Bottoms"].includes(p.category));
-    const shoes = relevant.filter(p => p.department === "Footwear" || p.department === "Shoes");
-    const bags = relevant.filter(p => p.department === "Bags & Purses").slice(0, 3);
-    const dresses = relevant.filter(p => ["Dresses"].includes(p.category));
-
-    // Combine with guaranteed slots per category, shuffle for variety
-    const candidateSet = new Set<string | number>();
-    const candidates: typeof relevant = [];
-    function addFromPool(pool: typeof relevant, max: number) {
-      const shuffled = [...pool].sort(() => Math.random() - 0.5);
-      let added = 0;
-      for (const item of shuffled) {
-        if (!candidateSet.has(item.id) && added < max) {
-          candidateSet.add(item.id);
-          candidates.push(item);
-          added++;
-        }
-      }
-    }
-    // Guarantee representation from each category
-    addFromPool(tops, 3);
-    addFromPool(layers, 3);
-    addFromPool(bottoms, 2);
-    addFromPool(shoes, 2);
-    addFromPool(dresses, 1);
-    addFromPool(bags, 1);
+    const relevant = catalog;
+    const candidates = buildCreatorCandidateSet(relevant);
 
     // Fetch candidate images in parallel. Previously sequential: 12
     // images × 100-300ms each = 1-4s of serial I/O. Promise.all cuts this
@@ -181,7 +112,7 @@ export async function GET(req: NextRequest) {
     // tanking the whole request (Vercel Hobby tier has a 10s total
     // budget).
     const FETCH_TIMEOUT_MS = 3000;
-    const textLabel = (i: number, p: CatalogProduct, suffix = "") =>
+    const textLabel = (i: number, p: CuratedCreatorProduct, suffix = "") =>
       `[${i}] ${p.title} — ${p.brand} — ${p.category} — $${p.price || "?"}${suffix}`;
 
     const blocks = await Promise.all(
@@ -298,17 +229,11 @@ Return ONLY valid JSON.`
       const mapped = resolveIndex(slot.index);
       if (mapped < 0 || mapped >= relevant.length) return null;
       const product = relevant[mapped];
-      // ShopMy: construct affiliate URL from product ID + curatorId.
-      // LTK (+ any future source): the affiliate URL is already in product.url.
-      const url =
-        creatorData.source === "shopmy" && curatorId
-          ? `https://shopmy.us/shop/product/${product.id}?Curator_id=${curatorId}`
-          : product.url;
       return {
         index: mapped,
         title: product.title,
         image: product.image,
-        url,
+        url: product.url,
         price: product.price,
         brand: product.brand,
       };
@@ -335,6 +260,9 @@ Return ONLY valid JSON.`
       location: locationName,
       creator,
       catalogSize: relevant.length,
+      incompleteCatalog: creatorData.incomplete,
+      coverage: creatorData.coverage,
+      catalogUpdatedAt: creatorData.catalogUpdatedAt,
       day: dayData,
       moments,
       outfit,

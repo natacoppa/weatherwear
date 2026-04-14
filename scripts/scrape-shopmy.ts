@@ -9,16 +9,10 @@
  */
 
 import { chromium } from "playwright";
+import { buildShopMyAffiliateUrl, type RawCreatorCatalog, type RawCreatorProduct } from "../src/lib/creator-catalog";
 
-interface ShopMyProduct {
-  id: number;
+interface ShopMyProduct extends RawCreatorProduct {
   title: string;
-  image: string;
-  url: string | null;
-  price: number | null;
-  brand: string;
-  category: string;
-  department: string;
 }
 
 const API_BASE = "https://apiv3.shopmy.us/api";
@@ -34,6 +28,7 @@ async function scrape(username: string, opts: { limit: number; department?: stri
   const allProducts: ShopMyProduct[] = [];
   const pageSize = 48;
   let offset = 0;
+  let curatorId: number | null = null;
 
   while (allProducts.length < opts.limit) {
     const batchLimit = Math.min(pageSize, opts.limit - allProducts.length);
@@ -54,16 +49,23 @@ async function scrape(username: string, opts: { limit: number; department?: stri
 
     if (!batch.success || !batch.results?.length) break;
 
-    for (const item of batch.results) {
+    curatorId ||= batch.results[0]?.Curator_id || batch.results[0]?.curatorId || null;
+
+    for (const [index, item] of batch.results.entries()) {
+      const productId = item.Product_id || item.id;
       allProducts.push({
-        id: item.Product_id || item.id,
+        sourceProductId: String(productId),
+        legacyId: productId,
+        sourceRank: offset + index,
         title: item.title,
         image: item.image,
-        url: item.fallbackUrl || null,
+        url: buildShopMyAffiliateUrl(productId, curatorId) || item.fallbackUrl || null,
         price: item.fallbackPrice || null,
         brand: item.AllBrand_name,
         category: item.Category_name,
         department: item.Department_name,
+        addedAt: null,
+        addedAtSource: "scraped_at",
       });
     }
 
@@ -74,7 +76,16 @@ async function scrape(username: string, opts: { limit: number; department?: stri
   }
 
   await browser.close();
-  return allProducts;
+  const scrapedAt = new Date().toISOString();
+  return {
+    source: "shopmy",
+    username,
+    name: username,
+    image: null,
+    scrapedAt,
+    sourceMeta: { curatorId },
+    products: allProducts.map((product) => ({ ...product, addedAt: scrapedAt })),
+  } satisfies RawCreatorCatalog;
 }
 
 // ── CLI ──────────────────────────────────────────────────────────────
@@ -94,7 +105,7 @@ const department = deptArg ? deptArg.split("=")[1] : undefined;
 
 console.error(`Scraping ShopMy catalog for @${username} (limit: ${limit})...`);
 
-scrape(username, { limit, department }).then((products) => {
-  console.error(`Found ${products.length} products`);
-  console.log(JSON.stringify(products, null, 2));
+scrape(username, { limit, department }).then((catalog) => {
+  console.error(`Found ${catalog.products.length} products`);
+  console.log(JSON.stringify(catalog, null, 2));
 });

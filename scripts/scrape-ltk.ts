@@ -18,17 +18,9 @@
  */
 
 import { chromium, type Page } from "playwright";
+import type { RawCreatorCatalog, RawCreatorProduct } from "../src/lib/creator-catalog";
 
-interface NormalizedProduct {
-  id: string;
-  title: string;
-  image: string;
-  url: string | null;
-  price: number | null;
-  brand: string;
-  category: string;
-  department: string;
-}
+type NormalizedProduct = RawCreatorProduct;
 
 // ── Keyword classifier ───────────────────────────────────────────────
 // Order matters: more specific rules first. First match wins.
@@ -240,7 +232,9 @@ async function scrape(username: string, opts: { limit: number }) {
         const title = cleanTitle(detail.name);
         const { category, department } = classify(title);
         products.push({
-          id: p.product_reference_id,
+          sourceProductId: p.product_reference_id,
+          legacyId: p.product_reference_id,
+          sourceRank: null,
           title,
           image,
           url: p.link_url,
@@ -248,6 +242,8 @@ async function scrape(username: string, opts: { limit: number }) {
           brand: detail.advertiser_name || "",
           category,
           department,
+          addedAt: null,
+          addedAtSource: "unknown",
         });
       }
 
@@ -258,14 +254,14 @@ async function scrape(username: string, opts: { limit: number }) {
   await browser.close();
 
   return {
+    source: "ltk",
     username,
     name: displayName?.trim() || username,
-    avatar,
-    profileId,
+    image: avatar,
     scrapedAt: new Date().toISOString(),
-    productCount: products.length,
+    sourceMeta: { profileId },
     products,
-  };
+  } satisfies RawCreatorCatalog;
 }
 
 // ── CLI ──────────────────────────────────────────────────────────────
@@ -284,7 +280,7 @@ console.error(`Scraping LTK catalog for @${username} (limit: ${limit})...`);
 
 scrape(username, { limit })
   .then((result) => {
-    console.error(`Found ${result.productCount} products across categories:`);
+    console.error(`Found ${result.products.length} products across categories:`);
     const counts: Record<string, number> = {};
     for (const p of result.products) counts[p.category] = (counts[p.category] || 0) + 1;
     for (const [cat, n] of Object.entries(counts).sort((a, b) => b[1] - a[1])) {
