@@ -84,6 +84,8 @@ export interface CreatorOutfitItem {
   url: string | null;
   price: number | null;
   brand: string;
+  category?: string;
+  canonicalCategory?: string;
 }
 
 export interface CreatorOutfit {

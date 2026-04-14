@@ -1,0 +1,44 @@
+{
+  "validationScope": "prompt-assembly-only",
+  "note": "Image payloads are tiny deterministic placeholders that exercise the image-aware content-block shape without pretending to validate full visual styling quality.",
+  "scenarios": [
+    {
+      "id": "creator-nyc-polished",
+      "locationName": "New York, NY, United States",
+      "day": { "tempMin": 43, "tempMax": 56 },
+      "styleDirectionIndex": 0,
+      "moments": [
+        { "label": "Walk out the door", "timeRange": "7-9am", "temp": 44, "sunFeel": 46, "shadeFeel": 40, "windSpeed": 11, "uvIndex": 1.6, "precipChance": 10 },
+        { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 56, "sunFeel": 60, "shadeFeel": 52, "windSpeed": 8, "uvIndex": 4.2, "precipChance": 5 },
+        { "label": "By evening", "timeRange": "6-10pm", "temp": 47, "sunFeel": 49, "shadeFeel": 43, "windSpeed": 10, "uvIndex": 0.2, "precipChance": 10 }
+      ],
+      "candidates": [
+        { "title": "Black wool blazer", "brand": "Toteme", "category": "Blazers", "price": 720, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Cream cashmere crewneck", "brand": "Khaite", "category": "Sweaters", "price": 980, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Dark rinse straight jean", "brand": "Citizens of Humanity", "category": "Jeans", "price": 238, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Black leather loafer", "brand": "Aeyde", "category": "Loafers", "price": 395, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Burgundy shoulder bag", "brand": "Savette", "category": "Bags", "price": 1290, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Charcoal wool coat", "brand": "The Row", "category": "Coats", "price": 2890, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } }
+      ]
+    },
+    {
+      "id": "creator-la-stable",
+      "locationName": "Los Angeles, CA, United States",
+      "day": { "tempMin": 64, "tempMax": 72 },
+      "styleDirectionIndex": 1,
+      "moments": [
+        { "label": "Walk out the door", "timeRange": "7-9am", "temp": 65, "sunFeel": 66, "shadeFeel": 63, "windSpeed": 5, "uvIndex": 1.5, "precipChance": 0 },
+        { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 72, "sunFeel": 75, "shadeFeel": 70, "windSpeed": 6, "uvIndex": 7.6, "precipChance": 0 },
+        { "label": "By evening", "timeRange": "6-10pm", "temp": 67, "sunFeel": 68, "shadeFeel": 65, "windSpeed": 5, "uvIndex": 0.4, "precipChance": 0 }
+      ],
+      "candidates": [
+        { "title": "White poplin shirt", "brand": "Tove", "category": "Shirts", "price": 390, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Sand silk tank", "brand": "Loulou Studio", "category": "Tops", "price": 175, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Olive relaxed trouser", "brand": "The Frankie Shop", "category": "Trousers", "price": 225, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Tan suede mule", "brand": "A.Emery", "category": "Mules", "price": 260, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Brown woven tote", "brand": "Dragon Diffusion", "category": "Bags", "price": 470, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Stone linen blazer", "brand": "Deiji Studios", "category": "Blazers", "price": 340, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } }
+      ]
+    }
+  ]
+}
