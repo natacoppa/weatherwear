@@ -2,6 +2,7 @@ import { expect, test } from "@playwright/test";
 import {
   findCreatorOutfitGuardrailViolations,
   findDayOutfitGuardrailViolations,
+  sanitizeDayOutfitForExtremeHeat,
 } from "../src/lib/outfit-output-guardrails";
 import type { CreatorOutfit, DayOutfit } from "../src/lib/types";
 import type { OutfitSignalBrief } from "../src/lib/outfit-signals";
@@ -31,12 +32,16 @@ function signalBrief(overrides: Partial<OutfitSignalBrief> = {}): OutfitSignalBr
 
 function dayOutfit(overrides: Partial<DayOutfit> = {}): DayOutfit {
   return {
+    family: "airy_trouser_separates",
     headline: "Heat-smart city look",
     walkOut: {
       summary: "Warm start before peak sun",
-      top: "White cotton tee",
+      base: {
+        kind: "separates",
+        top: "White cotton tee",
+        bottom: "Stone linen trousers",
+      },
       layer: null,
-      bottom: "Stone linen trousers",
       shoes: "Tan leather sandals",
       accessories: ["Black sunglasses", "Canvas tote"],
     },
@@ -93,6 +98,52 @@ test.describe("outfit output guardrails", () => {
     expect(violations.some((violation) => violation.includes("scarf"))).toBe(true);
   });
 
+  test("sanitizes removable extreme-heat accessories and layers from day outfits", () => {
+    const outfit = dayOutfit({
+      walkOut: {
+        ...dayOutfit().walkOut,
+        layer: "Stone gray cotton bomber jacket",
+        accessories: ["Sage linen scarf", "Black sunglasses"],
+      },
+      carry: {
+        ...dayOutfit().carry,
+        add: ["Camel silk scarf", "SPF 30"],
+        remove: ["Sage knit scarf"],
+      },
+      evening: {
+        ...dayOutfit().evening,
+        add: ["Cream cashmere sweater", "Water bottle"],
+      },
+      bagEssentials: ["Light wool scarf", "Water bottle"],
+    });
+
+    const sanitized = sanitizeDayOutfitForExtremeHeat(outfit, signalBrief());
+
+    expect(sanitized.walkOut.layer).toBeNull();
+    expect(sanitized.walkOut.accessories).toEqual(["Black sunglasses"]);
+    expect(sanitized.carry.add).toEqual(["SPF 30"]);
+    expect(sanitized.carry.remove).toEqual([]);
+    expect(sanitized.evening.add).toEqual(["Water bottle"]);
+    expect(sanitized.bagEssentials).toEqual(["Water bottle"]);
+    expect(findDayOutfitGuardrailViolations(sanitized, signalBrief())).toEqual([]);
+  });
+
+  test("does not mutate day outfits when extreme heat is off", () => {
+    const outfit = dayOutfit({
+      walkOut: {
+        ...dayOutfit().walkOut,
+        accessories: ["Sage linen scarf"],
+      },
+    });
+
+    const sanitized = sanitizeDayOutfitForExtremeHeat(outfit, signalBrief({
+      peakHeat: "warm",
+      overrides: { extremeHeat: false, extremeCold: false, footwear: false },
+    }));
+
+    expect(sanitized).toEqual(outfit);
+  });
+
   test("does not reject mild-day blazers when extreme heat is off", () => {
     const violations = findDayOutfitGuardrailViolations(dayOutfit({
       walkOut: {
@@ -120,6 +171,13 @@ test.describe("outfit output guardrails", () => {
 
     expect(violations.some((violation) => violation.includes("footwear"))).toBe(true);
     expect(violations.some((violation) => violation.includes("heel"))).toBe(true);
+  });
+
+  test("rejects outfits that drift outside the selected family", () => {
+    const violations = findDayOutfitGuardrailViolations(dayOutfit(), signalBrief(), "skirt_separates");
+
+    expect(violations.some((violation) => violation.includes("expected \"skirt_separates\""))).toBe(true);
+    expect(violations.some((violation) => violation.includes("does not match"))).toBe(true);
   });
 
   test("validates creator outfits after candidate enrichment", () => {

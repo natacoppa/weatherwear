@@ -10,6 +10,7 @@ import { SearchControls } from "@/components/search-controls";
 import { useRecents } from "@/hooks/use-recents";
 import { useSearchForm, type SearchFormState } from "@/hooks/use-search-form";
 import { apiFetch } from "@/lib/api-fetch";
+import { buildDayVariationHeaders, rememberDayOutfitFamily } from "@/lib/outfit-family-client";
 import { shopUrl } from "@/lib/shop";
 import type { CreatorInfo, CreatorOutfit, TodayResult, TripResult } from "@/lib/types";
 
@@ -82,12 +83,16 @@ export default function AppPage() {
     setLoading(true);
     setError(null);
     try {
-      const res = await apiFetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${day}`, { signal: ctrl.signal });
+      const res = await apiFetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${day}`, {
+        signal: ctrl.signal,
+        headers: buildDayVariationHeaders(),
+      });
       if (!res.ok) throw new Error(await readError(res));
       const data = (await res.json()) as TodayResult;
       // Guard: response body can resolve after abort() if the browser
       // already buffered it. Check the signal before writing state.
       if (ctrl.signal.aborted) return;
+      rememberDayOutfitFamily(data.outfit.family);
       setTodayResult(data);
       setDayIndex(data.dayIndex);
     } catch (e) {
@@ -129,10 +134,14 @@ export default function AppPage() {
     drillCtrl.current = ctrl;
     setDrillLoading(true);
     try {
-      const res = await apiFetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${dayIdx}`, { signal: ctrl.signal });
+      const res = await apiFetch(`/api/outfit-day?q=${encodeURIComponent(q)}&day=${dayIdx}`, {
+        signal: ctrl.signal,
+        headers: buildDayVariationHeaders(),
+      });
       if (!res.ok) throw new Error(await readError(res));
       const data = (await res.json()) as TodayResult;
       if (ctrl.signal.aborted) return;
+      rememberDayOutfitFamily(data.outfit.family);
       setDrillDay(data);
     } catch (e) {
       if (isAbort(e)) return;

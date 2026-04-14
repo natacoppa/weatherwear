@@ -9,6 +9,7 @@
 // to have run this before using the result.
 
 import type { DayOutfit, CreatorOutfit, TripResult } from "@/lib/types";
+import { isDayOutfitFamily } from "@/lib/outfit-family";
 
 export class AIShapeError extends Error {
   constructor(message: string, public readonly raw: unknown) {
@@ -30,6 +31,33 @@ function strArray(v: unknown): string[] {
   return v.filter((x): x is string => typeof x === "string");
 }
 
+function dayOutfitBase(v: unknown): DayOutfit["walkOut"]["base"] {
+  if (!isObject(v)) throw new AIShapeError("walkOut.base missing", v);
+  if (v.kind === "separates") {
+    const top = str(v.top);
+    const bottom = str(v.bottom);
+    if (!top || !bottom) {
+      throw new AIShapeError("separates base requires top and bottom", v);
+    }
+    return {
+      kind: "separates",
+      top,
+      bottom,
+    };
+  }
+  if (v.kind === "dress") {
+    const dress = str(v.dress);
+    if (!dress) {
+      throw new AIShapeError("dress base requires dress", v);
+    }
+    return {
+      kind: "dress",
+      dress,
+    };
+  }
+  throw new AIShapeError("walkOut.base kind invalid", v);
+}
+
 export function assertDayOutfit(raw: unknown): DayOutfit {
   if (!isObject(raw)) throw new AIShapeError("not an object", raw);
   if (!isObject(raw.walkOut)) throw new AIShapeError("walkOut missing", raw);
@@ -39,14 +67,18 @@ export function assertDayOutfit(raw: unknown): DayOutfit {
   const walkOut = raw.walkOut;
   const carry = raw.carry;
   const evening = raw.evening;
+  const family = str(raw.family);
+  if (!isDayOutfitFamily(family)) {
+    throw new AIShapeError("family missing or invalid", raw);
+  }
 
   return {
+    family,
     headline: str(raw.headline),
     walkOut: {
       summary: str(walkOut.summary),
-      top: str(walkOut.top),
+      base: dayOutfitBase(walkOut.base),
       layer: typeof walkOut.layer === "string" ? walkOut.layer : null,
-      bottom: str(walkOut.bottom),
       shoes: str(walkOut.shoes),
       accessories: strArray(walkOut.accessories),
     },

@@ -1,5 +1,6 @@
 import type { OutfitSignalBrief } from "@/lib/outfit-signals";
 import type { CreatorOutfit, DayOutfit } from "@/lib/types";
+import { dayOutfitMatchesFamily, type DayOutfitFamily } from "@/lib/outfit-family";
 
 const EXTREME_HEAT_DISALLOWED = [
   "jacket",
@@ -21,15 +22,23 @@ const NON_WALKABLE_FOOTWEAR = [
 ] as const;
 
 function collectDayFields(outfit: DayOutfit): string[] {
+  const baseFields = outfit.walkOut.base.kind === "dress"
+    ? [outfit.walkOut.base.dress]
+    : [outfit.walkOut.base.top, outfit.walkOut.base.bottom];
   return [
-    outfit.walkOut.top,
+    outfit.family,
+    outfit.walkOut.summary,
+    ...baseFields,
     outfit.walkOut.layer,
-    outfit.walkOut.bottom,
     outfit.walkOut.shoes,
     ...outfit.walkOut.accessories,
+    outfit.carry.summary,
     ...outfit.carry.add,
     ...outfit.carry.remove,
+    outfit.carry.note,
+    outfit.evening.summary,
     ...outfit.evening.add,
+    outfit.evening.note,
     ...outfit.bagEssentials,
   ].filter((value): value is string => Boolean(value));
 }
@@ -83,6 +92,20 @@ function findExtremeHeatViolations(fields: string[]): string[] {
     .map((token) => `Extreme heat guardrail violation: found disallowed item "${token}".`);
 }
 
+function includesExtremeHeatDisallowed(value: string | null | undefined): boolean {
+  if (!value) return false;
+  const normalized = value.toLowerCase();
+  return EXTREME_HEAT_DISALLOWED.some((token) => normalized.includes(token));
+}
+
+function stripExtremeHeatDisallowed(values: string[]): string[] {
+  return values.filter((value) => !includesExtremeHeatDisallowed(value));
+}
+
+function sanitizeExtremeHeatText(value: string): string {
+  return includesExtremeHeatDisallowed(value) ? "" : value;
+}
+
 function findCreatorExtremeHeatStructuralViolations(outfit: CreatorOutfit["outfit"]): string[] {
   const violations: string[] = [];
 
@@ -100,8 +123,19 @@ function findFootwearViolations(fields: string[]): string[] {
     .map((token) => `Walking-footwear guardrail violation: found non-walkable footwear "${token}".`);
 }
 
-export function findDayOutfitGuardrailViolations(outfit: DayOutfit, signalBrief: OutfitSignalBrief): string[] {
+export function findDayOutfitGuardrailViolations(
+  outfit: DayOutfit,
+  signalBrief: OutfitSignalBrief,
+  expectedFamily?: DayOutfitFamily,
+): string[] {
   const violations: string[] = [];
+  const familyToCheck = expectedFamily ?? outfit.family;
+  if (expectedFamily && outfit.family !== expectedFamily) {
+    violations.push(`Family alignment violation: expected "${expectedFamily}" but model returned "${outfit.family}".`);
+  }
+  if (!dayOutfitMatchesFamily(outfit, familyToCheck)) {
+    violations.push(`Family alignment violation: outfit does not match the "${familyToCheck}" family.`);
+  }
   if (signalBrief.overrides.extremeHeat) {
     violations.push(...findExtremeHeatViolations(collectDayFields(outfit)));
   }
@@ -109,6 +143,36 @@ export function findDayOutfitGuardrailViolations(outfit: DayOutfit, signalBrief:
     violations.push(...findFootwearViolations(collectDayFootwearFields(outfit)));
   }
   return violations;
+}
+
+export function sanitizeDayOutfitForExtremeHeat(outfit: DayOutfit, signalBrief: OutfitSignalBrief): DayOutfit {
+  if (!signalBrief.overrides.extremeHeat) {
+    return outfit;
+  }
+
+  return {
+    ...outfit,
+    walkOut: {
+      ...outfit.walkOut,
+      summary: sanitizeExtremeHeatText(outfit.walkOut.summary),
+      layer: includesExtremeHeatDisallowed(outfit.walkOut.layer) ? null : outfit.walkOut.layer,
+      accessories: stripExtremeHeatDisallowed(outfit.walkOut.accessories),
+    },
+    carry: {
+      ...outfit.carry,
+      summary: sanitizeExtremeHeatText(outfit.carry.summary),
+      add: stripExtremeHeatDisallowed(outfit.carry.add),
+      remove: stripExtremeHeatDisallowed(outfit.carry.remove),
+      note: sanitizeExtremeHeatText(outfit.carry.note),
+    },
+    evening: {
+      ...outfit.evening,
+      summary: sanitizeExtremeHeatText(outfit.evening.summary),
+      add: stripExtremeHeatDisallowed(outfit.evening.add),
+      note: sanitizeExtremeHeatText(outfit.evening.note),
+    },
+    bagEssentials: stripExtremeHeatDisallowed(outfit.bagEssentials),
+  };
 }
 
 export function findCreatorOutfitGuardrailViolations(

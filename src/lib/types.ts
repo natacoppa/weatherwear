@@ -2,14 +2,26 @@
 // Mirror the API route shapes in src/app/api/*.
 
 import type { CreatorCoverage, CreatorSource } from "@/lib/creator-catalog";
+import type { DayOutfitFamily } from "@/lib/outfit-family";
+
+export type DayOutfitBase =
+  | {
+      kind: "separates";
+      top: string;
+      bottom: string;
+    }
+  | {
+      kind: "dress";
+      dress: string;
+    };
 
 export interface DayOutfit {
+  family: DayOutfitFamily;
   headline: string;
   walkOut: {
     summary: string;
-    top: string;
+    base: DayOutfitBase;
     layer: string | null;
-    bottom: string;
     shoes: string;
     accessories: string[];
   };

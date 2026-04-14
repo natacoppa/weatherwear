@@ -14,14 +14,19 @@ import {
   type PromptDaySummary,
   type PromptMomentWeather,
 } from "../src/lib/outfit-prompt";
+import { selectDayOutfitFamily, type DayOutfitFamily } from "../src/lib/outfit-family";
 import { buildOutfitSignalBrief } from "../src/lib/outfit-signals";
 
 interface DayBenchmarkScenario {
   id: string;
   locationName: string;
+  benchmarkDate: string;
   day: PromptDaySummary;
   paletteIndex: number;
   moments: PromptMomentWeather[];
+  variationId: string;
+  recentFamilies: DayOutfitFamily[];
+  reviewFocus?: string;
 }
 
 interface CreatorBenchmarkScenario {
@@ -31,11 +36,13 @@ interface CreatorBenchmarkScenario {
   styleDirectionIndex: number;
   moments: PromptMomentWeather[];
   candidates: CreatorBenchmarkCandidate[];
+  reviewFocus?: string;
 }
 
 interface CreatorBenchmarkFixture {
   validationScope: string;
   note: string;
+  manualReviewChecklist?: string[];
   scenarios: CreatorBenchmarkScenario[];
 }
 
@@ -64,22 +71,40 @@ function main() {
   const daySnapshots = dayFixture.map((scenario) => {
     const colorDirection = selectPromptDirection(DAY_COLOR_DIRECTIONS, { index: scenario.paletteIndex });
     const transition = classifyTransitionIntensity(scenario.moments);
+    const signalBrief = buildOutfitSignalBrief({
+      locationName: scenario.locationName,
+      moments: scenario.moments,
+      transition,
+    });
+    const familySelection = selectDayOutfitFamily({
+      signalBrief,
+      variationContext: {
+        variationId: scenario.variationId,
+        recentFamilies: scenario.recentFamilies,
+      },
+      locationName: scenario.locationName,
+      date: scenario.benchmarkDate,
+    });
     return {
       id: scenario.id,
       locationName: scenario.locationName,
       paletteDirection: colorDirection,
       transition,
+      selectedFamily: familySelection.family,
+      validFamilies: familySelection.validFamilies,
+      familySeed: familySelection.seed,
+      benchmarkDate: scenario.benchmarkDate,
+      variationId: scenario.variationId,
+      recentFamilies: scenario.recentFamilies,
+      reviewFocus: scenario.reviewFocus || null,
       prompt: buildDayOutfitPrompt({
         locationName: scenario.locationName,
         day: scenario.day,
         weatherContext: formatDayWeatherContext(scenario.moments),
         colorDirection,
         transition,
-        signalBrief: buildOutfitSignalBrief({
-          locationName: scenario.locationName,
-          moments: scenario.moments,
-          transition,
-        }),
+        signalBrief,
+        selectedFamily: familySelection.family,
       }),
     };
   });
@@ -112,6 +137,8 @@ function main() {
       transition,
       validationScope: creatorFixture.validationScope,
       note: creatorFixture.note,
+      manualReviewChecklist: creatorFixture.manualReviewChecklist || [],
+      reviewFocus: scenario.reviewFocus || null,
       blockCount: blocks.length,
       imageBlockCount: blocks.filter((block) => block.type === "image").length,
       prompt,

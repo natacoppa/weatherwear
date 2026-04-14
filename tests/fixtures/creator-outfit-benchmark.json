@@ -1,6 +1,11 @@
 {
   "validationScope": "prompt-assembly-only",
   "note": "Image payloads are tiny deterministic placeholders that exercise the image-aware content-block shape without pretending to validate full visual styling quality.",
+  "manualReviewChecklist": [
+    "Run one live creator-mode request for each hot-weather scenario after prompt review.",
+    "Check whether trousers still dominate when skirts, shorts, sandals, or airy separates are plausible from the candidate set.",
+    "Treat persistent trouser-default outputs as evidence that prompt preference may not be enough."
+  ],
   "scenarios": [
     {
       "id": "creator-nyc-polished",
@@ -38,6 +43,26 @@
         { "title": "Tan suede mule", "brand": "A.Emery", "category": "Mules", "price": 260, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
         { "title": "Brown woven tote", "brand": "Dragon Diffusion", "category": "Bags", "price": 470, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
         { "title": "Stone linen blazer", "brand": "Deiji Studios", "category": "Blazers", "price": 340, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } }
+      ]
+    },
+    {
+      "id": "creator-miami-heat",
+      "locationName": "Miami, FL, United States",
+      "day": { "tempMin": 81, "tempMax": 90 },
+      "styleDirectionIndex": 1,
+      "reviewFocus": "Manual live check: prefer skirts, shorts, sandals, sleeveless tops, or airy separates over trouser-first styling when those candidates are available.",
+      "moments": [
+        { "label": "Walk out the door", "timeRange": "7-9am", "temp": 82, "sunFeel": 87, "shadeFeel": 81, "windSpeed": 6, "uvIndex": 2.4, "precipChance": 15, "humidity": 83 },
+        { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 90, "sunFeel": 97, "shadeFeel": 88, "windSpeed": 8, "uvIndex": 9.3, "precipChance": 30, "humidity": 76 },
+        { "label": "By evening", "timeRange": "6-10pm", "temp": 85, "sunFeel": 89, "shadeFeel": 83, "windSpeed": 7, "uvIndex": 0.5, "precipChance": 40, "humidity": 82 }
+      ],
+      "candidates": [
+        { "title": "White ribbed tank", "brand": "Toteme", "category": "Tops", "price": 120, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Terracotta cotton poplin skirt", "brand": "Matteau", "category": "Skirts", "price": 360, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Sand linen shorts", "brand": "Deiji Studios", "category": "Shorts", "price": 170, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Brown leather slide sandal", "brand": "A.Emery", "category": "Sandals", "price": 245, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Natural woven tote", "brand": "Dragon Diffusion", "category": "Bags", "price": 470, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } },
+        { "title": "Olive relaxed trouser", "brand": "The Frankie Shop", "category": "Trousers", "price": 225, "image": { "mediaType": "image/png", "data": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO2Z0uoAAAAASUVORK5CYII=" } }
       ]
     }
   ]

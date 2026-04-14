@@ -11,6 +11,13 @@ import {
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 import { requireApiKey } from "@/lib/api-auth";
 import {
+  parseRecentFamilies,
+  RECENT_FAMILIES_HEADER,
+  selectDayOutfitFamily,
+  VARIATION_ID_HEADER,
+  type DayVariationContext,
+} from "@/lib/outfit-family";
+import {
   buildDayOutfitPrompt,
   classifyTransitionIntensity,
   DAY_COLOR_DIRECTIONS,
@@ -19,7 +26,11 @@ import {
   type PromptMomentWeather,
 } from "@/lib/outfit-prompt";
 import { buildOutfitSignalBrief } from "@/lib/outfit-signals";
-import { buildGuardrailRetryInstruction, findDayOutfitGuardrailViolations } from "@/lib/outfit-output-guardrails";
+import {
+  buildGuardrailRetryInstruction,
+  findDayOutfitGuardrailViolations,
+  sanitizeDayOutfitForExtremeHeat,
+} from "@/lib/outfit-output-guardrails";
 
 function analyzeMoment(
   hours: HourlyForecast[],
@@ -47,6 +58,13 @@ function analyzeMoment(
     windSpeed: wind,
     uvIndex: uv,
     precipChance: precip,
+  };
+}
+
+export function readDayVariationContext(headers: Headers): DayVariationContext {
+  return {
+    variationId: headers.get(VARIATION_ID_HEADER)?.trim() || null,
+    recentFamilies: parseRecentFamilies(headers.get(RECENT_FAMILIES_HEADER)),
   };
 }
 
@@ -104,6 +122,13 @@ export async function GET(req: NextRequest) {
       moments,
       transition,
     });
+    const variationContext = readDayVariationContext(req.headers);
+    const familySelection = selectDayOutfitFamily({
+      signalBrief,
+      variationContext,
+      locationName,
+      date: targetDate,
+    });
     const prompt = buildDayOutfitPrompt({
       locationName,
       day: { tempMin: dayData.tempMin, tempMax: dayData.tempMax },
@@ -111,6 +136,7 @@ export async function GET(req: NextRequest) {
       colorDirection,
       transition,
       signalBrief,
+      selectedFamily: familySelection.family,
     });
     const createOutfit = async (promptText: string) => {
       const message = await anthropic.messages.create({
@@ -124,13 +150,19 @@ export async function GET(req: NextRequest) {
     };
 
     let outfit = await createOutfit(prompt);
-    let violations = findDayOutfitGuardrailViolations(outfit, signalBrief);
+    let violations = findDayOutfitGuardrailViolations(outfit, signalBrief, familySelection.family);
 
     if (violations.length > 0) {
       outfit = await createOutfit(`${prompt}\n\n${buildGuardrailRetryInstruction(violations, signalBrief)}`);
-      violations = findDayOutfitGuardrailViolations(outfit, signalBrief);
+      violations = findDayOutfitGuardrailViolations(outfit, signalBrief, familySelection.family);
       if (violations.length > 0) {
-        throw new AIShapeError(`weather guardrail violation: ${violations.join("; ")}`, outfit);
+        const sanitizedOutfit = sanitizeDayOutfitForExtremeHeat(outfit, signalBrief);
+        const sanitizedViolations = findDayOutfitGuardrailViolations(sanitizedOutfit, signalBrief, familySelection.family);
+        if (sanitizedViolations.length === 0) {
+          outfit = sanitizedOutfit;
+        } else {
+          throw new AIShapeError(`weather guardrail violation: ${sanitizedViolations.join("; ")}`, sanitizedOutfit);
+        }
       }
     }
 

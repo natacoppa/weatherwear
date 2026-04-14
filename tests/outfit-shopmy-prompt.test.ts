@@ -94,6 +94,10 @@ test.describe("creator outfit prompt composition", () => {
     });
 
     expect(prompt).toContain("Build for peak heat, not the morning.");
+    expect(prompt).toContain("Hot-weather silhouette preference:");
+    expect(prompt).toContain("Rank skirts, shorts, sandals, sleeveless tops, and airy separates ahead of trousers.");
+    expect(prompt).toContain("Trousers are a fallback, not the default.");
+    expect(prompt).not.toContain("dresses, skirts, shorts, sandals");
   });
 
   test("creator benchmark blocks preserve image-aware content shape", () => {

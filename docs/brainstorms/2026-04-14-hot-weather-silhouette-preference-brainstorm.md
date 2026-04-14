@@ -1,10 +1,12 @@
 ---
 topic: Hot-weather silhouette preference
 date: 2026-04-14
-status: active
+status: superseded
 ---
 
 # Hot-Weather Silhouette Preference
+
+> Superseded by `docs/brainstorms/2026-04-14-outfit-family-variation-brainstorm.md`, which captures the broader direction: flexible base silhouettes plus controlled user-to-user variation.
 
 ## What We're Building
 
@@ -154,6 +156,45 @@ Only if Stage 1 still feels pants-shaped should we do the larger structural chan
 - add a real dress path to the response schema
 - allow outfit assembly to choose between `dress` and `top + bottom`
 
+## Decision Rule: When Prompt Preference Is Not Enough
+
+We should **not** jump to schema work just because one or two outputs still look too trouser-first. Prompt work needs a fair shot first.
+
+Prompt preference should be considered **good enough** if, after implementation and spot-checking a small benchmark set of hot-weather scenarios:
+
+- dresses, skirts, shorts, and sandals begin showing up naturally in hot-weather outputs
+- trousers are no longer the dominant default on extreme-heat days
+- the outputs feel more obviously heat-native without losing coherence or city/style character
+
+We should escalate to schema support only if one or more of these remain true **after** the prompt-preference patch:
+
+1. **Dresses still almost never appear**
+   Even in scenarios where a human stylist would frequently choose one.
+
+2. **The model keeps forcing one-piece silhouettes into separates logic**
+   For example, repeatedly choosing top + bottom combinations that feel more contrived than a simple dress would.
+
+3. **Prompt wording starts doing unnatural contortions**
+   If we find ourselves adding increasingly specific dress-preferring language and the system still resists, that is a sign the contract is fighting the desired outcome.
+
+4. **Creator mode clearly suffers from the same structural ceiling**
+   If the candidate set contains appropriate dresses but the route almost never picks them, that suggests the problem is deeper than wording.
+
+## If We Escalate: Preferred Schema Direction
+
+If Stage 2 becomes necessary, the first schema move should be modest:
+
+- add a real `dress` slot/path
+- allow `top` and `bottom` to be nullable when `dress` is used
+
+This is preferable to a full silhouette abstraction in the first pass because it:
+
+- directly addresses the current product gap
+- keeps API and UI changes understandable
+- avoids turning a focused improvement into a larger outfit-engine redesign
+
+Broader one-piece modeling (jumpsuits, sets, more flexible base silhouettes) should be treated as later work only if the `dress` path still proves too narrow.
+
 ## Open Questions
 
 1. Should the hot-weather preference be triggered only for `extreme` heat, or also for `hot` days in the mid/high 80s?
@@ -166,4 +207,3 @@ Only if Stage 1 still feels pants-shaped should we do the larger structural chan
 - Personal style preferences
 - Occasion-specific dress codes
 - A full simplification pass on the entire styling engine
-

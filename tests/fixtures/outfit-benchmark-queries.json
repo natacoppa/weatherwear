@@ -2,6 +2,9 @@
   {
     "id": "nyc-cold-morning",
     "locationName": "New York, NY, United States",
+    "benchmarkDate": "2026-01-15",
+    "variationId": "bench-a1",
+    "recentFamilies": ["coat_anchored_separates"],
     "day": { "tempMin": 38, "tempMax": 47 },
     "paletteIndex": 0,
     "moments": [
@@ -13,8 +16,12 @@
   {
     "id": "nyc-heatwave-guardrail",
     "locationName": "New York, NY, United States",
+    "benchmarkDate": "2026-07-18",
+    "variationId": "bench-b2",
+    "recentFamilies": ["airy_trouser_separates", "shorts_separates"],
     "day": { "tempMin": 71, "tempMax": 100 },
     "paletteIndex": 7,
+    "reviewFocus": "Manual live check: trousers should no longer feel like the obvious default; dresses, skirts, shorts, sandals, and airy separates should feel more plausible.",
     "moments": [
       { "label": "Walk out the door", "timeRange": "7-9am", "temp": 71, "sunFeel": 71, "shadeFeel": 67, "windSpeed": 4, "uvIndex": 2.2, "precipChance": 5, "humidity": 78 },
       { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 100, "sunFeel": 101, "shadeFeel": 84, "windSpeed": 5, "uvIndex": 9.8, "precipChance": 0, "humidity": 46 },
@@ -24,6 +31,9 @@
   {
     "id": "la-summer-afternoon",
     "locationName": "Los Angeles, CA, United States",
+    "benchmarkDate": "2026-08-03",
+    "variationId": "bench-c3",
+    "recentFamilies": ["easy_dress"],
     "day": { "tempMin": 66, "tempMax": 77 },
     "paletteIndex": 5,
     "moments": [
@@ -35,6 +45,9 @@
   {
     "id": "tokyo-spring-rain",
     "locationName": "Tokyo, Japan",
+    "benchmarkDate": "2026-04-09",
+    "variationId": "bench-d4",
+    "recentFamilies": ["soft_layered_separates"],
     "day": { "tempMin": 56, "tempMax": 63 },
     "paletteIndex": 2,
     "moments": [
@@ -46,6 +59,9 @@
   {
     "id": "london-overcast",
     "locationName": "London, England, United Kingdom",
+    "benchmarkDate": "2026-03-02",
+    "variationId": "bench-e5",
+    "recentFamilies": ["dress_plus_layer"],
     "day": { "tempMin": 48, "tempMax": 54 },
     "paletteIndex": 7,
     "moments": [
@@ -57,6 +73,9 @@
   {
     "id": "paris-autumn",
     "locationName": "Paris, France",
+    "benchmarkDate": "2026-10-06",
+    "variationId": "bench-f6",
+    "recentFamilies": ["structured_separates"],
     "day": { "tempMin": 51, "tempMax": 58 },
     "paletteIndex": 1,
     "moments": [
@@ -68,8 +87,12 @@
   {
     "id": "miami-humid-heat",
     "locationName": "Miami, FL, United States",
+    "benchmarkDate": "2026-07-22",
+    "variationId": "bench-g7",
+    "recentFamilies": ["city_dress", "skirt_separates"],
     "day": { "tempMin": 82, "tempMax": 89 },
     "paletteIndex": 4,
+    "reviewFocus": "Manual live check: humid heat should favor low-bulk silhouettes and breathable polish instead of heavier city tailoring.",
     "moments": [
       { "label": "Walk out the door", "timeRange": "7-9am", "temp": 83, "sunFeel": 88, "shadeFeel": 82, "windSpeed": 6, "uvIndex": 2.5, "precipChance": 20, "humidity": 84 },
       { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 89, "sunFeel": 97, "shadeFeel": 87, "windSpeed": 8, "uvIndex": 9.4, "precipChance": 35, "humidity": 78 },
@@ -79,6 +102,9 @@
   {
     "id": "chicago-wind-chill",
     "locationName": "Chicago, IL, United States",
+    "benchmarkDate": "2026-01-28",
+    "variationId": "bench-h8",
+    "recentFamilies": ["winter_separates"],
     "day": { "tempMin": 28, "tempMax": 35 },
     "paletteIndex": 0,
     "moments": [
@@ -90,6 +116,9 @@
   {
     "id": "sf-fog-wind",
     "locationName": "San Francisco, CA, United States",
+    "benchmarkDate": "2026-06-11",
+    "variationId": "bench-i9",
+    "recentFamilies": ["light_separates"],
     "day": { "tempMin": 55, "tempMax": 63 },
     "paletteIndex": 6,
     "moments": [

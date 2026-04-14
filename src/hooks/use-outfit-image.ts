@@ -6,13 +6,29 @@ import { apiFetch } from "@/lib/api-fetch";
 
 // Session-scoped cache — survives DayCard prop changes so navigating
 // forward/back through days doesn't refetch. Keyed on
-// `location|date|headline` so edits to the same day's outfit invalidate.
+// `location|date|family+garments` so distinct valid silhouettes for the same
+// day do not collide in cache.
 // Unbounded for session lifetime. Acceptable for this product's action
 // volume; if usage patterns change, cap via LRU.
 const cache = new Map<string, string | null>();
 
+function outfitSignature(r: TodayResult): string {
+  const base =
+    r.outfit.walkOut.base.kind === "dress"
+      ? `dress:${r.outfit.walkOut.base.dress}`
+      : `separates:${r.outfit.walkOut.base.top}|${r.outfit.walkOut.base.bottom}`;
+
+  return [
+    r.outfit.family,
+    base,
+    r.outfit.walkOut.layer ?? "",
+    r.outfit.walkOut.shoes,
+    ...r.outfit.walkOut.accessories,
+  ].join("|");
+}
+
 function cacheKey(r: TodayResult) {
-  return `${r.location}|${r.day.date}|${r.outfit.headline}`;
+  return `${r.location}|${r.day.date}|${outfitSignature(r)}`;
 }
 
 /**
