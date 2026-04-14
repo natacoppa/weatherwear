@@ -76,6 +76,52 @@ const TROUSER_FAMILIES = new Set<DayOutfitFamily>([
   "tailored_trouser_separates",
 ]);
 
+const SKIRT_BOTTOM_KEYWORDS = ["skirt", "skort", "culotte"] as const;
+const SHORT_BOTTOM_KEYWORDS = ["short", "boxer"] as const;
+const TROUSER_BOTTOM_KEYWORDS = ["trouser", "pant", "slack", "chino", "jean", "denim", "legging", "capri"] as const;
+const STRUCTURED_KEYWORDS = [
+  "structured",
+  "tailored",
+  "button-down",
+  "button down",
+  "blouse",
+  "vest",
+  "loafer",
+  "slingback",
+  "ballet",
+  "pleated",
+  "mule",
+  "leather tote",
+  "structured tote",
+] as const;
+const LIGHT_LAYER_KEYWORDS = [
+  "cardigan",
+  "overshirt",
+  "shirt jacket",
+  "lightweight jacket",
+  "light jacket",
+  "linen jacket",
+  "cotton jacket",
+  "bomber",
+  "wrap",
+  "crewneck",
+] as const;
+const HEAVY_LAYER_KEYWORDS = [
+  "coat",
+  "trench",
+  "parka",
+  "puffer",
+  "wool",
+  "cashmere",
+  "shearling",
+  "fleece",
+  "thermal",
+  "winter",
+] as const;
+const WINTER_SHOE_KEYWORDS = ["boot", "clog", "loafer"] as const;
+const EASY_SHOE_KEYWORDS = ["sandal", "slide", "flat", "sneaker", "espadrille"] as const;
+const POLISHED_SHOE_KEYWORDS = ["loafer", "ballet", "slingback", "mule", "mary jane"] as const;
+
 export function isDayOutfitFamily(value: string): value is DayOutfitFamily {
   return DAY_OUTFIT_FAMILIES.includes(value as DayOutfitFamily);
 }
@@ -245,21 +291,66 @@ function hasKeyword(value: string | null | undefined, keywords: string[]): boole
   return keywords.some((keyword) => text.includes(keyword));
 }
 
+function bundleTexts(outfit: {
+  walkOut: {
+    base: { kind: "separates"; top: string; bottom: string } | { kind: "dress"; dress: string };
+    layer: string | null;
+    shoes?: string | null;
+    accessories?: string[];
+  };
+}): string[] {
+  const baseTexts = outfit.walkOut.base.kind === "dress"
+    ? [outfit.walkOut.base.dress]
+    : [outfit.walkOut.base.top, outfit.walkOut.base.bottom];
+
+  return [
+    ...baseTexts,
+    outfit.walkOut.layer,
+    outfit.walkOut.shoes,
+    ...(outfit.walkOut.accessories || []),
+  ].filter((value): value is string => Boolean(value));
+}
+
+function hasAnyKeyword(values: string[], keywords: readonly string[]): boolean {
+  return values.some((value) => hasKeyword(value, [...keywords]));
+}
+
 export function dayOutfitMatchesFamily(
   outfit: {
     walkOut: {
       base: { kind: "separates"; top: string; bottom: string } | { kind: "dress"; dress: string };
       layer: string | null;
+      shoes?: string | null;
+      accessories?: string[];
     };
   },
   family: DayOutfitFamily,
 ): boolean {
   const { base, layer } = outfit.walkOut;
+  const texts = bundleTexts(outfit);
+  const hasStructured = hasAnyKeyword(texts, STRUCTURED_KEYWORDS);
+  const hasLightLayer = hasAnyKeyword(texts, LIGHT_LAYER_KEYWORDS);
+  const hasHeavyLayer = hasAnyKeyword(texts, HEAVY_LAYER_KEYWORDS);
+  const hasWinterShoes = hasAnyKeyword(texts, WINTER_SHOE_KEYWORDS);
+  const hasEasyShoes = hasAnyKeyword(texts, EASY_SHOE_KEYWORDS);
+  const hasPolishedShoes = hasAnyKeyword(texts, POLISHED_SHOE_KEYWORDS);
 
   if (DRESS_FAMILIES.has(family)) {
     if (base.kind !== "dress") return false;
     if (family === "dress_plus_layer" || family === "dress_with_layering") {
-      return Boolean(layer);
+      return family === "dress_plus_layer"
+        ? Boolean(layer) && hasLightLayer && !hasHeavyLayer
+        : Boolean(layer) && (hasHeavyLayer || hasWinterShoes);
+    }
+    if (layer) return false;
+    if (family === "easy_dress") {
+      return !hasStructured && hasEasyShoes;
+    }
+    if (family === "city_dress") {
+      return hasStructured || hasPolishedShoes;
+    }
+    if (family === "light_dress") {
+      return !hasHeavyLayer;
     }
     return true;
   }
@@ -267,19 +358,41 @@ export function dayOutfitMatchesFamily(
   if (base.kind !== "separates") return false;
 
   if (SKIRT_FAMILIES.has(family)) {
-    return hasKeyword(base.bottom, ["skirt"]);
+    if (!hasKeyword(base.bottom, [...SKIRT_BOTTOM_KEYWORDS])) return false;
+    return family === "skirt_with_tights" ? Boolean(layer) || hasWinterShoes || hasHeavyLayer : true;
   }
 
   if (SHORTS_FAMILIES.has(family)) {
-    return hasKeyword(base.bottom, ["short"]);
+    return hasKeyword(base.bottom, [...SHORT_BOTTOM_KEYWORDS]);
   }
 
   if (TROUSER_FAMILIES.has(family)) {
-    return hasKeyword(base.bottom, ["trouser", "pant", "slack"]);
+    if (!hasKeyword(base.bottom, [...TROUSER_BOTTOM_KEYWORDS])) return false;
+    return family === "tailored_trouser_separates" ? hasStructured : !hasHeavyLayer;
+  }
+
+  if (family === "light_tailored_separates") {
+    return !layer && hasStructured;
+  }
+
+  if (family === "light_separates") {
+    return !layer && !hasStructured;
+  }
+
+  if (family === "soft_layered_separates") {
+    return Boolean(layer) && hasLightLayer && !hasHeavyLayer;
+  }
+
+  if (family === "structured_separates") {
+    return !layer && hasStructured;
+  }
+
+  if (family === "winter_separates") {
+    return Boolean(layer) && (hasHeavyLayer || hasWinterShoes);
   }
 
   if (family === "coat_anchored_separates") {
-    return Boolean(layer);
+    return Boolean(layer) && hasHeavyLayer;
   }
 
   return true;

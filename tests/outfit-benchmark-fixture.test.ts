@@ -6,7 +6,14 @@ test.describe("outfit benchmark fixtures", () => {
   test("day-mode fixture contains all canonical benchmark scenarios", () => {
     const scenarios = JSON.parse(
       fs.readFileSync(path.join(process.cwd(), "tests/fixtures/outfit-benchmark-queries.json"), "utf8"),
-    ) as Array<{ id: string; locationName: string; moments: unknown[]; day: { tempMin: number; tempMax: number }; reviewFocus?: string }>;
+    ) as Array<{
+      id: string;
+      locationName: string;
+      paletteIndex?: number;
+      moments: unknown[];
+      day: { tempMin: number; tempMax: number };
+      reviewFocus?: string;
+    }>;
 
     expect(scenarios).toHaveLength(9);
     expect(scenarios.map((scenario) => scenario.id)).toEqual([
@@ -21,6 +28,7 @@ test.describe("outfit benchmark fixtures", () => {
       "sf-fog-wind",
     ]);
     expect(scenarios.every((scenario) => scenario.locationName && scenario.moments.length >= 2)).toBe(true);
+    expect(scenarios.every((scenario) => typeof scenario.paletteIndex === "number")).toBe(true);
     expect(scenarios.every((scenario) => typeof scenario.day.tempMin === "number" && typeof scenario.day.tempMax === "number")).toBe(true);
     expect(scenarios.every((scenario) => typeof (scenario as { benchmarkDate?: string }).benchmarkDate === "string")).toBe(true);
     expect(scenarios.every((scenario) => typeof (scenario as { variationId?: string }).variationId === "string")).toBe(true);

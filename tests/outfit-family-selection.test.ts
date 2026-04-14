@@ -93,7 +93,13 @@ test.describe("day outfit family selection", () => {
 
   test("family matcher enforces dress and separates lanes", () => {
     expect(
-      dayOutfitMatchesFamily(dayOutfit({ kind: "dress", dress: "Olive cotton midi dress" }), "city_dress"),
+      dayOutfitMatchesFamily({
+        walkOut: {
+          ...dayOutfit({ kind: "dress", dress: "Olive cotton midi dress" }).walkOut,
+          shoes: "Black leather loafers",
+          accessories: ["Structured tote"],
+        },
+      }, "city_dress"),
     ).toBe(true);
     expect(
       dayOutfitMatchesFamily(dayOutfit({ kind: "separates", top: "Tank", bottom: "White poplin skirt" }), "skirt_separates"),
@@ -109,6 +115,35 @@ test.describe("day outfit family selection", () => {
         dayOutfit({ kind: "dress", dress: "Black slip dress" }, "Light cotton cardigan"),
         "dress_plus_layer",
       ),
+    ).toBe(true);
+  });
+
+  test("family matcher distinguishes layered and winter-oriented families", () => {
+    expect(
+      dayOutfitMatchesFamily({
+        walkOut: {
+          ...dayOutfit({ kind: "separates", top: "Cream knit polo", bottom: "Stone chino trousers" }, "Light cotton cardigan").walkOut,
+          shoes: "Leather loafers",
+        },
+      }, "soft_layered_separates"),
+    ).toBe(true);
+
+    expect(
+      dayOutfitMatchesFamily({
+        walkOut: {
+          ...dayOutfit({ kind: "separates", top: "Black merino sweater", bottom: "Charcoal wool trousers" }, "Camel wool coat").walkOut,
+          shoes: "Black leather boots",
+        },
+      }, "winter_separates"),
+    ).toBe(true);
+
+    expect(
+      dayOutfitMatchesFamily({
+        walkOut: {
+          ...dayOutfit({ kind: "separates", top: "White tee", bottom: "Blue denim culottes" }).walkOut,
+          shoes: "Leather flats",
+        },
+      }, "skirt_separates"),
     ).toBe(true);
   });
 });

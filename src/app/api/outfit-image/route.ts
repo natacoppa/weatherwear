@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 import { requireApiKey } from "@/lib/api-auth";
+import { AIShapeError, assertDayOutfit } from "@/lib/ai-shapes";
 import type { DayOutfit } from "@/lib/types";
 
 function describeWalkOutGarments(outfit: DayOutfit): string {
@@ -12,21 +13,33 @@ function describeWalkOutGarments(outfit: DayOutfit): string {
   return [...garments, outfit.walkOut.layer, outfit.walkOut.shoes].filter(Boolean).join(", ");
 }
 
+function isObject(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+export function parseDayOutfitImageRequest(raw: unknown): { outfit: DayOutfit; location: string; temp: number } {
+  if (!isObject(raw)) {
+    throw new AIShapeError("image request body must be an object", raw);
+  }
+
+  const outfit = assertDayOutfit(raw.outfit);
+  const location = typeof raw.location === "string" ? raw.location.trim() : "";
+  const temp = typeof raw.temp === "number" ? raw.temp : NaN;
+
+  if (!location || Number.isNaN(temp)) {
+    throw new AIShapeError("image request requires location and numeric temp", raw);
+  }
+
+  return { outfit, location, temp };
+}
+
 export async function POST(req: NextRequest) {
   const unauthed = requireApiKey(req);
   if (unauthed) return unauthed;
   const limited = rateLimit(req);
   if (limited) return limited;
   try {
-    const { outfit, location, temp } = (await req.json()) as {
-      outfit?: DayOutfit;
-      location?: string;
-      temp?: number;
-    };
-
-    if (!outfit || !location || typeof temp !== "number") {
-      return NextResponse.json({ error: "Missing outfit or location" }, { status: 400 });
-    }
+    const { outfit, location, temp } = parseDayOutfitImageRequest(await req.json());
 
     // Build the image prompt from the exact outfit recommendation
     const garments = describeWalkOutGarments(outfit);
@@ -54,7 +67,14 @@ export async function POST(req: NextRequest) {
 
     const data = await geminiRes.json();
     const parts = data?.candidates?.[0]?.content?.parts || [];
-    const imagePart = parts.find((p: Record<string, unknown>) => "inlineData" in p);
+    const imagePart = parts.find(
+      (part: unknown): part is { inlineData: { mimeType: string; data: string } } =>
+        isObject(part)
+        && "inlineData" in part
+        && isObject(part.inlineData)
+        && typeof part.inlineData.mimeType === "string"
+        && typeof part.inlineData.data === "string",
+    );
 
     if (!imagePart) {
       return NextResponse.json({ error: "No image generated" }, { status: 500 });
@@ -65,6 +85,9 @@ export async function POST(req: NextRequest) {
       image: `data:${imagePart.inlineData.mimeType};base64,${imagePart.inlineData.data}`,
     });
   } catch (error) {
+    if (error instanceof AIShapeError) {
+      return NextResponse.json({ error: error.message }, { status: 400 });
+    }
     console.error("Outfit image error:", error);
     return NextResponse.json({ error: "Failed to generate image" }, { status: 500 });
   }
