@@ -1,143 +1,169 @@
 [
   {
+    "username": "aimeesong",
+    "name": "Aimee Song",
+    "image": "https://avatar-cdn.liketoknow.it/4bd2d2c8-ff30-11e5-96ef-22000b0f8f3a.fd158d28-2a86-11e7-8c51-acbc32aa1441?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 341,
+    "topBrands": [
+      "Revolve Clothing (Global)",
+      "Mytheresa (US/CA)",
+      "Amiya",
+      "NET-A-PORTER (US)",
+      "Nordstrom"
+    ],
+    "sources": [
+      "ltk"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 79,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 74,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 74,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 79,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 7,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 28,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
     "username": "alyssainthecity",
     "name": "Alyssa Coscarelli",
     "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-23309-1769218972402",
-    "productCount": 96,
+    "productCount": 39,
     "topBrands": [
-      "JW Anderson",
-      "Paloma Wool",
-      "Dries Van Noten",
       "Chloé",
-      "Spinelli Kilcollin"
+      "Dana Foley NYC",
+      "Dunst",
+      "GAP",
+      "Merlette"
     ],
-    "curatorId": 23309
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 10,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 10,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 2,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 11,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
   },
   {
-    "username": "camillecharriere",
-    "name": "Camille Charrière ",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-282987-1761675032581",
-    "productCount": 96,
+    "username": "amberfillerup",
+    "name": "Amber Fillerup",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-29897-1695143475809",
+    "productCount": 81,
     "topBrands": [
-      "FENDI",
-      "Alexander Mcqueen",
-      "CHANEL",
-      "Giuseppe Zanotti",
-      "Louis Vuitton"
+      "Revolve Clothing (Global)",
+      "Free People (Global - UK&FR Excluded)",
+      "Shopbop",
+      "Alo Yoga (US)",
+      "Free People"
     ],
-    "curatorId": 282987
-  },
-  {
-    "username": "courtneygrow",
-    "name": "Courtney Grow",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-6380-1683292822686",
-    "productCount": 96,
-    "topBrands": [
-      "Alfie",
-      "Banana Republic",
-      "Still Here",
-      "Ely Ely",
-      "Chan Luu"
+    "sources": [
+      "ltk",
+      "shopmy"
     ],
-    "curatorId": 6380
-  },
-  {
-    "username": "tezza",
-    "name": "Tezza Barton",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-42535-1708526578153",
-    "productCount": 96,
-    "topBrands": [
-      "Business & Pleasure Co. ",
-      "Anna October",
-      "Manu Atelier",
-      "Magda Butrym",
-      "Herskind"
-    ],
-    "curatorId": 42535
-  },
-  {
-    "username": "juliaberolzheimer",
-    "name": "Julia Berolzheimer",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-55642-1772306546543",
-    "productCount": 96,
-    "topBrands": [
-      "DONNI.",
-      "ALÉMAIS",
-      "Ulla Johnson",
-      "AGOLDE",
-      "ALIGNE"
-    ],
-    "curatorId": 55642
-  },
-  {
-    "username": "weworewhat",
-    "name": "Danielle",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-51717-1713800677888",
-    "productCount": 96,
-    "topBrands": [
-      "FRAME",
-      "Electric Picks",
-      "Acne Studios",
-      "Rumored",
-      "Balenciaga"
-    ],
-    "curatorId": 51717
-  },
-  {
-    "username": "sincerelyjules",
-    "name": "Julie Sariñana",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-199858-1772058669679",
-    "productCount": 42,
-    "topBrands": [
-      "The Garment",
-      "Zara",
-      "SAINT LAURENT",
-      "Ben-Amun",
-      "Lié Studio"
-    ],
-    "curatorId": 199858
-  },
-  {
-    "username": "chrisellelim",
-    "name": "Chriselle Lim",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-5291-1753171027776",
-    "productCount": 96,
-    "topBrands": [
-      "Victoria Beckham",
-      "Jil Sander",
-      "Acne Studios",
-      "Issey Miyake",
-      "Guest House"
-    ],
-    "curatorId": 5291
-  },
-  {
-    "username": "oliviapalermo",
-    "name": "Olivia Palermo",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-7656-1662737031438",
-    "productCount": 96,
-    "topBrands": [
-      "Strathberry",
-      "Stuart Weitzman",
-      "Le Specs",
-      "Larroudé",
-      "ROTATE"
-    ],
-    "curatorId": 7656
-  },
-  {
-    "username": "brightonbutler",
-    "name": "Brighton Butler",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-52396-1714403832476",
-    "productCount": 96,
-    "topBrands": [
-      "ELAN",
-      "Xirena",
-      "Rhone",
-      "Tnuck Beach",
-      "Tanya Taylor"
-    ],
-    "curatorId": 52396
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 21,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 8,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 21,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 15,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 14,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 2,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
   },
   {
     "username": "andicsinger",
@@ -148,96 +174,930 @@
       "Darkpark",
       "Prada"
     ],
-    "curatorId": 47622
-  },
-  {
-    "username": "amberfillerup",
-    "name": "Amber Fillerup",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-29897-1695143475809",
-    "productCount": 96,
-    "topBrands": [
-      "Dear Frances",
-      "Quay",
-      "FP Movement",
-      "Eberjey",
-      "SNDYS"
+    "sources": [
+      "shopmy"
     ],
-    "curatorId": 29897
+    "incomplete": true,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 1,
+        "complete": false,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 1,
+        "complete": false,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 0,
+        "complete": false,
+        "window": "all"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 0,
+        "complete": false,
+        "window": "all"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 0,
+        "complete": false,
+        "window": "all"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 0,
+        "complete": false,
+        "window": "all"
+      }
+    }
   },
   {
-    "username": "juliamarieb",
-    "name": "Julia Marie B",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-99055-1769442047105",
-    "productCount": 96,
+    "username": "brightonbutler",
+    "name": "Brighton Butler",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-52396-1714403832476",
+    "productCount": 82,
     "topBrands": [
-      "Hanifa",
-      "JLUXLABEL",
-      "FP Movement",
-      "Ruslan Baginskiy",
-      "MCM"
+      "Shopbop",
+      "Amazon (US)",
+      "Nordstrom",
+      "Abercrombie & Fitch (US)",
+      "Anthropologie (US)"
     ],
-    "curatorId": 99055
+    "sources": [
+      "ltk",
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 23,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 19,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 14,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 16,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 7,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
   },
   {
-    "username": "jessicawang",
-    "name": "Jessica Wang",
-    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-75506-1726976358707",
-    "productCount": 10,
+    "username": "camillecharriere",
+    "name": "Camille Charrière ",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-282987-1761675032581",
+    "productCount": 36,
     "topBrands": [
-      "Unreal Fur",
-      "Veronica Beard",
-      "H&M",
-      "Kim Shui",
-      "Intimissimi"
+      "CHANEL",
+      "SAINT LAURENT",
+      "Celine",
+      "Falconeri",
+      "FENDI"
     ],
-    "curatorId": 75506
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": true,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 6,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 6,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 1,
+        "complete": false,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 10,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 2,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 11,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
   },
   {
-    "username": "aimeesong",
-    "name": "Aimee Song",
-    "image": "https://avatar-cdn.liketoknow.it/4bd2d2c8-ff30-11e5-96ef-22000b0f8f3a.fd158d28-2a86-11e7-8c51-acbc32aa1441?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
-    "productCount": 100,
-    "topBrands": ["Sandro", "Chloé", "Norma Kamali", "Gap", "Alo Yoga"],
-    "source": "ltk"
-  },
-  {
-    "username": "oliviarink",
-    "name": "Olivia Rink",
-    "image": "https://avatar-cdn.liketoknow.it/4c2e70ae-ff30-11e5-96ef-22000b0f8f3a.8918afea-ca4b-4232-9d2f-910c6a898c8d?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
-    "productCount": 100,
-    "topBrands": ["Abercrombie", "Boden", "J.Crew", "Dolce Vita", "ASOS"],
-    "source": "ltk"
-  },
-  {
-    "username": "fashion_jackson",
-    "name": "Amy Jackson",
-    "image": "https://avatar-cdn.liketoknow.it/4be59386-ff30-11e5-96ef-22000b0f8f3a.fd27f7df-42c7-4284-91c2-99dd57d9bfd4?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
-    "productCount": 100,
-    "topBrands": ["Aritzia", "Gap", "Nordstrom", "Tory Burch", "Madewell"],
-    "source": "ltk"
-  },
-  {
-    "username": "maryorton",
-    "name": "Mary Orton",
-    "image": "https://avatar-cdn.liketoknow.it/4be587c6-ff30-11e5-96ef-22000b0f8f3a.6ed92ed0-0639-4fd5-b536-2e4d147313a1?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
-    "productCount": 100,
-    "topBrands": ["Farfetch", "Net-a-Porter", "Mango", "Gap", "Staud"],
-    "source": "ltk"
+    "username": "chrisellelim",
+    "name": "Chriselle Lim",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-5291-1753171027776",
+    "productCount": 32,
+    "topBrands": [
+      "The Frankie Shop",
+      "Enza Costa",
+      "SAINT LAURENT",
+      "TOTEME",
+      "Acne Studios"
+    ],
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 5,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 5,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 10,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 4,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 1,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 7,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
   },
   {
     "username": "cmcoving",
     "name": "Caitlin Covington",
     "image": "https://avatar-cdn.liketoknow.it/4be2d223-ff30-11e5-96ef-22000b0f8f3a.4d0f51f6-8c23-4e51-8418-f740b41b07ea?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
-    "productCount": 100,
-    "topBrands": ["Abercrombie", "ASOS", "Amazon", "Nordstrom", "J.Crew"],
-    "source": "ltk"
+    "productCount": 254,
+    "topBrands": [
+      "Nordstrom",
+      "Zara US",
+      "Amazon (US)",
+      "H&M (US + CA)",
+      "MESHKI US"
+    ],
+    "sources": [
+      "ltk"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 48,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 8,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 39,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 43,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 78,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 38,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "courtneygrow",
+    "name": "Courtney Grow",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-6380-1683292822686",
+    "productCount": 38,
+    "topBrands": [
+      "Still Here",
+      "Chan Luu",
+      "STAUD",
+      "Alfie",
+      "Sézane"
+    ],
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": true,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 11,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 1,
+        "complete": false,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 10,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 4,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 5,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 7,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "fashion_jackson",
+    "name": "Amy Jackson",
+    "image": "https://avatar-cdn.liketoknow.it/4be59386-ff30-11e5-96ef-22000b0f8f3a.fd27f7df-42c7-4284-91c2-99dd57d9bfd4?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 330,
+    "topBrands": [
+      "Nordstrom",
+      "Shopbop",
+      "FASHIONPHILE (US)",
+      "Saks Fifth Avenue",
+      "Lululemon (US)"
+    ],
+    "sources": [
+      "ltk"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 57,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 35,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 58,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 60,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 52,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 68,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "jessicawang",
+    "name": "Jessica Wang",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-75506-1726976358707",
+    "productCount": 9,
+    "topBrands": [
+      "Citizens of Humanity",
+      "COS",
+      "Freja",
+      "Guest in Residence",
+      "H&M"
+    ],
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": true,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 2,
+        "complete": false,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 2,
+        "complete": false,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 2,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 1,
+        "complete": false,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 1,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 1,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "juliaberolzheimer",
+    "name": "Julia Berolzheimer",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-55642-1772306546543",
+    "productCount": 114,
+    "topBrands": [
+      "Mytheresa (US/CA)",
+      "Shopbop",
+      "Margaux",
+      "Anthropologie (US)",
+      "Chanel, Inc. (US)"
+    ],
+    "sources": [
+      "ltk",
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 28,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 11,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 31,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 14,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 15,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 15,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "juliamarieb",
+    "name": "Julia Marie B",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-99055-1769442047105",
+    "productCount": 37,
+    "topBrands": [
+      "adidas",
+      "Aritzia",
+      "MCM",
+      "Fear of God ESSENTIALS",
+      "FP Movement"
+    ],
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 10,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 11,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 4,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 6,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
   },
   {
     "username": "kathleen.post",
     "name": "Kathleen Post",
     "image": "https://avatar-cdn.liketoknow.it/4c630592-ff30-11e5-96ef-22000b0f8f3a.afd65771-257e-42bf-86b5-016d2239a6c8?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
-    "productCount": 100,
-    "topBrands": ["AllSaints", "Anthropologie", "Nordstrom", "Revolve", "Mango"],
-    "source": "ltk"
+    "productCount": 360,
+    "topBrands": [
+      "Revolve Clothing (Global)",
+      "Abercrombie & Fitch (US)",
+      "Zara US",
+      "Aritzia",
+      "Amazon (US)"
+    ],
+    "sources": [
+      "ltk"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 114,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 21,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 74,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 57,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 59,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 35,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "maryorton",
+    "name": "Mary Orton",
+    "image": "https://avatar-cdn.liketoknow.it/4be587c6-ff30-11e5-96ef-22000b0f8f3a.6ed92ed0-0639-4fd5-b536-2e4d147313a1?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 256,
+    "topBrands": [
+      "Nordstrom Rack",
+      "Spanx",
+      "Gap (US)",
+      "TJ Maxx",
+      "Nordstrom"
+    ],
+    "sources": [
+      "ltk"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 77,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 35,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 56,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 33,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 45,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 10,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "oliviapalermo",
+    "name": "Olivia Palermo",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-7656-1662737031438",
+    "productCount": 43,
+    "topBrands": [
+      "Strathberry",
+      "Larroudé",
+      "L'AGENCE",
+      "La DoubleJ",
+      "SIMKHAI"
+    ],
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 5,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 7,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 8,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 8,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 12,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "oliviarink",
+    "name": "Olivia Rink",
+    "image": "https://avatar-cdn.liketoknow.it/4c2e70ae-ff30-11e5-96ef-22000b0f8f3a.8918afea-ca4b-4232-9d2f-910c6a898c8d?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 154,
+    "topBrands": [
+      "Spanx",
+      "Abercrombie & Fitch (US)",
+      "The Beaufort Bonnet Company",
+      "Old Navy (US)",
+      "Target"
+    ],
+    "sources": [
+      "ltk"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 53,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 7,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 48,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 20,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 23,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "sincerelyjules",
+    "name": "Julie Sariñana",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-199858-1772058669679",
+    "productCount": 36,
+    "topBrands": [
+      "SKIMS",
+      "Zara",
+      "Balenciaga",
+      "Bottega Veneta",
+      "DONNI."
+    ],
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": true,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 13,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 4,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 6,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 4,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 0,
+        "complete": false,
+        "window": "all"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 9,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "tezza",
+    "name": "Tezza Barton",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-42535-1708526578153",
+    "productCount": 120,
+    "topBrands": [
+      "Zara US",
+      "NET-A-PORTER (US)",
+      "Polo Ralph Lauren",
+      "Magda Butrym",
+      "Reformation"
+    ],
+    "sources": [
+      "ltk",
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 34,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 19,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 29,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 15,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 12,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 11,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
+  },
+  {
+    "username": "weworewhat",
+    "name": "Danielle",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-51717-1713800677888",
+    "productCount": 39,
+    "topBrands": [
+      "Sea",
+      "Abercrombie & Fitch",
+      "FRAME",
+      "THE GREAT.",
+      "Acne Studios"
+    ],
+    "sources": [
+      "shopmy"
+    ],
+    "incomplete": false,
+    "coverage": {
+      "top": {
+        "minimum": 3,
+        "count": 17,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "layer": {
+        "minimum": 3,
+        "count": 4,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bottom": {
+        "minimum": 2,
+        "count": 11,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "shoe": {
+        "minimum": 2,
+        "count": 3,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "dress": {
+        "minimum": 1,
+        "count": 2,
+        "complete": true,
+        "window": "all+undated"
+      },
+      "bag": {
+        "minimum": 1,
+        "count": 2,
+        "complete": true,
+        "window": "all+undated"
+      }
+    }
   }
 ]

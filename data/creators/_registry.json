@@ -1,0 +1,198 @@
+[
+  {
+    "username": "alyssainthecity",
+    "name": "Alyssa Coscarelli",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-23309-1769218972402",
+    "shopmy": {
+      "username": "alyssainthecity",
+      "curatorId": 23309
+    }
+  },
+  {
+    "username": "camillecharriere",
+    "name": "Camille Charrière ",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-282987-1761675032581",
+    "shopmy": {
+      "username": "camillecharriere",
+      "curatorId": 282987
+    }
+  },
+  {
+    "username": "courtneygrow",
+    "name": "Courtney Grow",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-6380-1683292822686",
+    "shopmy": {
+      "username": "courtneygrow",
+      "curatorId": 6380
+    }
+  },
+  {
+    "username": "tezza",
+    "name": "Tezza Barton",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-42535-1708526578153",
+    "ltk": {
+      "username": "tezza",
+      "profileId": "4c582651-ff30-11e5-96ef-22000b0f8f3a"
+    },
+    "shopmy": {
+      "username": "tezza",
+      "curatorId": 42535
+    }
+  },
+  {
+    "username": "juliaberolzheimer",
+    "name": "Julia Berolzheimer",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-55642-1772306546543",
+    "ltk": {
+      "username": "juliaberolzheimer",
+      "profileId": "4bd4d197-ff30-11e5-96ef-22000b0f8f3a"
+    },
+    "shopmy": {
+      "username": "juliaberolzheimer",
+      "curatorId": 55642
+    }
+  },
+  {
+    "username": "weworewhat",
+    "name": "Danielle",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-51717-1713800677888",
+    "shopmy": {
+      "username": "weworewhat",
+      "curatorId": 51717
+    }
+  },
+  {
+    "username": "sincerelyjules",
+    "name": "Julie Sariñana",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-199858-1772058669679",
+    "shopmy": {
+      "username": "sincerelyjules",
+      "curatorId": 199858
+    }
+  },
+  {
+    "username": "chrisellelim",
+    "name": "Chriselle Lim",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-5291-1753171027776",
+    "shopmy": {
+      "username": "chrisellelim",
+      "curatorId": 5291
+    }
+  },
+  {
+    "username": "oliviapalermo",
+    "name": "Olivia Palermo",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-7656-1662737031438",
+    "shopmy": {
+      "username": "oliviapalermo",
+      "curatorId": 7656
+    }
+  },
+  {
+    "username": "brightonbutler",
+    "name": "Brighton Butler",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-52396-1714403832476",
+    "ltk": {
+      "username": "brightonbutler",
+      "profileId": "4bd77d61-ff30-11e5-96ef-22000b0f8f3a"
+    },
+    "shopmy": {
+      "username": "brightonbutler",
+      "curatorId": 52396
+    }
+  },
+  {
+    "username": "andicsinger",
+    "name": "Andy Csinger",
+    "image": null,
+    "shopmy": {
+      "username": "andicsinger",
+      "curatorId": 47622
+    }
+  },
+  {
+    "username": "amberfillerup",
+    "name": "Amber Fillerup",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-29897-1695143475809",
+    "ltk": {
+      "username": "amberfillerup",
+      "profileId": "4bd79e56-ff30-11e5-96ef-22000b0f8f3a"
+    },
+    "shopmy": {
+      "username": "amberfillerup",
+      "curatorId": 29897
+    }
+  },
+  {
+    "username": "juliamarieb",
+    "name": "Julia Marie B",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-99055-1769442047105",
+    "shopmy": {
+      "username": "juliamarieb",
+      "curatorId": 99055
+    }
+  },
+  {
+    "username": "jessicawang",
+    "name": "Jessica Wang",
+    "image": "https://production-shopmyshelf-uploads.s3.us-east-2.amazonaws.com/img-user-deres-75506-1726976358707",
+    "shopmy": {
+      "username": "jessicawang",
+      "curatorId": 75506
+    }
+  },
+  {
+    "username": "aimeesong",
+    "name": "Aimee Song",
+    "image": "https://avatar-cdn.liketoknow.it/4bd2d2c8-ff30-11e5-96ef-22000b0f8f3a.fd158d28-2a86-11e7-8c51-acbc32aa1441?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "ltk": {
+      "username": "aimeesong",
+      "profileId": "4bd2d2c8-ff30-11e5-96ef-22000b0f8f3a"
+    }
+  },
+  {
+    "username": "oliviarink",
+    "name": "Olivia Rink",
+    "image": "https://avatar-cdn.liketoknow.it/4c2e70ae-ff30-11e5-96ef-22000b0f8f3a.8918afea-ca4b-4232-9d2f-910c6a898c8d?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "ltk": {
+      "username": "oliviarink",
+      "profileId": "4c2e70ae-ff30-11e5-96ef-22000b0f8f3a"
+    }
+  },
+  {
+    "username": "fashion_jackson",
+    "name": "Amy Jackson",
+    "image": "https://avatar-cdn.liketoknow.it/4be59386-ff30-11e5-96ef-22000b0f8f3a.fd27f7df-42c7-4284-91c2-99dd57d9bfd4?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "ltk": {
+      "username": "fashion_jackson",
+      "profileId": "4be59386-ff30-11e5-96ef-22000b0f8f3a"
+    }
+  },
+  {
+    "username": "maryorton",
+    "name": "Mary Orton",
+    "image": "https://avatar-cdn.liketoknow.it/4be587c6-ff30-11e5-96ef-22000b0f8f3a.6ed92ed0-0639-4fd5-b536-2e4d147313a1?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "ltk": {
+      "username": "maryorton",
+      "profileId": "4be587c6-ff30-11e5-96ef-22000b0f8f3a"
+    }
+  },
+  {
+    "username": "cmcoving",
+    "name": "Caitlin Covington",
+    "image": "https://avatar-cdn.liketoknow.it/4be2d223-ff30-11e5-96ef-22000b0f8f3a.4d0f51f6-8c23-4e51-8418-f740b41b07ea?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "ltk": {
+      "username": "cmcoving",
+      "profileId": "4be2d223-ff30-11e5-96ef-22000b0f8f3a"
+    }
+  },
+  {
+    "username": "kathleen.post",
+    "name": "Kathleen Post",
+    "image": "https://avatar-cdn.liketoknow.it/4c630592-ff30-11e5-96ef-22000b0f8f3a.afd65771-257e-42bf-86b5-016d2239a6c8?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "ltk": {
+      "username": "kathleen.post",
+      "profileId": "4c630592-ff30-11e5-96ef-22000b0f8f3a"
+    }
+  }
+]

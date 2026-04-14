@@ -2,29 +2,86 @@
   "username": "andicsinger",
   "name": "Andy Csinger",
   "image": null,
-  "scrapedAt": "2026-04-11T18:02:12.963Z",
-  "productCount": 2,
+  "sources": [
+    "shopmy"
+  ],
+  "sourceMeta": {
+    "shopmy": {
+      "curatorId": 47622
+    }
+  },
+  "catalogUpdatedAt": "2026-04-14T15:27:17.310Z",
+  "incomplete": true,
+  "coverage": {
+    "top": {
+      "minimum": 3,
+      "count": 1,
+      "complete": false,
+      "window": "all+undated"
+    },
+    "layer": {
+      "minimum": 3,
+      "count": 1,
+      "complete": false,
+      "window": "all+undated"
+    },
+    "bottom": {
+      "minimum": 2,
+      "count": 0,
+      "complete": false,
+      "window": "all"
+    },
+    "shoe": {
+      "minimum": 2,
+      "count": 0,
+      "complete": false,
+      "window": "all"
+    },
+    "dress": {
+      "minimum": 1,
+      "count": 0,
+      "complete": false,
+      "window": "all"
+    },
+    "bag": {
+      "minimum": 1,
+      "count": 0,
+      "complete": false,
+      "window": "all"
+    }
+  },
   "products": [
     {
-      "id": 2410615,
+      "id": "shopmy:2410615",
+      "source": "shopmy",
+      "sourceProductId": "2410615",
+      "sourceRank": 0,
       "title": "Lisa - Loose Fit Carpenter Tencel Denim Tops",
       "image": "https://darkpark.it/cdn/shop/files/02027472e3c3cbeee019c970987f91e6_93f6469b-61b4-43f7-8ee1-3de85a138240.jpg?v=1769701754&width=2098",
-      "url": "https://darkpark.it/products/lisa-loose-fit-carpenter-tencel-denim-wtr58tbl01w075w075",
+      "url": "https://shopmy.us/shop/product/2410615?Curator_id=47622",
       "price": 585,
       "brand": "Darkpark",
       "category": "Tops",
-      "department": "Apparel"
+      "department": "Apparel",
+      "canonicalCategory": "top",
+      "addedAt": "2026-04-11T18:02:12.963Z",
+      "addedAtSource": "scraped_at"
     },
     {
-      "id": 550810,
+      "id": "shopmy:550810",
+      "source": "shopmy",
+      "sourceProductId": "550810",
+      "sourceRank": 1,
       "title": "Re-Nylon Blouson Jacket",
       "image": "https://static.shopmy.us/uploads/3bf46fd0-6c37-46cc-92d7-708525af7db3_imgi_115_292348_1WQ8_F0002_S_OOO_SLF.jpg",
-      "url": "https://prada.com/us/en/p/re-nylon-blouson-jacket/SGC864_1WQ9_F0APQ_S_OOO",
+      "url": "https://shopmy.us/shop/product/550810?Curator_id=47622",
       "price": 2450,
       "brand": "Prada",
       "category": "Jackets",
-      "department": "Coats & Outerwear"
+      "department": "Coats & Outerwear",
+      "canonicalCategory": "layer",
+      "addedAt": "2026-04-11T18:02:12.963Z",
+      "addedAtSource": "scraped_at"
     }
-  ],
-  "curatorId": 47622
+  ]
 }
