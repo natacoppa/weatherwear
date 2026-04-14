@@ -191,5 +191,53 @@
       "Intimissimi"
     ],
     "curatorId": 75506
+  },
+  {
+    "username": "aimeesong",
+    "name": "Aimee Song",
+    "image": "https://avatar-cdn.liketoknow.it/4bd2d2c8-ff30-11e5-96ef-22000b0f8f3a.fd158d28-2a86-11e7-8c51-acbc32aa1441?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 100,
+    "topBrands": ["Sandro", "Chloé", "Norma Kamali", "Gap", "Alo Yoga"],
+    "source": "ltk"
+  },
+  {
+    "username": "oliviarink",
+    "name": "Olivia Rink",
+    "image": "https://avatar-cdn.liketoknow.it/4c2e70ae-ff30-11e5-96ef-22000b0f8f3a.8918afea-ca4b-4232-9d2f-910c6a898c8d?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 100,
+    "topBrands": ["Abercrombie", "Boden", "J.Crew", "Dolce Vita", "ASOS"],
+    "source": "ltk"
+  },
+  {
+    "username": "fashion_jackson",
+    "name": "Amy Jackson",
+    "image": "https://avatar-cdn.liketoknow.it/4be59386-ff30-11e5-96ef-22000b0f8f3a.fd27f7df-42c7-4284-91c2-99dd57d9bfd4?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 100,
+    "topBrands": ["Aritzia", "Gap", "Nordstrom", "Tory Burch", "Madewell"],
+    "source": "ltk"
+  },
+  {
+    "username": "maryorton",
+    "name": "Mary Orton",
+    "image": "https://avatar-cdn.liketoknow.it/4be587c6-ff30-11e5-96ef-22000b0f8f3a.6ed92ed0-0639-4fd5-b536-2e4d147313a1?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 100,
+    "topBrands": ["Farfetch", "Net-a-Porter", "Mango", "Gap", "Staud"],
+    "source": "ltk"
+  },
+  {
+    "username": "cmcoving",
+    "name": "Caitlin Covington",
+    "image": "https://avatar-cdn.liketoknow.it/4be2d223-ff30-11e5-96ef-22000b0f8f3a.4d0f51f6-8c23-4e51-8418-f740b41b07ea?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 100,
+    "topBrands": ["Abercrombie", "ASOS", "Amazon", "Nordstrom", "J.Crew"],
+    "source": "ltk"
+  },
+  {
+    "username": "kathleen.post",
+    "name": "Kathleen Post",
+    "image": "https://avatar-cdn.liketoknow.it/4c630592-ff30-11e5-96ef-22000b0f8f3a.afd65771-257e-42bf-86b5-016d2239a6c8?v=0&auto=format&fm=webp&w=100&h=100&fit=crop&q=80&dpr=1",
+    "productCount": 100,
+    "topBrands": ["AllSaints", "Anthropologie", "Nordstrom", "Revolve", "Mango"],
+    "source": "ltk"
   }
 ]
