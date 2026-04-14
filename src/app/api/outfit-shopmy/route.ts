@@ -7,6 +7,19 @@ import { fetchWeather, geocode, calculateFeelsLike, HourlyForecast } from "@/lib
 import { rateLimit, corsHeaders } from "@/lib/rate-limit";
 import { requireApiKey } from "@/lib/api-auth";
 import {
+  buildCreatorOutfitPrompt,
+  classifyTransitionIntensity,
+  CREATOR_STYLE_DIRECTIONS,
+  formatCreatorWeatherContext,
+  selectPromptDirection,
+  type PromptMomentWeather,
+} from "@/lib/outfit-prompt";
+import { buildOutfitSignalBrief } from "@/lib/outfit-signals";
+import {
+  buildGuardrailRetryInstruction,
+  findCreatorOutfitGuardrailViolations,
+} from "@/lib/outfit-output-guardrails";
+import {
   buildCreatorCandidateSet,
   loadCuratedCreatorCatalog,
   type CuratedCreatorCatalog,
@@ -33,11 +46,7 @@ function loadCreatorData(username: string): CuratedCreatorCatalog | null {
 
 // ── Weather analysis ────────────────────────────────────────────────
 
-interface MomentWeather {
-  label: string; timeRange: string; temp: number; sunFeel: number; shadeFeel: number; windSpeed: number; uvIndex: number; precipChance: number;
-}
-
-function analyzeMoment(hours: HourlyForecast[], elevation: number, label: string, timeRange: string): MomentWeather {
+function analyzeMoment(hours: HourlyForecast[], elevation: number, label: string, timeRange: string): PromptMomentWeather {
   const avg = (arr: number[]) => arr.reduce((a, b) => a + b, 0) / arr.length;
   const t = Math.round(avg(hours.map((h) => h.temperature)));
   const hum = Math.round(avg(hours.map((h) => h.humidity)));
@@ -47,7 +56,7 @@ function analyzeMoment(hours: HourlyForecast[], elevation: number, label: string
   const solar = avg(hours.map((h) => h.solarRadiation));
   const precip = Math.max(...hours.map((h) => h.precipitationProbability));
   const fl = calculateFeelsLike(t, hum, wind, uv, solar, cloud, elevation);
-  return { label, timeRange, temp: t, sunFeel: fl.sunFeel, shadeFeel: fl.shadeFeel, windSpeed: wind, uvIndex: uv, precipChance: precip };
+  return { label, timeRange, temp: t, sunFeel: fl.sunFeel, shadeFeel: fl.shadeFeel, humidity: hum, windSpeed: wind, uvIndex: uv, precipChance: precip };
 }
 
 // ── Route ───────────────────────────────────────────────────────────
@@ -94,11 +103,15 @@ export async function GET(req: NextRequest) {
       walkOut.length > 0 ? analyzeMoment(walkOut, weather.elevation, "Walk out the door", "7–9am") : null,
       midday.length > 0 ? analyzeMoment(midday, weather.elevation, "Midday peak", "11am–3pm") : null,
       evening.length > 0 ? analyzeMoment(evening, weather.elevation, "By evening", "6–10pm") : null,
-    ].filter(Boolean) as MomentWeather[];
+    ].filter(Boolean) as PromptMomentWeather[];
 
-    const weatherContext = moments.map((m) =>
-      `${m.label} (${m.timeRange}): ${m.temp}°F air, sun feel ${m.sunFeel}°, shade feel ${m.shadeFeel}°, wind ${m.windSpeed}mph, UV ${m.uvIndex}, ${m.precipChance}% rain`
-    ).join("\n");
+    const weatherContext = formatCreatorWeatherContext(moments);
+    const transition = classifyTransitionIntensity(moments);
+    const signalBrief = buildOutfitSignalBrief({
+      locationName,
+      moments,
+      transition,
+    });
 
     const relevant = catalog;
     const candidates = buildCreatorCandidateSet(relevant);
@@ -145,73 +158,35 @@ export async function GET(req: NextRequest) {
         }
       }),
     );
-    const imageContents: Anthropic.Messages.ContentBlockParam[] = blocks.flat();
+    const baseImageContents: Anthropic.Messages.ContentBlockParam[] = blocks.flat();
 
-    const styleDirections = [
-      "polished minimalist — clean lines, muted tones, understated",
-      "relaxed effortless — lived-in textures, easy silhouettes",
-      "one bold statement piece anchoring a neutral outfit",
-      "tonal — shades of one color family",
-      "smart-casual — structured enough for lunch, relaxed for walking",
-    ];
-    const styleDirection = styleDirections[Math.floor(Math.random() * styleDirections.length)];
-
-    imageContents.push({
-      type: "text",
-      text: `You are an expert fashion stylist with impeccable taste. Look at the product images above and style a complete, beautiful outfit for ${locationName} today.
-
-Weather: ${Math.round(dayData.tempMin)}°–${Math.round(dayData.tempMax)}°F. ${weatherContext}
-
-Style direction: ${styleDirection}
-
-CRITICAL — match clothing weight to ACTUAL temperature. A thin t-shirt
-under a coat at 48°F is wrong even if it looks good. The base layer
-has to earn its place on its own at the coldest moment of the day:
-
-- Over 75°F = lightweight breathable only (thin cotton tees, linen, silk camis). No wool, no cashmere, no coats.
-- 65–75°F = light cotton / thin knit base, maybe a light jacket for evening.
-- 55–65°F = medium base layer (long-sleeve cotton, fine merino, light knit) + jacket.
-- 45–55°F = warm base (merino crew, cashmere sweater, turtleneck, thick knit) + substantial coat. DO NOT pick a thin t-shirt here.
-- 35–45°F = cashmere/wool sweater + proper winter coat + closed warm shoes.
-- Under 35°F = heavy parka, thermal base, insulated boots.
-
-The morning base layer must still work at midday peak — if midday is
-warm enough to shed the coat, the base underneath should be comfortable
-at that temp without a layer over it.
-
-Look at the actual product images above. Consider colors, textures, proportions, and how pieces look worn together. Style like a real client — every item earns its place. A perfect 3-piece outfit beats a mediocre 5-piece one. If the catalog has no appropriate warm base at the current temp, set "top" to null rather than forcing an inappropriate thin tee.
-
-The outfit should adapt through the day: what to wear walking out, what to adjust at midday, what to put back on by evening.
-
-Use [index] numbers. Set any slot to null if nothing good fits.
-
-JSON only:
-{
-  "headline": "Max 10 words",
-  "walkOut": {
-    "summary": "Max 12 words",
-    "top": { "index": 0, "title": "name" },
-    "layer": { "index": 5, "title": "name" } or null,
-    "bottom": { "index": 3, "title": "name" } or null,
-    "shoes": { "index": 7, "title": "name" } or null,
-    "accessories": [{ "index": 12, "title": "name" }]
-  },
-  "carry": { "summary": "12 words", "remove": ["item name to take off"], "add": ["item name to put on"], "note": "12 words" },
-  "evening": { "summary": "12 words", "add": ["item name to put back on"], "note": "12 words" },
-  "bagEssentials": []
-}
-
-Return ONLY valid JSON.`
+    const styleDirection = selectPromptDirection(CREATOR_STYLE_DIRECTIONS);
+    const promptText = buildCreatorOutfitPrompt({
+      locationName,
+      day: { tempMin: dayData.tempMin, tempMax: dayData.tempMax },
+      weatherContext,
+      styleDirection,
+      transition,
+      signalBrief,
     });
+    const createRawOutfit = async (promptOverride: string) => {
+      const message = await anthropic.messages.create({
+        model: CLAUDE_MODEL,
+        max_tokens: 1000,
+        messages: [{
+          role: "user",
+          content: [
+            ...baseImageContents,
+            { type: "text", text: promptOverride },
+          ],
+        }],
+      });
 
-    const message = await anthropic.messages.create({
-      model: CLAUDE_MODEL,
-      max_tokens: 1000,
-      messages: [{ role: "user", content: imageContents }],
-    });
+      const text = message.content[0].type === "text" ? message.content[0].text : "";
+      return assertCreatorOutfitRaw(parseAiJson(text));
+    };
 
-    const text = message.content[0].type === "text" ? message.content[0].text : "";
-    const raw = assertCreatorOutfitRaw(parseAiJson(text));
+    let raw = await createRawOutfit(promptText);
 
     // Map candidate-space indices back to relevant-space. Returns -1 for
     // hallucinated (out-of-range) indices so enrichItem can null them out.
@@ -236,25 +211,40 @@ Return ONLY valid JSON.`
         url: product.url,
         price: product.price,
         brand: product.brand,
+        category: product.category,
+        canonicalCategory: product.canonicalCategory,
       };
     };
 
-    const outfit = {
-      headline: raw.headline,
+    const resolveOutfit = (rawOutfit: typeof raw) => ({
+      headline: rawOutfit.headline,
       walkOut: {
-        summary: raw.walkOut.summary,
-        top: enrichItem(raw.walkOut.top),
-        layer: enrichItem(raw.walkOut.layer),
-        bottom: enrichItem(raw.walkOut.bottom),
-        shoes: enrichItem(raw.walkOut.shoes),
-        accessories: raw.walkOut.accessories
+        summary: rawOutfit.walkOut.summary,
+        top: enrichItem(rawOutfit.walkOut.top),
+        layer: enrichItem(rawOutfit.walkOut.layer),
+        bottom: enrichItem(rawOutfit.walkOut.bottom),
+        shoes: enrichItem(rawOutfit.walkOut.shoes),
+        accessories: rawOutfit.walkOut.accessories
           .map(enrichItem)
           .filter((x): x is NonNullable<ReturnType<typeof enrichItem>> => x !== null),
       },
-      carry: raw.carry,
-      evening: raw.evening,
-      bagEssentials: raw.bagEssentials,
-    };
+      carry: rawOutfit.carry,
+      evening: rawOutfit.evening,
+      bagEssentials: rawOutfit.bagEssentials,
+    });
+
+    let outfit = resolveOutfit(raw);
+    let violations = findCreatorOutfitGuardrailViolations(outfit, signalBrief);
+
+    if (violations.length > 0) {
+      hallucinated.length = 0;
+      raw = await createRawOutfit(`${promptText}\n\n${buildGuardrailRetryInstruction(violations, signalBrief)}`);
+      outfit = resolveOutfit(raw);
+      violations = findCreatorOutfitGuardrailViolations(outfit, signalBrief);
+      if (violations.length > 0) {
+        throw new AIShapeError(`weather guardrail violation: ${violations.join("; ")}`, outfit);
+      }
+    }
 
     return NextResponse.json({
       location: locationName,

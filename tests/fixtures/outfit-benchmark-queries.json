@@ -1,0 +1,101 @@
+[
+  {
+    "id": "nyc-cold-morning",
+    "locationName": "New York, NY, United States",
+    "day": { "tempMin": 38, "tempMax": 47 },
+    "paletteIndex": 0,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 39, "sunFeel": 42, "shadeFeel": 34, "windSpeed": 11, "uvIndex": 1.4, "precipChance": 10, "humidity": 64 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 46, "sunFeel": 52, "shadeFeel": 41, "windSpeed": 8, "uvIndex": 3.3, "precipChance": 5, "humidity": 52 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 41, "sunFeel": 43, "shadeFeel": 36, "windSpeed": 10, "uvIndex": 0.2, "precipChance": 10, "humidity": 60 }
+    ]
+  },
+  {
+    "id": "nyc-heatwave-guardrail",
+    "locationName": "New York, NY, United States",
+    "day": { "tempMin": 71, "tempMax": 100 },
+    "paletteIndex": 7,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 71, "sunFeel": 71, "shadeFeel": 67, "windSpeed": 4, "uvIndex": 2.2, "precipChance": 5, "humidity": 78 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 100, "sunFeel": 101, "shadeFeel": 84, "windSpeed": 5, "uvIndex": 9.8, "precipChance": 0, "humidity": 46 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 80, "sunFeel": 82, "shadeFeel": 80, "windSpeed": 6, "uvIndex": 0.4, "precipChance": 0, "humidity": 52 }
+    ]
+  },
+  {
+    "id": "la-summer-afternoon",
+    "locationName": "Los Angeles, CA, United States",
+    "day": { "tempMin": 66, "tempMax": 77 },
+    "paletteIndex": 5,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 67, "sunFeel": 69, "shadeFeel": 66, "windSpeed": 4, "uvIndex": 1.6, "precipChance": 0, "humidity": 58 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 77, "sunFeel": 83, "shadeFeel": 75, "windSpeed": 6, "uvIndex": 8.1, "precipChance": 0, "humidity": 44 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 72, "sunFeel": 73, "shadeFeel": 70, "windSpeed": 5, "uvIndex": 0.4, "precipChance": 0, "humidity": 50 }
+    ]
+  },
+  {
+    "id": "tokyo-spring-rain",
+    "locationName": "Tokyo, Japan",
+    "day": { "tempMin": 56, "tempMax": 63 },
+    "paletteIndex": 2,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 57, "sunFeel": 58, "shadeFeel": 54, "windSpeed": 7, "uvIndex": 1.1, "precipChance": 20, "humidity": 73 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 63, "sunFeel": 64, "shadeFeel": 60, "windSpeed": 9, "uvIndex": 2.8, "precipChance": 65, "humidity": 79 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 58, "sunFeel": 58, "shadeFeel": 55, "windSpeed": 10, "uvIndex": 0.2, "precipChance": 70, "humidity": 83 }
+    ]
+  },
+  {
+    "id": "london-overcast",
+    "locationName": "London, England, United Kingdom",
+    "day": { "tempMin": 48, "tempMax": 54 },
+    "paletteIndex": 7,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 48, "sunFeel": 49, "shadeFeel": 45, "windSpeed": 10, "uvIndex": 0.9, "precipChance": 25, "humidity": 76 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 53, "sunFeel": 55, "shadeFeel": 51, "windSpeed": 9, "uvIndex": 1.8, "precipChance": 30, "humidity": 68 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 49, "sunFeel": 50, "shadeFeel": 46, "windSpeed": 11, "uvIndex": 0.1, "precipChance": 35, "humidity": 80 }
+    ]
+  },
+  {
+    "id": "paris-autumn",
+    "locationName": "Paris, France",
+    "day": { "tempMin": 51, "tempMax": 58 },
+    "paletteIndex": 1,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 51, "sunFeel": 53, "shadeFeel": 48, "windSpeed": 7, "uvIndex": 1.3, "precipChance": 10, "humidity": 70 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 58, "sunFeel": 60, "shadeFeel": 55, "windSpeed": 8, "uvIndex": 3.1, "precipChance": 10, "humidity": 58 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 52, "sunFeel": 53, "shadeFeel": 49, "windSpeed": 6, "uvIndex": 0.2, "precipChance": 15, "humidity": 72 }
+    ]
+  },
+  {
+    "id": "miami-humid-heat",
+    "locationName": "Miami, FL, United States",
+    "day": { "tempMin": 82, "tempMax": 89 },
+    "paletteIndex": 4,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 83, "sunFeel": 88, "shadeFeel": 82, "windSpeed": 6, "uvIndex": 2.5, "precipChance": 20, "humidity": 84 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 89, "sunFeel": 97, "shadeFeel": 87, "windSpeed": 8, "uvIndex": 9.4, "precipChance": 35, "humidity": 78 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 84, "sunFeel": 89, "shadeFeel": 82, "windSpeed": 7, "uvIndex": 0.6, "precipChance": 45, "humidity": 86 }
+    ]
+  },
+  {
+    "id": "chicago-wind-chill",
+    "locationName": "Chicago, IL, United States",
+    "day": { "tempMin": 28, "tempMax": 35 },
+    "paletteIndex": 0,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 29, "sunFeel": 25, "shadeFeel": 20, "windSpeed": 18, "uvIndex": 1.2, "precipChance": 5, "humidity": 66 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 35, "sunFeel": 34, "shadeFeel": 29, "windSpeed": 14, "uvIndex": 3.2, "precipChance": 5, "humidity": 54 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 30, "sunFeel": 26, "shadeFeel": 21, "windSpeed": 17, "uvIndex": 0.1, "precipChance": 10, "humidity": 62 }
+    ]
+  },
+  {
+    "id": "sf-fog-wind",
+    "locationName": "San Francisco, CA, United States",
+    "day": { "tempMin": 55, "tempMax": 63 },
+    "paletteIndex": 6,
+    "moments": [
+      { "label": "Walk out the door", "timeRange": "7-9am", "temp": 55, "sunFeel": 56, "shadeFeel": 51, "windSpeed": 12, "uvIndex": 1.0, "precipChance": 5, "humidity": 79 },
+      { "label": "Midday peak", "timeRange": "11am-3pm", "temp": 63, "sunFeel": 67, "shadeFeel": 60, "windSpeed": 18, "uvIndex": 6.1, "precipChance": 0, "humidity": 60 },
+      { "label": "By evening", "timeRange": "6-10pm", "temp": 57, "sunFeel": 58, "shadeFeel": 53, "windSpeed": 16, "uvIndex": 0.2, "precipChance": 5, "humidity": 74 }
+    ]
+  }
+]
