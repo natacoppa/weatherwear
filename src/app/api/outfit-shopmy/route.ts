@@ -132,15 +132,21 @@ export async function GET(req: NextRequest) {
       `${m.label} (${m.timeRange}): ${m.temp}°F air, sun feel ${m.sunFeel}°, shade feel ${m.shadeFeel}°, wind ${m.windSpeed}mph, UV ${m.uvIndex}, ${m.precipChance}% rain`
     ).join("\n");
 
-    // Filter to outfit-relevant categories
-    const relevant = catalog.filter((p) => ["Apparel", "Footwear", "Activewear", "Bags & Purses", "Accessories", "Coats & Outerwear"].includes(p.department));
+    // Filter to outfit-relevant departments. Include both ShopMy names
+    // (fine-grained: "Footwear", "Coats & Outerwear") and LTK names
+    // (keyword-classified: "Shoes", "Apparel" covers outerwear too).
+    const relevant = catalog.filter((p) =>
+      ["Apparel", "Footwear", "Shoes", "Activewear", "Bags & Purses", "Accessories", "Coats & Outerwear"].includes(p.department)
+    );
 
-    // Select ~16 items most relevant for an outfit (tops, bottoms, layers, shoes, 1-2 bags)
-    // Cardigans go in tops (as potential base layers), NOT in layers. Layers = jackets/coats only.
-    const tops = relevant.filter(p => ["Tops", "Sweaters", "Blouses", "Cardigans"].includes(p.category));
-    const layers = relevant.filter(p => ["Jackets", "Coats", "Blazers"].includes(p.category));
-    const bottoms = relevant.filter(p => ["Pants", "Jeans", "Skirts", "Shorts", "Trousers"].includes(p.category));
-    const shoes = relevant.filter(p => p.department === "Footwear");
+    // Select ~16 items most relevant for an outfit (tops, bottoms, layers, shoes, 1-2 bags).
+    // Category names differ between ShopMy (fine-grained: "Sweaters",
+    // "Jackets") and LTK (keyword-classified: "Knits", "Outerwear").
+    // Include both so the same filter works for either source.
+    const tops = relevant.filter(p => ["Tops", "Sweaters", "Blouses", "Cardigans", "Knits", "T-Shirts"].includes(p.category));
+    const layers = relevant.filter(p => ["Jackets", "Coats", "Blazers", "Outerwear", "Vests"].includes(p.category));
+    const bottoms = relevant.filter(p => ["Pants", "Jeans", "Skirts", "Shorts", "Trousers", "Bottoms"].includes(p.category));
+    const shoes = relevant.filter(p => p.department === "Footwear" || p.department === "Shoes");
     const bags = relevant.filter(p => p.department === "Bags & Purses").slice(0, 3);
     const dresses = relevant.filter(p => ["Dresses"].includes(p.category));
 
