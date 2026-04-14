@@ -11,6 +11,8 @@ import { NextRequest, NextResponse } from "next/server";
 const ALLOWED_HOSTS = new Set([
   "static.shopmy.us",
   "cdn.shopmy.us",
+  "product-images-cdn.liketoknow.it", // LTK product images
+  "avatar-cdn.liketoknow.it", // LTK creator avatars
 ]);
 const ALLOWED_HOST_PATTERNS: RegExp[] = [
   // ShopMy S3 buckets across any AWS region.
