@@ -47,11 +47,13 @@ test.describe("day outfit prompt composition", () => {
         moments,
         transition: classifyTransitionIntensity(moments),
       }),
+      selectedFamily: "dress_plus_layer",
     });
 
     expect(prompt).toContain("How do people in Paris actually dress?");
     expect(prompt).toContain("Style the outfit around ONE anchor piece");
     expect(prompt).toContain("Today's palette direction:");
+    expect(prompt).toContain('The family for this request is "dress_plus_layer"');
   });
 
   test("stable-day prompt asks for minimal transition changes", () => {
@@ -66,6 +68,7 @@ test.describe("day outfit prompt composition", () => {
         moments,
         transition: { intensity: "stable", summary: "stable day", promptGuidance: "Say \"Outfit holds all day\" if no real change is needed." },
       }),
+      selectedFamily: "light_separates",
     });
 
     expect(prompt).toContain("Transition read: stable day.");
@@ -90,9 +93,16 @@ test.describe("day outfit prompt composition", () => {
         moments: hotMoments,
         transition,
       }),
+      selectedFamily: "city_dress",
     });
 
     expect(prompt).toContain("Build for peak heat, not the morning.");
     expect(prompt).toContain("Do not use jackets, scarves, sweaters, knits, wool, cashmere, coats, or other unnecessary layers.");
+    expect(prompt).toContain("Hot-weather silhouette preference:");
+    expect(prompt).toContain("Rank dresses, skirts, shorts, sandals, sleeveless tops, and airy separates ahead of trousers.");
+    expect(prompt).toContain("Trousers are a fallback, not the default.");
+    expect(prompt).toContain("breathable and light rather than tailored for its own sake");
+    expect(prompt).toContain('"family": "city_dress"');
+    expect(prompt).toContain('"base": {\n      "kind": "dress"');
   });
 });

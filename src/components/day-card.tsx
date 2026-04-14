@@ -23,6 +23,28 @@ function OutfitRow({ label, text }: { label: string; text: string }) {
   );
 }
 
+function walkOutPieces(result: TodayResult): Array<{ label: string; text: string }> {
+  const rows =
+    result.outfit.walkOut.base.kind === "dress"
+      ? [{ label: "Dress", text: result.outfit.walkOut.base.dress }]
+      : [
+          { label: "Top", text: result.outfit.walkOut.base.top },
+          { label: "Bottom", text: result.outfit.walkOut.base.bottom },
+        ];
+
+  if (result.outfit.walkOut.layer) {
+    rows.splice(1, 0, { label: "Layer", text: result.outfit.walkOut.layer });
+  }
+
+  rows.push({ label: "Shoes", text: result.outfit.walkOut.shoes });
+  return rows;
+}
+
+function shareWalkOutLine(result: TodayResult): string {
+  const pieces = walkOutPieces(result).map((piece) => piece.text);
+  return pieces.join(", ");
+}
+
 export function DayCard({ result }: { result: TodayResult }) {
   const { image: outfitImage, loading: imageLoading } = useOutfitImage(result);
   const [copied, setCopied] = useState(false);
@@ -37,7 +59,7 @@ export function DayCard({ result }: { result: TodayResult }) {
   const handleShare = async () => {
     const text =
       `${result.outfit.headline}\n\n` +
-      `Walk out: ${result.outfit.walkOut.top}${result.outfit.walkOut.layer ? `, ${result.outfit.walkOut.layer}` : ""}, ${result.outfit.walkOut.bottom}, ${result.outfit.walkOut.shoes}\n\n` +
+      `Walk out: ${shareWalkOutLine(result)}\n\n` +
       `${result.location} — via Well Suited`;
     if (navigator.share) {
       try {
@@ -100,10 +122,9 @@ export function DayCard({ result }: { result: TodayResult }) {
           summary={result.outfit.walkOut.summary}
         >
           <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-            <OutfitRow label="Top" text={result.outfit.walkOut.top} />
-            {result.outfit.walkOut.layer && <OutfitRow label="Layer" text={result.outfit.walkOut.layer} />}
-            <OutfitRow label="Bottom" text={result.outfit.walkOut.bottom} />
-            <OutfitRow label="Shoes" text={result.outfit.walkOut.shoes} />
+            {walkOutPieces(result).map((piece) => (
+              <OutfitRow key={`${piece.label}:${piece.text}`} label={piece.label} text={piece.text} />
+            ))}
           </div>
           {result.outfit.walkOut.accessories.length > 0 && (
             <div className="mt-5 pt-4 border-t border-border">

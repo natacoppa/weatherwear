@@ -1,4 +1,6 @@
 import type Anthropic from "@anthropic-ai/sdk";
+import type { DayOutfitFamily } from "@/lib/outfit-family";
+import { describeDayOutfitFamily } from "@/lib/outfit-family";
 import type {
   OutfitSignalBrief,
   PromptDaySummary,
@@ -171,6 +173,26 @@ function formatGuardrails(signalBrief: OutfitSignalBrief): string {
   return guardrails.length > 0 ? guardrails.map((rule) => `- ${rule}`).join("\n") : "- No special overrides.";
 }
 
+export function buildHotWeatherSilhouetteInstruction(
+  signalBrief: OutfitSignalBrief,
+  mode: "day" | "creator",
+): string | null {
+  if (signalBrief.peakHeat !== "hot" && signalBrief.peakHeat !== "extreme") {
+    return null;
+  }
+
+  const lines = [
+    "On hot days, start with less-fabric silhouettes first: lower-bulk, breathable, and clearly heat-native.",
+    mode === "day"
+      ? "Rank dresses, skirts, shorts, sandals, sleeveless tops, and airy separates ahead of trousers. Trousers are a fallback, not the default."
+      : "Rank skirts, shorts, sandals, sleeveless tops, and airy separates ahead of trousers. Trousers are a fallback, not the default.",
+    "Only use trousers if they clearly improve the outfit while still reading airy, easy, and heat-appropriate.",
+    "Even in polished cities, the outfit should read breathable and light rather than tailored for its own sake.",
+  ];
+
+  return lines.map((line) => `- ${line}`).join("\n");
+}
+
 export function buildDayOutfitPrompt(input: {
   locationName: string;
   day: PromptDaySummary;
@@ -178,8 +200,10 @@ export function buildDayOutfitPrompt(input: {
   colorDirection: string;
   transition: TransitionAssessment;
   signalBrief: OutfitSignalBrief;
+  selectedFamily: DayOutfitFamily;
 }): string {
-  const { locationName, day, weatherContext, colorDirection, transition, signalBrief } = input;
+  const { locationName, day, weatherContext, colorDirection, transition, signalBrief, selectedFamily } = input;
+  const hotWeatherSilhouetteInstruction = buildHotWeatherSilhouetteInstruction(signalBrief, "day");
   return `You're a high-end stylist. You're helping someone in ${locationName} who leaves at 8am and won't be home until 10pm. They need ONE outfit that works all day.
 
 Weather across the day:
@@ -208,7 +232,12 @@ ${formatSignalBrief(signalBrief)}
 Guardrails:
 ${formatGuardrails(signalBrief)}
 
-Transition read: ${transition.summary}. ${transition.promptGuidance}
+Selected outfit family:
+- The family for this request is "${selectedFamily}".
+- Stay inside this family. Do not switch to a different silhouette lane.
+- Style this family as ${describeDayOutfitFamily(selectedFamily)}.
+
+${hotWeatherSilhouetteInstruction ? `Hot-weather silhouette preference:\n${hotWeatherSilhouetteInstruction}\n` : ""}Transition read: ${transition.summary}. ${transition.promptGuidance}
 
 Headline guidance: give the headline a little city-specific character if it fits, but keep it under 10 words.
 
@@ -228,12 +257,21 @@ Rules:
 
 JSON format:
 {
+  "family": "${selectedFamily}",
   "headline": "Max 10 words — the day's vibe",
   "walkOut": {
     "summary": "How 8am feels in one sentence, max 12 words",
-    "top": "What you wear on top leaving the house",
+    "base": {
+      "kind": "separates",
+      "top": "What you wear on top leaving the house",
+      "bottom": "Pants/skirt/shorts"
+    }
+    OR
+    "base": {
+      "kind": "dress",
+      "dress": "One-piece base garment"
+    },
     "layer": "Outerwear/jacket or null",
-    "bottom": "Pants/skirt",
     "shoes": "Shoe recommendation",
     "accessories": ["Short item names"]
   },
@@ -263,6 +301,7 @@ export function buildCreatorOutfitPrompt(input: {
   signalBrief: OutfitSignalBrief;
 }): string {
   const { locationName, day, weatherContext, styleDirection, transition, signalBrief } = input;
+  const hotWeatherSilhouetteInstruction = buildHotWeatherSilhouetteInstruction(signalBrief, "creator");
   return `You are an expert fashion stylist with impeccable taste. Look at the product images above and style a complete, beautiful outfit for ${locationName} today.
 
 Weather: ${Math.round(day.tempMin)}°–${Math.round(day.tempMax)}°F. ${weatherContext}
@@ -279,7 +318,7 @@ ${formatSignalBrief(signalBrief)}
 Guardrails:
 ${formatGuardrails(signalBrief)}
 
-Transition read: ${transition.summary}. ${transition.promptGuidance}
+${hotWeatherSilhouetteInstruction ? `Hot-weather silhouette preference:\n${hotWeatherSilhouetteInstruction}\n` : ""}Transition read: ${transition.summary}. ${transition.promptGuidance}
 
 Headline guidance: give the headline a little city-specific character if it fits, but keep it under 10 words.
 
